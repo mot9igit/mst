@@ -1,0 +1,245 @@
+<footer class="dart_footer">
+    <div class="dart_container">
+        <div class="footer__topbar">
+            <div class="footer__item">
+                <div class="footer__subtitle">Каталог</div>
+                <ul>
+                    <li> <a class="footer__link" href="catalog/">Весь каталог</a> </li>
+                    <li class="first"><a href="avtoholodilniki/">Автохолодильники</a></li>
+                    <li><a href="vinnyie-shkafyi/">Винные шкафы</a></li>
+                    <li><a href="avtodoma-doma-na-kolyosax/">Автодома, дома на колёсах</a></li>
+                    <li><a href="bagazhnyie-sistemyi/">Багажные системы</a></li>
+                    <li><a href="gigiena-i-sanitariya/">Гигиена и санитария</a></li>
+                    <li><a href="klimaticheskie-sistemyi/">Климатические системы</a></li>
+                    <li><a href="mebel-i-aksessuaryi-dlya-otdyixa/">Мебель и аксессуары</a></li>
+                    <li><a href="elektrika/">Электрика</a></li>
+                    <li><a href="markizyi/">Маркизы</a></li>
+                    <li><a href="okna-i-lyuki/">Окна, двери и люки</a></li>
+                    <li><a href="oborudovanie-dlya-kuhni/">Оборудование для кухни</a></li>
+                    <li class="last"><a href="termosumki/">Термосумки</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Компания</div>
+                <ul class="">
+                    <li class="first"><a href="about">О компании</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                    <li class="last"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Сервис</div>
+                <ul class="">
+                    <li class="first"><a href="dostavka">Доставка</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li class="last"><a href="#">Оптовые продажи</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Информация</div>
+                <ul class="">
+                    <li class="first"><a href="#">Новости</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Как оформить заказ</a></li>
+                    <li><a href="#">База знаний</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li class="last"><a href="#">Договор публичной оферты</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item--contacts">
+                <a class="footer__tel telefon1" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                
+                
+                <a class="footer__mail" href="mailto:info@mstmp.tmweb.ru">info@mstmp.tmweb.ru</a>
+
+                
+            </div>
+        </div>
+        <div class="footer__bottombar">
+            <div class="footer__copy"><span itemscope="" itemtype="http://schema.org/WPFooter">Copyright © <span
+                        itemprop="copyrightYear">2022</span> </span> МСТ-МП All Rights Reserved. Все права защищены.
+                Копирование материалов запрещено. <br>
+                Отправляя любую форму на сайте, Вы соглашаетесь на обработку персональных данных</div>
+        </div>
+    </div>    
+</footer>
+<div class="mobile_navigation">
+    <ul>
+        <li>
+            <a href="#">
+                <i class="d_icon d_icon-home"></i>
+                <span>Главная</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="toggle_catalog">
+                <i class="d_icon d_icon-catalog"></i>
+                <span>Каталог</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="toggle_lk">
+                <i class="d_icon d_icon-account"></i>
+                <span>Кабинет</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="user_tools">
+                <div class="cart">
+                    <div id="msMiniCart" class="cart get_big_cart ">
+                        <div class="empty">
+                            <div class="cart-img">
+                                <i class="d_icon d_icon-cart"></i>
+                                <span class="ms2_total_count">0</span>
+                            </div>                                        
+                        </div>
+                        <div class="not_empty">
+                            <div class="cart-img">
+                                <i class="d_icon d_icon-cart"></i>
+                                <span class="ms2_total_count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span>Корзина</span>
+            </a>
+        </li>        
+    </ul>
+</div>
+
+<!-- MODALS -->
+<div class="modal fade" id="auth" tabindex="-1" aria-labelledby="auth" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="auth">Авторизация</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="dart_auth">
+                <div class="form_input_group">
+                    <label for="auth_login">Логин или email</label>
+                    <input type="text" id="auth_login" placeholder="Логин" name="login" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="auth_password">Пароль</label>
+                    <input type="text" id="auth_password" placeholder="Пароль" name="password" value="" class="required">                   
+                    <div class="desc">
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                </div>
+                <div class="form_input_group text-center">
+                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#register">Регистрация</a>
+                    <button class="dart-btn dart-btn-primary" type="submit">
+                        <span class="tm">Войти</span>
+                    </button>
+                </div>
+                <!--
+                <div class="socials text-center">
+                    <ul class="dart_socials">
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/google.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/yandex.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/vk_auth.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                -->
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="register">Регистрация</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="dart_auth">
+                <div class="form_input_group">
+                    <label for="register_email">Email</label>
+                    <input type="text" id="register_email" placeholder="Email" name="email" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_phone">Телефон</label>
+                    <input type="text" id="register_phone" placeholder="Телефон" name="phone" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_fullname">Имя</label>
+                    <input type="text" id="register_fullname" placeholder="Имя" name="fullname" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_login">Логин</label>
+                    <input type="text" id="register_login" placeholder="Логин" name="login" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_password">Пароль</label>
+                    <input type="text" id="register_password" placeholder="Пароль" name="password" value="" class="required">
+                </div>
+                <div class="form_input_group text-center">
+                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#auth">Войти</a>
+                    <button class="dart-btn dart-btn-primary">
+                        <span class="tm">Регистрация</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="pass_reset_success" tabindex="-1" aria-labelledby="pass_reset_success_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="modal_success">
+                <div class="text">
+                    <span class="title">Мы отправили пароль вам на почту</span>
+                    <span class="desc">Если письмо не пришло,<br/> позвоните по телефону +7 351 217-06-17</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="city_choice" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="register">Выберите ваш город</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="city_choice">
+				<input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить название города" autocomplete="off">
+			</div>
+            <div class="cities">
+                <a href="#" class="city_checked">
+                    <span>Миасс</span>
+                </a>
+                <a href="#" class="city_checked">
+                    <span>Пермь</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>

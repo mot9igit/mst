@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>MST</title>
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
+<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#282828">
+<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="libs/owlcarousel2/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="libs/fontawesome5/css/all.min.css">
+<link rel="stylesheet" href="libs/fontawesome5/css/v4-shims.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="libs/icofont.css">
+<link rel="stylesheet" href="css/style.css?id=90">
+</head>
+
+<body>
+  <div class="dart_wrapper">
+    <header class="dart_header">    
+    <div class="dart_header__top">
+        <div class="dart_container">
+            <div class="dart-row dart-align-items-center">
+                <div class="d-col-xxl-6 d-col-xl-4 d-col-lg-3">
+                    <div class="dart_header__top_info">
+                        <div class="geo_data">
+                            <div class="dart-item city_check">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#city_choice">
+                                    <span class="dart_geo_city">г Пермь</span>
+                                </a>
+                                <div class="city_popup">
+                                    <span>Вы находитесь в <b class="dart_geo_city">г Пермь</b>?</span>
+                                    <div class="buttons">
+                                        <a href="#" class="dart-btn dart-btn-small dart-btn-outline-secondary sl_city_more_info">Нет, другой</a>
+                                        <a href="#" class="dart-btn dart-btn-small dart-btn-primary sl_city_close city_checked">Да, верно</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dart-item dart-item-store">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#modal_store">
+                                    <i class="d_icon d_icon-map-marker"></i>
+                                    <span class="dart_geo_store">Магазин</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="d-col-xxl-6 d-col-xl-8 d-col-lg-9">
+                    <div class="dart_header__bar dart-align-items-center">
+                        <div class="dart_header__menu">
+                            <ul>
+                                <li><a href="#">Адреса магазинов</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Об ассоциации</a></li>
+                            </ul>
+                        </div>
+                        <div class="dart_header__phone">
+                            <a href="#">
+                                <i class="d_icon d_icon-phone"></i>
+                                <span>+7 (542) 345-34-15</span>
+                            </a>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dart_header__bottom">
+        <div class="dart_container">
+            <div class="dart-row dart-align-items-center">
+                <div class="d-col-xxl-2 d-col-xl-2 d-col-lg-3">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-3">
+                    <div class="dart-btn dart-btn-primary btn-menu noactive">
+						<i class="d_icon d_icon-catalog"></i>
+                        <span>Каталог товаров</span>
+                    </div>
+                </div>
+                <div class="d-col-xxl-7 d-col-xl-5 d-col-lg-4">
+                    <div class="search-block">
+                        <form action="#">
+                            <div class="search-block__input-group">
+                                <input type="text" name="search" placeholder="Введите то, что хотите найти">
+                                <button type="submit">
+                                    <i class="d_icon d_icon-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-col-xxl-1 d-col-xl-2 d-col-lg-2">
+                    <div class="user_tools">
+                        <div class="item">
+                            <div class="compare">
+                                <div data-id="1" data-list="default" class="comparison-default">
+                                    <a href="sravnenie-tovarov" data-toggle="tooltip" data-placement="bottom" title=""
+                                        data-original-title="Сравнение товаров">
+                                        <i class="d_icon d_icon-tune">
+                                            <span class="comparison-total">0</span>
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cart">
+                                <div id="msMiniCart" class="cart get_big_cart ">
+                                    <div class="empty">
+                                        <div class="cart-img">
+                                            <i class="d_icon d_icon-cart"></i>
+                                            <span class="ms2_total_count">0</span>
+                                        </div>                                        
+                                    </div>
+                                    <div class="not_empty">
+                                        <div class="cart-img">
+                                            <i class="d_icon d_icon-cart"></i>
+                                            <span class="ms2_total_count">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="user">
+                                <a href="#auth" data-bs-toggle="modal" data-bs-target="#auth">		
+                                    <i class="d_icon d_icon-account"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-d-menu">
+                <div class="dart-row tabs">
+                    <ul class="d-col-lg-3 menu-title">
+                        <li class="has-children">
+                            <a class="active" href="#category-134">Светодиодные модули</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-184">Светодиодные линейки</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-192">Светодиодная лента и неон</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-165">Блок питания</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-193">Светодиодные прожекторы</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-194">Светодиодные светильники</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-196">Управление освещением</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-198">Аксессуары и компоненты</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-197">Профиль алюминиевый</a>
+                        </li>
+                        <li class="has-children">
+                            <a href="#category-195">Светодиодные экраны</a>
+                        </li>
+                    </ul>
+                    
+                    <div id="category-134" class="d-col-lg-9 drop-menu">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Светодиодные модули <sup>52 наименования</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Модули SMD 3528</a></li>
+                                    <li><a href="#">Модули SMD 2835</a></li>
+                                    <li><a href="#">Модули SMD 5050</a></li>
+                                    <li><a href="#">Модули SMD 5054</a></li>
+                                    <li><a href="#">Модули SMD 5730</a></li>
+                                    <li><a href="#">Торцевые модули</a></li>
+                                    <li><a href="#">Пиксельные модули</a></li>
+                                    <li><a href="#">Светодиодные листы</a></li>
+                                    <li><a href="#">Digital SMART модули</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                <div class="right-columns">
+                                    <p>По характеристикам</p>
+                                    <ul class="tag">
+                                        <li><a href="#">Модули 2835</a></li>
+                                        <li><a href="#">Модули 2835</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-184" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">                                
+                                <span class="drop-menu__title">Светодиодные линейки <sup>7 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Линейки SMD 2835</a></li>
+                                    <li><a href="#">Линейки SMD 5730</a></li>
+                                    <li><a href="#">Линейки 220В</a></li>
+                                    <li><a href="#">Торцевые линейки</a></li>
+                                    <li><a href="#">Линейка DUAL CCT WW+CW</a></li>
+                                    <li><a href="#">Digital SMART линейки</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-192" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Светодиодная лента и неон <sup>7 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Лента SMD 3528</a>
+                                    </li>
+                                    <li><a href="#">Лента SMD 2835</a></li>
+                                    <li><a href="#">Лента SMD 5050</a></li>
+                                    <li><a href="#">Лента SMD 5054</a></li>
+                                    <li><a href="#">Лента SMD 5730</a></li>
+                                    <li><a href="#">Светодиодный неон 12В</a></li>
+                                    <li><a href="#">Светодиодный неон 220В</a></li>
+                                    <li><a href="#">Digital SMART лента</a></li>
+                                    <li><a href="#">Лента 220В</a></li>
+                                    <li><a href="#">Лента DUAL CCT WW+CW</a>
+                                    </li>
+                                    <li><a href="#">Лента RGBW / RGBWW</a></li>
+                                    <li><a href="#">Аксессуары для ленты</a>
+                                    </li>
+                                    <li><a href="#">Комплектующие к неону</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-165" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Блок питания <sup>50 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Блоки питания 12В</a></li>
+                                    <li><a href="#">Герметичные IP67 12В</a></li>
+                                    <li><a href="#">Влагозащитные IP43/44 12В</a></li>
+                                    <li><a href="#">Негерметичные IP20 12В</a></li>
+                                    <li><a href="#">Розеточные адаптеры</a></li>
+                                    <li><a href="#">Диммируемые блоки питания</a></li>
+                                    <li><a href="#">Блоки питания Sanpu</a></li>
+                                    <li><a href="#">Блоки питания Mean Well</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-193" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">                                
+                                <span class="drop-menu__title">Светодиодные прожекторы <sup>18 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Матричные</a></li>
+                                    <li><a href="#">Прожекторы SMD</a></li>
+                                    <li><a href="#">Портативные с аккумулятором</a></li>
+                                    <li><a href="#">С датчиком движения</a></li>
+                                    <li><a href="#">Комплектующие для прожекторов</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-194" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Светодиодные светильники <sup>27 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Потолочные светильники</a></li>
+                                    <li><a href="#">Точечные светильники</a></li>
+                                    <li><a href="#">Трековые светильники</a></li>
+                                    <li><a href="#">Светодиодные панели</a></li>
+                                    <li><a href="#">Офисные светильники</a></li>
+                                    <li><a href="#">Промышленные светильники</a></li>
+                                    <li><a href="#">Садово-парковые и уличные светильники</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-196" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Управление освещением <sup>0 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">RGB контроллеры</a></li>
+                                    <li><a href="#">Диммеры</a></li>
+                                    <li><a href="#">Digital контроллеры</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-198" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Аксессуары и компоненты <sup>0 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Для подключения ленты</a></li>
+                                    <li><a href="#">Для подключения неона</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-197" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Профиль алюминиевый <sup>0 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Профиль алюминиевый (комплект)</a></li>
+                                    <li><a href="#">Накладной профиль</a></li>
+                                    <li><a href="#">Угловой профиль</a></li>
+                                    <li><a href="#">Встраиваемый профиль</a></li>
+                                    <li><a href="#">Аксессуары для профиля</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="category-195" class="d-col-lg-9 drop-menu" style="display: none;">
+                        <div class="dart-row">
+                            <div class="d-col-lg-8 drop-menu_list">
+                                <span class="drop-menu__title">Светодиодные экраны <sup>0 наименований</sup></span>
+                                <p>Подкатегории</p>
+                                <ul class="list">
+                                    <li><a href="#">Модули P4</a></li>
+                                    <li><a href="#">Модули P5</a></li>
+                                    <li><a href="#">Модули P6</a></li>
+                                    <li><a href="#">Модули P8</a></li>
+                                    <li><a href="#">Модули Р10</a></li>
+                                    <li><a href="#">Блоки питания</a></li>
+                                    <li><a href="#">Контроллеры</a></li>
+                                </ul>
+                            </div>
+                            <div class="d-col-lg-4 sub-info-tags">
+                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dart_header__mobile">
+        <div class="dart_container">
+            <div class="mobile_menu__wrap">
+                <div class="geo_data">
+                    <a href="#" class="mobile_city">
+                        <i class="d_icon d_icon-map-marker"></i>
+                    </a>
+                </div>
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="">
+                        <img src="img/logo_alt.svg" alt="" class="logo__alt">
+                    </a>
+                </div>
+                <div class="menu">
+                    <a href="#" class="mobile-menu noactive">
+                        <div class="gamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>                
+                </div>
+            </div>   
+            <div class="search-block">
+                <form action="#">
+                    <div class="search-block__input-group">
+                        <input type="text" name="search" placeholder="Введите то, что хотите найти">
+                        <button type="submit">
+                            <i class="d_icon d_icon-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="dart_header__mobile-menu">
+                <ul class="dart_header__m-menu">
+                    <li>
+						<a href="#">Каталог товаров</a>
+					</li>
+					<li>
+						<a href="#">Каталог запчастей</a>
+					</li>
+					<li>
+						<a href="#">Оплата и доставка</a>
+					</li>
+					<li>
+						<a href="#">Акции</a>
+					</li>
+					<li>
+						<a href="#">Гарантия</a>
+					</li>
+					<li>
+						<a href="#">Журнал</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+                </ul>                
+            </div>   
+            <div class="dart_header__mobile-contacts">
+                <a href="tel:+73512170617" class="dart_header__mobile__phone">
+                    <i class="d_icon d_icon-phone"></i>
+                    <span>+7 351 217-06-17</span>
+                </a>                
+            </div>      
+        </div>
+    </div>
+</header>
+<div class="city_select">
+    <span class="title">Выберите ваш город</span>
+    <a href="#" class="close">
+        <i class="d_icon d_icon-close"></i>
+    </a>
+    <form action="#">
+        <div class="d_form-group">
+            <input type="text" name="city" placeholder="Начните вводить ваш город">
+        </div>
+        <div class="city_list">
+            <ul>
+                <li><a href="#" class="active">Челябинск</a></li>
+                <li><a href="#">Екатеринбург</a></li>
+                <li><a href="#">Краснодар</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Нижний Новгород</a></li>
+                <li><a href="#">Новосибирск</a></li>
+                <li><a href="#">Ростов-на-Дону</a></li>
+                <li><a href="#">Самара</a></li>
+            </ul>
+        </div>
+    </form>
+</div>
+
+<div class="mobile_catalog mobile_menu_catalog">
+    <div class="mobile_menu__header">
+        <div class="mobile_menu__header-wrap">
+            <div></div>
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo_alt.svg" alt="" class="logo__alt">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#" class="close">
+                    <i class="d_icon d_icon-close"></i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="mobile-catalog__content">
+        <div class="root_menu active">
+            <div class="dart_side_menu">
+                <ul>
+                    <li class="has_children material">
+                        <a href="#products_menu" data-target="#products_menu">
+                            <span>Каталог товаров</span>
+                        </a>
+                    </li>
+                    <li class="has_children material">
+                        <a href="#details_menu">
+                            <span>Каталог запчастей</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mobile-catalog__inner-block" id="products_menu">
+            <div class="dart_side_menu">
+                <ul class="mobile_inner_menu" id="products_menu">
+                    <li>
+                        <a href="#" data-target=".root_menu" class="back material">
+                            <span>Назад</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="material">
+                            <img src="img/menu/1.png" alt="">
+                            <span>Дрели</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="material">
+                            <img src="img/menu/2.png" alt="">
+                            <span>Фрезерные машины</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="material">
+                            <img src="img/menu/1.png" alt="">
+                            <span>Перфораторы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="material">
+                            <img src="img/menu/2.png" alt="">
+                            <span>Отбойные молотки</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="material">
+                            <img src="img/menu/1.png" alt="">
+                            <span>Лобзики</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>       
+</div>
+
+<div class="mobile_catalog mobile_menu_lk">
+    <div class="mobile_menu__header">
+        <div class="mobile_menu__header-wrap">
+            <div></div>
+            <div class="logo">
+                <a href="#">
+                    <img src="img/logo_alt.svg" alt="" class="logo__alt">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#" class="close">
+                    <i class="d_icon d_icon-close"></i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="mobile-catalog__content">
+        <div class="root_menu active">
+            <div class="dart_side_menu">
+                <ul>
+                    <li>
+                        <a href="#" class="material">
+                            <i class="d_icon d_icon-list-bulleted"></i>
+                            <span>Список заказов</span>
+                        </a>
+                    </li>
+                    <li class="active material">
+                        <a href="#">
+                            <i class="d_icon d_icon-cog"></i>
+                            <span>Настройки</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>       
+</div>
+<dib class="overlay"></dib>
+    <main class="dart_main">
+      <div class="breadcrumbs ">
+    <div class="dart_container">
+      <nav aria-label="breadcrumb">
+            <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a href="/" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1">
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a href="dostavka.html" itemprop="item"><span itemprop="name">Доставка</span></a><meta itemprop="position" content="2">
+                </li>
+            </ol>	
+        </nav>
+    </div>
+</div>
+      <section class="dart-section">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <blockquote>
+                    Миниатюрный и компактный автохолодильник Alpicool Cmini15 станет незаменимым помощником в дороге или при выезде на природу. Небольшие габариты и малый вес (8,6 кг) позволяют установить холодильник практически в любом автомобиле.
+                </blockquote>
+            </div>          
+        </div>
+      </section>
+      <section class="dart-section dart-block dart-block-half">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <div class="dart-row">
+                    <div class="dart-block-half__wrap d-col-md-6">
+                        <div class="dart-block-half__widget">
+                            <p>Компрессор автомобильного холодильника Alpicool Cmini15 работает на экологически безопасном хладагенте R134a, при этом имеет очень низкий уровень шума и потребляемую мощность охлаждения. Компрессор способен работать при угле наклона в 40° и температуре окружающего воздуха до 50°C.</p>
+                            <p>Внутренний объем автохолодильника — 15 л. Это небольшая компактная модель, предназначенная для охлаждения продуктов питания и напитков для одного-двух человек. Идеальный вариант для тех, кто много времени проводит в дороге: путешественники, водители автобусов, большегрузного транспорта и т.д.</p>
+                        </div>                        
+                    </div>
+                    <div class="dart-block-half__wrap d-col-md-6">
+                        <div class="dart-block-half__widget">
+                            <p>Alpicool Cmini15 несмотря на миниатюрные размеры оснащен USB входом для подзарядки внешних устройств, вентилятором, информативным дисплеем, внутренней подсветкой, удобными ручками для транспортировки.</p>
+                            <p>Холодильник способен поддерживать внутреннюю температуру от -20°C до 20°C. Предусмотрено питание как от городской сети в 110V и 220V, так и от автомобильного прикуривателя на 12V и 24V.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+      </section>
+      <section class="dart-section">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Компрессорный холодильник для автомобиля Alpcool Cmini15:</h2>
+                <ul>
+                    <li>Простая очистка с помощью воды</li>
+                    <li>Компрессор защищен от разгерметизации</li>
+                    <li>Товар сертифицирован: CEEMCIP24ROHSC-TICK</li>
+                    <li>Понятное и удобное управление с индикацией температуры и режима работы</li>
+                    <li>Допустимый угол наклона, при котором устройство работает без отклонений, составляет 30°</li>
+                    <li>Влагозащита по стандарту IP 24</li>
+                    <li>Трехступенчатая защита аккумулятора</li>
+                    <li>Защита компрессора от перегрева</li>
+                    <li>Выбор режимов работы MAX/ECO</li>
+                </ul>
+            </div>          
+        </div>
+      </section>
+      <section class="dart-section dart-block dart-block-accordeon">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Пример аккордеона</h2>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>          
+        </div>
+      </section>
+      <section class="dart-section dart-block dart-block-video">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Видео-галерея</h2>
+                <div class="dart-block-video__items">
+                    <div class="dart-row">
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-video__item">
+                                <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU">
+                                    <img src="https://img.youtube.com/vi/26uW_pH1fEU/maxresdefault.jpg" alt="Видео 1">
+                                </a>
+                                <div class="text">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU" data-image="">Видео 1</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-video__item">
+                                <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU">
+                                    <img src="https://img.youtube.com/vi/26uW_pH1fEU/maxresdefault.jpg" alt="Видео 2">
+                                </a>
+                                <div class="text">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU" data-image="">Видео 2</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-video__item">
+                                <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU">
+                                    <img src="https://img.youtube.com/vi/26uW_pH1fEU/maxresdefault.jpg" alt="Видео 3">
+                                </a>
+                                <div class="text">
+                                    <a data-fancybox="" href="https://www.youtube.com/watch?v=26uW_pH1fEU" data-image="">Видео 3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                    </div>
+                </div>
+            </div>          
+        </div>
+      </section>
+      <section class="dart-section dart-block">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Пример таблицы характеристик</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Наименование</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-val="vendor">
+                            <td width="40%"> Производитель </td>
+                            <td width="60%"> Alpicool </td>
+                        </tr>
+                        <tr data-val="color">
+                            <td width="40%">
+                                Цвет </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">серый</span>
+                            </td>
+                        </tr>
+                        <tr data-val="weight">
+                            <td width="40%">Вес </td>
+                            <td width="60%">8.5 кг </td>
+                        </tr>
+                        <tr data-val="size">
+                            <td width="40%">Размер </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">598 x 320 x 260</span>
+                            </td>
+                        </tr>
+                        <tr data-val="obiemhol">
+                            <td width="40%">Объем холодильника </td>
+                            <td width="60%">15 л </td>
+                        </tr>
+                        <tr data-val="tipohlad">
+                            <td width="40%">Тип охлаждения </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">компрессорный</span>
+                            </td>
+                        </tr>
+                        <tr data-val="rejimrabot">
+                            <td width="40%">Режим работы </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">охлаждение</span>
+                            </td>
+                        </tr>
+                        <tr data-val="voltage">
+                            <td width="40%">Напряжение питания </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">110</span>
+                                <span class="badge badge-secondary">12</span>
+                                <span class="badge badge-secondary">220</span>
+                                <span class="badge badge-secondary">24</span>
+                                В
+                            </td>
+                        </tr>
+                        <tr data-val="potrpoverohl">
+                            <td width="40%">Потребляемая мощность охлаждения </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">45</span>
+                                Вт
+                            </td>
+                        </tr>
+                        <tr data-val="tempdiapoz">
+                            <td width="40%"> Температурный диапазон </td>
+                            <td width="60%">+20 .. -20 °С </td>
+                        </tr>
+                        <tr data-val="hladogen">
+                            <td width="40%">Хладагент </td>
+                            <td width="60%">R134a </td>
+                        </tr>
+                        <tr data-val="tipinstall">
+                            <td width="40%">Тип установки </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">переносной</span>
+                            </td>
+                        </tr>
+                        <tr data-val="case">
+                            <td width="40%">Материал корпуса </td>
+                            <td width="60%">
+                                <span class="badge badge-secondary">пластик</span>
+                            </td>
+                        </tr>
+                        <tr data-val="dopfunkts">
+                            <td width="40%">Дополнительно (функции) </td>
+                            <td width="60%">
+                                USB для зарядки гаджетов, вентилятор, внутренняя подсветка, ручки для транспортировки, цифровой дисплей
+                            </td>
+                        </tr>
+                        <tr data-val="complektpostavki">
+                            <td width="40%">Комплект поставки </td>
+                            <td width="60%">
+                                Автохолодильник; Инструкция по эксплуатации; Гарантийный талон; Провод питания в прикуриватель 12/24В;
+                                Преобразователь напряжения 220/12В; 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </section>
+      <section class="dart-section dart-block">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Простой блок</h2>
+                <p>Повседневная практика показывает, что укрепление и развитие структуры играет важную роль в формировании новых предложений. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке систем массового участия. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Повседневная практика показывает, что сложившаяся структура организации играет важную роль в формировании соответствующий условий активизации.</p>
+                <p>Товарищи! начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации систем массового участия. Разнообразный и богатый опыт рамки и место обучения кадров позволяет оценить значение систем массового участия.</p>
+            </div>
+        </div>
+      </section>
+      <section class="dart-section dart-block dart-block-photo">
+        <div class="dart_container">
+            <div class="dart_container-content">
+                <h2>Фото-галерея</h2>
+                <div class="dart-block-photo__gallery">
+                    <div class="dart-row">
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/1.jpg">
+                                    <img src="/img/gallery/1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/2.jpg">
+                                    <img src="/img/gallery/2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/3.jpg">
+                                    <img src="/img/gallery/3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/4.jpg">
+                                    <img src="/img/gallery/4.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/5.jpg">
+                                    <img src="/img/gallery/5.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/6.jpg">
+                                    <img src="/img/gallery/6.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/7.jpg">
+                                    <img src="/img/gallery/7.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                        <!-- item -->
+                        <div class="d-col-sm-6 d-col-md-4">
+                            <div class="dart-block-photo__gallery-item">
+                                <a data-fancybox="gallery" href="/img/gallery/8.jpg">
+                                    <img src="/img/gallery/8.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- / item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer class="dart_footer">
+    <div class="dart_container">
+        <div class="footer__topbar">
+            <div class="footer__item">
+                <div class="footer__subtitle">Каталог</div>
+                <ul>
+                    <li> <a class="footer__link" href="catalog/">Весь каталог</a> </li>
+                    <li class="first"><a href="avtoholodilniki/">Автохолодильники</a></li>
+                    <li><a href="vinnyie-shkafyi/">Винные шкафы</a></li>
+                    <li><a href="avtodoma-doma-na-kolyosax/">Автодома, дома на колёсах</a></li>
+                    <li><a href="bagazhnyie-sistemyi/">Багажные системы</a></li>
+                    <li><a href="gigiena-i-sanitariya/">Гигиена и санитария</a></li>
+                    <li><a href="klimaticheskie-sistemyi/">Климатические системы</a></li>
+                    <li><a href="mebel-i-aksessuaryi-dlya-otdyixa/">Мебель и аксессуары</a></li>
+                    <li><a href="elektrika/">Электрика</a></li>
+                    <li><a href="markizyi/">Маркизы</a></li>
+                    <li><a href="okna-i-lyuki/">Окна, двери и люки</a></li>
+                    <li><a href="oborudovanie-dlya-kuhni/">Оборудование для кухни</a></li>
+                    <li class="last"><a href="termosumki/">Термосумки</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Компания</div>
+                <ul class="">
+                    <li class="first"><a href="about">О компании</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Поставщикам</a></li>
+                    <li class="last"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Сервис</div>
+                <ul class="">
+                    <li class="first"><a href="dostavka">Доставка</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li class="last"><a href="#">Оптовые продажи</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <div class="footer__subtitle">Информация</div>
+                <ul class="">
+                    <li class="first"><a href="#">Новости</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Как оформить заказ</a></li>
+                    <li><a href="#">База знаний</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li class="last"><a href="#">Договор публичной оферты</a></li>
+                </ul>
+            </div>
+            <div class="footer__item footer__item--contacts">
+                <a class="footer__tel telefon1" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                
+                
+                <a class="footer__mail" href="mailto:info@mstmp.tmweb.ru">info@mstmp.tmweb.ru</a>
+
+                
+            </div>
+        </div>
+        <div class="footer__bottombar">
+            <div class="footer__copy"><span itemscope="" itemtype="http://schema.org/WPFooter">Copyright © <span
+                        itemprop="copyrightYear">2022</span> </span> МСТ-МП All Rights Reserved. Все права защищены.
+                Копирование материалов запрещено. <br>
+                Отправляя любую форму на сайте, Вы соглашаетесь на обработку персональных данных</div>
+        </div>
+    </div>    
+</footer>
+<div class="mobile_navigation">
+    <ul>
+        <li>
+            <a href="#">
+                <i class="d_icon d_icon-home"></i>
+                <span>Главная</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="toggle_catalog">
+                <i class="d_icon d_icon-catalog"></i>
+                <span>Каталог</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="toggle_lk">
+                <i class="d_icon d_icon-account"></i>
+                <span>Кабинет</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="user_tools">
+                <div class="cart">
+                    <div id="msMiniCart" class="cart get_big_cart ">
+                        <div class="empty">
+                            <div class="cart-img">
+                                <i class="d_icon d_icon-cart"></i>
+                                <span class="ms2_total_count">0</span>
+                            </div>                                        
+                        </div>
+                        <div class="not_empty">
+                            <div class="cart-img">
+                                <i class="d_icon d_icon-cart"></i>
+                                <span class="ms2_total_count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span>Корзина</span>
+            </a>
+        </li>        
+    </ul>
+</div>
+
+<!-- MODALS -->
+<div class="modal fade" id="auth" tabindex="-1" aria-labelledby="auth" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="auth">Авторизация</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="dart_auth">
+                <div class="form_input_group">
+                    <label for="auth_login">Логин или email</label>
+                    <input type="text" id="auth_login" placeholder="Логин" name="login" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="auth_password">Пароль</label>
+                    <input type="text" id="auth_password" placeholder="Пароль" name="password" value="" class="required">                   
+                    <div class="desc">
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                </div>
+                <div class="form_input_group text-center">
+                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#register">Регистрация</a>
+                    <button class="dart-btn dart-btn-primary" type="submit">
+                        <span class="tm">Войти</span>
+                    </button>
+                </div>
+                <!--
+                <div class="socials text-center">
+                    <ul class="dart_socials">
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/google.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/yandex.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/icons/vk_auth.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                -->
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="register">Регистрация</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="dart_auth">
+                <div class="form_input_group">
+                    <label for="register_email">Email</label>
+                    <input type="text" id="register_email" placeholder="Email" name="email" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_phone">Телефон</label>
+                    <input type="text" id="register_phone" placeholder="Телефон" name="phone" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_fullname">Имя</label>
+                    <input type="text" id="register_fullname" placeholder="Имя" name="fullname" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_login">Логин</label>
+                    <input type="text" id="register_login" placeholder="Логин" name="login" value="" class="required">                    
+                </div>
+                <div class="form_input_group">
+                    <label for="register_password">Пароль</label>
+                    <input type="text" id="register_password" placeholder="Пароль" name="password" value="" class="required">
+                </div>
+                <div class="form_input_group text-center">
+                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#auth">Войти</a>
+                    <button class="dart-btn dart-btn-primary">
+                        <span class="tm">Регистрация</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="pass_reset_success" tabindex="-1" aria-labelledby="pass_reset_success_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="modal_success">
+                <div class="text">
+                    <span class="title">Мы отправили пароль вам на почту</span>
+                    <span class="desc">Если письмо не пришло,<br/> позвоните по телефону +7 351 217-06-17</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade" id="city_choice" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="register">Выберите ваш город</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="city_choice">
+				<input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить название города" autocomplete="off">
+			</div>
+            <div class="cities">
+                <a href="#" class="city_checked">
+                    <span>Миасс</span>
+                </a>
+                <a href="#" class="city_checked">
+                    <span>Пермь</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/owlcarousel2/dist/owl.carousel.min.js"></script>
+<script src="libs/match-height/dist/jquery.matchHeight-min.js"></script>
+<script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+<script src="libs/maskedinput/dist/jquery.maskedinput.min.js"></script>
+<script src="libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/main.js?time=5"></script>
+<script src="js/quiz.js?time=5"></script>
+<script>
+    $(document).ready(function(){
+        
+    });
+</script>
+</body>
+
+</html>

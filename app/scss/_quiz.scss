@@ -1,0 +1,1145 @@
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Light.eot');
+    src: local('Stolzl Light'), local('Stolzl-Light'),
+        url('../fonts/Stolzl-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Light.woff2') format('woff2'),
+        url('../fonts/Stolzl-Light.woff') format('woff'),
+        url('../fonts/Stolzl-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Thin.eot');
+    src: local('Stolzl Thin'), local('Stolzl-Thin'),
+        url('../fonts/Stolzl-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Thin.woff2') format('woff2'),
+        url('../fonts/Stolzl-Thin.woff') format('woff'),
+        url('../fonts/Stolzl-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl Book';
+    src: url('../fonts/Stolzl-Book.eot');
+    src: local('Stolzl Book'), local('Stolzl-Book'),
+        url('../fonts/Stolzl-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Book.woff2') format('woff2'),
+        url('../fonts/Stolzl-Book.woff') format('woff'),
+        url('../fonts/Stolzl-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Regular.eot');
+    src: local('Stolzl Regular'), local('Stolzl-Regular'),
+        url('../fonts/Stolzl-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Regular.woff2') format('woff2'),
+        url('../fonts/Stolzl-Regular.woff') format('woff'),
+        url('../fonts/Stolzl-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Bold.eot');
+    src: local('Stolzl Bold'), local('Stolzl-Bold'),
+        url('../fonts/Stolzl-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Bold.woff2') format('woff2'),
+        url('../fonts/Stolzl-Bold.woff') format('woff'),
+        url('../fonts/Stolzl-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('../fonts/Stolzl-Medium.eot');
+    src: local('Stolzl Medium'), local('Stolzl-Medium'),
+        url('../fonts/Stolzl-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Stolzl-Medium.woff2') format('woff2'),
+        url('../fonts/Stolzl-Medium.woff') format('woff'),
+        url('../fonts/Stolzl-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@keyframes buttonWave {
+	0% {
+	  	opacity: 0.2;
+		transform: scale(1);
+	}
+	100% {
+	  	opacity: 0;
+		transform: scale(30);
+	}
+}
+
+@keyframes blinker {  
+	from { 
+		opacity: 1; 
+	}
+	to { 
+		opacity: 0; 
+	}
+}
+
+@keyframes blick{
+	15%,
+	to{
+		left:110%;
+	}
+}
+
+@keyframes animPulse {
+    0% {
+        opacity: 0;
+        transform: scale(1); }
+    50% {
+        opacity: .8; 
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.8); 
+    } 
+}
+
+/* -------------- VARS ----------------- */
+$quiz-primary-color:            #F5B344;
+$quiz-secondary-color:          #3F71FF;
+$quiz-grey-color:               #F5F6F6;
+
+$quiz-border-radius:              10px;
+$quiz-main-padding:               15px;
+
+$font-quiz:                     'Stolzl', sans-serif;
+
+/* ------------- / VARS ---------------- */
+
+.dart-quiz{
+    position: relative;
+    .ui-widget-header {
+        border: 1px solid #fff;
+        background: $quiz-primary-color;
+        color: #333333;
+        font-weight: bold;
+    }
+    .ui-state-default, 
+    .ui-widget-content .ui-state-default, 
+    .ui-widget-header .ui-state-default, 
+    .ui-button, 
+    .ui-button.ui-state-disabled:hover, 
+    .ui-button.ui-state-disabled:active {
+        border: 1px solid #FFFFFF;
+        background: $quiz-primary-color;
+        font-weight: normal;
+        border-radius: 50%;
+        color: #454545;
+    }
+    &__header{
+        position: relative;
+        background-color: #fff;
+        padding: 25px 0;
+        .dart-quiz__logo{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            span{
+                display: inline-block;
+                padding-left: 33px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.3;
+                color: #000000;
+            }
+        }
+    }
+    &__navigation{
+        margin-top: 25px;
+        position: relative;
+        display: inline-block;
+        box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            & > li{
+                display: inline-block;
+                & > a{
+                    display: block;
+                    text-decoration: none;
+                    padding: 8px 15px;
+                    font-style: normal;
+                    font-weight: 350;
+                    font-size: 20px;
+                    line-height: 1.3;
+                    color: #000000;
+                    &:hover{
+                        color: $quiz-secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__banner{
+        position: relative;
+        padding: 150px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000;
+        background-position: bottom right;
+        &::before{
+            content: '';
+            height: 30px;
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+        h1{
+            display: block;
+            font-style: normal;
+            font-family: $font-quiz;
+            font-weight: 300;
+            font-size: 42px;
+            line-height: 1.3;
+            letter-spacing: 0.05em;
+            color: #000000;
+            margin-bottom: 32px;
+        }
+        p{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            font-family: $font-quiz;
+            line-height: 142.9%;
+            letter-spacing: 0.02em;
+            color: #000000;
+        }
+        &-gifts{
+            margin: 32px 0 64px;
+            display: flex;
+            flex-wrap: wrap;
+            .dart-quiz__banner-gift{
+                width: 33.33333333%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .image{
+                    position: relative;
+                    max-width: 150px;
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        background-color: $quiz-secondary-color;
+                        width: 18px;
+                        height: 18px;
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        border-radius: 50%;
+                        background-image: url(../img/quiz/icons/check.svg);
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+                .text{
+                    max-width: 250px;
+                    padding-left: 15px;
+                    font-family: $font-quiz;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 19px;
+                    line-height: 1.3;
+                    letter-spacing: 0.03em;
+                    color: #000000;
+                }
+            }
+        }
+        &-buttons{
+            a{
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                width: auto;
+                text-align: center;
+                small{
+                    display: block;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 1.3;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        &-dot{            
+            position: absolute;
+            pointer-events: all; 
+            &:hover &-hover {
+                display: block; 
+            }
+            &-plus{
+                width: 2.96vw;
+                height: 2.96vw;
+                background: rgba(63, 113, 255, 0.7);
+                border-radius: 50%;
+                position: relative;
+                cursor: pointer;
+                z-index: 1;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid rgba(63, 113, 255, 0.2);;
+                    opacity: 1;
+                    border-radius: 50%;
+                    animation: animPulse 2s linear infinite;
+                    z-index: -1; 
+                }
+                &::before {
+                    content: '';
+                    width: 1.742vw;
+                    height: 1.742vw;
+                    background-color: $quiz-secondary-color;
+                    background-image: url(../img/quiz/icons/i.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    font-size: 1vw;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: .3s;
+                    color: #fff; 
+                }
+            }
+            &-hover{
+                display: none;
+                background: #fff;
+                border-radius: 10px;
+                position: absolute;
+                width: 200px;
+                padding: 10px 10px;
+                bottom: calc(100% + 20px);
+                left: 50%;
+                z-index: 2;
+                transform: translate(-50%, 0);
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -20px;
+                    border: 10px solid transparent;
+                    border-top: 10px solid #fff;
+                    transform: translate(-50%, 0); 
+                }
+                .title {
+                    font-family: $font-quiz;
+                    display: block;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.3;
+                    color: #000000; 
+                    & + * {
+                        margin-top: 12px; 
+                    }
+                }
+                p {
+                    font-family: $font-quiz;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    color: #000000; 
+                }
+            }
+        }
+    }
+    &__messeger{
+        position: relative;
+        display: flex;
+        align-items: center;
+        &-status{
+            display: inline-block;
+            max-width: 145px;
+            font-family: $font-quiz;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.3;
+            letter-spacing: 0.05em;
+            color: #000000;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            font-family: $font-quiz;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            text-decoration: none;
+            max-width: 167px;
+            position: relative;
+            &::after{
+                content: '';
+                display: inline-block;
+                background: #25D366;
+                width: 7px;
+                height: 7px;
+                position: absolute;
+                top: 50%;
+                right: -4px;
+                border-radius: 50%;               
+                transform: translate(0, -50%);
+                animation: blinker .5s ease infinite alternate;
+            }
+            & + *{
+                padding-left: 17px;
+            }
+            i{
+                width: 28px;
+                & + *{
+                    padding-left: 14px;
+                }
+            }
+            span{
+                font-family: $font-quiz;
+                max-width: 100px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 133%;
+                letter-spacing: 0.05em;
+                color: #000000;
+            }
+        }
+        
+    }
+    &__icon{
+        display: inline-block;
+        &-whatsapp{
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-image: url(../img/quiz/icons/wa.png);
+            background-color: #25D366;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    &__contacts{
+        display: flex;
+        justify-content: space-between;
+        &-block{
+            text-align: center;
+            padding: 0 30px;
+            span{
+                display: block;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 1.3;
+                color: #000000;
+            }
+            a.phone{
+                display: block;
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.3;
+                color: #000000;
+            }
+            a.dart-quiz__action-alt{
+                display: inline-block;
+            }
+        }
+    }
+    &__text-center{
+        text-align: center;
+    }
+    &__action-alt{
+        display: inline-block;
+        font-style: normal;
+        text-decoration: none;
+        font-weight: 350;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #25D366;
+        border-bottom: 0.5px dashed #25D366;
+    }
+    &__form-group{
+        margin-bottom: 15px;
+        .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            &  + label {
+                padding: 15px 24px;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 24px;
+                letter-spacing: 0.03em;
+                color: #000000;
+                background-color: $quiz-grey-color;
+                display: inline-block;
+                display: block;
+                position: relative;
+                cursor: pointer;
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    right: 24px;
+                    background: url(../img/quiz/icons/clip.svg) no-repeat;
+                    width: 18px;
+                    height: 17px;
+                    transform: translate(0, -50%);
+                }
+                &:hover {
+                    background-color: #e5e5e5;
+                }
+                * {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    &__slider-wrap{
+        padding: 10px 20px;
+        input{
+            display: none;
+        }
+        &.dart-quiz__slider-one .ui-slider-handle {
+            width: 44px;
+            height: 24px;
+            border-radius: 5px !important;
+            color: #fff !important;
+            top: 50%;
+            margin-top: -14px;
+            text-align: center;
+            line-height: 24px;
+            outline: none;
+        }
+        .dart-quiz__slider-vals{
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16x;
+                line-height: 1.3;
+                color: #000000;
+            }
+            input{
+                display: block;
+            }
+        }
+    }
+    &__input{
+        display: block;
+        padding: 10px 15px 10px 38px;
+        font-family: $font-quiz;
+        height: 100%;
+        line-height: 20px;
+        display: block;
+        color: #666;
+        border: 0.5px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    .dart-quiz_btn{
+        display: inline-block;
+        padding: 20px 80px;
+        border-radius: 500px;
+        font-family: $font-quiz;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.3;
+        color: #000000;
+        text-decoration: none;
+        cursor: pointer;
+        &.hide{
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:hover{
+            text-decoration: none;
+            opacity: .7;
+        }
+        &.dart-quiz_btn_secondary{
+            color: #000;
+            background: $quiz-grey-color;
+        }
+        &.dart-quiz_btn_primary{
+            color: #fff;
+            overflow: hidden;
+            background: linear-gradient(91.86deg, #F5B344 34.33%, #FFAB1D 75.7%);
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                background: linear-gradient(90deg,hsla(0,0%,100%,.1) 10%,hsla(0,0%,100%,.2) 20%,hsla(0,0%,100%,.6));
+                width: 20px;
+                transform: skewX(-45deg);
+                left: -20%;
+                transition: all .6s ease;
+                animation-name: blick;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    &__skip{
+        display: inline-block;
+        margin-top: 50px;
+    }
+    &__do-know{
+        max-width: 450px;
+        margin: 0 auto;
+        text-align: center;
+        .dart-quiz__checkbox,
+        .dart-quiz__radio{
+            display: inline-block;
+            margin-top: 50px;
+        }
+    }
+    &__main-header{
+        display: block;
+        text-align: center;
+        font-family: $font-quiz;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 145.4%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #000000;
+        & + *{
+            margin-top: 47px;
+        }
+    }
+    &__content{
+        background: #FFFFFF;
+        box-shadow: 0px 2px 130px rgba(0, 0, 0, 0.05);
+        border-radius: $quiz-border-radius;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        .dart-quiz__header{
+            display: flex;
+            padding: 10px 0;
+            .dart-quiz__number{
+                width: 10%;
+                display: block;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 129.9%;
+                text-align: left;
+                letter-spacing: 0.03em;
+                color: #000000;
+                b{
+                    font-weight: 500;
+                }
+            }
+            .dart-quiz__progress-bar{
+                width: 90%;
+                .progress{
+                    border-radius: $quiz-border-radius*2;
+                    .progress-bar{
+                        border-radius: $quiz-border-radius*2;
+                    }
+                }                
+            }
+        }
+    }
+    &__two-column{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$quiz-main-padding;
+        margin-right: -$quiz-main-padding;
+        & > *{
+            padding: 0 $quiz-main-padding;
+            width: 50%;
+        }
+    }
+    &__three-column{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$quiz-main-padding;
+        margin-right: -$quiz-main-padding;
+        & > *{
+            padding: 0 $quiz-main-padding;
+            width: 33.3333333%;
+        }
+    }
+    &__tag{
+        align-items: center;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        color: #4a4a4a;
+        display: inline-flex;
+        font-size: .75rem;
+        height: 2em;
+        justify-content: center;
+        line-height: 1.5;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        &.dart-quiz__tag-info{
+            background: rgba(234, 156, 0, 0.2) !important;
+            border: solid 1px #ea9c00;
+            i{
+                color: #ea9c00;
+                & + *{
+                    margin-left: 5px;
+                }
+            }
+            span{
+                display: inline-block;
+            }
+        }
+    }
+    &__radio{
+        position: relative;
+        margin-bottom: $quiz-main-padding;
+        &.dart-quiz__radio-image{
+            input[type="radio"]:checked,
+            input[type="radio"]:not(:checked) {
+                & + label{
+                    &::before{
+                        top: 10px; 
+                        left: 10px;
+                        transform: none;
+                    }
+                    &::after{
+                        top: 13px; 
+                        left: 13px;
+                        transform: none;
+                    }
+                    .image{
+                        margin-bottom: $quiz-main-padding;
+                        img{
+                            max-height: 105px;
+                        }
+                    }
+                }
+            }
+        }
+        input[type="radio"]:checked,
+        input[type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+            & + label{
+                position: relative;
+                padding: 10px $quiz-main-padding 10px 38px;
+                cursor: pointer;
+                height: 100%;
+                line-height: 20px;
+                display: block;
+                color: #666;
+                border: 0.5px solid rgba(0, 0, 0, 0.2);;
+                border-radius: 10px;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 1.3;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: $font-quiz;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid #ddd;
+                    border-radius: 100%;
+                    background: #fff;                    
+                    transform: translate(0, -50%);
+                }
+                &::after{
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background: $quiz-secondary-color;
+                    position: absolute;
+                    top: 50%;
+                    left: 13px;
+                    border-radius: 100%;
+                    transform: translate(0, -50%);
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+        input[type="radio"]:not(:checked) + label::after {
+            opacity: 0;
+            transform: scale(0);
+        }
+        input[type="radio"]:checked + label{
+            border: 1px solid $quiz-secondary-color;
+            transition: all 0.2s ease;
+            &::after {
+                opacity: 1;
+                transform: scale(1) translate(0, -50%);
+            }
+            &::before {
+                border: 1px solid $quiz-secondary-color;
+                transition: all 0.2s ease;
+            }
+        }
+        
+    }
+    &__checkbox{
+        position: relative;
+        margin-bottom: $quiz-main-padding;
+        &.dart-quiz__radio-image{
+            input[type="checkbox"]:checked,
+            input[type="checkbox"]:not(:checked) {
+                & + label{
+                    &::before{
+                        top: 10px; 
+                        left: 10px;
+                        transform: none;
+                    }
+                    &::after{
+                        top: 16px; 
+                        left: 16px;
+                        transform: none;
+                    }
+                    .image{
+                        margin-bottom: $quiz-main-padding;
+                        img{
+                            max-height: 105px;
+                        }
+                    }
+                }
+            }
+        }
+        input[type="checkbox"]:checked,
+        input[type="checkbox"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+            & + label{
+                position: relative;
+                padding: 10px $quiz-main-padding 10px 38px;
+                cursor: pointer;
+                height: 100%;
+                line-height: 20px;
+                display: block;
+                color: #666;
+                border: 0.5px solid rgba(0, 0, 0, 0.2);;
+                border-radius: 10px;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 1.3;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: $font-quiz;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    width: 18px;
+                    height: 18px;
+                    border: 1px solid #ddd;
+                    border-radius: 2px;
+                    background: #fff;                    
+                    transform: translate(0, -50%);
+                }
+                &::after{
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    background: $quiz-secondary-color;
+                    position: absolute;
+                    top: 50%;
+                    left: 16px;
+                    border-radius: 2px;
+                    transform: translate(0, -50%);
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+        input[type="checkbox"]:not(:checked) + label::after {
+            opacity: 0;
+            transform: scale(0);
+        }
+        input[type="checkbox"]:checked + label{
+            border: 1px solid $quiz-secondary-color;
+            transition: all 0.2s ease;
+            &::after {
+                opacity: 1;
+                transform: scale(1) translate(0, -50%);
+            }
+            &::before {
+                border: 1px solid $quiz-secondary-color;
+                transition: all 0.2s ease;
+            }
+        }
+        
+    }
+    &__questions{
+        width: 75%;
+        padding: 92px 123px 42px;
+        position: relative;
+        .dart-quiz__buttons{
+            background: #fff;
+            padding: $quiz-main-padding 0;
+            position: absolute;
+            bottom: 42px;
+            left: 123px;
+            right: 123px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .dart-quiz__header{
+            position: absolute;
+            top: 42px;
+            left: 123px;
+            right: 123px;
+        }
+        .dart-quiz__question{
+            padding: 0;
+            padding-bottom: 95px;
+            .dart-quiz__step{
+                display: none;                
+                &.active{
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100px;
+                    height: 100%;
+                    .dart-quiz__answer-container{
+                        position: relative;
+                        padding: 15px 0;
+                        flex: 1 1 auto;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                    }
+                }                
+            }
+            &-title{
+                display: block;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 149.9%;
+                letter-spacing: 0.03em;
+                color: #000000;
+                margin-bottom: 30px;
+            }            
+        }
+    }
+    &__info{
+        width: 25%;
+        background-image: url(../img/quiz/quiz_info_bg.png);
+        background-repeat:  no-repeat;
+        background-size: cover;
+        background-position: center center;
+        .dart-quiz__gifts{
+            &-title{
+                display: block;
+                font-family: $font-quiz;
+                margin-bottom: 23px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.3;
+                text-align: center;
+                color: #000000;
+            }
+            &-items{
+                padding: 0 $quiz-main-padding*2 40px;
+            }
+            &-item{
+                background: #FFFFFF;
+                border-radius: 5px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-height: 61px;
+                background-repeat: no-repeat;
+                background-position: 30px bottom;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 17px;
+                    height: 17px;
+                    background-image: url(../img/quiz/quiz_lock.png);
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: $quiz-primary-color;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: -8px;
+                    transform: translate(0, -50%);
+                }
+                & + .dart-quiz__gifts-item{
+                    margin-top: $quiz-main-padding;
+                }
+                .image{
+                    padding: 0 $quiz-main-padding;
+                    width: 40%;
+                    text-align: center;
+                }
+                .text{
+                    width: 60%;
+                    padding: 0 $quiz-main-padding;
+                    .title{
+                        display: block;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.3;
+                        letter-spacing: 0.03em;
+                        color: #000000;
+                    }
+                    .description{
+                        display: block;
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 1.3;
+                        letter-spacing: 0.03em;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+        .dart-quiz__owner{
+            position: relative;
+            padding: 20px 70px;
+            &-text{
+                position: relative;
+                text-align: center;
+                span{
+                    display: block;
+                    font-family: $font-quiz;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 1.3;
+                }
+                p{
+                    font-family: $font-quiz;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 1.3;
+                    text-align: center;
+                    letter-spacing: 0.03em;
+                }
+            }
+            &-image{
+                position: relative;
+                padding-bottom: $quiz-main-padding*2;
+                text-align: center;
+                .dart-quiz__owner-name{
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    background: $quiz-secondary-color;
+                    border-radius: 5px;
+                    padding: 6px $quiz-main-padding;
+                    font-family: $font-quiz;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    transform: translate(-50%, 0) skew(-10deg);
+                    span{
+                        display: inline-block;
+                        transform: skew(10deg);
+                    }
+                }
+            }
+            &-online{
+                display: inline-block;
+                position: absolute;
+                top: 42px;
+                right: 45px;
+                background: #25D366;
+                border-radius: 500px;
+                padding: 4px $quiz-main-padding 4px 18px;
+                font-family: $font-quiz;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 1;
+                text-align: center;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                .dot{
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    background: #fff;
+                    border-radius: 50%;
+                    transform: translate(0, -50%);
+                    animation: blinker .5s ease infinite alternate;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $small-desktop){
+    .dart-quiz__content {
+        max-height: 75vh;
+        
+    }
+}

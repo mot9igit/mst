@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('./includes/meta.html')
+</head>
+
+<body>
+    <div class="dart_wrapper">
+        @@include('./includes/header.html')
+        <main class="dart_main">
+            @@include('./includes/breadcrumbs.html')
+            <div class="flyer_filters">
+                <div class="dart_container">
+                    <div class="dart-row dart-align-items-center">
+                        <div class="d-col-6">
+                            <a href="#" class="dart-btn dart-btn-primary filter-toggler">
+                                <i class="d_icon d_icon-filter"></i>
+                                <span>Фильтры</span>
+                            </a>
+                        </div>
+                        <div class="d-col-6">
+                            <button class="dart-btn dart-btn-text filters_reset">Сбросить фильтры</button>                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="dart-section categories">
+                <div class="dart_container">
+                    <h1>Дрели</h1>
+                    <div class="dart-row">
+                        <div class="d-col-lg-3">
+                            <div class="sidebar">
+                                <!-- widget -->
+                                <div class="widget filters">
+                                    <span class="title">ПОДБОР ПО ПАРАМЕТРАМ</span>
+                                    <a href="#" class="filter-close">×</a>
+                                    <div class="widget-content">
+                                        <form action="" method="post" id="mse2_filters">
+                                            <div class="widget-filter active" id="mse2_ms|vendor">
+                                                <h4 class="filters-title">Производитель</h4>
+                                                <div class="widget-contentcust">
+                                                    <div class="form-check two-colm">
+                                                        <input class="form-check-input" type="checkbox" name="vendor" id="mse2_ms|vendor_0" value="24">
+                                                        <label class="form-check-label" for="mse2_ms|vendor_0">
+                                                            <a href="boksyi-na-kryishu-avtomobilya/thule" class="nohref">THULE</a>
+                                                        </label>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="widget-filter active" id="mse2_ms|price">
+                                                <h4 class="filters-title">Цена</h4>
+                                                <div class="widget-content">
+                                                    <fieldset>
+                                                        <div class="mse2_number_inputs row">
+                                                            <div class="col-6">
+                                                                <label for="mse2_ms|price_0">от
+                                                                    <input class="form-control placeholder" type="text"
+                                                                        name="price" id="mse2_ms|price_0" value="51870">
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <label for="mse2_ms|price_1">до
+                                                                    <input class="form-control placeholder" type="text"
+                                                                        name="price" id="mse2_ms|price_1"
+                                                                        value="169900">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mse2_number_slider"></div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="widget-filter active" id="mse2_msoption|seriam">
+                                                <h4 class="filters-title">Серия</h4>
+                                                <div class="widget-contentcust">
+                                                    <div class="form-check two-colm">
+                                                        <input class="form-check-input" type="checkbox" name="seriam" id="mse2_msoption|seriam_0" value="Force XT">
+                                                        <label class="form-check-label" for="mse2_msoption|seriam_0">
+                                                            Force XT
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check two-colm">
+                                                        <input class="form-check-input" type="checkbox" name="seriam" id="mse2_msoption|seriam_1" value="Motion XT">
+                                                        <label class="form-check-label" for="mse2_msoption|seriam_1">
+                                                            Force XT
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check two-colm">
+                                                        <input class="form-check-input" type="checkbox" name="seriam" id="mse2_msoption|seriam_2" value="Vector">
+                                                        <label class="form-check-label" for="mse2_msoption|seriam_2">
+                                                            Vector
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buttons">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <a href="#" class="btn btn-primary filter-close">Применить</a>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="reset"
+                                                            class="btn btn-default hidden">Сбросить</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- / widget -->
+                            </div>
+                        </div>
+                        <div class="d-col-lg-9">
+                            <div class="fast_links">
+                                <a href="#" class="dart-btn dart-btn-secondary-outline">Дрели</a>
+                                <a href="#" class="dart-btn dart-btn-secondary-outline">Фрезерные машины</a>
+                            </div>
+                            <div class="sorting_box">
+                                <div class="row">
+                                    <div class="col-lg-10 col-6">
+                                        <div class="sorting_box_inner">
+                                            <span class="sort_title t700">Сортировка:</span>
+                                            <a href="#" class="sort-toggler">
+                                                <i class="d_icon d_icon-sort"></i>
+                                                <span>Сортировка</span>
+                                            </a>
+                                            <div class="sort-params" id="mse2_sort">
+                                                <a href="#" data-sort="ms|new" data-dir="" data-default="desc"
+                                                    class="sort">Новинки<span></span></a>
+                                                <a href="#" data-sort="ms|price" data-dir="" data-default="asc"
+                                                    class="sort">Сначала дешевле<span></span></a>
+                                                <a href="#" data-sort="ms|price" data-dir="" data-default="desc"
+                                                    class="sort">Сначала дороже<span></span></a>
+                                                <a href="#" data-sort="ms|old_price" data-dir="desc" data-default="desc"
+                                                    class="sort active">Акции<span></span></a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-6">
+                                        <a href="#" class="filter-toggler">
+                                            <i class="d_icon d_icon-filter"></i>
+                                            <span>Фильтры</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products products__category">
+                                <div class="dart-row">
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                    <!-- item -->
+                                    <div class="item-wrap d-col-xl-3 d-col-lg-4 d-col-md-6">
+                                        <div class="product eqh">
+                                            <div class="product__image">
+                                                <a href="#">
+                                                    <img src="img/products/1.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="product__text">
+                                                <div class="product__article">
+                                                    <span>Код товара: 140103087</span>
+                                                </div>
+                                                <a href="#">Дрель ударная BOSCH GSB 13 RE БЗП</a>
+                                                <div class="product__rating">
+                                                    <div class="ec-stars" title="0.000">
+                                                        <span style="width: 0.000%"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="product__prices">
+                                                    <span class="price">4 890 руб.</span>
+                                                </div>
+                                            </div>
+                                            <div class="product__buttons">
+                                                <form action="#">
+                                                    <button class="dart-btn dart-btn-primary">В корзину</button>
+                                                </form>
+                                                <div class="product__actions">
+                                                    <a href="#" class="compare">
+                                                        <i class="d-icon d_icon-tune"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / item -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('./includes/footer.html')
+    </div>
+    @@include('./includes/scripts.html')
+</body>
+
+</html>

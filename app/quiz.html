@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>MST</title>
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
+<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#282828">
+<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="libs/owlcarousel2/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="libs/fontawesome5/css/all.min.css">
+<link rel="stylesheet" href="libs/fontawesome5/css/v4-shims.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="libs/fancybox/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="libs/icofont.css">
+<link rel="stylesheet" href="css/style.css?id=90">
+</head>
+
+<body>
+  <div class="dart_wrapper">
+      <div class="dart-quiz__header">
+        <div class="dart_container">
+          <div class="dart-row">
+            <div class="d-col-lg-6">
+              <a href="#" class="dart-quiz__logo">
+                <img src="img/quiz/quiz_logo.png" alt="">
+                <span><b>Торговый Дом по продаже мототехники.</b><br/> Работаем по всему СНГ</span>
+              </a>
+            </div>
+            <div class="d-col-lg-6">
+              <div class="dart-quiz__contacts">
+                <div class="dart-quiz__messeger">
+                  <a href="#">
+                    <i class="dart-quiz__icon dart-quiz__icon-whatsapp"></i>
+                    <span>Написать в WhatsApp</span>
+                  </a>
+                  <span class="dart-quiz__messeger-status">
+                    Среднее время ответа: 1 минута
+                  </span>
+                </div>
+                <div class="dart-quiz__contacts-block">
+                  <span>Ежедневно с 9:00 до 19:00</span>
+                  <a href="tel:+79697778544" class="phone">8 (969) 777-85-44</a>
+                  <a href="#" class="dart-quiz__action-alt">Перезвоните мне</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dart-quiz__navigation">
+            <ul>
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Оплата</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">О компании</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dart-quiz">
+        <div class="dart-quiz__banner" style="background-image: url(img/quiz/banner_bg.jpg);">
+          <div class="dart-quiz__banner-dot" style="right: 20%;top: 35%;">
+              <div class="dart-quiz__banner-dot-plus">
+
+              </div>
+              <div class="dart-quiz__banner-dot-hover">
+                  <span class="title">На лето:</span>
+                  <p>плуг, окучник, картофелекопалки/сажалки и др. навесное&nbsp;</p>
+              </div>            
+          </div>
+          <div class="dart_container">
+            <div class="dart-row">
+              <div class="d-col-lg-8">
+                <h1><b>Снегоходы Буран напрямую 
+                  с завода</b>, производство г. Рыбинск.</h1>
+                <p>Пройдите тест из 6 вопросов и получите:</p>
+                <div class="dart-quiz__banner-gifts">
+                  <!-- item -->
+                  <div class="dart-quiz__banner-gift">
+                    <div class="image">
+                      <img src="img/quiz/mockup_magazine.png" alt="">
+                    </div>
+                    <div class="text">
+                      <span>КП на 3 модели, в том числе на модель без ПСМ дешевле на 80 т.р.</span>
+                    </div>
+                  </div>
+                  <!-- / item -->
+                  <!-- item -->
+                  <div class="dart-quiz__banner-gift">
+                    <div class="image">
+                      <img src="img/quiz/mockup_buran.png" alt="">
+                    </div>
+                    <div class="text">
+                      <span>Скидка до 50% на доставку до вашего города</span>
+                    </div>
+                  </div>
+                  <!-- / item -->
+                  <!-- item -->
+                  <div class="dart-quiz__banner-gift">
+                    <div class="image">
+                      <img src="img/quiz/mockup_gift.png" alt="">
+                    </div>
+                    <div class="text">
+                      <span>3 подарка на выбор</span>
+                    </div>
+                  </div>
+                  <!-- / item -->
+                </div>
+                <div class="dart-quiz__banner-buttons">
+                  <a href="#" class="dart-quiz_btn dart-quiz_btn_primary">
+                    <span>Пройти тест и выбрать снегоход</span>
+                    <small>это бесплатно</small>
+                  </a>
+                </div>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      <section class="dart-section">
+        <div class="dart_container">
+          <!-- QUIZ -->
+          <div class="dart-quiz">
+            <span class="dart-quiz__main-header"><b>Ответьте на 6 вопросов</b> и узнайте точную<br/> стоимость снегохода Буран с доставкой и допами</span>
+            <div class="dart-quiz__content">
+              <div class="dart-quiz__questions">
+                <div class="dart-quiz__header">
+                  <span class="dart-quiz__number"><b>Вопрос <span class="dart-quiz__current-step">2</span></b> из <span class="dart-quiz__all-steps">6</span></span>
+                  <div class="dart-quiz__progress-bar">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100" style="width: 16%">Расчет пройден на 16%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dart-quiz__question">
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_1 active" data-step="1">
+                    <span class="dart-quiz__question-title">Какой хотите двигатель?</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__two-column">
+                            <div class="dart-quiz__radio">
+                                <input type="radio" id="question_1_option_1" name="radio-group" value="2х тактный РМЗ-640">
+                                <label for="question_1_option_1">2х тактный РМЗ-640</label>
+                            </div>
+                            <div class="dart-quiz__radio">
+                                <input type="radio" id="question_1_option_2" name="radio-group" value="4х тактный Лифан 29 л.с.">
+                                <label for="question_1_option_2">4х тактный Лифан 29 л.с.</label>
+                            </div>
+                        </div>                        
+                    </div>
+                  </div>
+                  <!-- / step -->
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_2" data-step="2">
+                    <span class="dart-quiz__question-title">Какой хотите двигатель?</span>
+                    <div class="dart-quiz__answer-container">   
+                        <div class="dart-quiz__two-column">
+                            <div class="dart-quiz__radio dart-quiz__radio-image">
+                                <input type="radio" id="question_2_option_1" name="radio-group-2" value="2х тактный РМЗ-640">
+                                <label for="question_2_option_1">
+                                    <div class="image">
+                                        <img src="img/quiz/image_question_1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span>2х тактный РМЗ-640</span>
+                                    </div>                                    
+                                </label>
+                            </div>
+                            <div class="dart-quiz__radio dart-quiz__radio-image">
+                                <input type="radio" id="question_2_option_2" name="radio-group-2" value="4х тактный Лифан 29 л.с.">
+                                <label for="question_2_option_2">
+                                    <div class="image">
+                                        <img src="img/quiz/image_question_2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span>4х тактный Лифан 29 л.с.</span>
+                                    </div>                                     
+                                </label>
+                            </div>
+                            
+                        </div>                    
+                    </div>
+                  </div>      
+                  <!-- / step -->  
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_3" data-step="3">
+                    <span class="dart-quiz__question-title">Когда планируйте покупку?</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__tag dart-quiz__tag-info">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Выберите один или несколько вариантов</span>
+                        </div>
+                        <div class="dart-quiz__two-column">
+                            <div class="dart-quiz__checkbox">
+                                <input type="checkbox" id="question_3_option_1" name="radio-group_3" value="как можно быстрее">
+                                <label for="question_3_option_1">как можно быстрее</label>
+                            </div>
+                            <div class="dart-quiz__checkbox">
+                                <input type="checkbox" id="question_3_option_2" name="radio-group_3" value="до нового года">
+                                <label for="question_3_option_2">до нового года</label>
+                            </div>
+                            <div class="dart-quiz__checkbox">
+                                <input type="checkbox" id="question_3_option_3" name="radio-group_3" value="в течение 2 недель">
+                                <label for="question_3_option_3">в течение 2 недель</label>
+                            </div>
+                            <div class="dart-quiz__checkbox">
+                                <input type="checkbox" id="question_3_option_4" name="radio-group_3" value="после новогодних праздников">
+                                <label for="question_3_option_4">после новогодних праздников</label>
+                            </div>
+                        </div>                        
+                    </div>
+                  </div>
+                  <!-- / step -->
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_4" data-step="4">
+                    <span class="dart-quiz__question-title dart-quiz__text-center">Хотим, чтобы Вы знали</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__do-know">
+                            <p>Компания СнегоТехника дорожит своей репутацией, ценит Ваше время, и постарается сделать сотрудничество с нами максимально комфортным.</p>
+                            <div class="dart-quiz__radio">
+                                <input type="radio" id="question_4_option_1" name="radio-group_4" value="Теперь знаю">
+                                <label for="question_4_option_1">Теперь знаю</label>
+                            </div>
+                        </div>                        
+                    </div>
+                  </div>
+                  <!-- / step -->   
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_5" data-step="5">
+                    <span class="dart-quiz__question-title">Выберите подарок за прохождение опроса</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__tag dart-quiz__tag-info">
+                            <i class="fa fa-check-circle"></i>
+                            <span>Выберите один или несколько вариантов</span>
+                        </div>
+                        <div class="dart-quiz__three-column">
+                            <div class="dart-quiz__checkbox dart-quiz__radio-image">
+                                <input type="checkbox" id="question_5_option_1" name="radio-group_5" value="Масло для Бурана 2Т">
+                                <label for="question_5_option_1">
+                                    <div class="image">
+                                        <img src="img/quiz/gift_1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span>Масло для Бурана 2Т</span>
+                                    </div>    
+                                </label>
+                            </div>
+                            <div class="dart-quiz__checkbox dart-quiz__radio-image">
+                                <input type="checkbox" id="question_5_option_2" name="radio-group_5" value="Масло для Бурана 2Т">
+                                <label for="question_5_option_2">
+                                    <div class="image">
+                                        <img src="img/quiz/gift_2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span>Расширители лыж</span>
+                                    </div>    
+                                </label>
+                            </div>
+                            <div class="dart-quiz__checkbox dart-quiz__radio-image">
+                                <input type="checkbox" id="question_5_option_3" name="radio-group_5" value="Масло для Бурана 2Т">
+                                <label for="question_5_option_3">
+                                    <div class="image">
+                                        <img src="img/quiz/gift_3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <span>Оригинальный ремень Rubena</span>
+                                    </div>    
+                                </label>
+                            </div>
+                        </div>                        
+                    </div>
+                  </div>
+                  <!-- / step -->   
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_6" data-step="6">
+                    <span class="dart-quiz__question-title dart-quiz__text-center">Прикрепите файл</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__two-column">
+                            <div class="dart-quiz__form-group">
+                                <input type="file" name="file_1" id="file_1" class="inputfile" data-multiple-caption="{count} файлов выбрано" multiple/>
+                                <label for="file_1"><span>Загрузить файл</span></label>  
+                            </div>    
+                            <div class="dart-quiz__form-group">
+                                <input type="file" name="file_2" id="file_2" class="inputfile" data-multiple-caption="{count} файлов выбрано" multiple/>
+                                <label for="file_2"><span>Загрузить файл</span></label>  
+                            </div>                                  
+                        </div>   
+                        <div class="dart-quiz__radio dart-quiz__skip">
+                            <input type="radio" id="question_6_option_1" name="radio-group_6" value="Пропустил">
+                            <label for="question_6_option_1">Пропустить вопрос</label>
+                        </div>                     
+                    </div>
+                  </div>
+                  <!-- / step -->      
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_7" data-step="7">
+                    <span class="dart-quiz__question-title">В какую сумму хотите уложиться?</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__form-group dart-quiz__slider-wrap dart-quiz__slider-one">
+                            <div class="dart-quiz__slider" data-min="0" data-max="100" data-def="50" data-step="1">
+                              <div class="ui-slider-handle"></div>
+                            </div>
+                            <div class="dart-quiz__slider-vals">
+                              <span class="min" data-min="0">0</span>
+                              <span class="max" data-max="100">100</span>
+                            </div>
+                            <input type="text" name="slider" class="slider-value" value=""/>
+                        </div>                                            
+                    </div>
+                  </div>
+                  <!-- / step -->   
+                  <!-- step -->
+                  <div class="dart-quiz__step dart-quiz__step_8" data-step="8">
+                    <span class="dart-quiz__question-title">В какую сумму хотите уложиться?</span>
+                    <div class="dart-quiz__answer-container">
+                        <div class="dart-quiz__form-group dart-quiz__slider-wrap dart-quiz__slider-two">
+                            <div class="dart-quiz__slider" data-min="10000" data-max="100000" data-def="20000" data-step="500">
+                            </div>
+                            <div class="dart-quiz__slider-vals">
+                              <input type="text" class="dart-quiz__input dart-quiz__slider-two-min" value="10000">
+	                            <input type="text" class="dart-quiz__input dart-quiz__slider-two-max" value="100000">
+                            </div>                            
+                        </div>                                            
+                    </div>
+                  </div>
+                  <!-- / step -->    
+                </div>
+                <div class="dart-quiz__buttons">
+                    <a href="#" class="dart-quiz_prev dart-quiz_btn dart-quiz_btn_secondary">Назад</a>
+                    <a href="#" class="dart-quiz_next dart-quiz_btn dart-quiz_btn_primary">Вперед</a>
+                </div>
+              </div>
+              <div class="dart-quiz__info">
+                <div class="dart-quiz__owner">
+                  <span class="dart-quiz__owner-online"> <i class="dot"></i> Онлайн</span>
+                  <div class="dart-quiz__owner-image">
+                    <img src="img/quiz/quiz_info_owner.png" alt="" class="dart-quiz__owner-img">
+                    <div class="dart-quiz__owner-name"><span>Иванов Иван</span></div>
+                  </div>                  
+                  <div class="dart-quiz__owner-text">
+                    <span class="dart-quiz__owner-status">Менеджер по работе с клиентами</span>
+                    <p>Пройдите тест и я лично рассчитаю стоимость снегохода с доставкой в 3-х вариантах</p>
+                  </div>
+                </div>
+                <div class="dart-quiz__gifts">
+                  <span class="dart-quiz__gifts-title">После теста вы получите:</span>
+                  <div class="dart-quiz__gifts-items">
+                    <!-- item -->
+                    <div class="dart-quiz__gifts-item">
+                      <div class="image">
+                        <img src="img/quiz/mockup_magazine.png" alt="">
+                      </div>
+                      <div class="text">
+                        <span class="title">КП на 3 модели</span>
+                      </div>
+                    </div>
+                    <!-- /item -->
+                    <!-- item -->
+                    <div class="dart-quiz__gifts-item">
+                      <div class="image">
+                        <img src="img/quiz/mockup_buran.png" alt="">
+                      </div>
+                      <div class="text">
+                        <span class="title">Скидка до 50%</span>
+                        <span class="description">на доставку</span>
+                      </div>
+                    </div>
+                    <!-- /item -->
+                    <!-- item -->
+                    <div class="dart-quiz__gifts-item">
+                      <div class="image">
+                        <img src="img/quiz/mockup_gift.png" alt="">
+                      </div>
+                      <div class="text">
+                        <span class="title">3 подарка</span>
+                        <span class="description">на выбор</span>
+                      </div>
+                    </div>
+                    <!-- /item -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / QUIZ-->
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/owlcarousel2/dist/owl.carousel.min.js"></script>
+<script src="libs/match-height/dist/jquery.matchHeight-min.js"></script>
+<script src="libs/fancybox/dist/jquery.fancybox.min.js"></script>
+<script src="libs/maskedinput/dist/jquery.maskedinput.min.js"></script>
+<script src="libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/main.js?time=5"></script>
+<script src="js/quiz.js?time=5"></script>
+<script>
+    $(document).ready(function(){
+        
+    });
+</script>
+</body>
+
+</html>
