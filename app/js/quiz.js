@@ -5,6 +5,7 @@ var steps_form = {
         attr: 'data-step',
         prev_button: 'a.dart-quiz_prev',
         next_button: 'a.dart-quiz_next',
+        success_button: 'button.dart-quiz_success',
         counter_current: '.dart-quiz__current-step',
         counter_all: '.dart-quiz__all-steps',
         step: '.dart-quiz__step',
@@ -63,7 +64,19 @@ var steps_form = {
                }
            });
         })
-        $(this.options.step+' input[type=radio]').change(function(e){
+        $(this.options.step+" input[name=contact]").change(function(){
+            var pls = $(steps_form.options.step+" input[name=contact]:checked").data("placeholder");
+            if($(steps_form.options.step+" input[name=contact]").val() != 'Email'){
+                $(steps_form.options.step+" input[name=email]").addClass('hidden');
+                $(steps_form.options.step+" input[name=phone]").removeClass('hidden');
+                $(steps_form.options.step+" input[name=phone]").attr("placeholder", pls);
+            }else{
+                $(steps_form.options.step+" input[name=email]").removeClass('hidden');
+                $(steps_form.options.step+" input[name=phone]").addClass('hidden');
+            }
+            
+        });
+        $(this.options.step+' input[type=radio]:not([name=contact])').change(function(e){
             e.preventDefault();
             steps_form.stepChange('inc');
         });
@@ -192,9 +205,11 @@ var steps_form = {
             $(this.options.wrapper).find(this.options.prev_button).removeClass('hide');
         }
         if(percent == 100){
-            $(this.options.wrapper).find(this.options.next_button).addClass('hide');
+            $(this.options.wrapper).find(this.options.next_button).addClass('hidden');
+            $(this.options.wrapper).find(this.options.success_button).removeClass('hidden');
         }else{
-            $(this.options.wrapper).find(this.options.next_button).removeClass('hide');
+            $(this.options.wrapper).find(this.options.next_button).removeClass('hidden');
+            $(this.options.wrapper).find(this.options.success_button).addClass('hidden');
         }
     }
 };

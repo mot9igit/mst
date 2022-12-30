@@ -66,7 +66,10 @@ $(document).ready(function(){
             }, 1500);
         });
     }
-
+	$(document).on('click', '.toggle-characteristic', function(e){
+		e.preventDefault();
+		$(this).closest('.dart-characters').toggleClass('active');
+	})
 	// footer blocks
 	$('.footer__subtitle').on('click', function() {
         if (_window.width() < 768) {
@@ -126,6 +129,7 @@ $(document).ready(function(){
 	});
 	$(document).on("click", ".toggle_catalog", function(e){
 		e.preventDefault();
+		$('.mobile_menu_lk').removeClass("active");
 		$('.mobile_menu_catalog').toggleClass("active");
 		if($('body').hasClass("noscroll")){
 			$('body').removeClass("noscroll");
@@ -135,31 +139,31 @@ $(document).ready(function(){
 	});
 	$(document).on("click", ".toggle_lk", function(e){
 		e.preventDefault();
+		$('.mobile_menu_catalog').removeClass("active");
 		$('.mobile_menu_lk').toggleClass("active");
 		if($('body').hasClass("noscroll")){
 			$('body').removeClass("noscroll");
 		}else{
 			$('body').addClass("noscroll");
 		}   
-	})
-	$(".mobile_catalog .root_menu ul>li>a").click(function(e){
-        var target = $(this).data("target");
-        if(target){
-            e.preventDefault();
-            $(".mobile_catalog .root_menu").removeClass("active");
-            $(target).addClass("active");
-        }
-    });
-    $(".mobile_catalog .back").click(function(e){
-        e.preventDefault();
-        var target = $(this).data("target");
-        if(target){
-            $(".mobile_catalog .mobile-catalog__inner-block").removeClass("active");
-            $(target).addClass("active");
-        }
-    });
+	});
+	$('.mobile_catalog li.has-children>a').click(function(e) {
+		e.preventDefault();
+		$(this).find('ul').toggleClass('active');
+		$(this).parent().parent().toggleClass('inmenu');
+		$(this).parent().toggleClass('active');		
+	});
+	
+	$('.mobile_catalog li.has-children ul .closer a').click(function(e) {
+		e.preventDefault();
+		$(this).parent().parent().toggleClass('active');
+		$(this).parent().parent().parent().parent().toggleClass('inmenu');
+		$(this).parent().parent().parent().toggleClass('active');		
+	});
 	$('.mobile_catalog a.close').click(function(e){
 		e.preventDefault();
+		$(this).closest('.mobile_catalog').find(".mobile-vertical-menu-list").removeClass("inmenu");
+		$(this).closest('.mobile_catalog').find(".has-children").removeClass("active");
 		$(this).closest('.mobile_catalog').removeClass('active');
 		if($('body').hasClass("noscroll")){
 			$('body').removeClass("noscroll");

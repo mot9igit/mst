@@ -23,92 +23,110 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-  
-.d_icon-close:before {
-	content: "\e911";
-}
-.d_icon-home:before {
-	content: "\e912";
-}
-.d_icon-angle-down:before {
-	content: "\e913";
-}
-.d_icon-sort:before {
-	content: "\e914";
-}
-.d_icon-filter:before {
-	content: "\e915";
-}
-.d_icon-play:before {
-	content: "\e916";
-}
-.d_icon-catalog:before {
-	content: "\e910";
-}
-.d_icon-map-marker:before {
-	content: "\e90d";
-  }
-  
-.d_icon-angle-right:before {
-	content: "\e90e";
-}
-  
-.d_icon-angle-left:before {
-	content: "\e90f";
+
+.d_icon-clock:before {
+	content: "\e91c";
 }
 
-.d_icon-search:before {
-	content: "\e90c";
-}
-
-.d_icon-phone:before {
-	content: "\e90b";
-}
-
-.d_icon-tooltip-question:before {
-	content: "\e900";
-}
-
-.d_icon-human-queue:before {
+.d_icon-trash:before {
 	content: "\e901";
 }
-  
-.d_icon-archive:before {
+
+.d_icon-map:before {
 	content: "\e902";
 }
-  
-.d_icon-analytics:before {
+
+.d_icon-user-alt:before {
 	content: "\e903";
 }
   
-.d_icon-truck:before {
+.d_icon-credit-card:before {
 	content: "\e904";
 }
   
-.d_icon-file-document:before {
+.d_icon-tooltip-question:before {
 	content: "\e905";
 }
   
-.d_icon-list-bulleted:before {
+.d_icon-human-queue:before {
 	content: "\e906";
 }
   
-.d_icon-cog:before {
+.d_icon-archive:before {
 	content: "\e907";
 }
   
-.d_icon-account:before {
+.d_icon-analytics:before {
 	content: "\e908";
 }
   
-.d_icon-cart:before {
+.d_icon-truck:before {
 	content: "\e909";
+}
+
+.d_icon-file-document:before {
+	content: "\e90a";
+}
+  
+.d_icon-list-bulleted:before {
+	content: "\e90b";
+}
+  
+.d_icon-cog:before {
+	content: "\e90c";
+}
+  
+.d_icon-account:before {
+	content: "\e90d";
+}
+  
+.d_icon-cart:before {
+	content: "\e90e";
 }
   
 .d_icon-tune:before {
-	content: "\e90a";
+	content: "\e90f";
+}
+  
+.d_icon-phone:before {
+	content: "\e910";
 }
 
+.d_icon-search:before {
+	content: "\e911";
+}
+.d_icon-map-marker:before {
+	content: "\e912";
+}
+.d_icon-angle-right:before {
+	content: "\e913";
+}
+.d_icon-angle-left:before {
+	content: "\e914";
+}
+.d_icon-catalog:before {
+	content: "\e915";
+}
+.d_icon-close:before {
+	content: "\e916";
+}
+.d_icon-home:before {
+	content: "\e917";
+}
+.d_icon-angle-down:before {
+	content: "\e918";
+}
+.d_icon-sort:before {
+	content: "\e919";
+}
+.d_icon-filter:before {
+	content: "\e91a";
+}
+
+.d_icon-play:before {
+	content: "\e91b";
+}
+  
 body{
     font-family: $font-stack;
 }

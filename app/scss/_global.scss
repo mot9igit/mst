@@ -211,6 +211,23 @@ blockquote{
 	display: block; 
 }
 /* ----------------- UTILS ------------- */
+.inliner {
+	display: block;
+	font-size: 0;
+	& > * {
+	  	display: inline-block;
+	  	float: none; 
+	}
+	&.inliner-vam > * {
+	  vertical-align: middle; 
+	}
+	&.inliner-top > * {
+		vertical-align: top; 
+	}
+	&.inliner-bottom > * {
+		vertical-align: bottom; 
+	}
+}
 @for $i from 1 to 5 {
 	.dart-mb-#{$i}{
 		margin-top: #{$i}rem;
