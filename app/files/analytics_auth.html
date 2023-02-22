@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('./includes/meta.html')
+</head>
+
+<body class="fullh analytics_auth">
+  <div class="dart_wrapper">
+    <main class="dart_main">
+      <form class="form-signin">
+        <div class="text-center">
+            <img class="mb-4" src="img/logo.svg" alt="" width="200">  
+        </div>        
+        <input type="text" name="email" class="dart-form-control" placeholder="Логин" required="">
+        <input type="password" name="password" class="dart-form-control" placeholder="Пароль" required="">
+        <button class="dart-btn dart-btn-primary dart-btn-block" type="submit">Войти</button>
+        <div class="form-signin__copy">
+            <span>© MST. 2022.</span>
+        </div>        
+      </form>
+    </main>
+  </div>  
+  @@include('./includes/scripts.html')
+</body>
+
+</html>

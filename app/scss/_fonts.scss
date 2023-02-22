@@ -24,6 +24,16 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-account-circle:before {
+  content: "\e900";
+}
+.d_icon-view-agenda:before {
+  content: "\e91d";
+}
+.d_icon-view-grid:before {
+  content: "\e91e";
+}
+
 .d_icon-clock:before {
 	content: "\e91c";
 }
