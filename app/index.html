@@ -65,12 +65,6 @@
                                 <li><a href="#">Об ассоциации</a></li>
                             </ul>
                         </div>
-                        <div class="dart_header__phone">
-                            <a href="#">
-                                <i class="d_icon d_icon-phone"></i>
-                                <span>+7 (542) 345-34-15</span>
-                            </a>
-                        </div>
                     </div>                    
                 </div>
             </div>
@@ -79,337 +73,232 @@
     <div class="dart_header__bottom">
         <div class="dart_container">
             <div class="dart-row dart-align-items-center">
-                <div class="d-col-xxl-2 d-col-xl-2 d-col-lg-3">
+                <div class="d-col-xxl-2 d-col-xl-2 d-col-lg-4">
                     <div class="logo">
                         <a href="#">
                             <img src="img/logo.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-3">
-                    <div class="dart-btn dart-btn-primary btn-menu noactive">
-						<i class="d_icon d_icon-catalog"></i>
-                        <span>Каталог товаров</span>
-                    </div>
-                </div>
-                <div class="d-col-xxl-7 d-col-xl-5 d-col-lg-4">
-                    <div class="search-block">
+                <div class="d-col-xxl-7 d-col-xl-6 d-col-lg-5">
+                    <div class="dart_header_search-block">
                         <form action="#">
-                            <div class="search-block__input-group">
-                                <input type="text" name="search" placeholder="Введите то, что хотите найти">
-                                <button type="submit">
-                                    <i class="d_icon d_icon-search"></i>
+                            <div class="dart_header_search-block__input-group">
+                                <input type="text" name="search" placeholder="Введите то, что хотите найти" autocomplete="off">
+                                <button type="submit" class="dart-btn dart-btn-primary">
+                                    Найти
                                 </button>
+                                <i class="d_icon d_icon-search"></i>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="d-col-xxl-1 d-col-xl-2 d-col-lg-2">
-                    <div class="user_tools">
-                        <div class="item">
-                            <div class="compare">
-                                <div data-id="1" data-list="default" class="comparison-default">
-                                    <a href="sravnenie-tovarov" data-toggle="tooltip" data-placement="bottom" title=""
-                                        data-original-title="Сравнение товаров">
-                                        <i class="d_icon d_icon-tune">
-                                            <span class="comparison-total">0</span>
-                                        </i>
+                <div class="d-col-xxl-3 d-col-xl-4 d-col-lg-3">
+                    <div class="dart_header__phone">
+                        <a href="#">
+                            <i class="d_icon d_icon-phone"></i>
+                            <span>+7 (542) 345-34-15</span>
+                        </a>
+                        <span class="clock">Режим работы: 08:00-17:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dart_header__navigation">
+                <div class="dart-row space-between">
+                    <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-4">
+                        <div class="dart-btn dart-btn-primary btn-menu noactive">
+                            <i class="d_icon d_icon-catalog"></i>
+                            <span>Каталог товаров</span>
+                        </div>
+                    </div>
+                    <div class="d-col-xxl-4 d-col-xl-5 d-col-lg-6">
+                        <div class="user_tools">
+                            <div class="item">
+                                <div class="user">
+                                    <a href="#auth" data-bs-toggle="modal" data-bs-target="#auth">		
+                                        <i class="d_icon d_icon-account"></i>
+                                        <span>Вход/Регистрация</span>
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="cart">
-                                <div id="msMiniCart" class="cart get_big_cart ">
-                                    <div class="empty">
-                                        <div class="cart-img">
-                                            <i class="d_icon d_icon-cart"></i>
-                                            <span class="ms2_total_count">0</span>
-                                        </div>                                        
-                                    </div>
-                                    <div class="not_empty">
-                                        <div class="cart-img">
-                                            <i class="d_icon d_icon-cart"></i>
-                                            <span class="ms2_total_count">0</span>
-                                        </div>
+                            <div class="item">
+                                <div class="compare">
+                                    <div data-id="1" data-list="default" class="comparison-default">
+                                        <a href="sravnenie-tovarov" data-toggle="tooltip" data-placement="bottom" title=""
+                                            data-original-title="Сравнение товаров">
+                                            <i class="d_icon d_icon-tune">
+                                                <span class="comparison-total">0</span>
+                                            </i>
+                                            <span>Сравнение</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="user">
-                                <a href="#auth" data-bs-toggle="modal" data-bs-target="#auth">		
-                                    <i class="d_icon d_icon-account"></i>
-                                </a>
-                            </div>
+                            <div class="item">
+                                <div class="cart">
+                                    <div id="msMiniCart" class="cart get_big_cart ">
+                                        <div class="empty">
+                                            <div class="cart-img">
+                                                <i class="d_icon d_icon-cart"></i>
+                                                <span class="ms2_total_count">0</span>
+                                            </div>                                        
+                                        </div>
+                                        <div class="not_empty">
+                                            <div class="cart-img">
+                                                <i class="d_icon d_icon-cart"></i>
+                                                <span class="ms2_total_count">0</span>
+                                            </div>
+                                        </div>
+                                        <span>Корзина</span>
+                                    </div>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="dropdown-d-menu">
-                <div class="dart-row tabs">
-                    <ul class="d-col-lg-3 menu-title">
-                        <li class="has-children">
-                            <a class="active" href="#category-134">Светодиодные модули</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-184">Светодиодные линейки</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-192">Светодиодная лента и неон</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-165">Блок питания</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-193">Светодиодные прожекторы</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-194">Светодиодные светильники</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-196">Управление освещением</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-198">Аксессуары и компоненты</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-197">Профиль алюминиевый</a>
-                        </li>
-                        <li class="has-children">
-                            <a href="#category-195">Светодиодные экраны</a>
-                        </li>
-                    </ul>
-                    
-                    <div id="category-134" class="d-col-lg-9 drop-menu">
+                <div class="dart_desktop_menu">
+                    <div class="dart_container">
                         <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Светодиодные модули <sup>52 наименования</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Модули SMD 3528</a></li>
-                                    <li><a href="#">Модули SMD 2835</a></li>
-                                    <li><a href="#">Модули SMD 5050</a></li>
-                                    <li><a href="#">Модули SMD 5054</a></li>
-                                    <li><a href="#">Модули SMD 5730</a></li>
-                                    <li><a href="#">Торцевые модули</a></li>
-                                    <li><a href="#">Пиксельные модули</a></li>
-                                    <li><a href="#">Светодиодные листы</a></li>
-                                    <li><a href="#">Digital SMART модули</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                <div class="right-columns">
-                                    <p>По характеристикам</p>
-                                    <ul class="tag">
-                                        <li><a href="#">Модули 2835</a></li>
-                                        <li><a href="#">Модули 2835</a></li>
+                            <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-4 dart_desktop_menu__wrap">
+                                <div class="dart_desktop_menu__items">
+                                    <ul>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#" data-target="#category_1">
+                                                <img src="img/cats/1.jpg" alt="">
+                                                <span>Инструмент</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#" data-target="#category_2">
+                                                <img src="img/cats/2.jpg" alt="">
+                                                <span>Строительные материалы</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/3.jpg" alt="">
+                                                <span>Сантехника</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/4.jpg" alt="">
+                                                <span>Всё для сада</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/5.jpg" alt="">
+                                                <span>Расходные материалы</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="active">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/6.jpg" alt="">
+                                                <span>Офис и дом</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/7.jpg" alt="">
+                                                <span>Строительное оборудование</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/8.jpg" alt="">
+                                                <span>Ручной инструмент</span>
+                                            </a>
+                                        </li>
+                                        <li itemprop="url" class="">
+                                            <a class="has-children" href="#">
+                                                <img src="img/cats/9.jpg" alt="">
+                                                <span>Электрика и свет</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div id="category-184" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">                                
-                                <span class="drop-menu__title">Светодиодные линейки <sup>7 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Линейки SMD 2835</a></li>
-                                    <li><a href="#">Линейки SMD 5730</a></li>
-                                    <li><a href="#">Линейки 220В</a></li>
-                                    <li><a href="#">Торцевые линейки</a></li>
-                                    <li><a href="#">Линейка DUAL CCT WW+CW</a></li>
-                                    <li><a href="#">Digital SMART линейки</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-192" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Светодиодная лента и неон <sup>7 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Лента SMD 3528</a>
-                                    </li>
-                                    <li><a href="#">Лента SMD 2835</a></li>
-                                    <li><a href="#">Лента SMD 5050</a></li>
-                                    <li><a href="#">Лента SMD 5054</a></li>
-                                    <li><a href="#">Лента SMD 5730</a></li>
-                                    <li><a href="#">Светодиодный неон 12В</a></li>
-                                    <li><a href="#">Светодиодный неон 220В</a></li>
-                                    <li><a href="#">Digital SMART лента</a></li>
-                                    <li><a href="#">Лента 220В</a></li>
-                                    <li><a href="#">Лента DUAL CCT WW+CW</a>
-                                    </li>
-                                    <li><a href="#">Лента RGBW / RGBWW</a></li>
-                                    <li><a href="#">Аксессуары для ленты</a>
-                                    </li>
-                                    <li><a href="#">Комплектующие к неону</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-165" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Блок питания <sup>50 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Блоки питания 12В</a></li>
-                                    <li><a href="#">Герметичные IP67 12В</a></li>
-                                    <li><a href="#">Влагозащитные IP43/44 12В</a></li>
-                                    <li><a href="#">Негерметичные IP20 12В</a></li>
-                                    <li><a href="#">Розеточные адаптеры</a></li>
-                                    <li><a href="#">Диммируемые блоки питания</a></li>
-                                    <li><a href="#">Блоки питания Sanpu</a></li>
-                                    <li><a href="#">Блоки питания Mean Well</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-193" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">                                
-                                <span class="drop-menu__title">Светодиодные прожекторы <sup>18 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Матричные</a></li>
-                                    <li><a href="#">Прожекторы SMD</a></li>
-                                    <li><a href="#">Портативные с аккумулятором</a></li>
-                                    <li><a href="#">С датчиком движения</a></li>
-                                    <li><a href="#">Комплектующие для прожекторов</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-194" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Светодиодные светильники <sup>27 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Потолочные светильники</a></li>
-                                    <li><a href="#">Точечные светильники</a></li>
-                                    <li><a href="#">Трековые светильники</a></li>
-                                    <li><a href="#">Светодиодные панели</a></li>
-                                    <li><a href="#">Офисные светильники</a></li>
-                                    <li><a href="#">Промышленные светильники</a></li>
-                                    <li><a href="#">Садово-парковые и уличные светильники</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-196" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Управление освещением <sup>0 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">RGB контроллеры</a></li>
-                                    <li><a href="#">Диммеры</a></li>
-                                    <li><a href="#">Digital контроллеры</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-198" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Аксессуары и компоненты <sup>0 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Для подключения ленты</a></li>
-                                    <li><a href="#">Для подключения неона</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-197" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Профиль алюминиевый <sup>0 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Профиль алюминиевый (комплект)</a></li>
-                                    <li><a href="#">Накладной профиль</a></li>
-                                    <li><a href="#">Угловой профиль</a></li>
-                                    <li><a href="#">Встраиваемый профиль</a></li>
-                                    <li><a href="#">Аксессуары для профиля</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div id="category-195" class="d-col-lg-9 drop-menu" style="display: none;">
-                        <div class="dart-row">
-                            <div class="d-col-lg-8 drop-menu_list">
-                                <span class="drop-menu__title">Светодиодные экраны <sup>0 наименований</sup></span>
-                                <p>Подкатегории</p>
-                                <ul class="list">
-                                    <li><a href="#">Модули P4</a></li>
-                                    <li><a href="#">Модули P5</a></li>
-                                    <li><a href="#">Модули P6</a></li>
-                                    <li><a href="#">Модули P8</a></li>
-                                    <li><a href="#">Модули Р10</a></li>
-                                    <li><a href="#">Блоки питания</a></li>
-                                    <li><a href="#">Контроллеры</a></li>
-                                </ul>
-                            </div>
-                            <div class="d-col-lg-4 sub-info-tags">
-                                <a class="dart-btn dart-btn-secondary-outline all-goods" href="#">Все товары</a>
-                                
+                            <div class="d-col-xxl-10 d-col-xl-9 d-col-lg-8">
+                                <div class="dart_desktop_menu__subitems">
+                                    <div class="dart_desktop_menu__item" id="category_1">
+                                        <span class="title">Инструмент</span>
+                                        <ul class="list">
+                                            <li class="first"><a href="#">Шуруповерты</a></li>
+                                            <li><a href="#">Заклепочники</a></li>
+                                            <li><a href="#">Клуппы электрические</a></li>
+                                            <li><a href="#">Шлифмашинки</a></li>
+                                            <li><a href="#">Перфораторы</a></li>
+                                            <li><a href="#">Дрели</a></li>
+                                            <li><a href="#">Фрезеры</a></li>
+                                            <li><a href="#">Пилы</a></li>
+                                            <li><a href="#">Лобзики</a></li>
+                                            <li><a href="#">Фены (Термопистолеты)</a></li>
+                                            <li><a href="#">Аккумуляторный инструмент</a></li>
+                                            <li><a href="#">Бороздоделы (штроборезы)</a></li>
+                                            <li><a href="#">Электрорубанки</a></li>
+                                            <li><a href="#">Генераторы (электростанции)</a></li>
+                                            <li><a href="#">Гайковерты</a></li>
+                                            <li><a href="#">Граверы</a></li>
+                                            <li><a href="#">Измерительный инструмент</a></li>
+                                            <li><a href="#">Краскопульты</a></li>
+                                            <li><a href="#">Ножницы по металлу</a></li>
+                                            <li><a href="#">Отбойные молотки</a></li>
+                                            <li><a href="#">Пистолеты</a></li>
+                                            <li><a href="#">Сварочное оборудование</a></li>
+                                            <li><a href="#">Пистолеты</a></li>
+                                            <li><a href="#">Реноваторы многофункциональные</a></li>
+                                            <li><a href="#">Пневмоинструмент</a></li>
+                                            <li><a href="#">Гвоздезабиватели (степлеры)</a></li>
+                                            <li><a href="#">Инструментальные наборы</a></li>
+                                            <li class="last"><a href="#">Пневмоподготовка</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dart_desktop_menu__item" id="category_2">
+                                        <span class="title">Строительные материалы</span>
+                                        <ul class="list">
+                                            <li class="first"><a href="#">Шуруповерты</a></li>
+                                            <li><a href="#">Заклепочники</a></li>
+                                            <li><a href="#">Клуппы электрические</a></li>
+                                            <li><a href="#">Шлифмашинки</a></li>
+                                            <li><a href="#">Перфораторы</a></li>
+                                            <li><a href="#">Дрели</a></li>
+                                            <li><a href="#">Фрезеры</a></li>
+                                            <li><a href="#">Пилы</a></li>
+                                            <li><a href="#">Лобзики</a></li>
+                                            <li><a href="#">Фены (Термопистолеты)</a></li>
+                                            <li><a href="#">Аккумуляторный инструмент</a></li>
+                                            <li><a href="#">Бороздоделы (штроборезы)</a></li>
+                                            <li><a href="#">Электрорубанки</a></li>
+                                            <li><a href="#">Генераторы (электростанции)</a></li>
+                                            <li><a href="#">Гайковерты</a></li>
+                                            <li><a href="#">Граверы</a></li>
+                                            <li><a href="#">Измерительный инструмент</a></li>
+                                            <li><a href="#">Краскопульты</a></li>
+                                            <li><a href="#">Ножницы по металлу</a></li>
+                                            <li><a href="#">Отбойные молотки</a></li>
+                                            <li><a href="#">Пистолеты</a></li>
+                                            <li><a href="#">Сварочное оборудование</a></li>
+                                            <li><a href="#">Пистолеты</a></li>
+                                            <li><a href="#">Реноваторы многофункциональные</a></li>
+                                            <li><a href="#">Пневмоинструмент</a></li>
+                                            <li><a href="#">Гвоздезабиватели (степлеры)</a></li>
+                                            <li><a href="#">Инструментальные наборы</a></li>
+                                            <li class="last"><a href="#">Пневмоподготовка</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>            
+        </div>        
     </div>
     
     <div class="dart_header__mobile">
         <div class="dart_container">
-            <div class="mobile_menu__wrap">
-                <div class="geo_data">
-                    <a href="#" class="mobile_city">
-                        <i class="d_icon d_icon-map-marker"></i>
-                    </a>
-                </div>
+            <div class="mobile_menu__wrap">                
                 <div class="logo">
                     <a href="#">
                         <img src="img/logo.svg" alt="">
@@ -426,6 +315,26 @@
                     </a>                
                 </div>
             </div>   
+            <div class="geo_data">
+                <div class="dart-item city_check">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#city_choice">
+                        <span class="dart_geo_city">г. Челябинск</span>
+                    </a>
+                    <div class="city_popup">
+                        <span>Вы находитесь в <b class="dart_geo_city">г. Челябинск</b>?</span>
+                        <div class="buttons">
+                            <a href="#" class="dart-btn dart-btn-small dart-btn-outline-secondary sl_city_more_info">Нет, другой</a>
+                            <a href="#" class="dart-btn dart-btn-small dart-btn-primary sl_city_close city_checked">Да, верно</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dart-item dart-item-store">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal_store">
+                        <i class="d_icon d_icon-map-marker"></i>
+                        <span class="dart_geo_store">Магазин “Ибрагимов” с. Верхнеярккеево</span>
+                    </a>
+                </div>
+            </div>
             <div class="search-block">
                 <form action="#">
                     <div class="search-block__input-group">
@@ -470,6 +379,213 @@
         </div>
     </div>
 </header>
+<div class="dart-search">
+    <div class="dart-search__overlay"></div>
+    <div class="dart-search__dialog">
+        <div class="dart-search__form">
+            <form action="#">
+                <div class="dart-search__input-group">
+                    <input type="text" name="search" placeholder="Пишите, что хотите, поле свободно" autocomplete="off">
+                    <div class="dart-search__input-group__buttons">
+                        <button class="dart-search__clear" type="reset"></button>
+                        <button class="dart-btn dart-btn-primary">Найти</button>
+                    </div>
+                </div>                
+            </form>
+        </div>
+        <div class="dart-search__results active">
+            <div class="dart-search__results-wrap">
+                <div class="dart-search__results-side">
+                    <div class="dart-search__results-block dart-search__results-popular">
+                        <div class="dart-search__results-block__content">
+                            <ul>
+                                <li><a href="#"><mark>Перфоратор</mark></a></li>
+                                <li><a href="#"><mark>Перфоратор</mark> интерскол</a></li>
+                                <li><a href="#">Сетовой <mark>перфоратор</mark></a></li>
+                                <li><a href="#">Аккумуляторный <mark>перфоратор</mark></a></li>
+                                <li><a href="#"><mark>Перфоратор</mark> Интерскол 160.1.0.00</a></li>
+                            </ul>
+                        </div>                                        
+                    </div>
+                    <div class="dart-search__results-block dart-search__results-category">
+                        <div class="dart-search__results-block__header">
+                            <span>Категории</span>
+                        </div>
+                        <div class="dart-search__results-block__content">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/menu/1.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span>Перфораторы</span>
+                                            <span class="desc">Инструмент / Аккумуляторный инструмент / Перфораторы</span>
+                                        </div>                                    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/menu/2.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span>Лобзики</span>
+                                            <span class="desc">Инструмент / Аккумуляторный инструмент / Лобзики</span>
+                                        </div>                                    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/menu/1.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span>Перфораторы</span>
+                                            <span class="desc">Инструмент / Аккумуляторный инструмент / Перфораторы</span>
+                                        </div>                                    
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="image">
+                                            <img src="img/menu/2.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <span>Лобзики</span>
+                                            <span class="desc">Инструмент / Аккумуляторный инструмент / Лобзики</span>
+                                        </div>                                    
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="dart-search__results-block dart-search__results-content">
+                    <div class="dart-search__results-content__legend">
+                        <span class="title">Товары по запросу</span>
+                        <span class="request">Перфоратор</span>
+                    </div>
+                    <div class="dart-search__results-block__header">
+                        <span>Товары</span>
+                    </div>
+                    <div class="dart-search__results-content__items">
+                        <div class="dart-row">
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/2.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/3.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                            <!-- item -->
+                            <div class="d-col-lg-3 d-col-md-12">
+                                <a href="#" class="item">
+                                    <div class="image">
+                                        <img src="img/products/1.png" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="price">5 170 руб.</div>
+                                        <span class="title">Перфоратор Интерскол П-24/700ЭР 160.1.0.00</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- / item -->
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="dart-search__results-more">
+                <span class="title">Показать другие товары по запросу</span> 
+                <span class="request">перфоратор</span>
+            </a>
+        </div>
+    </div>    
+</div>
 <div class="city_select">
     <span class="title">Выберите ваш город</span>
     <a href="#" class="close">
@@ -786,6 +902,9 @@
               <a href="/main.html" target="_blank">Главная страница</a>
             </li>
             <li class="list-group-item">
+              <a href="/main_alt.html" target="_blank">Главная страница (альт)</a>
+            </li>
+            <li class="list-group-item">
               <a href="/category.html" target="_blank">Категория</a> <span class="badge text-bg-primary">NEW</span>
             </li>
             <li class="list-group-item">
@@ -819,6 +938,12 @@
               <a href="/analytics_auth.html" target="_blank">Аналитика || Авторизация</a>
             </li>
             <li class="list-group-item">
+              <a href="/sales.html" target="_blank">Оптовые продажи</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/contacts.html" target="_blank">Контакты</a>
+            </li>
+            <li class="list-group-item">
               <a href="/quiz.html" target="_blank">Квиз</a>
             </li>
           </ul>
@@ -829,9 +954,11 @@
           <h2>Кнопки</h2>
           <div class="mt-3">
             <a href="#" class="dart-btn dart-btn-primary">Основная кнопка</a>
+            <a href="#" class="dart-btn dart-btn-primary dart-btn-loading">Основная кнопка</a>
             <a href="#" class="dart-btn dart-btn-primary-outline">Основная кнопка тип 2</a>
             <a href="#" class="dart-btn dart-btn-secondary">Второстепенная кнопка</a>
             <a href="#" class="dart-btn dart-btn-secondary-outline">Второстепенная кнопка тип 2</a>
+            <a href="#" class="dart-btn dart-btn-primary-dark">Основная кнопка</a>
             <a href="#" class="dart-btn dart-btn-text">Просто текст</a>
           </div>
         </div>
@@ -845,11 +972,76 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
+                    <i class="d_icon d_icon-tag"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-tag</span>
+                    <span class="symbol">\e92b</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-grade"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-grade</span>
+                    <span class="symbol">\e92c</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-key"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-key</span>
+                    <span class="symbol">\e92d</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-star"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-star</span>
+                    <span class="symbol">\e92e</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-acute"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-acute</span>
+                    <span class="symbol">\e929</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
                     <i class="d_icon d_icon-account-circle"></i>
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-account-circle</span>
-                    <span class="symbol">\e900</span>
+                    <span class="symbol">\e90a</span>
                   </div>
                 </div>          
               </div>
@@ -862,7 +1054,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-view-agenda</span>
-                    <span class="symbol">\e91d</span>
+                    <span class="symbol">\e927</span>
                   </div>
                 </div>          
               </div>
@@ -875,7 +1067,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-view-grid</span>
-                    <span class="symbol">\e91e</span>
+                    <span class="symbol">\e928</span>
                   </div>
                 </div>          
               </div>
@@ -888,7 +1080,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-trash</span>
-                    <span class="symbol">\e901</span>
+                    <span class="symbol">\e90b</span>
                   </div>
                 </div>          
               </div>
@@ -902,7 +1094,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-map</span>
-                    <span class="symbol">\e902</span>
+                    <span class="symbol">\e90c</span>
                   </div>
                 </div>          
               </div>
@@ -915,7 +1107,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-user-alt</span>
-                    <span class="symbol">\e903</span>
+                    <span class="symbol">\e90d</span>
                   </div>
                 </div>          
               </div>
@@ -928,7 +1120,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-credit-card</span>
-                    <span class="symbol">\e904</span>
+                    <span class="symbol">\e90e</span>
                   </div>
                 </div>          
               </div>
@@ -941,7 +1133,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-tooltip-question</span>
-                    <span class="symbol">\e905</span>
+                    <span class="symbol">\e90f</span>
                   </div>
                 </div>          
               </div>
@@ -954,7 +1146,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-human-queue</span>
-                    <span class="symbol">\e906</span>
+                    <span class="symbol">\e910</span>
                   </div>
                 </div>          
               </div>
@@ -967,7 +1159,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-archive</span>
-                    <span class="symbol">\e907</span>
+                    <span class="symbol">\e911</span>
                   </div>
                 </div>          
               </div>
@@ -980,7 +1172,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-analytics</span>
-                    <span class="symbol">\e908</span>
+                    <span class="symbol">\e912</span>
                   </div>
                 </div>          
               </div>
@@ -993,7 +1185,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-truck</span>
-                    <span class="symbol">\e909</span>
+                    <span class="symbol">\e913</span>
                   </div>
                 </div>          
               </div>
@@ -1006,7 +1198,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-file-document</span>
-                    <span class="symbol">\e90a</span>
+                    <span class="symbol">\e914</span>
                   </div>
                 </div>          
               </div>
@@ -1019,7 +1211,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-list-bulleted</span>
-                    <span class="symbol">\e90b</span>
+                    <span class="symbol">\e915</span>
                   </div>
                 </div>          
               </div>
@@ -1032,7 +1224,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-cog</span>
-                    <span class="symbol">\e90c</span>
+                    <span class="symbol">\e916</span>
                   </div>
                 </div>          
               </div>
@@ -1045,7 +1237,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-account</span>
-                    <span class="symbol">\e90d</span>
+                    <span class="symbol">\e917</span>
                   </div>
                 </div>          
               </div>
@@ -1058,7 +1250,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-cart</span>
-                    <span class="symbol">\e90e</span>
+                    <span class="symbol">\e918</span>
                   </div>
                 </div>          
               </div>
@@ -1071,7 +1263,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-tune</span>
-                    <span class="symbol">\e90f</span>
+                    <span class="symbol">\e919</span>
                   </div>
                 </div>          
               </div>
@@ -1084,7 +1276,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-phone</span>
-                    <span class="symbol">\e910</span>
+                    <span class="symbol">\e91a</span>
                   </div>
                 </div>          
               </div>
@@ -1097,7 +1289,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-search</span>
-                    <span class="symbol">\e911</span>
+                    <span class="symbol">\e91b</span>
                   </div>
                 </div>          
               </div>
@@ -1110,7 +1302,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-map-marker</span>
-                    <span class="symbol">\e912</span>
+                    <span class="symbol">\e91c</span>
                   </div>
                 </div>          
               </div>
@@ -1123,7 +1315,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-angle-right</span>
-                    <span class="symbol">\e913</span>
+                    <span class="symbol">\e91d</span>
                   </div>
                 </div>          
               </div>
@@ -1136,7 +1328,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-angle-left</span>
-                    <span class="symbol">\e914</span>
+                    <span class="symbol">\e91e</span>
                   </div>
                 </div>          
               </div>
@@ -1149,7 +1341,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-catalog</span>
-                    <span class="symbol">\e915</span>
+                    <span class="symbol">\e91f</span>
                   </div>
                 </div>          
               </div>
@@ -1162,7 +1354,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-close</span>
-                    <span class="symbol">\e916</span>
+                    <span class="symbol">\e920</span>
                   </div>
                 </div>          
               </div>
@@ -1175,7 +1367,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-home</span>
-                    <span class="symbol">\e917</span>
+                    <span class="symbol">\e921</span>
                   </div>
                 </div>          
               </div>
@@ -1188,7 +1380,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-angle-down</span>
-                    <span class="symbol">\e918</span>
+                    <span class="symbol">\e922</span>
                   </div>
                 </div>          
               </div>
@@ -1201,7 +1393,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-sort</span>
-                    <span class="symbol">\e919</span>
+                    <span class="symbol">\e923</span>
                   </div>
                 </div>          
               </div>
@@ -1214,7 +1406,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-filter</span>
-                    <span class="symbol">\e91a</span>
+                    <span class="symbol">\e924</span>
                   </div>
                 </div>          
               </div>
@@ -1227,7 +1419,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-play</span>
-                    <span class="symbol">\e91b</span>
+                    <span class="symbol">\e925</span>
                   </div>
                 </div>          
               </div>
@@ -1240,7 +1432,138 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-clock</span>
-                    <span class="symbol">\e91c</span>
+                    <span class="symbol">\e926</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-envelope"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-envelope</span>
+                    <span class="symbol">\e900</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-heart"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-heart</span>
+                    <span class="symbol">\e901</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-tech"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-clock</span>
+                    <span class="symbol">\e902</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-thumbs-up"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-thumbs-up</span>
+                    <span class="symbol">\e903</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-proud"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-proud</span>
+                    <span class="symbol">\e904</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-ambulance"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-ambulance</span>
+                    <span class="symbol">\e905</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-hands"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-hands</span>
+                    <span class="symbol">\e906</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-users"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-users</span>
+                    <span class="symbol">\e907</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-global"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-global</span>
+                    <span class="symbol">\e908</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+              <!-- item -->
+              <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-share"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-share</span>
+                    <span class="symbol">\e909</span>
                   </div>
                 </div>          
               </div>

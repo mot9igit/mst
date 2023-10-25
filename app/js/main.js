@@ -1,19 +1,170 @@
+function init_t () {
+	var myMap = new ymaps.Map("ya_map", {
+	  center: [ 55.903610, 37.434476 ],
+	  zoom: 16
+	}, {
+	  searchControlProvider: 'yandex#search'
+	}),
+	myPlacemark = new ymaps.Placemark([ 55.903269, 37.420483 ], {
+		balloonContentHeader: "152934, Россия, Московская область, г. Химки, ул. Ленинградская, 29, этаж 9, помещение 4",
+		balloonContentBody: '<div class="contacts"><div class="item">' +
+			'<i class="fa fa-envelope"></i>' +
+			'<a href="mailto:info@mst.tools" class="email" itemprop="email">info@mst.tools</a>' +
+		'</div>' + 
+		'<div class="item">' +
+			'<meta itemprop="telephone" content="+74951242024">' +
+			'<i class="d_icon d_icon-phone"></i>' +
+			'<a href="tel:+74951242024" class="phone">+7 (495) 124-20-24</a>' +
+		'</div></div>',
+		balloonContentFooter: "",
+		hintContent: "СнегоТехника г. Рыбинск, тел. 8 (908) 029-45-44"
+	});	
+	myMap.geoObjects.add(myPlacemark);
+	myPlacemark.balloon.open();
+	myMap.behaviors.disable('scrollZoom');
+}
+$(document).ready(function() {
+	if($('#ya_map').length){
+		ymaps.ready(init_t);
+	}
+});
+
+// SEARCH
+
+/*
+$(document).ready(function(){
+	$(document).on("focusin", ".dart_header_search-block input", function(e){
+		$('.dart-search').addClass('active');
+	})
+	$(document).on("focusout", ".dart_header_search-block input", function(e){
+		$('.dart-search').removeClass('active');
+	})
+})
+*/
+
+var dart_search = {
+	options: {
+		input: '.dart_header_search-block input',
+		inputAlt: '.search-block input',
+		formInput: '.dart-search__form input',
+		search: '.dart-search',
+		activeClass: 'active',
+		overlay: '.dart-search__overlay',
+		dialog: '.dart-search__dialog',
+		clear: '.dart-search__clear'
+	},
+	initialize: function(){
+		const searchField = document.querySelector(this.options.input)
+		searchField.addEventListener( 'focusin', (e) => {
+			const body = document.querySelector('body')
+			const formInput = document.querySelector(this.options.formInput)
+			var elementOffset = e.target.getBoundingClientRect().top;
+			var availableHeight = window.innerHeight
+			const field = document.querySelector(this.options.search)
+			field.classList.add(this.options.activeClass)
+			if(elementOffset > 0){
+				field.style.paddingTop = elementOffset + 'px'
+			}else{
+				field.style.paddingTop = 0
+			}			
+			this.getHeight(availableHeight)	
+			body.classList.add('noscroll')	
+			formInput.focus()			
+		})
+		const searchFieldAlt = document.querySelector(this.options.inputAlt)
+		searchFieldAlt.addEventListener( 'focusin', (e) => {
+			const body = document.querySelector('body')
+			const formInput = document.querySelector(this.options.formInput)
+			var elementOffset = e.target.getBoundingClientRect().top;
+			var availableHeight = window.innerHeight
+			const field = document.querySelector(this.options.search)
+			field.classList.add(this.options.activeClass)
+			if(elementOffset > 0){
+				field.style.paddingTop = elementOffset + 'px'
+			}else{
+				field.style.paddingTop = 0
+			}			
+			this.getHeight(availableHeight)	
+			body.classList.add('noscroll')
+			formInput.focus()				
+		})
+		const overlay = document.querySelector(this.options.overlay)
+		overlay.addEventListener( 'click', (e) => {
+			const body = document.querySelector('body')
+			const field = document.querySelector(this.options.search)
+			field.classList.remove(this.options.activeClass)
+			body.classList.remove('noscroll')	
+		})
+		const clear = document.querySelector(this.options.clear)
+		clear.addEventListener( 'click', (e) => {
+			e.preventDefault();
+			const body = document.querySelector('body')
+			const searchField = document.querySelector(this.options.formInput)
+			searchField.value = ""
+			const field = document.querySelector(this.options.input)
+			field.value = ""
+			const search = document.querySelector(this.options.search)
+			search.classList.remove(this.options.activeClass)
+			body.classList.remove('noscroll')
+		})
+		window.addEventListener( 'resize', (e) => {
+			var availableHeight = window.innerHeight
+			this.getHeight(availableHeight)		
+		})
+	},
+	getHeight: function(availableHeight){
+		const dialog = document.querySelector(this.options.dialog)
+		const height = availableHeight * 0.7
+		if(availableHeight < 1000){			
+			dialog.style.maxHeight = height + 'px'
+		}
+	}
+}
+
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+	dart_search.initialize();
+});
 
 
 $(document).ready(function(){
 	var _window = $(window);
-    var _document = $(document);
+  	var _document = $(document);
+
+	
 
 	$(".eqh").matchHeight();
 
 	// menu
-	$(".btn-menu").mouseover(function(){
-		$(".dropdown-d-menu").css({display: "block"});
-    });
+	const menu = document.querySelector('.dart_desktop_menu');
+	const menu_btn = document.querySelector('.btn-menu');
+	document.addEventListener( 'click', (e) => {
+		const withinBoundaries = e.composedPath().includes(menu);	
+		const withinBtn = e.composedPath().includes(menu_btn);	
+		if (!withinBoundaries && !withinBtn){
+			menu.classList.remove('show', 'active');
+			$(".dart_desktop_menu__items a.has-children").removeClass('active');
+			$(".dart_desktop_menu__item").removeClass("active");
+		}
+	});
+	$(document).on("click", ".btn-menu", function(e){
+		e.preventDefault();
+		$(".dart_desktop_menu").toggleClass("show");
+	});
+	$(".dart_desktop_menu__items a.has-children").mouseover(function(){
+		$(".dart_desktop_menu__items a.has-children").removeClass('active');
+		$(this).addClass("active");
+		$(".dart_desktop_menu").addClass("active");
+		$(".dart_desktop_menu__item").removeClass("active");
+		var target = $(this).data("target")
+		$(target).addClass("active");
+  });
    
-   	$(".dropdown-d-menu").mouseleave(function(){
-		$(".dropdown-d-menu").css({display: "none"});
-   	});
+  $(".dart_desktop_menu__item").mouseleave(function(){
+		$(".dart_desktop_menu__items a.has-children").removeClass('active');
+		$(".dart_desktop_menu__item").removeClass("active");
+		$(".dart_desktop_menu").removeClass("active");
+  });
 
 	$('.tabs').tabslet({
 		mouseevent: 'hover',
@@ -280,6 +431,33 @@ $(document).ready(function(){
             }
         }
 	});
+
+	var owlStores = $('.stores-slider-js');
+	owlStores.owlCarousel({
+        loop: false,
+        items: 6,
+        margin: 12,
+        nav: true,
+        dots: false,
+        navText: ['<i class="d_icon d_icon-angle-left" aria-hidden="true"></i>', '<i class="d_icon d_icon-angle-right" aria-hidden="true"></i>'],
+        responsive: {
+					0: {
+            	items: 1
+            },
+            400: {
+            	items: 2
+            },
+            800: {
+            	items: 3
+            },
+            1000: {
+            	items: 4
+            },
+            1200: {
+            	items: 6
+            }
+        }
+	});
     // QUANTITY
 	$('.dart-quantity .dart-quantity__btn').click(function(e){
         e.preventDefault();
@@ -322,12 +500,54 @@ $(document).ready(function(){
 		});
 
 		myMap.geoObjects
+				.add(new ymaps.Placemark([58.004531, 56.238367], {
+					balloonContent: 'Пример метки'
+				}, {
+					preset: 'islands#redIcon'
+			}));		
+		}
+	
+
+	// stores map filter
+	if($("#stores-map").length){
+		ymaps.ready(init_stores_map);
+	}	
+
+	function init_stores_map() {
+		var myMap = new ymaps.Map("stores-map", {
+			center: [58.004531, 56.238367],
+			zoom: 10,
+			controls: ['zoomControl']
+		}, {
+			searchControlProvider: 'yandex#search'
+		});
+
+		var element = {
+			image: 'img/stores/store.jpg',
+			phones: '+7 (900) 123-45-67',
+			workTime: 'с 08:00 до 17:00'
+		};
+		var text = '<div class="sl_baloon_header"><img src="img/stores/store.jpg" width="15"/>"СпецПрофОборудование”</div>';
+		if(element['phones']){
+				text = text+'<div class="sl_baloon_phones sl_baloon_block"><b>Телефоны:</b><br/>+7 (900) 123-45-67</div>';
+		}
+		if(element['workTime']){
+				text = text+'<div class="sl_baloon_works sl_baloon_block"><b>Время работы:</b><br/>с 08:00 до 17:00</div>';
+		}
+		text = text+'<div class="sl_baloon_submit sl_baloon_block"><button type="button" class="sl_check">Забрать отсюда</button></div>';
+
+		myMap.geoObjects
 			.add(new ymaps.Placemark([58.004531, 56.238367], {
-				balloonContent: 'Пример метки'
+				balloonContent: text
 			}, {
 				preset: 'islands#redIcon'
 		}));
 	}
+
+	$('.stores-map .toggler a').click(function(e){
+		e.preventDefault();
+		$(this).closest('.stores-map').toggleClass('map-mode');
+	})
 
 	/* ---------------- / NOT FOR PROD ----------------- */
 	/*
@@ -528,6 +748,36 @@ $(document).ready(function(){
 		};	
 		var owlActive = main_owl.owlCarousel(owlOptions);		
 	});
+	$(function() {
+		var main_full_owl = $('.main-full-slider'),	
+		owlOptions = {
+			loop: false,
+			navText: ['<i class="d_icon d_icon-angle-left" aria-hidden="true"></i>', '<i class="d_icon d_icon-angle-right" aria-hidden="true"></i>'],
+			margin: 0,
+			nav: true,
+			dots: true,
+			items: 1,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				400: {
+					items: 1,
+					nav: false
+				},
+				760: {
+					items: 1,
+					nav: false
+				},
+				991: {
+					items: 1,
+					nav: true
+				}
+			  }
+		};	
+		var owlMainActive = main_full_owl.owlCarousel(owlOptions);		
+	});
 	// MAIN MENU SLIDER
 	$(function() {
 		var menu_owl = $('.main_menu_slider'),	
@@ -680,6 +930,54 @@ $(document).ready(function(){
           	}
         });
       });
+
+	// PERSONAL SLIDER 
+	$(function() {
+		var tablets_owl = $('.owl-carousel-personal'),	
+			owlOptions = {
+			  	loop: false,
+				margin: 16,
+				nav: true,
+				dots: false,
+				autoWidth: true,
+				navText: ['<i class="d_icon d_icon-angle-left" aria-hidden="true"></i>', '<i class="d_icon d_icon-angle-right" aria-hidden="true"></i>'],
+				items: 1,
+				responsive: {
+					0: {
+						items: 1
+					},
+					300: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					900: {
+						items: 4
+					}
+				}
+			};
+	
+		if ( $(window).width() < 1436 ) {
+			var owlActive = tablets_owl.owlCarousel(owlOptions);
+		} else {
+			tablets_owl.addClass('off');
+		}
+	
+		$(window).resize(function() {
+			if ( $(window).width() < 1436 ) {
+				if ( $('.owl-carousel-personal').hasClass('off') ) {
+					var owlActive = tablets_owl.owlCarousel(owlOptions);
+					tablets_owl.removeClass('off');
+				}
+			} else {
+				if ( !$('.owl-carousel-personal').hasClass('off') ) {
+					tablets_owl.addClass('off').trigger('destroy.owl.carousel');
+					tablets_owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+				}
+			}
+		});
+	});
 
 	var screen_width = document.documentElement.clientWidth;
     var container_width = $("footer .dart_container").innerWidth();
