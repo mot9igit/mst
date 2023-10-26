@@ -3597,6 +3597,9 @@ ul {
   #choice_store .toggler {
     display: block;
   }
+  #choice_store .modal-body {
+    min-height: 180px;
+  }
   .choice_store_map {
     display: none;
   }
