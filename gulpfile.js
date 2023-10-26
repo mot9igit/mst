@@ -75,8 +75,8 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'app/libs/owlcarousel2/dist/owl.carousel.min.js',
-    'app/libs/maskedinput/dist/jquery.maskedinput.min.js',
+    // 'app/libs/owlcarousel2/dist/owl.carousel.min.js',
+    // 'app/libs/maskedinput/dist/jquery.maskedinput.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

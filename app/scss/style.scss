@@ -4,6 +4,7 @@
 @import 'libs';
 @import 'global';
 @import 'quiz';
+@import 'stores_map';
 
 
 @keyframes spinner-border {
@@ -2796,29 +2797,29 @@ a.comparison-link{
     color: $primary-color;
 }
   
-.cities {
-    margin-top: 32px;
-    margin-left: -5px;
-    margin-right: -5px;
-    a {
-        position: relative;
-        display: inline-block;
-        margin: 5px 5px;
-        padding: 5px 8px;
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s;
-        color: $primary-color;
-        border: 1px solid transparent;
-        border-radius: 3px;
-        font-size: 14px;
-        line-height: 20px;
-        &:hover {
-            border: 1px solid $primary-color;
-            text-decoration: none;
-        }
-    }
-}
+// .cities {
+//     margin-top: 32px;
+//     margin-left: -5px;
+//     margin-right: -5px;
+//     a {
+//         position: relative;
+//         display: inline-block;
+//         margin: 5px 5px;
+//         padding: 5px 8px;
+//         -webkit-transition: all .3s;
+//         -o-transition: all .3s;
+//         transition: all .3s;
+//         color: $primary-color;
+//         border: 1px solid transparent;
+//         border-radius: 3px;
+//         font-size: 14px;
+//         line-height: 20px;
+//         &:hover {
+//             border: 1px solid $primary-color;
+//             text-decoration: none;
+//         }
+//     }
+// }
 
 /* -------------- DEMO DATA -------------- */
 .icons-list{
