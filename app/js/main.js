@@ -1008,3 +1008,19 @@ $(document).ready(function(){
     }     
 });
 
+
+// Выбор По алфавиту/По региону в выборе города
+function toggleFilterCity(){
+	//Получаем индекс нажатой кнопки
+	let cheackFilter = document.getElementsByName("sity_filter_id");
+
+	if(cheackFilter[0].checked){
+		document.getElementById("choice_city").classList.add("filter_city")
+	}else{
+		document.getElementById("choice_city").classList.remove("filter_city")
+	}
+}
+
+function toggleMapAndList(){
+	document.getElementById('choice_store').classList.toggle("display_map_or_list")
+}

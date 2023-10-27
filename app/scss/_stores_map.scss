@@ -91,6 +91,26 @@
     }
 }
 
+#choice_city{
+    &.filter_city{
+        .alfovit_filter{
+            display: none;
+        }
+
+        .region_filter{
+            display: grid;
+        }
+    }
+
+    .alfovit_filter{
+        display: grid;
+    }
+
+    .region_filter{
+        display: none;
+    }
+}
+
 
 @media only screen and (max-width: $big-phones) { 
     .cities{
@@ -149,6 +169,7 @@
 .choice_store{
     .modal-body{
         max-height: 270px;
+        min-height: 180px;
     }
 }
 
@@ -168,37 +189,78 @@
     }
 }
 
+.choice_mobile_shop_map{
+    display: none;
+    min-height: 600px;
+}
+
 
 @media only screen and (max-width: $tablets) { 
     #choice_store{
+
+        &.display_map_or_list{
+            .btn-list{
+                display: block;
+            }
+            .btn-map{
+                display: none;
+            }
+
+            .choice_shop_list{
+                display: none;
+            }
+
+            .choice_mobile_shop_map{
+                display: block;
+                height: 600px;
+
+                *:first-child{
+                    object-fit: cover;
+                    margin: 0;
+                    height: 100% !important;
+                }
+            }
+        }
+        
+        .modal-body {
+            min-height: 650px;
+        }
+
+        .btn-list{
+            display: none;
+        }
+
+        .btn-map{
+            display: block;
+        }
+
         .toggler{
             display: block;
         }
 
-        .modal-body{
-            min-height: 180px;
-        }
-    }
+        // .modal-body{
+        //     min-height: 180px;
+        // }
 
-    .choice_store_map{
-        display: none;
-    }
-
-    #choice_store{
-        .btn-list{
+        .choice_store_map{
             display: none;
         }
 
         .toggler{
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             right: 20px;
         }
     }
 
     .shop_choice{
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: $big-phones) {
+    .shop_choice{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -227,7 +289,7 @@
     margin-left: -12px;
     gap: 24px 0;
 
-    .d-col-md-3{
+    &_item{
         display: flex;
         flex-direction: column;
     }
@@ -270,27 +332,5 @@
 @media only screen and (max-width: $tablets) { 
     .shops_nearby_container_adres{
         padding: 0;
-    }
-
-    .shops_nearby_container{
-        .d-col-md-3{
-            width: 33.33%;
-        }
-    }
-}
-
-@media only screen and (max-width: $small-tablets) { 
-    .shops_nearby_container{
-        .d-col-md-3{
-            width: 50%;
-        }
-    }
-}
-
-@media only screen and (max-width: $big-phones) { 
-    .shops_nearby_container{
-        .d-col-md-3{
-            width: 100%;
-        }
     }
 }
