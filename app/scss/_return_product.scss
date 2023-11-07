@@ -710,7 +710,7 @@
 
     &_margin-left{
         margin-left: 40px;
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 
     &__all-plises{
@@ -807,7 +807,8 @@
 
     &__mini-brief-info{
         display: flex;
-        gap: 24px;
+        gap: 8px 24px;
+        flex-wrap: wrap;
     }
 }
 
@@ -865,6 +866,10 @@
         border: 1px solid rgba(0, 0, 0, 0.12);
         background: #FFF;
         padding: 40px;
+    }
+
+    textarea{
+        resize: none;
     }
 
     &__title{
@@ -931,6 +936,10 @@
     }
 }
 
+.dart_side_menu_mobile-active{
+    display: block !important;
+}
+
 @media only screen and (max-width: $desktop) {
     .card-container{
         gap: 16px;
@@ -966,14 +975,19 @@
         font-size: 14px;
     }
 
-    .action-steps__item {
-        max-width: calc(calc(100% / 3) - 30px);
-        padding-left: 30px;
-    }
-
     .action-steps{
         margin-left: 40px;
+
+        &__text{
+            font-size: 14px; 
+        }
+
+        &__item {
+            max-width: calc(calc(100% / 3) - 30px);
+            padding-left: 30px;
+        }
     }
+    
 }
 
 
@@ -1021,14 +1035,85 @@
     .return-next-page{
         margin-top: 16px;
     }
+
+    .sale-nav-container{
+        display: flex;
+        flex-direction: column
+    }
+
+    .content-container-chapter__image {
+        max-height: 358px;
+        min-height: 400px;
+    }
+
+    .mini-pluses{
+        gap: 8px;
+        &__icon {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+        }
+
+        &__text{
+            max-width: 200px;
+        }
+    }
+
+    .content-container-chapter__all-plises {
+        gap: 10px 16px;
+    }
+
+    .content-container-chapter__block{
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .sales-form__form{
+        height: fit-content;
+        padding: 26px;
+    }
+
+    .action-steps__item {
+        max-width: calc(calc(100% / 2) - 20px);
+        padding-left: 30px;
+    }
 }
 
 @media only screen and (max-width: 990px){
-    .dart_side_menu{
+    .dart_side_menu_mobile-none{
         display: none !important;
     }
     .table-mibile-width{
         max-width: 1200px !important;
+    }
+
+    .content-container-chapter{
+        flex-direction: column;
+    }
+
+    .content-container-chapter{
+        max-height: unset;
+        &__image {
+            max-height: 550px;
+            min-height: 200px;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+    
+            img{
+                width: 100%;
+            }
+        }
+
+        &_mobile{
+            flex-direction: column-reverse;
+        }
+    
     }
 }
 
