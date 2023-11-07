@@ -1,4 +1,5 @@
-.city_complete{
+.city_complete,
+.store_complete{
     padding-left: 48px;
 }
 
@@ -180,10 +181,14 @@
 
     *:first-child{
         object-fit: cover;
-    }
+    }    
 }
 
-#choice_store{
+#modal-stores-map{
+    height: 400px;
+}
+
+#modal_store{
     .toggler{
         display: none;
     }
@@ -196,7 +201,7 @@
 
 
 @media only screen and (max-width: $tablets) { 
-    #choice_store{
+    #modal_store{
 
         &.display_map_or_list{
             .btn-list{
@@ -210,15 +215,9 @@
                 display: none;
             }
 
-            .choice_mobile_shop_map{
+            .modal-stores-map__map{
                 display: block;
                 height: 600px;
-
-                *:first-child{
-                    object-fit: cover;
-                    margin: 0;
-                    height: 100% !important;
-                }
             }
         }
         
@@ -238,11 +237,7 @@
             display: block;
         }
 
-        // .modal-body{
-        //     min-height: 180px;
-        // }
-
-        .choice_store_map{
+        .modal-stores-map__map{
             display: none;
         }
 
@@ -282,6 +277,13 @@
     }
 }
 
+.shops_nearby_desc{
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 24px;
+}
+
 .shops_nearby_container{
     display: flex;
     flex-wrap: wrap;
@@ -292,6 +294,7 @@
     &_item{
         display: flex;
         flex-direction: column;
+        margin-bottom: 24px;
     }
 
     a{

@@ -1008,6 +1008,17 @@ $(document).ready(function(){
     }     
 });
 
+const scrollTable = document.querySelector('.scroll-attention');
+if(scrollTable){
+	scrollTable.addEventListener("scroll", (event) => {
+		if(scrollTable.scrollLeft > 20){
+			scrollTable.classList.add("scroll-right");
+		}else{
+			scrollTable.classList.remove("scroll-right");
+		}
+	});
+}
+
 
 // Выбор По алфавиту/По региону в выборе города
 function toggleFilterCity(){
@@ -1024,3 +1035,87 @@ function toggleFilterCity(){
 function toggleMapAndList(){
 	document.getElementById('choice_store').classList.toggle("display_map_or_list")
 }
+
+//кнопка на странице return_creating
+
+const buttonNext = document.querySelector('.return-next-page');
+
+if(buttonNext){
+	buttonNext.addEventListener('click', function() {
+		document.querySelector('.return-container_one').classList.add('return-page-two')
+		document.querySelector('.return-container_two').classList.add('return-page-two')
+	})
+}
+
+// Dropdown menu
+
+// Полифилл для метода forEach для NodeList
+if (window.NodeList && !NodeList.prototype.forEach) {
+	NodeList.prototype.forEach = function (callback, thisArg) {
+		thisArg = thisArg || window;
+		for (var i = 0; i < this.length; i++) {
+			callback.call(thisArg, this[i], i, this);
+		}
+	};
+}
+
+document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+	const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+	const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+	const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+	const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+
+	// Клик по кнопке. Открыть/Закрыть select
+	dropDownBtn.addEventListener('click', function (e) {
+		dropDownList.classList.toggle('dropdown__list--visible');
+        this.classList.add('dropdown__button--active');
+	});
+
+	// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+	dropDownListItems.forEach(function (listItem) {
+		listItem.addEventListener('click', function (e) {
+			e.stopPropagation();
+			dropDownBtn.innerText = this.innerText;
+			dropDownBtn.focus();
+			dropDownInput.value = this.dataset.value;
+			dropDownList.classList.remove('dropdown__list--visible');
+		});
+	});
+
+	// Клик снаружи дропдауна. Закрыть дропдаун
+	document.addEventListener('click', function (e) {
+		if (e.target !== dropDownBtn) {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+		}
+	});
+
+	// Нажатие на Tab или Escape. Закрыть дропдаун
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Tab' || e.key === 'Escape') {
+			dropDownBtn.classList.remove('dropdown__button--active');
+			dropDownList.classList.remove('dropdown__list--visible');
+		}
+	});
+});
+
+// Конец Dropdown menu
+
+// Выделение всех cheackbox на странице возврата
+
+document.querySelector('input[name=table-return-cheack-select-all]').addEventListener('click', function (e) {
+	console.log("Клик")
+    var els = document.querySelectorAll(
+      'input[name=table-return-cheack]'
+    );
+
+    Array.prototype.forEach.call(els, function(cb){
+      cb.checked = e.target.checked;
+    });
+  })
+;
+
+// document.querySelector('.return-container_display-flex').addEventListener('scroll', function() {
+// 	// document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+// 	console.log("Скрол");
+//   });

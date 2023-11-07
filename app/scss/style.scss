@@ -5,6 +5,7 @@
 @import 'global';
 @import 'quiz';
 @import 'stores_map';
+@import 'return_product';
 
 
 @keyframes spinner-border {
@@ -7230,6 +7231,19 @@ ol.comments-list {
 }
 
 @media (max-width: $tablets) {
+    .modal-content{
+        .modal-header,
+        .modal-body,
+        .modal-footer{
+            padding: 12px 15px 12px;
+        }
+        .modal_input{
+            padding: 4px 15px 12px;
+            .d_icon-search{
+                left: 33px;
+            }
+        }
+    }
     .dart_container-content ol.coloumn_2 {
         display: block;
         li{
