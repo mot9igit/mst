@@ -1,3 +1,75 @@
+//SWIPER
+
+// const swiper = new Swiper('.swiper', {
+// 	// Optional parameters
+// 	direction: 'horizontal',
+// 	loop: true,
+  
+// 	// If we need pagination
+// 	pagination: {
+// 	  el: '.swiper-pagination',
+// 	},
+  
+// 	// Navigation arrows
+// 	navigation: {
+// 	  nextEl: '.swiper-button-next',
+// 	  prevEl: '.swiper-button-prev',
+// 	},
+  
+// 	// And if we need scrollbar
+// 	scrollbar: {
+// 	  el: '.swiper-scrollbar',
+// 	},
+// });
+
+var swiper = new Swiper('.swiper', {
+	slidesPerView: getDirection(),
+	direction: 'horizontal',
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+	on: {
+	  resize: function () {
+		swiper.changeDirection(getDirection());
+	  },
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1.5,
+			spaceBetween: 20
+		},
+		590: {
+			slidesPerView: 2.5,
+			spaceBetween: 20
+		},
+		767: {
+			slidesPerView: 1.5,
+			spaceBetween: 20
+		},
+		990: {
+			slidesPerView: 2.5,
+			spaceBetween: 20
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween: 40
+		},
+		1500: {
+			slidesPerView: 4,
+			spaceBetween: 40
+		}
+	  }
+  });
+  
+  function getDirection() {
+	var windowWidth = window.innerWidth;
+	var slidesPerView = window.innerWidth <= 1200 ? 3 : 3;
+  
+	return slidesPerView;
+  }
+
 function init_t () {
 	var myMap = new ymaps.Map("ya_map", {
 	  center: [ 55.903610, 37.434476 ],
