@@ -6571,6 +6571,12 @@ ol.comments-list {
                 background: #F0817E;
                 border: 1px solid rgba(0, 0, 0, 0.12);
                 border-radius: $border-radius;
+                &.image_wrap{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #ffffff;
+                }
                 span{
                     display: block;
                     color: #FFB8B6;
@@ -7225,6 +7231,19 @@ ol.comments-list {
 }
 
 @media (max-width: $tablets) {
+    .modal-content{
+        .modal-header,
+        .modal-body,
+        .modal-footer{
+            padding: 12px 15px 12px;
+        }
+        .modal_input{
+            padding: 4px 15px 12px;
+            .d_icon-search{
+                left: 33px;
+            }
+        }
+    }
     .dart_container-content ol.coloumn_2 {
         display: block;
         li{
