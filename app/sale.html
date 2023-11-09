@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css">
 <link rel="stylesheet" href="libs/icofont.css">
 <link rel="stylesheet" href="css/style.css?id=90">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -895,10 +896,9 @@
 </div>
             <section class="dart-section">
                 <div class="dart_container">
-                    <h2>Продажа товаров в маркетплейсе «MachineStore»</h2>
-
-                    <div class="d-col-xxl-12 d-col-xl-12 display-flex sale-nav-container">
-                        <div class="d-col-xxl-3 d-col-xl-3 d-col-12">
+                    <h1>Продажа товаров в маркетплейсе «MachineStore»</h1>
+                    <div class="dart-row">
+                        <div class="d-col-lg-3 d-col-md-4 d-col-12">
                             <div class="dart_side_menu_mobile-active dart_side_menu">
                                 <ul>
                                     <li>
@@ -924,47 +924,60 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="d-col-xxl-9 d-col-xl-9 d-col-12">
-                            <div class="card-container">
-                                <div class="card-image">
-                                    <div class="card-image__icon">
-                                        <img src="/img/sale/gear.svg" alt="">
+                        <div class="d-col-lg-9 d-col-md-8 d-col-12">
+                            <div class="swiper">
+                                <div class="card-container swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <div class="card-image__icon">
+                                                <img src="/img/sale/gear.svg" alt="">
+                                            </div>
+                                            <p class="card-image__text">Просто начать и легко работать - все работы по
+                                                интеграции
+                                                и настройки мы берем на себя</p>
+                                        </div>
                                     </div>
-                                    <p class="card-image__text">Просто начать и легко работать - все работы по
-                                        интеграции
-                                        и настройки мы берем на себя</p>
-                                </div>
-                                <div class="card-image">
-                                    <div class="card-image__icon">
-                                        <img src="/img/sale/phone.svg" alt="">
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <div class="card-image__icon">
+                                                <img src="/img/sale/phone.svg" alt="">
+                                            </div>
+                                            <p class="card-image__text">Минимальное отвлечение ваших сотрудников на обработку заказов</p>
+                                        </div>
                                     </div>
-                                    <p class="card-image__text">Минимальное отвлечение ваших сотрудников на обработку заказов</p>
-                                </div>
-                                <div class="card-image">
-                                    <div class="card-image__icon">
-                                        <img src="/img/sale/analytics.svg" alt="">
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <div class="card-image__icon">
+                                                <img src="/img/sale/analytics.svg" alt="">
+                                            </div>
+                                            <p class="card-image__text">Профессиональная система анализа для вашего бизнеса - в нашей системе много инструментов для работы
+                                                с ассортиментом </p>
+                                        </div>
                                     </div>
-                                    <p class="card-image__text">Профессиональная система анализа для вашего бизнеса - в нашей системе много инструментов для работы
-                                        с ассортиментом </p>
-                                </div>
-                                <div class="card-image">
-                                    <div class="card-image__icon">
-                                        <img src="/img/sale/medal.svg" alt="">
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <div class="card-image__icon">
+                                                <img src="/img/sale/medal.svg" alt="">
+                                            </div>
+                                            <p class="card-image__text">Поддержка от производителей - вы можете выполнять задания от производителей и получать от них вознаграждение</p>
+                                        </div>
                                     </div>
-                                    <p class="card-image__text">Поддержка от производителей - вы можете выполнять задания от производителей и получать от них вознаграждение</p>
+                                    
                                 </div>
-
-                                
+                                <div class="swiper-navigation">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
                             </div>
+                           
                         </div>
                     </div>
-
-                    <div class="d-col-xxl-12 d-col-xl-12 display-flex">
-                        <div class="d-col-xxl-3 d-col-0 padding-null">
+                    <div class="dart-row">
+                        <div class="d-col-xxl-3 d-col-0">
                         </div>
                         <div class="d-col-xxl-9 d-col-12">
-                            <div class="model-container">
-                                <h5>Выберите свою модель работы</h5>
+                            <h2 class="text-center">Выберите свою модель работы</h2>
+                            <div class="dart-row mb-5">
                                 <div class="model-container__content">
                                     <div class="info-with-button d-col-lg-4">
                                         <b>Продажа вашей продукции</b>
@@ -979,125 +992,129 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="content-container-chapter">
-                                <div class="content-container-chapter__image padding-null d-col-xxl-4 d-col-xl-4 d-col-lg-4 d-col-12">
-                                    <img src="/img/sale/laptopWebsite.jpg" alt="">
-                                </div>
-                                <div>
-                                    <h5>Продажа вашей продукции</h5>
-                                    <p class="info-frame__text content-container-chapter_frame-margin">Мы продаем вашу продукцию на своем сайте по вашим ценам</p>
-
-                                    <div class="content-container-chapter__all-plises">
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-truck"></i>
-                                            <p class="mini-pluses__text">Не нужно заниматься доставкой</p>
-                                        </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-online-store"></i>
-                                            <p class="mini-pluses__text">Не нужно оформлять карточки товара</p>
-                                        </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-code"></i>
-                                            <p class="mini-pluses__text">Не нужно заниматься интеграцией</p>
-                                        </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-boxes"></i>
-                                            <p class="mini-pluses__text">Товар не нужно вести 
-                                                на наш склад, мы заберем его сами, когда он будет продан</p>
-                                        </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-users"></i>
-                                            <p class="mini-pluses__text">Не нужно заниматься консультированием покупателя</p>
-                                        </div>
+                            <div class="dart-section">
+                                <div class="dart-row">
+                                    <div class="content-container-chapter__image d-col-lg-4 d-col-12">
+                                        <img src="/img/sale/laptopWebsite.jpg" alt="">
                                     </div>
-
-                                    <div class="content-container-chapter__block-diagram">
-                                        <div class="content-container-chapter__diagram-horisontal">
-                                            <p class="content-container-chapter__block content-container-chapter__block_right-line">Мы получаем ваши остатки
-                                                и цены</p>
-                                            <p class="content-container-chapter__block content-container-chapter__block_right-line">Покупатель оплачивает товар на нашем сайте</p>
+                                    <div class="d-col-lg-8 d-col-12">
+                                        <h2>Продажа вашей продукции</h2>
+                                        <p class="info-frame__text content-container-chapter_frame-margin">Мы продаем вашу продукцию на своем сайте по вашим ценам</p>
+    
+                                        <div class="content-container-chapter__all-plises">
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-truck"></i>
+                                                <p class="mini-pluses__text">Не нужно заниматься доставкой</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-online-store"></i>
+                                                <p class="mini-pluses__text">Не нужно оформлять карточки товара</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-code"></i>
+                                                <p class="mini-pluses__text">Не нужно заниматься интеграцией</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-boxes"></i>
+                                                <p class="mini-pluses__text">Товар не нужно вести 
+                                                    на наш склад, мы заберем его сами, когда он будет продан</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-users"></i>
+                                                <p class="mini-pluses__text">Не нужно заниматься консультированием покупателя</p>
+                                            </div>
                                         </div>
-                                        <div class="content-container-chapter__block_horisontal-line">
-                                            <p class="content-container-chapter__block content-container-chapter__block_left-line">Курьер забирает товар из вашего магазина
-                                                и отвозит его клиенту</p>
-                                            <p class="content-container-chapter__block content-container-chapter__block_left-line">Покупатель приходит
-                                                в ваш магазин и вы выдаете ему товар</p>
+    
+                                        <div class="content-container-chapter__block-diagram">
+                                            <div class="content-container-chapter__diagram-horisontal">
+                                                <p class="content-container-chapter__block content-container-chapter__block_right-line">Мы получаем ваши остатки
+                                                    и цены</p>
+                                                <p class="content-container-chapter__block content-container-chapter__block_right-line">Покупатель оплачивает товар на нашем сайте</p>
+                                            </div>
+                                            <div class="content-container-chapter__block_horisontal-line">
+                                                <p class="content-container-chapter__block content-container-chapter__block_left-line">Курьер забирает товар из вашего магазина
+                                                    и отвозит его клиенту</p>
+                                                <p class="content-container-chapter__block content-container-chapter__block_left-line">Покупатель приходит
+                                                    в ваш магазин и вы выдаете ему товар</p>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="content-container-chapter__mini-brief-info">
-                                        <div class="mini-brief-info">
-                                            <i class="mini-brief-info__icon d_icon d_icon-wallet"></i>
-                                            <p class="mini-brief-info__text">Наша комиссия - 5%</p>
-                                        </div>
-                                        <div class="mini-brief-info">
-                                            <i class="mini-brief-info__icon d_icon d_icon-time"></i>
-                                            <p class="mini-brief-info__text">Вывод денег через 3 дня</p>
+    
+                                        <div class="content-container-chapter__mini-brief-info">
+                                            <div class="mini-brief-info">
+                                                <i class="mini-brief-info__icon d_icon d_icon-wallet"></i>
+                                                <p class="mini-brief-info__text">Наша комиссия - 5%</p>
+                                            </div>
+                                            <div class="mini-brief-info">
+                                                <i class="mini-brief-info__icon d_icon d_icon-time"></i>
+                                                <p class="mini-brief-info__text">Вывод денег через 3 дня</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="content-container-chapter content-container-chapter_mobile">
-                                <div class="content-container-chapter__content">
-                                    <h5>Точка выдачи</h5>
-                                    <p class="info-frame__text content-container-chapter_frame-margin">Мы привозим вам товары, вы выдаете их нашим покупателям и получаете вознаграждение</p>
-
-                                    <div class="content-container-chapter__all-plises">
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-payments"></i>
-                                            <p class="mini-pluses__text">Вы получаете прибыль без вложений</p>
+                            
+                            <div class="dart-section">
+                                <div class="dart-row mobile-column-reverse">
+                                    <div class="d-col-lg-8 d-col-12">
+                                        <h2>Точка выдачи</h2>
+                                        <p class="info-frame__text content-container-chapter_frame-margin">Мы привозим вам товары, вы выдаете их нашим покупателям и получаете вознаграждение</p>
+    
+                                        <div class="content-container-chapter__all-plises">
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-payments"></i>
+                                                <p class="mini-pluses__text">Вы получаете прибыль без вложений</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-speed"></i>
+                                                <p class="mini-pluses__text">Все вопросы по логистике мы решаем сами</p>
+                                            </div>
+                                            <div class="mini-pluses">
+                                                <i class="mini-pluses__icon d_icon d_icon-file"></i>
+                                                <p class="mini-pluses__text">Минимальный документооборот</p>
+                                            </div>
                                         </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-speed"></i>
-                                            <p class="mini-pluses__text">Все вопросы по логистике мы решаем сами</p>
+    
+                                        <div class="content-container-chapter__block-diagram content-container-chapter__block-diagram_margin">
+                                            <div class="content-container-chapter__diagram-horisontal">
+                                                <p class="content-container-chapter__block content-container-chapter__block_right-line">Покупатель оплачивает
+                                                    товар на нашем сайте
+                                                    и выбирает ваш магазин
+                                                    как точку выдачи</p>
+                                                <p class="content-container-chapter__block content-container-chapter__block_right-line">Мы привозим вам товар</p>
+                                                <p class="content-container-chapter__block">Покупатель приходит в ваш
+                                                    магазин и вы выдаете
+                                                    ему товар</p>
+                                            </div>
                                         </div>
-                                        <div class="mini-pluses">
-                                            <i class="mini-pluses__icon d_icon d_icon-file"></i>
-                                            <p class="mini-pluses__text">Минимальный документооборот</p>
+    
+                                        <div class="content-container-chapter__mini-brief-info">
+                                            <div class="mini-brief-info">
+                                                <i class="mini-brief-info__icon d_icon d_icon-wallet"></i>
+                                                <p class="mini-brief-info__text">Вы получаете до 20% наценки от стоимости выданного товара</p>
+                                            </div>
+                                            <div class="mini-brief-info">
+                                                <i class="mini-brief-info__icon d_icon d_icon-time"></i>
+                                                <p class="mini-brief-info__text">Вывод денег через 3 дня</p>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="content-container-chapter__block-diagram content-container-chapter__block-diagram_margin">
-                                        <div class="content-container-chapter__diagram-horisontal">
-                                            <p class="content-container-chapter__block content-container-chapter__block_right-line">Покупатель оплачивает
-                                                товар на нашем сайте
-                                                и выбирает ваш магазин
-                                                как точку выдачи</p>
-                                            <p class="content-container-chapter__block content-container-chapter__block_right-line">Мы привозим вам товар</p>
-                                            <p class="content-container-chapter__block">Покупатель приходит в ваш
-                                                магазин и вы выдаете
-                                                ему товар</p>
-                                        </div>
+                                    <div class="content-container-chapter__image d-col-lg-4 d-col-12">
+                                        <img src="/img/sale/warehouse.png" alt="">
                                     </div>
-
-                                    <div class="content-container-chapter__mini-brief-info">
-                                        <div class="mini-brief-info">
-                                            <i class="mini-brief-info__icon d_icon d_icon-wallet"></i>
-                                            <p class="mini-brief-info__text">Вы получаете до 20% наценки от стоимости выданного товара</p>
-                                        </div>
-                                        <div class="mini-brief-info">
-                                            <i class="mini-brief-info__icon d_icon d_icon-time"></i>
-                                            <p class="mini-brief-info__text">Вывод денег через 3 дня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-container-chapter__image content-container-chapter_margin-left padding-null d-col-xxl-4 d-col-xl-4 d-col-lg-4 d-col-12">
-                                    <img src="/img/sale/warehouse.png" alt="">
                                 </div>
                             </div>
+                            
 
-                            <div class="sales-form">
-                                <form class="sales-form__form d-col-xxl-5 d-col-xl-4 d-col-lg-5" action="">
-                                    <h5 class="sales-form__title">Форма</h5>
+                            <div class="dart-row sales-form">
+                                <form class="sales-form__form d-col-lg-5 d-col-12" action="">
+                                    <h2 class="sales-form__title">Форма</h2>
                                     <input type="text" class="sales-form__input dart-form-control" name="contact" value="" placeholder="???"/>
                                     <input type="text" class="sales-form__input dart-form-control" name="contact" value="" placeholder="???"/>
                                     <textarea name="text" class="sales-form__input dart-form-control" placeholder="???"></textarea>
                                     <a href="#" class="ales-form__button dart-btn dart-btn-primary dart-btn_padding">Отправить</a>
                                 </form>
 
-                                <div class="action-steps">
+                                <div class="action-steps d-col-lg-7 d-col-12">
                                     <div class="action-steps__item">
                                         <div class="action-steps__number">01</div>
                                         <p class="action-steps__text">Заполняете форму
@@ -1130,9 +1147,9 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
                 </div>
             </section>
         </main>
@@ -2148,7 +2165,8 @@
     </div>
 </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -2167,6 +2185,7 @@
         
     });
 </script>
+
 </body>
 
 </html>
