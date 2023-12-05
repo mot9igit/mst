@@ -1,0 +1,66 @@
+.error-page{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 24px 0;
+    }
+
+    &__image{
+        max-height: 500px;
+        height: 50vh;
+    }
+
+    &__buttons{
+        gap: 24px;
+        display: flex;
+
+        a{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $desktop) {
+    
+}
+
+
+@media only screen and (max-width: $small-desktop) { 
+    
+}
+
+@media only screen and (max-width: 990px){
+    
+
+}
+
+@media only screen and (max-width: $small-tablets){
+    
+    .error-page{
+    
+        &__title{
+            font-size: 30px;
+        }
+    
+        &__buttons{
+            gap: 10px;
+
+            a{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: $big-phones){
+    
+}
