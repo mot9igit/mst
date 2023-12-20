@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('./includes/meta.html')
+</head>
+
+<body>
+  <div class="dart_wrapper">
+    @@include('./includes/header.html')
+    <main class="dart_main">
+      <!-- @@include('./includes/breadcrumbs.html') -->
+      <section class="dart-section">
+        <div class="dart_container dart-align-items-center error-page">
+          <img src="../img/404/404.svg" class="error-page__image" alt="">
+          <h1 class="error-page__title">Страница не найдена</h1>
+          <div class="error-page__buttons">
+            <a href="#" class="dart-btn dart-btn-secondary">Вернуться назад</a>
+            <a href="/" class="dart-btn dart-btn-primary">На главную</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @@include('./includes/footer.html') -->
+  </div>
+  @@include('./includes/scripts.html')
+</body>
+
+</html>
