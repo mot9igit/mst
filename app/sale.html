@@ -1206,11 +1206,11 @@
             </div>
             <div class="footer__item footer__item--contacts">
                 <a class="footer__tel telefon1" href="tel:+79991234567">+7 (999) 123-45-67</a>
-                
-                
+
+
                 <a class="footer__mail" href="mailto:info@mstmp.tmweb.ru">info@mstmp.tmweb.ru</a>
 
-                
+
             </div>
         </div>
         <div class="footer__bottombar">
@@ -1219,7 +1219,7 @@
                 Копирование материалов запрещено. <br>
                 Отправляя любую форму на сайте, Вы соглашаетесь на обработку персональных данных</div>
         </div>
-    </div>    
+    </div>
 </footer>
 <div class="mobile_navigation">
     <ul>
@@ -1249,7 +1249,7 @@
                             <div class="cart-img">
                                 <i class="d_icon d_icon-cart"></i>
                                 <span class="ms2_total_count">0</span>
-                            </div>                                        
+                            </div>
                         </div>
                         <div class="not_empty">
                             <div class="cart-img">
@@ -1261,38 +1261,40 @@
                 </div>
                 <span>Корзина</span>
             </a>
-        </li>        
+        </li>
     </ul>
 </div>
 
 <!-- MODALS -->
 <div class="modal fade" id="auth" tabindex="-1" aria-labelledby="auth" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="auth">Авторизация</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form action="#" class="dart_auth">
-                <div class="form_input_group">
-                    <label for="auth_login">Логин или email</label>
-                    <input type="text" id="auth_login" placeholder="Логин" name="login" value="" class="required">                    
-                </div>
-                <div class="form_input_group">
-                    <label for="auth_password">Пароль</label>
-                    <input type="text" id="auth_password" placeholder="Пароль" name="password" value="" class="required">                   
-                    <div class="desc">
-                        <a href="#">Забыли пароль?</a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="auth">Авторизация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="dart_auth">
+                    <div class="form_input_group">
+                        <label for="auth_login">Логин или email</label>
+                        <input type="text" id="auth_login" placeholder="Логин" name="login" value="" class="required">
                     </div>
-                </div>
-                <div class="form_input_group text-center">
-                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#register">Регистрация</a>
-                    <button class="dart-btn dart-btn-primary" type="submit">
-                        <span class="tm">Войти</span>
-                    </button>
-                </div>
-                <!--
+                    <div class="form_input_group">
+                        <label for="auth_password">Пароль</label>
+                        <input type="text" id="auth_password" placeholder="Пароль" name="password" value=""
+                            class="required">
+                        <div class="desc">
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                    </div>
+                    <div class="form_input_group text-center">
+                        <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal"
+                            data-bs-target="#register">Регистрация</a>
+                        <button class="dart-btn dart-btn-primary" type="submit">
+                            <span class="tm">Войти</span>
+                        </button>
+                    </div>
+                    <!--
                 <div class="socials text-center">
                     <ul class="dart_socials">
                         <li>
@@ -1313,846 +1315,987 @@
                     </ul>
                 </div>
                 -->
-            </form>
+                </form>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="register">Регистрация</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form action="#" class="dart_auth">
-                <div class="form_input_group">
-                    <label for="register_email">Email</label>
-                    <input type="text" id="register_email" placeholder="Email" name="email" value="" class="required">                    
-                </div>
-                <div class="form_input_group">
-                    <label for="register_phone">Телефон</label>
-                    <input type="text" id="register_phone" placeholder="Телефон" name="phone" value="" class="required">                    
-                </div>
-                <div class="form_input_group">
-                    <label for="register_fullname">Имя</label>
-                    <input type="text" id="register_fullname" placeholder="Имя" name="fullname" value="" class="required">                    
-                </div>
-                <div class="form_input_group">
-                    <label for="register_login">Логин</label>
-                    <input type="text" id="register_login" placeholder="Логин" name="login" value="" class="required">                    
-                </div>
-                <div class="form_input_group">
-                    <label for="register_password">Пароль</label>
-                    <input type="text" id="register_password" placeholder="Пароль" name="password" value="" class="required">
-                </div>
-                <div class="form_input_group text-center">
-                    <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal" data-bs-target="#auth">Войти</a>
-                    <button class="dart-btn dart-btn-primary">
-                        <span class="tm">Регистрация</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-      </div>
     </div>
 </div>
-<div class="modal fade" id="pass_reset_success" tabindex="-1" aria-labelledby="pass_reset_success_title" aria-hidden="true">
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="register">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="dart_auth">
+                    <div class="form_input_group">
+                        <label for="register_email">Email</label>
+                        <input type="text" id="register_email" placeholder="Email" name="email" value=""
+                            class="required">
+                    </div>
+                    <div class="form_input_group">
+                        <label for="register_phone">Телефон</label>
+                        <input type="text" id="register_phone" placeholder="Телефон" name="phone" value=""
+                            class="required">
+                    </div>
+                    <div class="form_input_group">
+                        <label for="register_fullname">Имя</label>
+                        <input type="text" id="register_fullname" placeholder="Имя" name="fullname" value=""
+                            class="required">
+                    </div>
+                    <div class="form_input_group">
+                        <label for="register_login">Логин</label>
+                        <input type="text" id="register_login" placeholder="Логин" name="login" value=""
+                            class="required">
+                    </div>
+                    <div class="form_input_group">
+                        <label for="register_password">Пароль</label>
+                        <input type="text" id="register_password" placeholder="Пароль" name="password" value=""
+                            class="required">
+                    </div>
+                    <div class="form_input_group text-center">
+                        <a href="#" class="dart-btn dart-btn-text" data-bs-toggle="modal"
+                            data-bs-target="#auth">Войти</a>
+                        <button class="dart-btn dart-btn-primary">
+                            <span class="tm">Регистрация</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="modal-body">
-            <div class="modal_success">
-                <div class="text">
-                    <span class="title">Мы отправили пароль вам на почту</span>
-                    <span class="desc">Если письмо не пришло,<br/> позвоните по телефону +7 351 217-06-17</span>
+    </div>
+</div>
+<div class="modal fade" id="pass_reset_success" tabindex="-1" aria-labelledby="pass_reset_success_title"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal_success">
+                    <div class="text">
+                        <span class="title">Мы отправили пароль вам на почту</span>
+                        <span class="desc">Если письмо не пришло,<br /> позвоните по телефону +7 351 217-06-17</span>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
 </div>
 
 <div class="modal fade" id="city_choice" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="register">Выберите ваш город</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="city_choice">
-				<input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить название города" autocomplete="off">
-			</div>
-            <div class="cities">
-                <a href="#" class="city_checked">
-                    <span>Миасс</span>
-                </a>
-                <a href="#" class="city_checked">
-                    <span>Пермь</span>
-                </a>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="register">Выберите ваш город</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="city_choice">
+                    <input type="text" name="city" class="form-control city_complete"
+                        placeholder="Начните вводить название города" autocomplete="off">
+                </div>
+                <div class="cities">
+                    <a href="#" class="city_checked">
+                        <span>Миасс</span>
+                    </a>
+                    <a href="#" class="city_checked">
+                        <span>Пермь</span>
+                    </a>
+                </div>
             </div>
         </div>
-      </div>
     </div>
 </div>
 
 <div class="modal fade" id="choice_city" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="register">Выберите город</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="register">Выберите город</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_input">
+                <input type="text" name="city" class="form-control city_complete"
+                    placeholder="Начните вводить наименование города" autocomplete="off">
+                <i class="d_icon d_icon-search"></i>
+            </div>
+            <div class="modal_radio_button">
+                <input type="radio" checked name="sity_filter_id" id="alfovit" />
+                <label onclick="toggleFilterCity()" for="alfovit">По алфавиту</label>
+
+                <input type="radio" name="sity_filter_id" id="region" />
+                <label onclick="toggleFilterCity()" for="region">По региону</label>
+            </div>
+            <div class="modal-body">
+                <div class="city_choice">
+                </div>
+                <div class="cities alfovit_filter">
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">А</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Б</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">В</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Г</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Д</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Е</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Ж</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">З</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">И</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">К</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Л</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">М</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Н</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">О</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">П</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Р</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">С</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">С</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Д</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Е</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Ж</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">З</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">И</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">К</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Л</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">М</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Н</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">О</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">П</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Р</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+                </div>
+
+                <div class="cities region_filter">
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Адыгея Респ</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Алтайский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Башкортостан Респ</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Брянская обл</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Краснодарский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Красноярский край</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">З</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">И</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">К</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Л</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">М</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Н</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">О</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">П</div>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                        <a class="cities_alfovite_city">Барнаул</a>
+                    </div>
+
+                    <div class="cities_elem">
+                        <div class="cities_alfovite_letter">Р</div>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                        <a class="cities_alfovite_city">Абакан</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal_input">
-            <input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить наименование города" autocomplete="off">
-            <i class="d_icon d_icon-search"></i>
-        </div>
-        <div class="modal_radio_button">
-            <input type="radio" checked name="sity_filter_id" id="alfovit" />
-            <label onclick="toggleFilterCity()" for="alfovit">По алфавиту</label>
-
-            <input type="radio" name="sity_filter_id" id="region" />
-            <label onclick="toggleFilterCity()" for="region">По региону</label>
-        </div>
-        <div class="modal-body">
-            <div class="city_choice">
-        </div>
-        <div class="cities alfovit_filter">
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">А</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Б</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">В</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Г</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Д</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Е</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Ж</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">З</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">И</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">К</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Л</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">М</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Н</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">О</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">П</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Р</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">С</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">С</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Д</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Е</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Ж</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">З</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">И</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">К</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Л</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">М</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Н</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">О</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">П</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Р</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-        </div>
-
-        <div class="cities region_filter">
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Адыгея Респ</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Алтайский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Башкортостан Респ</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Брянская обл</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Краснодарский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Красноярский край</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">З</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">И</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">К</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Л</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">М</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Н</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">О</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">П</div>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-                <a class="cities_alfovite_city">Барнаул</a>
-            </div>
-            
-            <div class="cities_elem">
-                <div class="cities_alfovite_letter">Р</div>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-                <a class="cities_alfovite_city">Абакан</a>
-            </div>
-        </div>
-        </div>
-      </div>
     </div>
 </div>
 
 
 <div class="modal fade" id="choice_store" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="register">Выберите магазин</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal_input">
-            <input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить наименование или адрес магазина" autocomplete="off">
-            <i class="d_icon d_icon-search"></i>
-        </div>
-        <div class="modal-body">
-            <div class="shop_choice choice_shop_list">
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="register">Выберите магазин</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal_input">
+                <input type="text" name="city" class="form-control city_complete"
+                    placeholder="Начните вводить наименование или адрес магазина" autocomplete="off">
+                <i class="d_icon d_icon-search"></i>
+            </div>
+            <div class="modal-body">
+                <div class="shop_choice choice_shop_list">
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 2</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 3</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 4</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 5</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Гоголя, 16, этаж 1, офис 122</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
+                    <div class="shop_choice_item">
+                        <a href="#">«Ибрагимов»</a>
+                        <span class="shop_choice_item_address">ул. Гоголя, 16, этаж 1, офис 122</span>
+                        <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                    </div>
+
                 </div>
 
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 2</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
+                <div class="choice_mobile_shop_map">
+                    <img src="https://sun9-4.userapi.com/impg/eUpWXoE572IgnPhUEpr76H8YXghwqMNt5rRP7Q/nluBBTQDyjU.jpg?size=887x563&quality=96&sign=a16b94336d32dfe7fd943d23e80e8519&type=album"
+                        alt="">
                 </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 3</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 4</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 5</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Гоголя, 16, этаж 1, офис 122</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Максима Горького, 1</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-
-                <div class="shop_choice_item">
-                    <a href="#">«Ибрагимов»</a>
-                    <span class="shop_choice_item_address">ул. Гоголя, 16, этаж 1, офис 122</span>
-                    <span class="shop_choice_item_time">с 10:00 до 20:00</span>
-                </div>
-                
+            </div>
+            <div class="choice_store_map">
+                <img src="https://sun9-4.userapi.com/impg/eUpWXoE572IgnPhUEpr76H8YXghwqMNt5rRP7Q/nluBBTQDyjU.jpg?size=887x563&quality=96&sign=a16b94336d32dfe7fd943d23e80e8519&type=album"
+                    alt="">
             </div>
 
-            <div class="choice_mobile_shop_map">
-                <img src="https://sun9-4.userapi.com/impg/eUpWXoE572IgnPhUEpr76H8YXghwqMNt5rRP7Q/nluBBTQDyjU.jpg?size=887x563&quality=96&sign=a16b94336d32dfe7fd943d23e80e8519&type=album" alt="">
+            <div class="toggler">
+                <a onclick="toggleMapAndList()" class="dart-btn dart-btn-primary btn-map">
+                    <i class="d_icon d_icon-map-marker"></i>
+                    <span>На карте</span>
+                </a>
+                <a onclick="toggleMapAndList()" class="dart-btn dart-btn-primary btn-list">
+                    <i class="d_icon d_icon-list-bulleted"></i>
+                    <span>Списком</span>
+                </a>
             </div>
         </div>
-        <div class="choice_store_map">
-            <img src="https://sun9-4.userapi.com/impg/eUpWXoE572IgnPhUEpr76H8YXghwqMNt5rRP7Q/nluBBTQDyjU.jpg?size=887x563&quality=96&sign=a16b94336d32dfe7fd943d23e80e8519&type=album" alt="">
-        </div>
-
-        <div class="toggler">
-            <a onclick="toggleMapAndList()" class="dart-btn dart-btn-primary btn-map">
-              <i class="d_icon d_icon-map-marker"></i>
-              <span>На карте</span>
-            </a>
-            <a onclick="toggleMapAndList()" class="dart-btn dart-btn-primary btn-list">
-              <i class="d_icon d_icon-list-bulleted"></i>
-              <span>Списком</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="schedule_choice" tabindex="-1" aria-labelledby="schedule_choice_title" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="register">Изменение графика работы</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="base-table">
+                    <thead class="base-table__thead">
+                        <tr>
+                            <th class="base-table__th form-check-table__title">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input" type="checkbox" name="schedule_choice_table"
+                                        id="schedule_choice_table_all" value="24">
+                                        День недели
+                                </div>  
+                            </th>
+                            <th class="base-table__th">Время работы</th>
+                            <th class="base-table__th">Время перерыва</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-1" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-1">Понедельник</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">8:00 - 17:00</td>
+                            <td class="base-table__td">
+                                <p>12:00 - 13:00</p>
+                                <p>15:00 - 16:00</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-2" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-2">Вторник</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">8:00 - 17:00</td>
+                            <td class="base-table__td">
+                                <p>12:00 - 13:00</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-3" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-3">Среда</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">8:00 - 17:00</td>
+                            <td class="base-table__td">
+                                <p>12:00 - 13:00</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-4" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-4">Четверг</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">8:00 - 17:00</td>
+                            <td class="base-table__td">
+                                <p>12:00 - 13:00</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-5" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-5">Пятница</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">8:00 - 17:00</td>
+                            <td class="base-table__td">
+                                <p>12:00 - 13:00</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-6" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-6">Суббота</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">Выходной</td>
+                            <td class="base-table__td">
+                                <p>-</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="base-table__td">
+                                <div class="form-check form-check-table">
+                                    <input class="form-check-input margin-null" type="checkbox" name="schedule_choice_table" id="schedule_choice_table-7" value="24">
+                                    <label class="form-check-label" for="schedule_choice_table-7">Воскресенье</label>
+                                </div>             
+                            </td>
+                            <td class="base-table__td">Выходной</td>
+                            <td class="base-table__td">
+                                <p>-</p>
+                                <a href="#" class="base-table__add">+<span>Добавить перерыв</span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modal-buttons">
+                <a href="#" class="dart-btn dart-btn-secondary">Отменить</a>
+                <a href="#" class="dart-btn dart-btn-primary">Подтвердить</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <div class="pop-up-window">
@@ -2162,40 +2305,6 @@
     </div>
     <div class="pop-up-window__icon">
         <img src="img/icons/pop-up.svg" alt="">
-    </div>
-</div>
-
-<div class="modal fade show" id="choice_store" tabindex="-1" aria-labelledby="city_choice_title" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="register">Выберите магазин</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal_input">
-            <input type="text" name="city" class="form-control city_complete" placeholder="Начните вводить наименование или адрес магазина" autocomplete="off">
-            <i class="d_icon d_icon-search"></i>
-        </div>
-        <div class="modal-body">
-            
-
-        </div>
-        <div class="choice_store_map">
-            <img src="https://sun9-4.userapi.com/impg/eUpWXoE572IgnPhUEpr76H8YXghwqMNt5rRP7Q/nluBBTQDyjU.jpg?size=887x563&quality=96&sign=a16b94336d32dfe7fd943d23e80e8519&type=album" alt="">
-        </div>
-
-        <div class="toggler">
-            <a class="dart-btn dart-btn-primary btn-map">
-              <i class="d_icon d_icon-map-marker"></i>
-              <span>На карте</span>
-            </a>
-            <a class="dart-btn dart-btn-primary btn-list">
-              <i class="d_icon d_icon-list-bulleted"></i>
-              <span>Списком</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
 </div>
     </div>
