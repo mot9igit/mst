@@ -14162,6 +14162,31 @@ ol.comments-list {
   border: none !important;
 }
 
+.big_code_block {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+}
+
+.big_code_block span {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.big_code_block span.big_code_block__label {
+  font-size: 14px;
+}
+
+.big_code_block span.desc {
+  font-size: 12px;
+  font-weight: normal;
+}
+
 @media (max-width: 1800px) {
   .dart_header__bar > * + * {
     margin-left: 15px;
