@@ -26,6 +26,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-clock_time:before {
+  content: "\e93a";
+}
+.d_icon-calendar:before {
+  content: "\e93b";
+}
+.d_icon-bank:before {
+  content: "\e93c";
+}
+.d_icon-info:before {
+  content: "\e93d";
+}
 .d_icon-time:before {
   content: "\e935";
 }
@@ -200,3 +212,4 @@
 .d_icon-share:before {
   content: "\e909";
 }
+
