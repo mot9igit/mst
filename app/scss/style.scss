@@ -7182,6 +7182,35 @@ ol.comments-list {
     }
 }
 
+.error-page{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 24px 0;
+    }
+
+    &__image{
+        max-height: 500px;
+        height: 50vh;
+    }
+
+    &__buttons{
+        gap: 24px;
+        display: flex;
+
+        a{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+
 @media (max-width: $desktop) {
     .dart_header__bar > * + *{
         margin-left: 15px;
@@ -7776,6 +7805,21 @@ ol.comments-list {
     }
     .half__widget{
         padding: $main-padding $main-padding;
+    }
+    .error-page{
+
+        &__title{
+            font-size: 30px;
+        }
+
+        &__buttons{
+            gap: 10px;
+
+            a{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
     }
     .footer__topbar {
         padding-top: 0; 
