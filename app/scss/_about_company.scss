@@ -233,16 +233,18 @@
     }
 
     .home-widget-info{
-    &__text{
-        width: 80%;
-        color: #A0A0A0;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 106%; /* 12.72px */
-        letter-spacing: 0.25px;
-        display: flex;
-        margin-top: 16px;
-    }}
-    
+        &__text{
+            width: 80%;
+            color: #A0A0A0;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 106%; /* 12.72px */
+            letter-spacing: 0.25px;
+            display: flex;
+            margin-top: 16px;
+        }
+    }
+}
+
 }
