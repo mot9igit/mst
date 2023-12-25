@@ -131,3 +131,132 @@
         transform: translate(-50%, -50%);
     }
 }
+
+.swiper-button-disabled{
+    opacity: 0 !important;
+}
+
+.dartSwiperNew{
+    height: 256px;
+
+    &__slide{
+        position: relative;
+        p{
+            position: absolute;
+            padding: 16px 12px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            color: #282828;
+            top: 0;
+        }
+    }
+}
+
+.dart-swiper-new{
+    position: relative;
+}
+
+.dart-swiper-manufacturer{
+    position: relative;
+}
+
+.dartSwiperManufacturer{
+    &__slide{
+        border-radius: 5px;
+        background: var(--btn-secondary-outline-background);
+        padding: 8px;
+        height: 130px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-self: center !important;
+    }
+}
+
+.card-img-text{
+    background: var(--btn-secondary-outline-background);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+    &__icon{
+        font-size: 70px;
+    }
+
+    &__text{
+        text-align: center;
+        color: var(--secondary-color);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+.whoWorking{
+    background: #F0FADF;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+
+    img{
+        margin: 0 80px;
+    }
+
+    &__text{
+        h3{
+            color: #282828;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            width: 80%;
+        }
+
+        p{
+            color: #282828;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+}
+
+.card-icon-title{
+    padding: 24px;
+    border-radius: 5px;
+    margin-top: 12px;
+    height: 100%;
+
+    i{
+        font-size: 34px;
+       
+    }
+
+
+    h3{
+        color: #282828;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        width: 85%;
+        margin-bottom: 8px;
+        margin-top: 33px;
+    }
+
+    p{
+        color: #282828;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+

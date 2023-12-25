@@ -42,7 +42,28 @@ var swipertwo = new Swiper(".promoSwiperMini", {
     spaceBetween: 8,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-mini-next",
+      prevEl: ".swiper-mini-prev",
     },
 });
+
+//Свайпер новинки
+var swipertree = new Swiper(".dartSwiperNew", {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-new-next",
+        prevEl: ".swiper-new-prev",
+    },
+});
+
+//Свайпер производители
+var swipertree = new Swiper(".dartSwiperManufacturer", {
+    slidesPerView: 6,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-manufacturer-next",
+        prevEl: ".swiper-manufacturer-prev",
+    },
+});
+dartSwiperManufacturer

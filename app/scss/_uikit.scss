@@ -130,3 +130,26 @@
         border: 1px solid var(--border-color);
     }
 }
+
+.dart-btn-next{
+    &:hover{
+        background: var(--color-prev-hover);
+        filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08));
+        transition: all .3s;
+    }
+}
+
+.dart-btn-prev{
+    &:hover{
+        background: var(--color-prev-hover);
+        filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.08));
+        transition: all .3s;
+    }
+}
+
+.dart-link-all{
+    &:hover{
+        color: var(--link-color-hover);
+        transition: all .3s;
+    }
+}
