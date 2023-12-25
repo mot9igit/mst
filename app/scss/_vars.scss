@@ -36,23 +36,31 @@ $main-padding:          24px;
     --main-background-windows: #fff;
     --color-prev-hover: #EEE;
     --link-color-hover: #8B8B8B;
+    --footer-text-color: #B0B0B0;
+    --rating-color: #E6E6E6;
+    --logo-desctop: url('../img/logo_alt.svg');
+    --logo-mobile: url('../img/min-logo.svg');
 }
 
 //Тёмная тема
 [dark] {
     --primary-color: #F00;
     --primary-hover: #EC0000;
-    --white-color: #fff;
-    --secondary-color: #282828;
+    --white-color: #000000;
+    --secondary-color: #d7d7d7;
     --btn-secondary-color: rgba(0, 0, 0, 0.03);
-    --btn-secondary-outline-background: #F8F7F5;
-    --btn-secondary-outline-color: #4D4D4D;
-    --btn-secondary-outline-hover: #E9E9E9;
-    --border-color: #E2E2E2;
-    --main-background: #F5F5F5;
-    --main-background-windows: #fff;
-    --color-prev-hover: #EEE;
-    --link-color-hover: #8B8B8B;
+    --btn-secondary-outline-background: #07080a;
+    --btn-secondary-outline-color: #b2b2b2;
+    --btn-secondary-outline-hover: #161616;
+    --border-color: #1d1d1d;
+    --main-background: #0a0a0a;
+    --main-background-windows: #000000;
+    --color-prev-hover: #111111;
+    --link-color-hover: #747474;
+    --footer-text-color: #4f4f4f;
+    --rating-color: #191919;
+    --logo-desctop: url('../img/logo.svg');
+    --logo-mobile: url('../img/logo.svg');
 }
 
 //Демо!!!

@@ -2,6 +2,7 @@
     border-radius: 5px;
     background: var(--main-background-windows);
     padding: 24px;
+    margin-bottom: 80px;
 
     &__title{
         display: flex;
@@ -183,8 +184,15 @@
     align-items: center;
     gap: 20px;
     padding: 40px 0;
+    text-decoration: none;
+    &:hover{
+        color: none;
+    }
     &__icon{
         font-size: 70px;
+        &:hover{
+            color: none;
+        }
     }
 
     &__text{
@@ -203,6 +211,11 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
+    text-decoration: none;
+
+    &:hover{
+        color: none;
+    }
 
     img{
         margin: 0 80px;
@@ -235,8 +248,7 @@
     height: 100%;
 
     i{
-        font-size: 34px;
-       
+        font-size: 34px; 
     }
 
 
@@ -260,3 +272,11 @@
     }
 }
 
+
+.link-no-style{
+    text-decoration: none;
+    &:hover{
+        color: unset;
+    }
+
+}

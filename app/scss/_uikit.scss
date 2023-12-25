@@ -21,6 +21,18 @@
     }
 }
 
+.dart-btn-primary-mini{
+    font-size: 14px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: var(--white-color);
+
+    &:hover{
+        background: var(--primary-hover);
+        color: var(--white-color);
+    }
+}
+
 .dart-btn-secondary{
     background: var(--white-color);
     color: var(--secondary-color);

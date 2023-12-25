@@ -259,12 +259,15 @@ h3, .h3{
 
 
 h4, .h4{
-	display: block;
+	color: var(--secondary-color);
+	font-size: 16px;
 	font-style: normal;
-	font-size: 24px;
-	font-weight: 400;
-	color: #75787b;
-	margin-bottom: 8px;	
+	font-weight: 500;
+	line-height: 16px;
+
+	& + *{
+		margin-top: 8px;
+	}
 }
 
 
@@ -611,10 +614,12 @@ ul{
 
 	&__logo{
 		margin-right: 24px;
-		width: 211px !important;
-		img{
-			width: 100%;
-		}
+		width: 210px;
+		height: 80px;
+		background-image: var(--logo-desctop);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
 	}
 
 	.dart_container{
@@ -628,9 +633,14 @@ ul{
 		align-items: center;
 	}
 
+	&__components-mobile{
+		display: none;
+	}
+
 	&__search{
 		display: flex;
 		align-items: center;
+		// min-width: 400px;
 		
 		input{
 			border-radius: 5px 0 0 5px;
@@ -674,4 +684,311 @@ ul{
 	.modal-point-sity{
 		opacity: 1;
 	}
+}
+
+// FOOTER
+
+.dart-topfooter{
+	padding: 40px 0;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.dart-bottomfooter{
+	padding: 20px 0 60px 0;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+	p{
+		color: var(--footer-text-color);
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 15px; /* 100% */
+		letter-spacing: 0.5px;
+		max-width: 783px;
+	}
+}
+
+.footer-link{
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	
+	a{
+		text-decoration: none;
+	}
+}
+
+.footer-social{
+	width: 24px;
+	height: 24px;
+	transition: all .3s;
+	opacity: 0.8;
+
+	&:hover{
+		opacity: 1;
+	}
+}
+
+.footer-link-last{
+	align-items: flex-end;
+}
+
+
+//left menu
+
+.dart-menu-left{
+    height: 880px;
+    border-radius: 5px;
+
+    &__info-top{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 20px;
+        background: var(--main-background-windows);
+        border-radius: 5px;
+		z-index: 1;
+
+        .dart-btn{
+            margin-top: 12px;
+        }
+    }
+
+    //Временный стиль! Удалить при внедрении карты
+    &__map{
+        background: url('../img/home/menumap.png');
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+//right menu
+.dart-catalog-menu{
+    border-radius: 5px;
+    padding: 18px;
+    background: var(--main-background-windows);
+
+    ul{
+        padding: 0;
+    }
+
+    &__category{
+        list-style: none;
+		transition: all 1s;
+
+        ul{
+            li{
+                list-style: none;
+            }
+            padding-left: 50px;
+        }
+    }
+
+	
+
+    &__el{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+		transition: all 0.5s;
+		transform: scale(1);
+
+        img{
+            border-radius: 5px;
+            background: var(--btn-secondary-outline-background);
+        }
+
+		&:hover{
+			color: $primary-color;
+			img{
+				transform: scale(1.1);
+			}
+		}
+    }
+
+	&__list{
+		overflow: hidden;
+		max-height: 0;
+		// opacity: 0;
+		transition: max-height .5s;
+		a{
+			text-decoration: none;
+		}
+	}
+
+	&__category.active{
+		transition: max-height .5s;
+        .dart-catalog-menu__list{
+			max-height: 500px;
+		}
+    }
+}
+
+//рейтинг
+
+.dart-rating{
+	.d_icon-star{
+		font-size: 16px;
+		color: var(--rating-color);
+	}
+	
+}
+
+.dart-rating[data-rating="1"]{
+	.d_icon-star:nth-child(-n+1){
+		color: #FFE500;
+	}
+}
+
+.dart-rating[data-rating="2"]{
+	.d_icon-star:nth-child(-n+2){
+		color: #FFE500;
+	}
+}
+
+.dart-rating[data-rating="3"]{
+	.d_icon-star:nth-child(-n+3){
+		color: #FFE500;
+	}
+}
+
+.dart-rating[data-rating="4"]{
+	.d_icon-star:nth-child(-n+4){
+		color: #FFE500;
+	}
+}
+
+.dart-rating[data-rating="5"]{
+	.d_icon-star:nth-child(-n+5){
+		color: #FFE500;
+	}
+}
+
+.shop-map{
+	&__icon{
+		border: 1px solid var(--border-color);
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+
+		&-map{
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__light-text{
+		color: var(--link-color-hover);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 18px;
+	}
+
+	&__timing{
+		padding-left: 15px;
+		position: relative;
+		&::before{
+			width: 6px;
+			height: 6px;
+			background: #8FFF00;
+			border-radius: 50%;
+			position: absolute;
+			content: "";
+			top: 50%;
+			transform: translate(0, -50%);
+			left: 0px;
+		}
+	}
+
+}
+
+.ymaps-2-1-79-balloon__content{
+	font: unset !important;
+}
+
+.ymaps-2-1-79-placemark-overlay{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.map-circle-image{
+	width: 40px;
+	height: 40px;
+}
+
+
+
+
+@media (max-width: $desktop){
+	
+}
+
+@media (max-width: $small-desktop){
+	.dart-header{
+		// background: #8FFF00;
+
+		&__logo{
+			background: var(--logo-mobile);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			width: 40px;
+			height: 40px;
+			margin-right: 12px
+		}
+	}
+}
+
+@media (max-width: $tablets){
+	
+}
+
+@media (max-width: $small-tablets){
+	.dart-header{
+		// background: #8FFF00;
+
+
+		&__search{
+			display: none;
+		}
+
+	}
+}
+
+@media (max-width: $big-phones){
+	.dart-header{
+		// background: #8FFF00;
+
+		.dart_container{
+			flex-direction: row-reverse;
+		}
+
+		.change-city{
+			display: none;
+		}
+
+		&__components-desctop{
+			display: none;
+		}
+
+		&__components-mobile{
+			display: flex;
+		}
+		
+	}
+
+	.nav-dart-menu{
+		.d_icon{
+			font-size: 24px;
+		}
+	}
+	
 }
