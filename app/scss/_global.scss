@@ -665,6 +665,7 @@ ul{
 	box-shadow: $shadow;
 	top: 72px;
 	background: var(--white-color);
+	pointer-events: none;
 
 	p{
 		max-width: 225px;
@@ -924,8 +925,31 @@ ul{
 	height: 40px;
 }
 
+.header-my-sity{
+	display: flex;
+	align-items: center;
+	font-size: 12px;
 
+	i{
+		font-size: 12px;
+		position: relative;
+    	top: 2px;
+		left: 2px
+	}
+}
 
+.heaser-sity-mobile{
+	font-size: 14px;
+	font-weight: 500;
+	left: -2px;
+}
+
+.block-center{
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: center
+}
 
 @media (max-width: $desktop){
 	
@@ -948,17 +972,17 @@ ul{
 }
 
 @media (max-width: $tablets){
-	
-}
-
-@media (max-width: $small-tablets){
 	.dart-header{
 		// background: #8FFF00;
-
 
 		&__search{
 			display: none;
 		}
+	}
+}
+
+@media (max-width: $small-tablets){
+	.dart-header{
 
 	}
 }

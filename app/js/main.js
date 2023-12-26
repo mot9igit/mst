@@ -55,6 +55,35 @@ var swipertree = new Swiper(".dartSwiperNew", {
         nextEl: ".swiper-new-next",
         prevEl: ".swiper-new-prev",
     },
+	breakpoints: {
+		// 0: {
+		// 	slidesPerView: 1,
+		// 	spaceBetween: 8
+		// },
+		// //when window width is >= 320px
+		// 320: {
+		//   slidesPerView: 1.3,
+		//   spaceBetween: 8
+		// },
+		// // when window width is >= 480px
+		// 480: {
+		//   slidesPerView: 3,
+		//   spaceBetween: 30
+		// },
+		// //when window width is >= 640px
+		// // 640: {
+		// // 	slidesPerView: 5,
+		// // 	spaceBetween: 8,
+		// // },
+		// 1600: {
+		// 	slidesPerView: 6,
+		// 	spaceBetween: 8,
+		// },
+		// 1800: {
+		// 	slidesPerView: 5,
+		// 	spaceBetween: 8,
+		// }
+	  }
 });
 
 //Свайпер производители
