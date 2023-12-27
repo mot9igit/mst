@@ -1,7 +1,4 @@
 .dart-home{
-    border-radius: 5px;
-    background: var(--main-background-windows);
-    padding: 24px;
     margin-bottom: 80px;
 
     &__title{
@@ -138,7 +135,7 @@
 }
 
 .dartSwiperNew{
-    height: 256px;
+    // height: 256px;
 
     &__slide{
         position: relative;
@@ -319,6 +316,11 @@
     justify-content: center;
 }
 
+.dart-window{
+    background: var(--main-background-windows);
+    padding: 24px;
+    border-radius: 5px;
+}
 
 
 
@@ -329,6 +331,10 @@
 @media (max-width: $small-desktop){
     .dart-catalog-menu{
         display: none;
+    }
+
+    .dart-window{
+        padding: 24px 16px;
     }
 
     .dart-catalog-menu-mobile{
@@ -342,7 +348,10 @@
         }
     }
 
-    
+    //Временно!!!!! Карта слева не знаем куда вставить
+    .dart-menu-left{
+        display: none;
+    }
 }
 
 @media (max-width: $tablets){
@@ -378,6 +387,26 @@
         }
     }
 
+    .dart-home{
+        margin-bottom: 32px;
+    }
+
+    .promoSwiperMini{
+        height: unset;
+    }
+
+    .promoSwiper{
+		margin-bottom: 8px;
+        width: unset;
+
+		&__slide{
+			p {
+				padding: 30px;
+				font-size: 32px;
+				line-height: 1;
+			}
+		}
+	}
 }
 
 @media (max-width: $small-tablets){
@@ -404,15 +433,42 @@
         }
     }
 
-    
-
     .catalog-menu-big-card p {
         position: relative;
         top: -3px;
     }
+
+    .promoSwiper{
+		margin-bottom: 8px;
+
+		&__slide{
+			p {
+				padding: 30px;
+				font-size: 30px;
+				line-height: 1;
+			}
+		}
+	}
+
+	.swiper-pagination-bullet{
+		width: 10px !important;
+		height: 10px !important;
+		border: 1px solid #FFFFFF !important;
+	}
 }
 
 @media (max-width: $big-phones){
+    .promoSwiper{
+		margin-bottom: 8px;
+
+		&__slide{
+			p {
+				padding: 28px;
+				font-size: 26px;
+				line-height: 1;
+			}
+		}
+	}
 
 }
 
@@ -430,5 +486,27 @@
 
     .catalog-menu-el img {
         width: 56px;
+    }
+
+    .promoSwiper{
+		margin-bottom: 8px;
+
+		&__slide{
+			p {
+				padding: 28px;
+				font-size: 22px;
+				line-height: 1;
+			}
+		}
+	}
+
+	.swiper-pagination-bullet{
+		width: 8px !important;
+		height: 8px !important;
+		border: 1px solid #FFFFFF !important;
+	}
+
+    .dartSwiperManufacturer__slide{
+        height: 85px !important;
     }
 }

@@ -26,6 +26,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-logout:before {
+	content: "\e913";
+}
+.d_icon-basket:before {
+	content: "\e914";
+}
+
 .d_icon-close:before {
   content: "\e900";
 }

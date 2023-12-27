@@ -31,6 +31,32 @@ let swiper = new Swiper(".promoSwiper", {
         delay: 10000,
         disableOnInteraction: false
     },
+	breakpoints: {
+		0: {
+			slidesPerView: 1.05,
+			spaceBetween: 8
+		},
+		430: {
+			slidesPerView: 1.05,
+			spaceBetween: 8
+		},
+		600: {
+			slidesPerView: 1.05,
+			spaceBetween: 8
+		},
+		768: {
+			slidesPerView: 1,
+			spaceBetween: 8
+		},
+		991: {
+			slidesPerView: 1,
+			spaceBetween: 8
+		},
+		1200: {
+			slidesPerView: 1,
+			spaceBetween: 8
+		}
+	}
 });
 
 //Свайпер акции сбоку
@@ -45,6 +71,50 @@ var swipertwo = new Swiper(".promoSwiperMini", {
       nextEl: ".swiper-mini-next",
       prevEl: ".swiper-mini-prev",
     },
+	breakpoints: {
+		0: {
+			grid: {
+				rows: 1,
+			},
+			slidesPerView: 1.5,
+		},
+		430: {
+			grid: {
+				rows: 1,
+			},
+			slidesPerView: 2.5,
+		},
+		600: {
+			grid: {
+				rows: 1,
+			},
+			slidesPerView: 3.5,
+		},
+		768: {
+			grid: {
+				rows: 1,
+			},
+			slidesPerView: 5,
+		},
+		991: {
+			grid: {
+				rows: 2,
+			},
+			slidesPerView: 2,
+		},
+		1200: {
+			grid: {
+				rows: 2,
+			},
+			slidesPerView: 2,
+		},
+		1800: {
+			grid: {
+				rows: 2,
+			},
+			slidesPerView: 2,
+		}
+	}
 });
 
 //Свайпер новинки
@@ -56,34 +126,28 @@ var swipertree = new Swiper(".dartSwiperNew", {
         prevEl: ".swiper-new-prev",
     },
 	breakpoints: {
-		// 0: {
-		// 	slidesPerView: 1,
-		// 	spaceBetween: 8
-		// },
-		// //when window width is >= 320px
-		// 320: {
-		//   slidesPerView: 1.3,
-		//   spaceBetween: 8
-		// },
-		// // when window width is >= 480px
-		// 480: {
-		//   slidesPerView: 3,
-		//   spaceBetween: 30
-		// },
-		// //when window width is >= 640px
-		// // 640: {
-		// // 	slidesPerView: 5,
-		// // 	spaceBetween: 8,
-		// // },
-		// 1600: {
-		// 	slidesPerView: 6,
-		// 	spaceBetween: 8,
-		// },
-		// 1800: {
-		// 	slidesPerView: 5,
-		// 	spaceBetween: 8,
-		// }
-	  }
+		0: {
+			slidesPerView: 1.9,
+		},
+		430: {
+			slidesPerView: 2.8,
+		},
+		600: {
+			slidesPerView: 3.6,
+		},
+		768: {
+			slidesPerView: 4.6,
+		},
+		991: {
+			slidesPerView: 5.6,
+		},
+		1200: {
+			slidesPerView: 6.3,
+		},
+		1800: {
+			slidesPerView: 5,
+		}
+	}
 });
 
 //Свайпер производители
@@ -94,6 +158,23 @@ var swipertree = new Swiper(".dartSwiperManufacturer", {
         nextEl: ".swiper-manufacturer-next",
         prevEl: ".swiper-manufacturer-prev",
     },
+	breakpoints: {
+		0: {
+			slidesPerView: 2.5,
+		},
+		430: {
+			slidesPerView: 3,
+		},
+		600: {
+			slidesPerView: 4.5,
+		},
+		768: {
+			slidesPerView: 5.5,
+		},
+		991: {
+			slidesPerView: 6,
+		}
+	}
 });
 
 
@@ -230,4 +311,26 @@ if(alldartSwiperSearch){
 			},
 		});
     }
+}
+
+//Открытие менюшки
+
+const menu_toggler = document.querySelector('.nav-dart-menu');
+const sidebar = document.querySelector('.sidebar');
+const body = document.querySelector('body');
+
+if(menu_toggler && sidebar){
+	menu_toggler.addEventListener('click', () => {
+		sidebar.classList.toggle('show');
+		body.style.overflow = "hidden"
+	})
+}
+
+//Закрытие менюшки
+
+function closeSidebar(){
+	if(sidebar){
+		sidebar.classList.remove('show');
+		body.style.overflow = "scroll"
+	}
 }

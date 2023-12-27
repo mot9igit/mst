@@ -28,14 +28,18 @@
     <header class="dart-header">
     <div class="dart_container">
         <div class="dart-header__components">
-            <a href="#" class="dart-header__logo">
-            </a>
-            <!-- <div class="d-col-4"> -->
-                <div class="dart-input dart-input-search dart-header__search">
-                    <input type="text" placeholder="Найти во всех магазинах">
-                    <a href="/search.html" class="dart-btn dart-btn-primary">Найти</a>
+            <div class="dart-header__mobile-logo">
+                <div class="dart-header__components dart-header__components-mobile">
+                    <div class="nav-dart-menu">
+                        <i class="d_icon d_icon-menu"></i>
+                    </div>
                 </div>
-            <!-- </div> -->
+                <a href="#" class="dart-header__logo"></a>
+            </div>
+            <div class="dart-input dart-input-search dart-header__search">
+                <input type="text" placeholder="Найти во всех магазинах">
+                <a href="/search.html" class="dart-btn dart-btn-primary">Найти</a>
+            </div>
             <div class="change-city">
                 <a href="#" class="dart-btn dart-btn-icon-list">
                     <i class="d_icon-geo"></i>
@@ -50,11 +54,6 @@
             </div>
             
         </div>
-
-        <div class="dart-header__components dart-header__components-desctop">
-            <a href="tel:+74993255250" class="dart-btn">+7 499 325 52 50</a>
-            <a href="#" class="dart-btn dart-btn-secondary">Войти</a>
-        </div>
         
         <div class="dart-header__components dart-header__components-mobile">
             <a href="#" class="link-no-style block-center">
@@ -66,19 +65,51 @@
             </a>
         </div>
 
-        <div class="dart-header__components dart-header__components-mobile">
-            <div class="nav-dart-menu">
-                <i class="d_icon d_icon-menu"></i>
-            </div>
+        <div class="dart-header__components">
+            <a href="tel:+74993255250" class="dart-btn dart-header__components-desctop">+7 499 325 52 50</a>
+            <a href="#" class="dart-btn dart-btn-secondary">Войти</a>
         </div>
     </div> 
 </header>
+
+<div class="sidebar" onclick="closeSidebar()">
+    <div class="sidebar__menu" onclick="event.stopPropagation()">
+        <div class="sidebar__profile">
+            <!-- Если аватарка -->
+            <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+
+            <!-- Если первая буква -->
+            <div class="sidebar__profile-letter">М</div>
+            <p>Максимов Максим</p>
+        </div>
+        <a href="#" class="sidebar__bold link-no-style">
+            <i class="d_icon d_icon-logout"></i>
+            <p>История заказов</p>
+        </a>
+        <a href="#" class="sidebar__bold link-no-style">
+            <i class="d_icon d_icon-basket"></i>
+            <p>Выйти</p>
+        </a>
+        
+        <div class="sidebar__list">
+            <a href="#">О компании</a>
+            <a href="#">Контакты</a>
+            <a href="#">Возврат товара</a>
+            <a href="#">Гарантии</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Публичная оферта</a>
+            <hr>
+            <a href="#">+7 (499) 325-52-50</a>
+            <a href="#">info@mst.tools</a>
+        </div>
+    </div>
+</div>
     <main class="dart_main">
       
       <section class="dart-section" >
         <div class="dart_container">
           <div class="dart-row">
-            <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-12">
+            <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-12 mb-3 mp-0">
                 <div class="dart-catalog-menu">
                   <ul>
                     <li class="dart-catalog-menu__category">
@@ -334,14 +365,14 @@
                   </div>
                 </div>
             </div>
-            <div class="d-col-xxl-7 d-col-xl-9">
-              <div class="dart-home">
+            <div class="d-col-xxl-7 d-col-xl-9 mp-0">
+              <div class="dart-home dart-window">
                 <div class="dart-home__title mb-3">
                   <h2>Акции</h2>
                   <a class="dart-link-all" href="#">Все <i class="d_icon d_icon-right-arrow"></i></a>
                 </div>
                 <div class="dart-row">
-                  <div class="d-col-xl-8">
+                  <div class="d-col-lg-8">
                     <div class="swiper promoSwiper">
                       <div class="swiper-wrapper">
                         <a href="#" class="swiper-slide promoSwiper__slide">
@@ -360,7 +391,7 @@
                       <div class="swiper-pagination"></div>
                     </div>
                   </div>
-                  <div class="d-col-xl-4">
+                  <div class="d-col-lg-4">
                     <div class="swiper promoSwiperMini">
                       <div class="swiper-wrapper">
                         <a href="#" class="swiper-slide promoSwiperMini__slide" loading="lazy">
@@ -460,31 +491,31 @@
                   <div class="swiper dartSwiperManufacturer">
                     <div class="swiper-wrapper">
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/1.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/2.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/3.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/4.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/5.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/6.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/7.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/8.png" loading="lazy" alt="">
                       </a>
                       <a href="#" class="swiper-slide dartSwiperManufacturer__slide">
-                        <img src="../img/slider/manufacturer/yandex-delivery.png" loading="lazy" alt="">
+                        <img src="../img/vendors/9.png" loading="lazy" alt="">
                       </a>
                     </div>
                   </div>
@@ -588,25 +619,25 @@
     <div class="dart_container">
         <div class="dart-topfooter">
             <div class="dart-row">
-                <div class="d-col-md-2">
+                <div class="d-col-lg-2 d-col-md-3">
                     <div class="footer-link">
                         <a href="#">О компании</a>
                         <a href="#">Контакты</a>
                     </div>
                 </div>
-                <div class="d-col-md-2">
+                <div class="d-col-lg-2 d-col-md-3">
                     <div class="footer-link">
                         <a href="#">Возврат товара</a>
                         <a href="#">Гарантии</a>
                     </div>
                 </div>
-                <div class="d-col-md-2">
+                <div class="d-col-lg-4 d-col-md-3">
                     <div class="footer-link">
                         <a href="#">Политика конфиденциальности</a>
                         <a href="#">Публичная оферта</a>
                     </div>
                 </div>
-                <div class="d-col-md-6">
+                <div class="d-col-lg-4 d-col-md-3">
                     <div class="footer-link footer-link-last">
                         <a href="#">+7 (499) 325-52-50</a>
                         <a href="#">info@mst.tools</a>
