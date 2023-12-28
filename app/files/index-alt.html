@@ -10,7 +10,7 @@
     @@include('./includes/header.html')
     <main class="dart_main">
       <!-- @@include('./includes/breadcrumbs.html') -->
-      <section class="dart-section" >
+      <section class="dart-section mpt-0" >
         <div class="dart_container">
           <div class="dart-row">
             <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-12 mb-3 mp-0">
@@ -158,8 +158,11 @@
 
                   </ul>
                 </div>
-                <div class="dart-catalog-menu-mobile dart-window ">
+                <div class="dart-catalog-menu-mobile dart-window">
                   <h2>Каталог</h2>
+                  <div class="dart-input dart-input-search mb-3">
+                    <input type="text" placeholder="Найти во всех магазинах">
+                  </div>
                   <div class="dart-row">
                     <div class="d-col-lg-5 d-col-md-4 d-col-12">
                       <div class="dart-row">
@@ -474,7 +477,7 @@
                 </a>
 
                 <div class="dart-row cards-img-text-mobile">
-                  <a href="#" class="d-col-lg-4 link-no-style" style="padding-right: 0;">
+                  <a href="#" class="d-col-lg-4 link-no-style">
                     <div class="card-icon-title" style="background: #EBFAFD;">
                       <i class="d_icon d_icon-watch card-img-text__icon"></i>
                       <h3>Когда товар нужен срочно</h3>
@@ -484,7 +487,7 @@
                   </a>
                   
 
-                  <a href="#" class="d-col-lg-4 link-no-style" style="padding-right: 0;">
+                  <a href="#" class="d-col-lg-4 link-no-style">
                     <div class="card-icon-title" style="background: #FAE6E5;">
                       <i class="d_icon d_icon-eye card-img-text__icon"></i>
                       <h3>Если нужно посмотреть до покупки</h3>
@@ -508,7 +511,7 @@
                   <div class="dart-menu-left__info-top">
                       <h3>Выберите магазин</h3>
                       <p>Сейчас вы видите магазины в Москве</p>
-                      <a href="#" class="dart-btn dart-btn-primary-mini">Выбрать из списка</a>
+                      <a href="#" class="dart-btn dart-btn-primary-mini showMap">Выбрать из списка</a>
                   </div>
                   <div class="dart-menu-left__map" id="dart-menu-left__map">
                     <!-- Сюда помещяем карту -->

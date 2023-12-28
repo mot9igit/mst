@@ -7,8 +7,15 @@
     font-weight: 500;
     line-height: 19px;
     transition: all 0.3s;
-    display: inline-block;
+    display: inline-flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .d_icon{
+        font-size: 24px;
+    }
 }
 
 .dart-btn-primary{
@@ -98,6 +105,32 @@
     } 
 }
 
+
+.dart-btn-radio-mini{
+    padding: 0 !important;
+    input{
+        display: none;
+    }
+
+    label{
+        background-color: var(--btn-secondary-outline-background);
+        color: var(--secondary-color);
+        cursor: pointer;
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 5px;
+
+        &:hover{
+            background-color: var(--btn-secondary-outline-hover);
+        }
+    }
+
+    input:checked + label{
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+    } 
+}
+
 .dart-input input{
     outline: none;
     border-radius: 5px;
@@ -163,5 +196,28 @@
     &:hover{
         color: var(--link-color-hover);
         transition: all .3s;
+    }
+}
+
+.btn-close{
+    background: var(--color-sitebar-text);
+    opacity: 0.3;
+    color: var(--white-color) !important;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:hover{
+        background: var(--color-sitebar-text);
+        opacity: 0.5;
+        color: var(--white-color) !important;
+    }
+
+    .d_icon{
+        font-size: 12px;
     }
 }

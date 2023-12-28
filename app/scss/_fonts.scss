@@ -26,67 +26,73 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.d_icon-logout:before {
+.d_icon-shopchange:before {
+	content: "\e915";
+  }
+  .d_icon-list:before {
+	content: "\e916";
+  }
+  .d_icon-logout:before {
 	content: "\e913";
-}
-.d_icon-basket:before {
+  }
+  .d_icon-basket:before {
 	content: "\e914";
-}
-
-.d_icon-close:before {
-  content: "\e900";
-}
-.d_icon-courier:before {
-  content: "\e901";
-}
-.d_icon-down-arrow:before {
-  content: "\e902";
-}
-.d_icon-express:before {
-  content: "\e903";
-}
-.d_icon-eye:before {
-  content: "\e904";
-}
-.d_icon-geo:before {
-  content: "\e905";
-}
-.d_icon-left-arrow:before {
-  content: "\e906";
-}
-.d_icon-menu:before {
-  content: "\e907";
-}
-.d_icon-photo:before {
-  content: "\e908";
-}
-.d_icon-point-geo:before {
-  content: "\e909";
-}
-.d_icon-right-arrow:before {
-  content: "\e90a";
-}
-.d_icon-search:before {
-  content: "\e90b";
-}
-.d_icon-setting:before {
-  content: "\e90c";
-}
-.d_icon-setup:before {
-  content: "\e90d";
-}
-.d_icon-shop:before {
-  content: "\e90e";
-}
-.d_icon-star:before {
-  content: "\e90f";
-}
-.d_icon-vk .path1:before {
-  content: "\e910";
-}
-.d_icon-vk .path2:before {
-  content: "\e911";
-}
-.d_icon-watch:before {
-  content: "\e912";
-}
+  }
+  .d_icon-close:before {
+	content: "\e900";
+  }
+  .d_icon-courier:before {
+	content: "\e901";
+  }
+  .d_icon-down-arrow:before {
+	content: "\e902";
+  }
+  .d_icon-express:before {
+	content: "\e903";
+  }
+  .d_icon-eye:before {
+	content: "\e904";
+  }
+  .d_icon-geo:before {
+	content: "\e905";
+  }
+  .d_icon-left-arrow:before {
+	content: "\e906";
+  }
+  .d_icon-menu:before {
+	content: "\e907";
+  }
+  .d_icon-photo:before {
+	content: "\e908";
+  }
+  .d_icon-point-geo:before {
+	content: "\e909";
+  }
+  .d_icon-right-arrow:before {
+	content: "\e90a";
+  }
+  .d_icon-search:before {
+	content: "\e90b";
+  }
+  .d_icon-setting:before {
+	content: "\e90c";
+  }
+  .d_icon-setup:before {
+	content: "\e90d";
+  }
+  .d_icon-shop:before {
+	content: "\e90e";
+  }
+  .d_icon-star:before {
+	content: "\e90f";
+  }
+  .d_icon-vk .path1:before {
+	content: "\e910";
+  }
+  .d_icon-vk .path2:before {
+	content: "\e911";
+  }
+  .d_icon-watch:before {
+	content: "\e912";
+  }
+  

@@ -76,7 +76,7 @@ var swipertwo = new Swiper(".promoSwiperMini", {
 			grid: {
 				rows: 1,
 			},
-			slidesPerView: 1.5,
+			slidesPerView: 2,
 		},
 		430: {
 			grid: {
@@ -204,6 +204,7 @@ let stores_map = {
 	options: {
 		wrapper: '.dart-menu-left__map',
 		map: 'dart-menu-left__map',
+		mapModal: 'changeshop__map',
 		stores_list: '.modal-stores-map__items',
 		search_form: '.modal-stores-map__form',
 		toggler: '.dart-menu-left__map .toggler a',
@@ -218,8 +219,25 @@ let stores_map = {
 			controls: ['zoomControl']
 		});
 
+		let mainMapModal = new ymaps.Map(stores_map.options.mapModal, {
+			center: stores_map.options.center,
+			zoom: 9,
+			controls: ['zoomControl']
+		});
+
 
 		mainMap.geoObjects
+			.add(new ymaps.Placemark(stores_map.options.center, {
+				balloonContent: "Вы тут",
+				hintContent: "Вы тут",
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: '/img/icons/here.png',
+				iconImageSize: [40, 40],
+				iconImageOffset: [-20, -20]
+		}));
+
+		mainMapModal.geoObjects
 			.add(new ymaps.Placemark(stores_map.options.center, {
 				balloonContent: "Вы тут",
 				hintContent: "Вы тут",
@@ -286,6 +304,7 @@ let stores_map = {
 				}
 			});
 			mainMap.geoObjects.add(myPlacemark);
+			mainMapModal.geoObjects.add(myPlacemark);
 		});
 	}
 	
@@ -333,4 +352,49 @@ function closeSidebar(){
 		sidebar.classList.remove('show');
 		body.style.overflow = "scroll"
 	}
+}
+
+// Выбор По алфавиту/По региону в выборе города
+function toggleFilterCity(){
+	//Получаем индекс нажатой кнопки
+	let cheackFilter = document.getElementsByName("sity_filter_id");
+
+	if(cheackFilter[0].checked){
+		document.getElementById("choice_city").classList.add("filter_city")
+	}else{
+		document.getElementById("choice_city").classList.remove("filter_city")
+	}
+}
+
+//Карта desctop
+
+const showCardButton = document.querySelector('.showMap');
+const changeshop = document.querySelector('.changeshop')
+
+if(showCardButton && changeshop){
+	showCardButton.addEventListener('click', () => {
+		changeshop.classList.toggle('show');
+		body.style.overflow = "hidden"
+	})
+}
+
+function closeChangeshop(){
+	if(changeshop){
+		changeshop.classList.remove('show');
+		body.style.overflow = "scroll"
+	}
+}
+
+const changeshopToggler = document.querySelectorAll('.changeshop-toggler');
+
+
+
+if(changeshopToggler){
+
+	for (let i = 0; i < changeshopToggler.length; i++) {
+		changeshopToggler[i].addEventListener('click', () => {
+			changeshop.classList.toggle('showList')
+		})
+	}
+	
 }

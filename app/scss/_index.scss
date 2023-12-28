@@ -20,6 +20,10 @@
                 font-size: 18px;
             }
         }
+
+        .dart-link-all{
+            margin: 0;
+        }
     }
 }
 
@@ -322,7 +326,11 @@
     border-radius: 5px;
 }
 
-
+.dart-catalog-menu-mobile{
+    .dart-input{
+        display: none;
+    }
+}
 
 @media (max-width: $desktop){
 	
@@ -455,6 +463,16 @@
 		height: 10px !important;
 		border: 1px solid #FFFFFF !important;
 	}
+
+    .dart-catalog-menu-mobile{
+        h2{
+            display: none !important;
+        }
+
+        .dart-input{
+            display: block;
+        }
+    }
 }
 
 @media (max-width: $big-phones){
@@ -469,6 +487,30 @@
 			}
 		}
 	}
+
+
+    
+    .dart-swiper-next{
+        width: 30px !important;
+        height: 30px !important;
+        right: 0px !important;
+        top: 55% !important;
+
+        &::after{
+            font-size: 20px !important;
+        }
+    }
+
+    .dart-swiper-prev{
+        left: 0px !important;
+        width: 30px !important;
+        height: 30px !important;
+        top: 55% !important;
+
+        &::after{
+            font-size: 20px !important;
+        }
+    }
 
 }
 
