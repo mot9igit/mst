@@ -52,6 +52,10 @@ body {
 	min-height: 100vh;
 }
 
+.dart-overflov-unset{
+	overflow: unset !important;
+}
+
 .dart_noscroll{
 	overflow: hidden;
 }
@@ -398,14 +402,6 @@ blockquote{
 	.desktop-show{
 		display: none;
 	}
-}
-
-@media (max-width: $small-tablets){
-	@for $i from 1 to 10 {
-		.mobile-order-#{$i}{
-			order: #{$i};
-		}
-	}
 
 	.mp-0{
 		padding-left: 0 !important;
@@ -414,6 +410,14 @@ blockquote{
 
 	.mpt-0{
 		padding-top: 0 !important;
+	}
+}
+
+@media (max-width: $small-tablets){
+	@for $i from 1 to 10 {
+		.mobile-order-#{$i}{
+			order: #{$i};
+		}
 	}
 }
 
@@ -1126,7 +1130,8 @@ ul{
 //left menu
 
 .dart-menu-left{
-    height: 880px;
+	max-height: 700px;
+    height: 100vh;
     border-radius: 5px;
 
     &__info-top{
@@ -1594,7 +1599,11 @@ ul{
 
 
 @media (max-width: $desktop){
-	
+	.dart-header{
+		&__components-desctop{
+			padding: 15px 14px !important;
+		}
+	}
 }
 
 @media (max-width: $small-desktop){
@@ -1621,15 +1630,54 @@ ul{
 			width: 1000px;
 		}
 	}
-}
 
-@media (max-width: $tablets){
 	.dart-header{
+		.dart_container{
+			// flex-direction: row-reverse;
+		}
+
+		&__mobile-logo{
+			display: flex;
+			gap: 8px;
+		}
+
+		&__logo{
+			width: 24px;
+			height: 24px;
+		
+		}
+
+		.change-city .dart-btn-icon-list{
+			display: none;
+		}
+
+		.modal-point-sity{
+			width: 100%;
+			left: 0;
+			top: 79px;
+		}
+
+		&__components-desctop{
+			display: none;
+		}
+
+		&__components-mobile{
+			display: flex;
+		}
+
 		&__search{
 			display: none;
 		}
 	}
-	
+
+	.nav-dart-menu{
+		.d_icon{
+			font-size: 24px;
+		}
+	}
+}
+
+@media (max-width: $tablets){
 
 	h2, .h2{
 		font-size: 24px !important;
@@ -1710,7 +1758,6 @@ ul{
 			}
 		}	
 	}
-
 }
 
 @media (max-width: $small-tablets){
@@ -1744,48 +1791,6 @@ ul{
 }
 
 @media (max-width: $big-phones){
-	.dart-header{
-		.dart_container{
-			// flex-direction: row-reverse;
-		}
-
-		&__mobile-logo{
-			display: flex;
-			gap: 8px;
-		}
-
-		&__logo{
-			width: 24px;
-			height: 24px;
-		
-		}
-
-		.change-city .dart-btn-icon-list{
-			display: none;
-		}
-
-		.modal-point-sity{
-			width: 100%;
-			left: 0;
-			top: 79px;
-		}
-
-		&__components-desctop{
-			display: none;
-		}
-
-		&__components-mobile{
-			display: flex;
-		}
-		
-	}
-
-	.nav-dart-menu{
-		.d_icon{
-			font-size: 24px;
-		}
-	}
-
 	.change-shop-mobile{
 		display: flex;
 		align-items: center;

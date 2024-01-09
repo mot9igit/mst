@@ -41,15 +41,15 @@ let swiper = new Swiper(".promoSwiper", {
 			spaceBetween: 8
 		},
 		600: {
-			slidesPerView: 1.05,
+			slidesPerView: 1.1,
 			spaceBetween: 8
 		},
 		768: {
-			slidesPerView: 1,
+			slidesPerView: 1.2,
 			spaceBetween: 8
 		},
 		991: {
-			slidesPerView: 1,
+			slidesPerView: 1.3,
 			spaceBetween: 8
 		},
 		1200: {
@@ -96,19 +96,25 @@ var swipertwo = new Swiper(".promoSwiperMini", {
 			},
 			slidesPerView: 5,
 		},
-		991: {
+		993: {
 			grid: {
-				rows: 2,
+				rows: 1,
 			},
-			slidesPerView: 2,
+			slidesPerView: 5,
 		},
-		1200: {
+		1000: {
 			grid: {
-				rows: 2,
+				rows: 1,
 			},
-			slidesPerView: 2,
+			slidesPerView: 4.5,
 		},
-		1800: {
+		1400: {
+			grid: {
+				rows: 1,
+			},
+			slidesPerView: 4,
+		},
+		1601: {
 			grid: {
 				rows: 2,
 			},
@@ -142,10 +148,13 @@ var swipertree = new Swiper(".dartSwiperNew", {
 			slidesPerView: 5.6,
 		},
 		1200: {
-			slidesPerView: 6.3,
+			slidesPerView: 3.5,
+		},
+		1400: {
+			slidesPerView: 4.5,
 		},
 		1800: {
-			slidesPerView: 5,
+			slidesPerView: 5.5,
 		}
 	}
 });

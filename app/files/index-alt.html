@@ -10,10 +10,11 @@
     @@include('./includes/header.html')
     <main class="dart_main">
       <!-- @@include('./includes/breadcrumbs.html') -->
-      <section class="dart-section mpt-0" >
-        <div class="dart_container">
-          <div class="dart-row">
-            <div class="d-col-xxl-2 d-col-xl-3 d-col-lg-12 mb-3 mp-0">
+      <section class="dart-section dart-overflov-unset mpt-0" >
+        <div class="dart_container mp-0">
+          <div class="dart-custom-grid">
+            <!--d-col-xl-3 d-col-lg-12 d-col-lg-2  mb-3 mp-0  -->
+            <div class="d-col-menu">
                 <div class="dart-catalog-menu">
                   <ul>
                     <li class="dart-catalog-menu__category">
@@ -272,33 +273,34 @@
                   </div>
                 </div>
             </div>
-            <div class="d-col-xxl-7 d-col-xl-9 mp-0">
+            <!-- d-col-lg-7   d-col-xl-9 -->
+            <div class="d-col-content">
               <div class="dart-home dart-window">
                 <div class="dart-home__title mb-3">
                   <h2>Акции</h2>
                   <a class="dart-link-all" href="#">Все <i class="d_icon d_icon-right-arrow"></i></a>
                 </div>
-                <div class="dart-row">
-                  <div class="d-col-lg-8">
-                    <div class="swiper promoSwiper">
-                      <div class="swiper-wrapper">
-                        <a href="#" class="swiper-slide promoSwiper__slide">
-                          <p>Скидки и кешбэк</p>
-                          <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide promoSwiper__slide">
-                          <p>Скидки и кешбэк Скидки и кешбэк Скидки и кешбэк Скидки и кешбэк</p>
-                          <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
-                        </a>
-                        <a href="#" class="swiper-slide promoSwiper__slide">
-                          <p>Скидки и кешбэк Скидки и кешбэк</p>
-                          <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
-                        </a>
-                      </div>
-                      <div class="swiper-pagination"></div>
+                <div class="d-col-main-swiper">
+                  <!-- d-col-xl-8 -->
+                  <div class="swiper promoSwiper">
+                    <div class="swiper-wrapper">
+                      <a href="#" class="swiper-slide promoSwiper__slide">
+                        <p>Скидки и кешбэк</p>
+                        <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
+                      </a>
+                      <a href="#" class="swiper-slide promoSwiper__slide">
+                        <p>Скидки и кешбэк Скидки и кешбэк Скидки и кешбэк Скидки и кешбэк</p>
+                        <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
+                      </a>
+                      <a href="#" class="swiper-slide promoSwiper__slide">
+                        <p>Скидки и кешбэк Скидки и кешбэк</p>
+                        <img src="../img/slider/slider-promo.png" loading="lazy" alt="">
+                      </a>
                     </div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="d-col-lg-4">
+                  <!-- d-col-xl-4 -->
+                  <div class="d-col-promoSwiperMini">
                     <div class="swiper promoSwiperMini">
                       <div class="swiper-wrapper">
                         <a href="#" class="swiper-slide promoSwiperMini__slide" loading="lazy">
@@ -435,28 +437,28 @@
                 </div>
 
                 <div class="dart-row cards-img-text-mobile">
-                  <div class="d-col-lg-3 d-col-sm-6">
+                  <div class="d-col-xxl-3 d-col-xl-6 d-col-lg-3 d-col-sm-6">
                     <a href="#" class="card-img-text link-no-style">
                       <i class="d_icon d_icon-express card-img-text__icon"></i>
                       <p class="card-img-text__text">Экспресс от 15 минут</p>
                     </a>
                   </div>
 
-                  <div class="d-col-lg-3 d-col-sm-6">
+                  <div class="d-col-xxl-3 d-col-xl-6 d-col-lg-3 d-col-sm-6">
                     <a href="#" class="card-img-text link-no-style">
                       <i class="d_icon d_icon-courier card-img-text__icon"></i>
                       <p class="card-img-text__text">Курьер до квартиры</p>
                     </a>
                   </div>
 
-                  <div class="d-col-lg-3 d-col-sm-6">
+                  <div class="d-col-xxl-3 d-col-xl-6 d-col-lg-3 d-col-sm-6">
                     <a href="#" class="card-img-text link-no-style">
                       <i class="d_icon d_icon-point-geo card-img-text__icon"></i>
                       <p class="card-img-text__text">Пункт выдачи ТК</p>
                     </a>
                   </div>
 
-                  <div class="d-col-lg-3 d-col-sm-6">
+                  <div class="d-col-xxl-3 d-col-xl-6 d-col-lg-3 d-col-sm-6">
                     <a href="#" class="card-img-text link-no-style">
                       <i class="d_icon d_icon-shop card-img-text__icon"></i>
                       <p class="card-img-text__text">Самовывоз из магазина</p>
@@ -477,7 +479,7 @@
                 </a>
 
                 <div class="dart-row cards-img-text-mobile">
-                  <a href="#" class="d-col-lg-4 link-no-style">
+                  <a href="#" class="d-col-xxl-4 d-col-xl-12 d-col-lg-4 link-no-style">
                     <div class="card-icon-title" style="background: #EBFAFD;">
                       <i class="d_icon d_icon-watch card-img-text__icon"></i>
                       <h3>Когда товар нужен срочно</h3>
@@ -487,7 +489,7 @@
                   </a>
                   
 
-                  <a href="#" class="d-col-lg-4 link-no-style">
+                  <a href="#" class="d-col-xxl-4 d-col-xl-12 d-col-lg-4 link-no-style">
                     <div class="card-icon-title" style="background: #FAE6E5;">
                       <i class="d_icon d_icon-eye card-img-text__icon"></i>
                       <h3>Если нужно посмотреть до покупки</h3>
@@ -495,7 +497,7 @@
                     </div>
                   </a>
 
-                  <a href="#" class="d-col-lg-4 link-no-style">
+                  <a href="#" class="d-col-xxl-4 d-col-xl-12 d-col-lg-4 link-no-style">
                     <div class="card-icon-title" style="background: #F7F8FA;">
                       <i class="d_icon d_icon-setup card-img-text__icon"></i>
                       <h3>Редкие запчасти и товары</h3>
@@ -506,7 +508,8 @@
 
               </div>
             </div>
-            <div class="d-col-xxl-3">
+            <!-- d-col-lg-3 -->
+            <div class="d-col-map">
               <div class="dart-menu-left">
                   <div class="dart-menu-left__info-top">
                       <h3>Выберите магазин</h3>
