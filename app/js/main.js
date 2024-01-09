@@ -356,22 +356,33 @@ if(menu_toggler && sidebar){
 
 //Закрытие менюшки
 
-function closeSidebar(){
+// function closeSidebar(){
 	if(sidebar){
-		sidebar.classList.remove('show');
-		body.style.overflow = "scroll"
+		sidebar.addEventListener('click', () => {
+			sidebar.classList.remove('show');
+			body.style.overflow = "scroll"
+		})
+		
 	}
-}
+// }
 
 // Выбор По алфавиту/По региону в выборе города
-function toggleFilterCity(){
-	//Получаем индекс нажатой кнопки
-	let cheackFilter = document.getElementsByName("sity_filter_id");
 
-	if(cheackFilter[0].checked){
-		document.getElementById("choice_city").classList.add("filter_city")
-	}else{
-		document.getElementById("choice_city").classList.remove("filter_city")
+const toggleFilterCity = document.querySelectorAll('.toggleFilterCity');
+
+if(toggleFilterCity){
+	for(let i = 0; i < toggleFilterCity.length; i++){
+		toggleFilterCity[i].addEventListener('click', () => {
+
+			//Получаем индекс нажатой кнопки
+			let cheackFilter = document.getElementsByName("sity_filter_id");
+
+			if(cheackFilter[0].checked){
+				document.getElementById("choice_city").classList.add("filter_city")
+			}else{
+				document.getElementById("choice_city").classList.remove("filter_city")
+			}
+		})
 	}
 }
 
@@ -387,10 +398,15 @@ if(showCardButton && changeshop){
 	})
 }
 
-function closeChangeshop(){
-	if(changeshop){
-		changeshop.classList.remove('show');
+const closeChangeShop = document.querySelectorAll('.closeChangeShop');
+
+if(closeChangeShop){
+	for(let i = 0; i < closeChangeShop.length; i++){
+		closeChangeShop[i].addEventListener('click', () => {
+
+			changeshop.classList.remove('show');
 		body.style.overflow = "scroll"
+		})
 	}
 }
 

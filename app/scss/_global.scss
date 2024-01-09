@@ -1679,6 +1679,9 @@ ul{
 
 @media (max-width: $tablets){
 
+
+	
+
 	h2, .h2{
 		font-size: 24px !important;
 	}
@@ -1704,7 +1707,7 @@ ul{
 				}
 			}
 
-			&__mobile{
+			.changeshop__mobile{
 				.map{
 					display: inline-flex;
 				}

@@ -3904,12 +3904,12 @@ ul {
   .changeshop.showList .changeshop__map {
     display: none;
   }
-  .changeshop.showList__mobile .map {
+  .changeshop.showList .changeshop__mobile .map {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
-  .changeshop.showList__mobile .list {
+  .changeshop.showList .changeshop__mobile .list {
     display: none;
   }
   .changeshop__mobile .map {

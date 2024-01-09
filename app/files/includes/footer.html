@@ -244,7 +244,9 @@
                     class="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
-                ></button>
+                >
+                <i class="d_icon d_icon-close"></i>
+            </button>
             </div>
             <div class="modal_input">
                 <input
@@ -263,12 +265,12 @@
                     name="sity_filter_id"
                     id="alfovit"
                 />
-                <label onclick="toggleFilterCity()" for="alfovit"
+                <label class="toggleFilterCity" for="alfovit"
                     >По алфавиту</label
                 >
 
                 <input type="radio" name="sity_filter_id" id="region" />
-                <label onclick="toggleFilterCity()" for="region"
+                <label class="toggleFilterCity" for="region"
                     >По региону</label
                 >
             </div>
@@ -1180,7 +1182,7 @@
     <i class="d_icon d_icon-right-arrow"></i>
 </a>
 
-<div class="changeshop" onclick="closeChangeshop()">
+<div class="changeshop closeChangeShop">
     <div class="changeshop__menu" onclick="event.stopPropagation()">
         <div class="changeshop__map" id="changeshop__map"></div>
         <div class="changeshop__list">
@@ -1188,9 +1190,8 @@
                 <div class="dart-home__title">
                     <h3>Выберите магазин</h3>
                     <a
-                        onclick="closeChangeshop()"
                         href="#"
-                        class="btn-close link-no-style"
+                        class="btn-close link-no-style closeChangeShop"
                         ><i class="d_icon d_icon-close"></i
                     ></a>
                 </div>

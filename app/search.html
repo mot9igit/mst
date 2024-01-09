@@ -76,7 +76,7 @@
     </div> 
 </header>
 
-<div class="sidebar" onclick="closeSidebar()">
+<div class="sidebar">
     <div class="sidebar__menu" onclick="event.stopPropagation()">
         <div class="sidebar__profile">
             <!-- Если аватарка -->
@@ -87,11 +87,11 @@
             <p>Максимов Максим</p>
         </div>
         <a href="#" class="sidebar__bold link-no-style">
-            <i class="d_icon d_icon-logout"></i>
+            <i class="d_icon d_icon-basket"></i>
             <p>История заказов</p>
         </a>
         <a href="#" class="sidebar__bold link-no-style">
-            <i class="d_icon d_icon-basket"></i>
+            <i class="d_icon d_icon-logout"></i>
             <p>Выйти</p>
         </a>
         
@@ -1003,7 +1003,9 @@
                     class="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
-                ></button>
+                >
+                <i class="d_icon d_icon-close"></i>
+            </button>
             </div>
             <div class="modal_input">
                 <input
@@ -1022,12 +1024,12 @@
                     name="sity_filter_id"
                     id="alfovit"
                 />
-                <label onclick="toggleFilterCity()" for="alfovit"
+                <label class="toggleFilterCity" for="alfovit"
                     >По алфавиту</label
                 >
 
                 <input type="radio" name="sity_filter_id" id="region" />
-                <label onclick="toggleFilterCity()" for="region"
+                <label class="toggleFilterCity" for="region"
                     >По региону</label
                 >
             </div>
@@ -1939,7 +1941,7 @@
     <i class="d_icon d_icon-right-arrow"></i>
 </a>
 
-<div class="changeshop" onclick="closeChangeshop()">
+<div class="changeshop closeChangeShop">
     <div class="changeshop__menu" onclick="event.stopPropagation()">
         <div class="changeshop__map" id="changeshop__map"></div>
         <div class="changeshop__list">
@@ -1947,9 +1949,8 @@
                 <div class="dart-home__title">
                     <h3>Выберите магазин</h3>
                     <a
-                        onclick="closeChangeshop()"
                         href="#"
-                        class="btn-close link-no-style"
+                        class="btn-close link-no-style closeChangeShop"
                         ><i class="d_icon d_icon-close"></i
                     ></a>
                 </div>
@@ -2185,7 +2186,7 @@
 <script src="https://api-maps.yandex.ru/2.1/?apikey=7270e707-f1a7-4397-a1d7-0c545cf0b735&lang=ru_RU" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="libs/jquery-ui/jquery-ui.min.js"></script>
