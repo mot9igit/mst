@@ -388,14 +388,16 @@ if(toggleFilterCity){
 
 //Карта desctop
 
-const showCardButton = document.querySelector('.showMap');
+const showCardButton = document.querySelectorAll('.showMap');
 const changeshop = document.querySelector('.changeshop')
 
 if(showCardButton && changeshop){
-	showCardButton.addEventListener('click', () => {
-		changeshop.classList.toggle('show');
-		body.style.overflow = "hidden"
-	})
+	for(let i = 0; i < showCardButton.length; i++){
+		showCardButton[i].addEventListener('click', () => {
+			changeshop.classList.toggle('show');
+			body.style.overflow = "hidden"
+		})
+	}
 }
 
 const closeChangeShop = document.querySelectorAll('.closeChangeShop');
