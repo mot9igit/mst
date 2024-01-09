@@ -1130,7 +1130,7 @@ ul{
 //left menu
 
 .dart-menu-left{
-	max-height: 700px;
+	max-height: 800px;
     height: 100vh;
     border-radius: 5px;
 
@@ -1486,7 +1486,7 @@ ul{
 		background: var(--main-background-windows);
 		position: fixed;
 		z-index: 2;
-		transition: all 0.8s;
+		transition: all 0.7s;
 		right: 0%;
 		width: 1100px;
 		transform: translate(100%);

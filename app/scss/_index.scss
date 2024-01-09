@@ -310,10 +310,6 @@
     }
 }
 
-.dart-catalog-menu-mobile-two{
-    display: none;
-}
-
 .catalog-menu-el{
     display: flex;
     flex-direction: column;
@@ -380,6 +376,122 @@
 
 .d-col-main-swiper{
     display: flex;
+}
+
+.catalog-mobile{
+
+    p{
+        font-size: 12px;
+        padding: 0 10%;
+        text-align: center;
+    }
+
+    display: flex;
+
+    &__left{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left-cont{
+        width: 50%;
+    }
+
+    &__left-cont-small{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 0;
+        align-content: space-between;
+    }
+
+    &__right{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 0;
+    }
+
+    &__big{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+
+        &::before{
+            border-radius: 50% 50% 49% 51% / 75% 75% 25% 25%;
+            position: absolute;
+            content: "";
+            background-color: var(--main-background-windows);
+            height: 100px;
+            width: 100px;
+            top: 45%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__img{
+        width: 150px;
+        height: 195px;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        background: var(--btn-secondary-outline-background);
+        // background-color: #FF6652;
+
+        margin-bottom: 12px;
+
+        img{
+            z-index: 1;
+            position: relative;
+        }
+    }
+
+    &__small{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        align-items: center;
+
+        &::before{
+            border-radius: 50% 50% 49% 51% / 75% 75% 25% 25%;
+            position: absolute;
+            content: "";
+            background-color: var(--main-background-windows);
+            height: 50px;
+            width: 50px;
+            top: 40%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__small-two{
+        width: 100%;
+    }
+
+    &__img-small{
+        width: 80%;
+        height: 81px;
+        display: flex;
+        justify-content: center;
+        background: var(--btn-secondary-outline-background);
+        // background-color: #FF6652;
+        border-radius: 7px;
+        margin-bottom: 8px;
+
+        img{
+            z-index: 1;
+            object-fit: contain;
+            height: 100% !important;
+        }
+    }
 }
 
 @media (max-width: $desktop){
@@ -559,10 +671,52 @@
 		}
 	}
 
-    
+    .catalog-mobile__img{
+        height: 212px;
+    }
+
+    .catalog-mobile__big::before {
+        height: 80px;
+        width: 80px;
+    }
 }
 
 @media (max-width: $small-tablets){
+    .catalog-mobile__img{
+        height: 155px;
+        width: 128px;
+        margin-bottom: 8px;
+    }
+
+    .catalog-mobile__img-small{
+        width: 90%;
+        height: 56px;
+        margin-bottom: 6px;
+    }
+
+    .catalog-mobile__right{
+        gap: 12px 0;
+    }
+
+    .catalog-mobile__left-cont-small{
+        gap: 15px 0;
+    }
+
+    .catalog-mobile p{
+        padding: 0 5%;
+    }
+
+    .catalog-mobile__big::before {
+        height: 60px;
+        width: 60px;
+    }
+
+    .catalog-mobile__small::before {
+        border-radius: 50% 50% 49% 51% / 75% 75% 25% 25%;
+        height: 30px;
+        width: 30px;
+        top: 35%;
+    }
     
     .dart-catalog-menu-mobile-two{
         display: flex;
@@ -611,6 +765,20 @@
 }
 
 @media (max-width: $big-phones){
+
+    .catalog-mobile{
+        flex-direction: column;
+        gap: 16px;
+
+        &__left{
+            width: 100%;
+        }
+
+        &__right{
+            width: 100%;
+        }
+    }
+
     .promoSwiper{
 		margin-bottom: 8px;
 
