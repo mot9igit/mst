@@ -1,0 +1,79 @@
+.mini-info-shop{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    &__image{
+        border-radius: 64px;
+        border: 1px solid var(--link-color-hover);
+        width: 64px;
+        height: 64px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__text{
+        span{
+            color: var(--link-color-hover);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            margin-left: 8px;
+        }
+    }
+}
+
+
+
+.dartSwiperSearch{
+    // margin-bottom: 50px;
+
+    &__text{
+        padding: 12px;
+    }
+
+    &__code{
+        color: var(--link-color-hover);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 8px;
+    }
+
+    &__image{
+        height: 145px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            height: 100% !important;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__sale{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        color: var(--secondary-color);
+    }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+}

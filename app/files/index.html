@@ -7,85 +7,22 @@
 
 <body>
   <div class="dart_wrapper">
-    @@include('./includes/header.html')
+    <!-- @@include('./includes/header.html') -->
     <main class="dart_main">
-      @@include('./includes/breadcrumbs.html')
+      <!-- @@include('./includes/breadcrumbs.html') -->
       <section class="dart-section">
         <div class="dart_container">
           <h2>Верстка сайта</h2>
           <div class="dart-alert dart-alert-info">Чтобы посмотреть как будет выглядеть сайт, переходите по ссылкам ниже. Каждая страница откроется в новой вкладке.</div>
           <ul class="list-group">
             <li class="list-group-item">
-              <a href="/main.html" target="_blank">Главная страница</a>
+              <a href="/index-alt.html" target="_blank">Главная страница</a>
             </li>
             <li class="list-group-item">
-              <a href="/main_alt.html" target="_blank">Главная страница (альт)</a>
+              <a href="/blank.html" target="_blank">Бланк</a> <span class="badge text-bg-primary">NEW</span>
             </li>
             <li class="list-group-item">
-              <a href="/category.html" target="_blank">Категория</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/filter.html" target="_blank">Категория с фильтром</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/product.html" target="_blank">Товар</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/text.html" target="_blank">Текстовая страница</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/actions.html" target="_blank">Акции</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/blog.html" target="_blank">Блог</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/cart.html" target="_blank">Корзина</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/success.html" target="_blank">Заказ оформлен</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/profile_products.html" target="_blank">Профиль || Товары</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/profile_settings.html" target="_blank">Профиль || Настройки</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/analytics_auth.html" target="_blank">Аналитика || Авторизация</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/sales.html" target="_blank">Оптовые продажи</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/contacts.html" target="_blank">Контакты</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/quiz.html" target="_blank">Квиз</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/stores_map.html" target="_blank">Магазины на карте</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/return_creating.html" target="_blank">Оформить возврат</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/return_product-all.html" target="_blank">Все возвраты</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/return_product.html" target="_blank">Возврат</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/sale.html" target="_blank">Продажа товаров в маркетплейсе «MachineStore»</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/404.html" target="_blank">404</a>
-            </li>
-            <li class="list-group-item">
-              <a href="/about_company.html" target="_blank">О компании</a> <span class="badge text-bg-primary">NEW</span>
-            </li>
-            <li class="list-group-item">
-              <a href="/widgets.html" target="_blank">Виджеты</a> <span class="badge text-bg-primary">NEW</span>
+              <a href="/search.html" target="_blank">Поиск</a> <span class="badge text-bg-primary">NEW</span>
             </li>
           </ul>
         </div>
@@ -93,42 +30,79 @@
       <section class="dart-section">
         <div class="dart_container">
           <h2>Кнопки</h2>
-          <div class="mt-3">
+          <div>
             <a href="#" class="dart-btn dart-btn-primary">Основная кнопка</a>
-            <a href="#" class="dart-btn dart-btn-primary dart-btn-loading">Основная кнопка</a>
-            <a href="#" class="dart-btn dart-btn-primary-outline">Основная кнопка тип 2</a>
+            <a href="#" class="dart-btn dart-btn-primary-mini">Основная маленькая кнопка</a>
             <a href="#" class="dart-btn dart-btn-secondary">Второстепенная кнопка</a>
             <a href="#" class="dart-btn dart-btn-secondary-outline">Второстепенная кнопка тип 2</a>
-            <a href="#" class="dart-btn dart-btn-primary-dark">Основная кнопка</a>
-            <a href="#" class="dart-btn dart-btn-text">Просто текст</a>
+            <a href="#" class="btn-close link-no-style"><i class="d_icon d_icon-close"></i></a>
+            <a href="#" class="dart-btn dart-btn-icon-list">
+              <i class="d_icon-geo"></i>
+              Москва
+              <i class="d_icon-down-arrow"></i>
+            </a>
+            <a class="dart-btn dart-btn-radio">
+                <input type="checkbox" id="toggle-button">
+                <label for="toggle-button" class="text">Кнопка-переключатель</label>
+            </a>
+            <a class="dart-btn dart-btn-radio-mini">
+              <input type="checkbox" id="toggle-button-1">
+              <label for="toggle-button-1" class="text">маленькая кнопка-переключатель</label>
+            </a>
           </div>
         </div>
       </section>
+
       <section class="dart-section">
         <div class="dart_container">
-          <h2>Виджеты</h2>
+          <h2>Формы</h2>
+          <div class="dart-input dart-input-search mb-3">
+            <input type="text" placeholder="Адрес или наименование магазина">
+          </div>
+          <div class="dart-input dart-input-text">
+            <input type="text" placeholder="Логин">
+          </div>
+        </div>
+      </section>
+
+      <section class="dart-section">
+        <div class="dart_container">
           <div class="dart-row">
-            <div class="d-col-xl-3 d-col-lg-4 d-col-sm-5">
-              <div class="widget-item widget-item_background-orange">
-                <div class="widget-item__icon">
-                  <i class="d_icon d_icon-currency-rub"></i>
+            <div class="d-col-2">
+              <div class="dart-row">
+                <div class="d-col-6">
+                  <h4>Самоделкин</h4>
+                  <div class="dart-rating" data-rating="4">
+                    <i class="d_icon d_icon-star"></i>
+                    <i class="d_icon d_icon-star"></i>
+                    <i class="d_icon d_icon-star"></i>
+                    <i class="d_icon d_icon-star"></i>
+                    <i class="d_icon d_icon-star"></i>
+                  </div>
                 </div>
-                <b class="widget-item__title">25 000 000 ₽</b>
-                <p class="widget-item__text">Сумма проданных товаров</p>
-              </div>
-            </div>
-            <div class="d-col-xl-3 d-col-lg-4 d-col-sm-5">
-              <div class="widget-item widget-item_background-blue">
-                <div class="widget-item__icon">
-                  <i class="d_icon d_icon-shopping-bag"></i>
+                <div class="d-col-6">
+                  <img class="shop-map__icon" src="../img/favicon.jpg" alt="">
                 </div>
-                <b class="widget-item__title">10 000 шт.</b>
-                <p class="widget-item__text">Количество проданных товаров</p>
               </div>
+              <p class="mt-2 mb-1">ул. Советская улица, 89с1</p>
+              <span class="shop-map__light-text">12 км</span>
+              <p class="shop-map__timing mt-3">Открыто до 20:00</p>
+              <a href="#" class="dart-btn dart-btn-primary-mini mt-2">Выбрать</a>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="dart-section">
+        <div class="dart_container">
+          <h2>h2 Заголовок</h2>
+          <h3>h3 Заголовок</h3>
+          <h4>h4 Заголовок</h4>
+          <p>Параграф</p>
+        </div>
+      </section>
+
+      
       <section class="dart-section">
         <div class="dart_container">
           <h2>Иконки</h2>
@@ -138,467 +112,11 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-tag"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-tag</span>
-                    <span class="symbol">\e92b</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-grade"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-grade</span>
-                    <span class="symbol">\e92c</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-key"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-key</span>
-                    <span class="symbol">\e92d</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-star"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-star</span>
-                    <span class="symbol">\e92e</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-acute"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-acute</span>
-                    <span class="symbol">\e929</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-account-circle"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-account-circle</span>
-                    <span class="symbol">\e90a</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-view-agenda"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-view-agenda</span>
-                    <span class="symbol">\e927</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-view-grid"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-view-grid</span>
-                    <span class="symbol">\e928</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-trash"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-trash</span>
-                    <span class="symbol">\e90b</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-map"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-map</span>
-                    <span class="symbol">\e90c</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-user-alt"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-user-alt</span>
-                    <span class="symbol">\e90d</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-credit-card"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-credit-card</span>
-                    <span class="symbol">\e90e</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-tooltip-question"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-tooltip-question</span>
-                    <span class="symbol">\e90f</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-human-queue"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-human-queue</span>
-                    <span class="symbol">\e910</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-archive"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-archive</span>
-                    <span class="symbol">\e911</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-analytics"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-analytics</span>
-                    <span class="symbol">\e912</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-truck"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-truck</span>
-                    <span class="symbol">\e913</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-file-document"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-file-document</span>
-                    <span class="symbol">\e914</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-list-bulleted"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-list-bulleted</span>
-                    <span class="symbol">\e915</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-cog"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-cog</span>
-                    <span class="symbol">\e916</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-account"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-account</span>
-                    <span class="symbol">\e917</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-cart"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-cart</span>
-                    <span class="symbol">\e918</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-tune"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-tune</span>
-                    <span class="symbol">\e919</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-phone"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-phone</span>
-                    <span class="symbol">\e91a</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-search"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-search</span>
-                    <span class="symbol">\e91b</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-map-marker"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-map-marker</span>
-                    <span class="symbol">\e91c</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-angle-right"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-angle-right</span>
-                    <span class="symbol">\e91d</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-angle-left"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-angle-left</span>
-                    <span class="symbol">\e91e</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-catalog"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-catalog</span>
-                    <span class="symbol">\e91f</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
                     <i class="d_icon d_icon-close"></i>
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-close</span>
-                    <span class="symbol">\e920</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-home"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-home</span>
-                    <span class="symbol">\e921</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-angle-down"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-angle-down</span>
-                    <span class="symbol">\e922</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-sort"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-sort</span>
-                    <span class="symbol">\e923</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-filter"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-filter</span>
-                    <span class="symbol">\e924</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-play"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-play</span>
-                    <span class="symbol">\e925</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-clock"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-clock</span>
-                    <span class="symbol">\e926</span>
+                    <span class="symbol">\e900</span>
                   </div>
                 </div>          
               </div>
@@ -608,128 +126,67 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-envelope"></i>
+                    <i class="d_icon d_icon-courier"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-envelope</span>
-                    <span class="symbol">\e900</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-heart"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-heart</span>
+                    <span class="selector">.d_icon-courier</span>
                     <span class="symbol">\e901</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
+
               <!-- item -->
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-tech"></i>
+                    <i class="d_icon d_icon-down-arrow"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-clock</span>
+                    <span class="selector">.d_icon-down-arrow</span>
                     <span class="symbol">\e902</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
+
               <!-- item -->
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-thumbs-up"></i>
+                    <i class="d_icon d_icon-express"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-thumbs-up</span>
+                    <span class="selector">.d_icon-express</span>
                     <span class="symbol">\e903</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
+
               <!-- item -->
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-proud"></i>
+                    <i class="d_icon d_icon-eye"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-proud</span>
+                    <span class="selector">.d_icon-eye</span>
                     <span class="symbol">\e904</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
+
               <!-- item -->
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-ambulance"></i>
+                    <i class="d_icon d_icon-geo"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-ambulance</span>
+                    <span class="selector">.d_icon-geo</span>
                     <span class="symbol">\e905</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-hands"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-hands</span>
-                    <span class="symbol">\e906</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-users"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-users</span>
-                    <span class="symbol">\e907</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-global"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-global</span>
-                    <span class="symbol">\e908</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-share"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-share</span>
-                    <span class="symbol">\e909</span>
                   </div>
                 </div>          
               </div>
@@ -743,7 +200,7 @@
                   </div>
                   <div class="text">
                     <span class="selector">.d_icon-left-arrow</span>
-                    <span class="symbol">\e92f</span>
+                    <span class="symbol">\e906</span>
                   </div>
                 </div>          
               </div>
@@ -753,11 +210,11 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-shopping-bag"></i>
+                    <i class="d_icon d_icon-menu"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-shopping-bag</span>
-                    <span class="symbol">\e930</span>
+                    <span class="selector">.d_icon-menu</span>
+                    <span class="symbol">\e907</span>
                   </div>
                 </div>          
               </div>
@@ -767,11 +224,123 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-currency-rub"></i>
+                    <i class="d_icon d_icon-photo"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-currency-rub</span>
-                    <span class="symbol">\e931</span>
+                    <span class="selector">.d_icon-photo</span>
+                    <span class="symbol">\e908</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-point-geo"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-point-geo</span>
+                    <span class="symbol">\e909</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-right-arrow"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-right-arrow</span>
+                    <span class="symbol">\e90a</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-search"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-search</span>
+                    <span class="symbol">\e90b</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-setting"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-setting</span>
+                    <span class="symbol">\e90c</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-setup"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-setup</span>
+                    <span class="symbol">\e90d</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-shop"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-shop</span>
+                    <span class="symbol">\e90e</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-star"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-star</span>
+                    <span class="symbol">\e90f</span>
+                  </div>
+                </div>          
+              </div>
+              <!-- / item -->
+
+               <!-- item -->
+               <div class="d-col-md-3">          
+                <div class="item">
+                  <div class="icon">
+                    <i class="d_icon d_icon-watch"></i>
+                  </div>
+                  <div class="text">
+                    <span class="selector">.d_icon-watch</span>
+                    <span class="symbol">\e912</span>
                   </div>
                 </div>          
               </div>
@@ -781,25 +350,11 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-shopping-bag"></i>
+                    <i class="d_icon d_icon-logout"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-shopping-bag</span>
-                    <span class="symbol">\e930</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-              
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-online-store"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-online-store</span>
-                    <span class="symbol">\e938</span>
+                    <span class="selector">.d_icon-logout</span>
+                    <span class="symbol">\e913</span>
                   </div>
                 </div>          
               </div>
@@ -809,11 +364,11 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-code"></i>
+                    <i class="d_icon d_icon-basket"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-code</span>
-                    <span class="symbol">\e937</span>
+                    <span class="selector">.d_icon-basket</span>
+                    <span class="symbol">\e914</span>
                   </div>
                 </div>          
               </div>
@@ -823,143 +378,29 @@
               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-boxes"></i>
+                    <i class="d_icon d_icon-shopchange"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-boxes</span>
-                    <span class="symbol">\e936</span>
+                    <span class="selector">.d_icon-shopchange</span>
+                    <span class="symbol">\e915</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
 
-              <!-- item -->
-              <div class="d-col-md-3">          
+               <!-- item -->
+               <div class="d-col-md-3">          
                 <div class="item">
                   <div class="icon">
-                    <i class="d_icon d_icon-payments"></i>
+                    <i class="d_icon d_icon-list"></i>
                   </div>
                   <div class="text">
-                    <span class="selector">.d_icon-payments</span>
-                    <span class="symbol">\e934</span>
+                    <span class="selector">.d_icon-list</span>
+                    <span class="symbol">\e916</span>
                   </div>
                 </div>          
               </div>
               <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-speed"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-speed</span>
-                    <span class="symbol">\e933</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-file"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-file</span>
-                    <span class="symbol">\e932</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-wallet"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-wallet</span>
-                    <span class="symbol">\e939</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-time"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-time</span>
-                    <span class="symbol">\e935</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-clock_time"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-clock_time</span>
-                    <span class="symbol">\e93a</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-calendar"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-calendar</span>
-                    <span class="symbol">\e93b</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-bank"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-bank</span>
-                    <span class="symbol">\e93c</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              <!-- item -->
-              <div class="d-col-md-3">          
-                <div class="item">
-                  <div class="icon">
-                    <i class="d_icon d_icon-info"></i>
-                  </div>
-                  <div class="text">
-                    <span class="selector">.d_icon-info</span>
-                    <span class="symbol">\e93d</span>
-                  </div>
-                </div>          
-              </div>
-              <!-- / item -->
-
-              
             </div>
           
           </div>
