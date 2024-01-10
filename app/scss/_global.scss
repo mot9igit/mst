@@ -33,6 +33,11 @@ body {
 	}
 }
 
+hr{
+	color: var(--border-color);
+	opacity: 1;
+}
+
 .overlay {
 	position: fixed;
 	width: 100vw;
@@ -670,6 +675,14 @@ ul{
 			left: -5px;
 		}
 	}
+
+	&__search-btn{
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 400px;
+		transition: width .4s;
+	}
 }
 
 // ------------------------Модальное окно выбора города
@@ -1259,10 +1272,6 @@ ul{
 			line-height: 18px;
 		}
 
-		hr{
-			color: var(--border-color);
-			opacity: 1;
-		}
 	}
 }
 
@@ -1288,7 +1297,6 @@ ul{
         }
     }
 
-	
 
     &__el{
         cursor: pointer;
@@ -1521,6 +1529,12 @@ ul{
 	height: 100vh;
 	transition: all 0.3s;
 
+	&__rating{
+		display: none;
+		width: 500px;
+		padding: 36px 24px 0 24px;
+	}
+
 	&__menu{
 		height: 100vh;
 		background: var(--main-background-windows);
@@ -1540,6 +1554,18 @@ ul{
 		.changeshop__menu{
 			transform: translate(0%);
 			right: 0%;
+		}
+	}
+
+	&.showRating{
+		.changeshop{
+			&__list{
+				display: none;
+			}
+
+			&__rating{
+				display: flex;
+			}
 		}
 	}
 
@@ -1637,6 +1663,320 @@ ul{
 	}
 }
 
+.changeShopRating{
+	flex-direction: column;
+
+	&__title{
+		display: flex;
+		justify-content: space-between
+	}
+
+	&__title-text{
+		display: flex;
+		gap: 8px;
+		align-items: center;
+
+		.d_icon-left-arrow{
+			font-size: 24px;
+			cursor: pointer;
+		}
+	}
+
+	.dart-rating{
+		display: flex;
+		align-items: center;
+		margin-top: 12px;
+		padding-left: 24px;
+	}
+
+	&__change{
+		width: 100%;
+		border-radius: 5px;
+		background-color: var(--btn-secondary-outline-background);
+	}
+}
+
+// Filters modal
+
+.allFiltrsModal{
+	pointer-events: none;
+	background: rgba(0, 0, 0, 0);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	transition: all 0.6s;
+
+	.d_icon-close{
+		position: absolute;
+		right: 40px;
+		top: 60px;
+		cursor: pointer;
+	}
+
+	&__content{
+		height: 100%;
+		width: 500px;
+		background: #fff;
+		position: fixed;
+		left: 0;
+		transform: translateX(-100%);
+		transition: all 0.6s;
+		padding: 60px 40px;
+		position: relative;
+	}
+
+	&__title{
+		padding-right: 40px;
+	}
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.78);
+		width: 100vw;
+		height: 100vh;
+		transition: all 0.6s;
+
+		.allFiltrsModal{
+			&__content{
+				transform: translateX(0%);
+				transition: all 0.6s;
+			}
+		}
+	}
+}
+
+.widget-filter{
+	overflow: hidden;
+	margin-bottom: 32px;
+
+	&__title{
+		padding-left: 32px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		&::before{
+			content: "\e90a";
+			font-family: 'icomoon' !important;
+			position: absolute;
+			left: 0;
+			font-size: 24px;
+			transform: rotate(0deg);
+			transition: all 0.3s;
+		}
+	}
+
+	.widget-content{
+		max-height: 0px;
+		transition: max-height .4s;
+		margin-top: 12px;
+	}
+
+	&.active{
+		.widget-content{
+			max-height: 500px;
+			transition: max-height .4s;
+		}
+
+		.widget-filter__title{
+			&::before{
+				transform: rotate(90deg);
+				transition: all 0.3s;
+			}
+		}
+	}
+}
+
+.btn-back{
+	display: none;
+}
+
+// Модальное окно поиска
+
+.dart-header{
+	&__search{
+		position: relative;
+		width: 100%;
+
+		&.show{
+			// transition: all 0.4s;
+			.searchModal{
+				pointer-events: all;
+				background-color: rgba(0, 0, 0, 0.78);
+			}
+
+			.dart-header__search-btn{
+				z-index: 2;
+				width: 600px;
+				position: absolute;
+				transition: width .4s;
+			}
+		}
+	}
+}
+
+.searchModal{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 1;
+
+	&__content{
+		box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
+		position: fixed;
+		top: 70px;
+		width: 1050px;
+		height: 470px;
+		border-radius: 5px;
+		opacity: 0;
+		pointer-events: none;
+		display: flex;
+		padding: 24px;
+
+		&.show{
+			background: var(--main-background-windows);
+			pointer-events: all;
+			opacity: 1;
+		}
+
+		&::before {
+			width: 100%;
+			position: absolute;
+			bottom: 15px;
+			left: 0;
+			z-index: 2;
+			display: block;
+			height: 40px;
+			pointer-events: none;
+			content: "";
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #FFF 87.24%);
+		}
+
+		&::after {
+			width: 100%;
+			position: absolute;
+			top: 15px;
+			left: 0;
+			z-index: 2;
+			display: block;
+			height: 20px;
+			pointer-events: none;
+			content: "";
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0, #FFF 87.24%);
+		}
+	}
+
+	&__allResults{
+		text-decoration: none;
+		color: var(--link-color-hover);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 18px;
+
+		padding-left: 12px;
+		position: relative;
+		top: -10px;
+	}
+
+	&__left{
+		width: 35%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	&__right{
+		padding: 20px 0;
+		width: 65%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: relative;
+	}
+
+	&__right::-webkit-scrollbar {
+		width: 3px;
+		background-color: var(--color-prev-hover);
+	}
+
+	&__left::-webkit-scrollbar {
+		width: 5px;
+		background-color: var(--color-prev-hover);
+	}
+
+	&_often{
+		margin-top: 24px;
+		margin-bottom: 40px;
+		display: flex;
+    	flex-direction: column;
+		gap: 16px;
+
+		a{
+			text-decoration: none;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 16px;
+			color: var(--secondary-color);
+
+			&:hover{
+				transition: all 0.3s;
+				color: var(--primary-hover);
+			}
+		}
+	}
+
+	&_categories{
+		margin-top: 24px;
+		gap: 16px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&_categories-item{
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		img{
+			width: 40px;
+			height: 40px;
+			object-fit: contain;
+			transform: scale(1);
+			transition: all 0.3;
+		}
+
+		&:hover{
+			p{
+				transition: all 0.3s;
+				color: var(--primary-hover);
+			}
+			
+			img{
+				transform: scale(1.1);
+				transition: all 0.3;
+			}
+		}
+
+		span{
+			color: var(--text-color-dop);
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 16px;
+		}
+	}
+}
+
+
 
 @media (max-width: $desktop){
 	.dart-header{
@@ -1711,6 +2051,7 @@ ul{
 	}
 
 	.nav-dart-menu{
+		cursor: pointer;
 		.d_icon{
 			font-size: 24px;
 		}
@@ -1724,10 +2065,6 @@ ul{
 }
 
 @media (max-width: $tablets){
-
-
-	
-
 	h2, .h2{
 		font-size: 24px !important;
 	}
@@ -1741,7 +2078,6 @@ ul{
 	}
 
 	.changeshop{
-
 		&.showList{
 			.changeshop{
 				&__list{
@@ -1761,6 +2097,30 @@ ul{
 				.list{
 					display: none;
 				}
+
+				.close{
+					display: none;
+				}
+			}
+		}
+
+		&.showRating{
+			.changeshop{
+				&__list{
+					display: none;
+				}
+	
+				&__rating{
+					display: flex;
+				}
+
+				&__map{
+					display: none;
+				}
+
+				&__mobile{
+					display: none;
+				}
 			}
 		}
 
@@ -1771,6 +2131,46 @@ ul{
 
 			.list{
 				display: inline-flex;
+			}
+
+			.close{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 36px;
+				height: 36px;
+				font-size: 20px;
+				border-radius: 8px;
+				background-color: var(--main-background-windows);
+				position: absolute;
+				left: 16px;
+				top: 24px;
+				box-shadow: $shadow;
+				pointer-events: all;
+			}
+		}
+
+		&__settings{
+			.dart-home__title{
+				justify-content: center;
+				align-items: center;
+
+				.btn-close{
+					display: none;
+				}
+
+				.btn-back{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					left: 16px;
+					width: 36px;
+					height: 36px;
+					border-radius: 8px;
+					background: var(--main-background-windows);
+					box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.10);
+				}
 			}
 		}
 
@@ -1868,6 +2268,9 @@ ul{
 		width: 100%;
 	}
 
+
+	
+	.changeshop__rating,
 	.changeshop__list{
 		width: 100%;
 	}

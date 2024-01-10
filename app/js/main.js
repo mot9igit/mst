@@ -192,22 +192,12 @@ const menu_items = document.querySelectorAll('.dart-catalog-menu__el');
 if(menu_items){
     for (let i = 0; i < menu_items.length; i++) {
         menu_items[i].addEventListener("click", function() {
-            //Выключает активную вкладку
-            // for (let j = 0; j < menu_items.length; j++) {
-            //     if(menu_items[j] != menu_items[i]){
-            //         menu_items[j].parentElement.classList.remove("active")
-            //     }
-            // }
-
             menu_items[i].parentElement.classList.toggle("active");
         });
     }
 }
 
 //Карта
-
-
-
 let stores_map = {
 
 	options: {
@@ -323,7 +313,6 @@ let stores_map = {
 ymaps.ready(stores_map.init);
 
 //Слайдер на странице поиска
-
 const alldartSwiperSearch = document.querySelectorAll('.dartSwiperSearch');
 if(alldartSwiperSearch){
 	for (let i = 0; i < alldartSwiperSearch.length; i++) {
@@ -333,8 +322,8 @@ if(alldartSwiperSearch){
 			slidesPerView: 5,
 			spaceBetween: 8,
 			navigation: {
-				nextEl: ".swiper-new-next",
-				prevEl: ".swiper-new-prev",
+				nextEl: ".swiper-search-next-"+ (i+1),
+				prevEl: ".swiper-search-prev-"+ (i+1),
 			},
 		});
     }
@@ -387,43 +376,128 @@ if(toggleFilterCity){
 
 //Карта desctop
 
-const showCardButton = document.querySelectorAll('.showMap');
-const changeshop = document.querySelector('.changeshop')
+// const showCardButton = document.querySelectorAll('.showMap');
+// const changeshop = document.querySelector('.changeshop')
 
-if(showCardButton && changeshop){
-	for(let i = 0; i < showCardButton.length; i++){
-		showCardButton[i].addEventListener('click', () => {
-			changeshop.classList.toggle('show');
+// if(showCardButton && changeshop){
+// 	for(let i = 0; i < showCardButton.length; i++){
+// 		showCardButton[i].addEventListener('click', () => {
+// 			changeshop.classList.toggle('show');
+// 			body.style.overflow = "hidden"
+// 		})
+// 	}
+// }
+
+// const closeChangeShop = document.querySelectorAll('.closeChangeShop');
+
+// if(closeChangeShop){
+// 	for(let i = 0; i < closeChangeShop.length; i++){
+// 		closeChangeShop[i].addEventListener('click', () => {
+
+// 			changeshop.classList.remove('show');
+// 			body.style.overflow = "auto"
+// 		})
+// 	}
+// }
+
+// const changeshopToggler = document.querySelectorAll('.changeshop-toggler');
+
+// if(changeshopToggler){
+// 	for (let i = 0; i < changeshopToggler.length; i++) {
+// 		changeshopToggler[i].addEventListener('click', () => {
+// 			changeshop.classList.toggle('showList')
+// 		})
+// 	}
+	
+// }
+
+// //changeshop переход в отзывам
+// const btnToggleRating = document.querySelectorAll('.btnToggleRating')
+
+// if(btnToggleRating){
+// 	for(let i = 0; i < btnToggleRating.length; i++){
+// 		btnToggleRating[i].addEventListener('click', () => {
+// 			changeshop.classList.toggle('showList')
+// 		})
+// 	}
+// }
+
+const changeshop = document.querySelector('.changeshop') //Модалка
+
+const btnActiveChangeshopOn = document.querySelectorAll('.btnActiveChangeshopOn'); //Открывает модалку
+const btnActiveChangeshopOff = document.querySelectorAll('.btnActiveChangeshopOff'); //Закрывает модалку
+const btnMapOn = document.querySelectorAll('.btnMapOn'); //Открываем карту на мобильных устройствах
+const btnListOn = document.querySelectorAll('.btnListOn'); //Открываем список на мобильных устройствах
+const btnRatingOn = document.querySelectorAll('.btnRatingOn') //Открываем рейтинг
+const btnRatingOff = document.querySelectorAll('.btnRatingOff') //Закрываем рейтинг
+
+function clearAllChangeshop(){
+	changeshop.classList.remove('showList')
+	changeshop.classList.remove('showRating')
+}
+
+if(btnActiveChangeshopOn){
+	for(let i = 0; i < btnActiveChangeshopOn.length; i++){
+		btnActiveChangeshopOn[i].addEventListener('click', () => {
+			clearAllChangeshop()
+			changeshop.classList.add('show')
 			body.style.overflow = "hidden"
 		})
 	}
 }
 
-const closeChangeShop = document.querySelectorAll('.closeChangeShop');
-
-if(closeChangeShop){
-	for(let i = 0; i < closeChangeShop.length; i++){
-		closeChangeShop[i].addEventListener('click', () => {
-
-			changeshop.classList.remove('show');
-		body.style.overflow = "auto"
+if(btnActiveChangeshopOff){
+	for(let i = 0; i < btnActiveChangeshopOff.length; i++){
+		btnActiveChangeshopOff[i].addEventListener('click', () => {
+			changeshop.classList.remove('show')
+			body.style.overflow = "auto"
 		})
 	}
 }
 
-const changeshopToggler = document.querySelectorAll('.changeshop-toggler');
-
-
-
-if(changeshopToggler){
-
-	for (let i = 0; i < changeshopToggler.length; i++) {
-		changeshopToggler[i].addEventListener('click', () => {
-			changeshop.classList.toggle('showList')
+if(btnMapOn){
+	for(let i = 0; i < btnMapOn.length; i++) {
+		btnMapOn[i].addEventListener('click', () => {
+			clearAllChangeshop()
+			changeshop.classList.remove('showList')
 		})
 	}
-	
 }
+
+if(btnListOn){
+	for(let i = 0; i < btnListOn.length; i++) {
+		btnListOn[i].addEventListener('click', () => {
+			clearAllChangeshop()
+			changeshop.classList.add('showList')
+		})
+	}
+}
+
+if(btnRatingOn){
+	for(let i = 0; i < btnRatingOn.length; i++) {
+		btnRatingOn[i].addEventListener('click', () => {
+			clearAllChangeshop()
+			changeshop.classList.add('showRating')
+		})
+	}
+}
+
+if(btnRatingOff){
+	for(let i = 0; i < btnRatingOff.length; i++) {
+		btnRatingOff[i].addEventListener('click', () => {
+			changeshop.classList.remove('showRating')
+			changeshop.classList.add('showList')
+		})
+	}
+}
+
+
+// if(changeshopToggler){
+// 	for (let i = 0; i < changeshopToggler.length; i++) {
+// 		changeshopToggler[i].addEventListener('click', () => {
+// 			changeshop.classList.toggle('showList')
+// 		})
+// 	}
 
 //Ползунок
 
@@ -474,3 +548,68 @@ $(".polzunok-container-5 input").change(function() {
         $(".polzunok-5").slider("values", 1, input_right);
     }
 });
+
+//Модальное окно фильтров
+const showModalFiltrs = document.querySelectorAll('.showModalFiltrs');
+const allFiltrsModal = document.querySelector('.allFiltrsModal');
+let isModalFiltrs = false;
+
+if(showModalFiltrs && allFiltrsModal){
+	for(let i = 0; i < showModalFiltrs.length; i++){
+		showModalFiltrs[i].addEventListener('click', () => {
+			if(isModalFiltrs){
+				allFiltrsModal.classList.remove('show')
+				body.style.overflow = "auto"
+				isModalFiltrs = false
+			}else{
+				allFiltrsModal.classList.add('show')
+				body.style.overflow = "hidden"
+				isModalFiltrs = true
+			}
+			
+		})
+	}
+}
+
+//Фильтры раскрытие пунктов
+const widget_filter = document.querySelectorAll('.widget-filter__title');
+if(widget_filter){
+    for (let i = 0; i < widget_filter.length; i++) {
+        widget_filter[i].addEventListener("click", function() {
+            widget_filter[i].parentElement.classList.toggle("active");
+        });
+    }
+}
+
+// Модальное окно поиска
+
+const headerSearchToggle = document.querySelectorAll('.headerSearchToggle');
+const headerSearch = document.querySelector('.dart-header__search');
+const headerSearchAdd = document.querySelector('.dart-header__search input')
+
+if(headerSearchToggle){
+	for(let i = 0; i < headerSearchToggle.length; i++){
+		headerSearchToggle[i].addEventListener('click', () => {
+			headerSearch.classList.toggle('show');
+			document.querySelector('.searchModal__content').classList.remove('show')
+			body.style.overflow = "auto"
+		})
+	}
+}
+
+if(headerSearchAdd){
+	headerSearchAdd.addEventListener('click', () => {
+		headerSearch.classList.add('show');
+		body.style.overflow = "hidden"
+	})
+
+	// Временно!
+	headerSearchAdd.addEventListener('input', () => {
+		if(headerSearchAdd.value.length > 4){
+			document.querySelector('.searchModal__content').classList.add('show')
+		}else{
+			document.querySelector('.searchModal__content').classList.remove('show')
+		}
+	})
+}
+
