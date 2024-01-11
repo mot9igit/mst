@@ -26,6 +26,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-plus:before {
+  content: "\e917";
+}
+.d_icon-minus:before {
+  content: "\e918";
+}
+
 .d_icon-shopchange:before {
 	content: "\e915";
   }

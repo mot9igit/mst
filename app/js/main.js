@@ -664,3 +664,27 @@ if(closeDartModalBtn && dartModalTogglers){
         });
     }
 }
+
+//Кликер в корзине
+
+const dartQuantityMinus = document.querySelectorAll('.dart-quantity__btn.minus');
+const dartQuantityPlus = document.querySelectorAll('.dart-quantity__btn.plus');
+
+
+if(dartQuantityMinus && dartQuantityPlus){
+	for(let i = 0; i < dartQuantityMinus.length; i++){
+		dartQuantityMinus[i].addEventListener('click', () => {
+			const getInput = dartQuantityMinus[i].parentElement.querySelector('.dart-quantity__counter');
+			if(getInput.value != 1){
+				getInput.value = Number(getInput.value) - 1
+			}
+		})
+	}
+
+	for(let i = 0; i < dartQuantityPlus.length; i++){
+		dartQuantityPlus[i].addEventListener('click', () => {
+			const getInput = dartQuantityMinus[i].parentElement.querySelector('.dart-quantity__counter');
+			getInput.value = Number(getInput.value) + 1
+		})
+	}
+}
