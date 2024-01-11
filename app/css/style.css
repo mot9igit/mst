@@ -4810,8 +4810,8 @@ ul {
 
 .d-col-basket .basket-container__img {
   width: 108px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .d-col-basket .basket-container__count {
