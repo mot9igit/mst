@@ -219,6 +219,7 @@
     justify-content: center;
     border-radius: 50%;
     transition: all 0.3s;
+    padding: 0;
 
     &:hover{
         background: var(--color-sitebar-text);
@@ -227,6 +228,6 @@
     }
 
     .d_icon{
-        font-size: 12px;
+        font-size: 8px;
     }
 }

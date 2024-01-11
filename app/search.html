@@ -280,7 +280,7 @@
         <div class="dart-header__components">
             <a href="tel:+74993255250" class="dart-btn dart-header__components-desctop">+7 499 325 52 50</a>
             <a href="#" class="dart-btn dart-header__components-desctop"><i class="d_icon d_icon-setting"></i>Сравнение</a>
-            <a href="#" class="dart-btn dart-btn-secondary">Войти</a>
+            <a href="#" class="dart-btn dart-btn-secondary dart-modal-toggler" data-dart-modal="dm-login">Войти</a>
         </div>
     </div> 
 </header>
@@ -578,9 +578,183 @@
                 <p>4,1</p>
             </div>
             <hr>
-            <div class="changeShopRating__change">
-                
+            <div class="changeShopRating__scroll">
+                <div class="changeShopRating__change">
+                    <p>Оцените и оставьте отзыв</p>
+                    <div class="change-rating mt-2 dart-modal-toggler" data-dart-modal="dm-feedback-no-auth">
+                        <input name="fst" value="0" type="radio" disabled checked />
+                        <label for="fst-1">
+                            <i class="d_icon d_icon-star"></i>
+                        </label>
+                        <input name="fst" id="fst-1" value="1" type="radio" />
+    
+                        <label for="fst-2">
+                            <i class="d_icon d_icon-star"></i>
+                        </label>
+                        <input name="fst" id="fst-2" value="2" type="radio" />
+                        <label for="fst-3">
+                            <i class="d_icon d_icon-star"></i>
+                        </label>
+                        <input name="fst" id="fst-3" value="3" type="radio" />
+                        <label for="fst-4">
+                            <i class="d_icon d_icon-star"></i>
+                        </label>
+                        <input name="fst" id="fst-4" value="4" type="radio" />
+                        <label for="fst-5">
+                            <i class="d_icon d_icon-star"></i>
+                        </label>
+                        <input name="fst" id="fst-5" value="5" type="radio" />
+                    </div>
+                </div>
+                <div class="changeshop__filtrs mt-3">
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="toggle-button-22" />
+                        <label for="toggle-button-22" class="text"
+                            >С ответами</label
+                        >
+                    </a>
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="toggle-button-33" />
+                        <label for="toggle-button-33" class="text"
+                            >Положительные</label
+                        >
+                    </a>
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="toggle-button-44" />
+                        <label for="toggle-button-44" class="text"
+                            >Отрицательные</label
+                        >
+                    </a>
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="toggle-button-55" />
+                        <label for="toggle-button-55" class="text"
+                            >По дате</label
+                        >
+                    </a>
+                </div>
+                <div class="changeShopRating__container">
+                    <div class="changeShopRating__feedback">
+                        <div class="changeShopRating__info">
+                            <div class="changeShopRating__user">
+                                <!-- Если аватарка -->
+                                <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+                    
+                                <!-- Если первая буква -->
+                                <div class="sidebar__profile-letter">М</div>
+                                <div class="changeShopRating__user-rating">
+                                    <b>Максимов Максим</b>
+                                    <div class="dart-rating" data-rating="5">
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="changeShopRating__date">30 августа 2023</p>
+                        </div>
+                        <div class="changeShopRating__text">
+                            Отличный магазин! Низкие цены и самое главное всё есть
+                        </div>
+                        <div class="changeShopRating__answer">
+                            <span class="changeShopRating__answer-on answerChangeShow">— Посмотреть ответ магазина</span>
+                            <span class="changeShopRating__answer-off answerChangeShow">— Скрыть ответ магазина</span>
+                            <div class="changeShopRating__answer-info">
+                                <!-- Если аватарка -->
+                                <img class="sidebar__profile-image" src="../../img/personal/1.png" alt="">
+                    
+                                <!-- Если первая буква -->
+                                <!-- <div class="sidebar__profile-letter">М</div> -->
+    
+                                <div class="changeShopRating__answer-container">
+                                    <div class="changeShopRating__answer-text">
+                                        <b>Самоделкин</b>
+                                        <p class="changeShopRating__date">30 августа 2023</p>
+                                    </div>
+                                    <div class="changeShopRating__text">
+                                        Добрый день! Благодарим вас за оставленный отзыв, ждем вас снова и будем радовать и впредь! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium tempore reprehenderit repellat. Non obcaecati quae laborum cupiditate. Voluptatem nam, voluptates possimus provident eum nulla earum placeat deleniti mollitia harum architecto.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="changeShopRating__feedback">
+                        <div class="changeShopRating__info">
+                            <div class="changeShopRating__user">
+                                <!-- Если аватарка -->
+                                <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+                    
+                                <!-- Если первая буква -->
+                                <div class="sidebar__profile-letter">М</div>
+                                <div class="changeShopRating__user-rating">
+                                    <b>Максимов Максим</b>
+                                    <div class="dart-rating" data-rating="5">
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="changeShopRating__date">30 августа 2023</p>
+                        </div>
+                        <div class="changeShopRating__text">
+                            Отличный магазин! Низкие цены и самое главное всё есть
+                        </div>
+                    </div>
+    
+                    <div class="changeShopRating__feedback">
+                        <div class="changeShopRating__info">
+                            <div class="changeShopRating__user">
+                                <!-- Если аватарка -->
+                                <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+                    
+                                <!-- Если первая буква -->
+                                <div class="sidebar__profile-letter">М</div>
+                                <div class="changeShopRating__user-rating">
+                                    <b>Максимов Максим</b>
+                                    <div class="dart-rating" data-rating="5">
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="changeShopRating__date">30 августа 2023</p>
+                        </div>
+                        <div class="changeShopRating__text">
+                            Отличный магазин! Низкие цены и самое главное всё есть
+                        </div>
+                        <div class="changeShopRating__answer">
+                            <span class="changeShopRating__answer-on answerChangeShow">— Посмотреть ответ магазина</span>
+                            <span class="changeShopRating__answer-off answerChangeShow">— Скрыть ответ магазина</span>
+                            <div class="changeShopRating__answer-info">
+                                <!-- Если аватарка -->
+                                <img class="sidebar__profile-image" src="../../img/personal/1.png" alt="">
+                    
+                                <!-- Если первая буква -->
+                                <!-- <div class="sidebar__profile-letter">М</div> -->
+    
+                                <div class="changeShopRating__answer-container">
+                                    <div class="changeShopRating__answer-text">
+                                        <b>Самоделкин</b>
+                                        <p class="changeShopRating__date">30 августа 2023</p>
+                                    </div>
+                                    <div class="changeShopRating__text">
+                                        Добрый день! Благодарим вас за оставленный отзыв, ждем вас снова и будем радовать и впредь!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
 
         <div class="changeshop__mobile">
@@ -812,7 +986,87 @@
 </div>
 
 
+<!-- Шаблон модального окна -->
 
+<div class="dart-modal" id="dm-test">
+    <div class="dart-modal__content" onclick="event.stopPropagation()">
+        <a href="#" class="btn-close link-no-style dart-modal-close"><i class="d_icon d_icon-close"></i></a>
+        <h2>Модалка</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ad nemo quos deserunt eaque? Quisquam sint inventore similique, modi, eveniet eius nihil cupiditate eaque repudiandae assumenda, tenetur est magni quos.
+    </div>
+</div>
+
+<div class="dart-modal" id="dm-feedback-no-auth">
+    <div class="dart-modal__content" onclick="event.stopPropagation()">
+        <a href="#" class="btn-close link-no-style dart-modal-close"><i class="d_icon d_icon-close"></i></a>
+        <div class="feedback-no-auth">
+            <img src="../../img/test.svg" alt="">
+            <h3>Оставляйте отзывы</h3>
+            <p>Войдите в аккаунт, чтобы ставить оценки и писать отзывы.</p>
+        </div>
+        <a href="#" class="dart-btn dart-btn-primary dart-modal-toggler" data-dart-modal="dm-login" style="width: 100%;">Войти или создать аккаунт</a>
+    </div>
+</div>
+
+<div class="dart-modal" id="dm-login">
+    <div class="dart-modal__content dm-login" onclick="event.stopPropagation()">
+        <a href="#" class="btn-close link-no-style dart-modal-close"><i class="d_icon d_icon-close"></i></a>
+        <div class="feedback-no-auth">
+            <img src="../../img/test.svg" alt="">
+            <h3>Добро пожаловать!</h3>
+        </div>
+        <form class="dm-login__form">
+            <div class="dart-input dart-input-text">
+                <input type="text" placeholder="Логин">
+            </div>
+            <div class="dart-input dart-input-text mt-2 mb-1">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <a href="#" class="dm-login__forgot link-no-style">Забыли пароль?</a>
+            <a href="#" class="dart-btn dart-btn-primary mt-2" style="width: 100%;">Войти</a>
+        </form>
+        <a href="#" class="dart-btn dart-btn-secondary-outline dart-modal-toggler mt-1"  data-dart-modal="dm-register" style="width: 100%;">Зарегистрироваться</a>
+        <div class="dm-auth-social">
+            <p>Войти с помощью</p>
+            <div class="dm-auth-social__container">
+                <a href="#"><img src="../../img/icons/sber.svg" alt=""></a>
+                <a href="#"><img src="../../img/icons/ya.svg" alt=""></a>
+                <a href="#"><img src="../../img/icons/vk2.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="dart-modal" id="dm-register">
+    <div class="dart-modal__content dm-register" onclick="event.stopPropagation()">
+        <a href="#" class="btn-close link-no-style dart-modal-close"><i class="d_icon d_icon-close"></i></a>
+        <div class="feedback-no-auth">
+            <img src="../../img/test.svg" alt="">
+            <h3>Регистрация</h3>
+        </div>
+        <form class="dm-register__form">
+            <div class="dart-input dart-input-text mb-2">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="dart-input dart-input-text mb-2">
+                <input type="text" placeholder="Телефон">
+            </div>
+            <div class="dart-input dart-input-text mb-2">
+                <input type="text" placeholder="Имя">
+            </div>
+            <div class="dart-input dart-input-text mb-2">
+                <input type="text" placeholder="Логин">
+            </div>
+            <div class="dart-input dart-input-text">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <div class="dm-register__back">
+                <div class="dm-register__back-btn dart-modal-toggler" data-dart-modal="dm-login"><i class="d_icon d_icon-left-arrow"></i></div>
+                <a href="#" class="dart-btn dart-btn-primary">Зарегистрироваться</a>
+            </div>
+        </form>
+    </div>
+</div>
     <main class="dart_main">
       <section class="dart-section dart-overflov-unset mpt-0" >
         <div class="dart_container mp-0">
@@ -1550,15 +1804,40 @@
               </div>
             </div>
             <div class="d-col-map">
-              <div class="dart-menu-left">
-                  <div class="dart-menu-left__info-top">
-                      <h3>Выберите магазин</h3>
-                      <p>Сейчас вы видите магазины в Москве</p>
-                      <a href="#" class="dart-btn dart-btn-primary-mini showMap">Выбрать из списка</a>
+              <div class="d-col-shop mb-2">
+                <div class="d-col-shop__info">
+                  <div class="d-col-shop__left">
+                    <h3>Самоделкин <i class="d_icon d_icon-down-arrow"></i></h3>
+                    <div class="dart-rating" data-rating="4">
+                      <i class="d_icon d_icon-star"></i>
+                      <i class="d_icon d_icon-star"></i>
+                      <i class="d_icon d_icon-star"></i>
+                      <i class="d_icon d_icon-star"></i>
+                      <i class="d_icon d_icon-star"></i>
+                    </div>
+                    <p class="mt-1">ул. Советская улица, 89с1</p>
                   </div>
-                  <div class="dart-menu-left__map" id="dart-menu-left__map">
-                    <!-- Сюда помещяем карту -->
-                  </div>
+                  <img src="../img/ava.png" alt="">
+                </div>
+                <div class="d-col-shop__chart mt-3">
+                  <p class="shop-map__timing">Сегодня с 10:00 до 20:00</p>
+                  <span class="shop-map__light-text">12 км</span>
+                </div>
+                <span class="d-col-shop__status">Открыто</span>
+              </div>
+              <div class="d-col-basket">
+                  <!-- Корзина с элементами -->
+                  <h3>Корзина <span>Очистить</span></h3>
+
+
+                  <!-- Пустая корзина -->
+                  <!-- <h3>Корзина</h3>
+                  <div class="basket-empty">
+                    <div class="basket-empty__content">
+                      <img src="../img/test.svg" alt="">
+                      <h3>В вашей корзине пока пусто</h3>
+                    </div>
+                  </div> -->
               </div>
             </div>
           </div>

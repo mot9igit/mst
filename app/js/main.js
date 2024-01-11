@@ -491,14 +491,6 @@ if(btnRatingOff){
 	}
 }
 
-
-// if(changeshopToggler){
-// 	for (let i = 0; i < changeshopToggler.length; i++) {
-// 		changeshopToggler[i].addEventListener('click', () => {
-// 			changeshop.classList.toggle('showList')
-// 		})
-// 	}
-
 //Ползунок
 
 $(".polzunok-5").slider({
@@ -613,3 +605,62 @@ if(headerSearchAdd){
 	})
 }
 
+//Комментарии показать/скрыть ответ
+const answerChangeShow = document.querySelectorAll('.answerChangeShow');
+if(answerChangeShow){
+    for (let i = 0; i < answerChangeShow.length; i++) {
+        answerChangeShow[i].addEventListener("click", function() {
+            answerChangeShow[i].parentElement.classList.toggle("show");
+        });
+    }
+}
+
+//Свои модалки
+
+const dartModal = document.querySelectorAll('.dart-modal');
+const dartModalTogglers = document.querySelectorAll('.dart-modal-toggler');
+
+if(dartModalTogglers){
+	for(let i = 0; i < dartModalTogglers.length; i++){
+		const dartModallAttribute = dartModalTogglers[i].getAttribute('data-dart-modal');
+		if(dartModallAttribute && dartModal){
+			dartModalTogglers[i].addEventListener('click', () => {
+				const getModal = document.getElementById(dartModallAttribute);
+				if(getModal){
+					if(!getModal.classList.contains('show')){
+						getModal.classList.add('show')
+						body.style.overflow = "hidden"
+					}
+				}
+			})
+		}
+	}
+}
+
+//Закрытие модалок
+
+const closeDartModal = document.querySelectorAll('.dart-modal');
+if(closeDartModal){
+	for(let i = 0; i<closeDartModal.length; i++){
+		closeDartModal[i].addEventListener('click', () => {
+			closeDartModal[i].classList.remove('show')
+			body.style.overflow = "auto"
+		})
+	}
+}
+
+const closeDartModalBtn = document.querySelectorAll('.dart-modal-close');
+if(closeDartModalBtn && dartModalTogglers){
+    for (let i = 0; i < closeDartModalBtn.length; i++) {
+        closeDartModalBtn[i].addEventListener("click", function() {
+            closeDartModalBtn[i].parentElement.parentElement.classList.remove("show");
+			body.style.overflow = "auto"
+        });
+    }
+
+	for (let i = 0; i < dartModalTogglers.length; i++) {
+        dartModalTogglers[i].addEventListener("click", function() {
+            dartModalTogglers[i].closest('.dart-modal').classList.remove("show");
+        });
+    }
+}
