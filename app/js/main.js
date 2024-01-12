@@ -325,6 +325,38 @@ if(alldartSwiperSearch){
 				nextEl: ".swiper-search-next-"+ (i+1),
 				prevEl: ".swiper-search-prev-"+ (i+1),
 			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.5,
+				},
+				410: {
+					slidesPerView: 2,
+				},
+				600: {
+					slidesPerView: 3,
+				},
+				800: {
+					slidesPerView: 4,
+				},
+				1000: {
+					slidesPerView: 5,
+				},
+				1200: {
+					slidesPerView: 3,
+				},
+				1350: {
+					slidesPerView: 3.5,
+				},
+				1450: {
+					slidesPerView: 4,
+				},
+				1700: {
+					slidesPerView: 4.5,
+				},
+				1780: {
+					slidesPerView: 5,
+				}
+			}
 		});
     }
 }
@@ -685,6 +717,31 @@ if(dartQuantityMinus && dartQuantityPlus){
 		dartQuantityPlus[i].addEventListener('click', () => {
 			const getInput = dartQuantityMinus[i].parentElement.querySelector('.dart-quantity__counter');
 			getInput.value = Number(getInput.value) + 1
+		})
+	}
+}
+
+//Каталог в шапке
+
+const dartHeaderCatalogToggler = document.querySelectorAll('.dartHeaderCatalogToggler');
+const dartHeaderCatalog = document.querySelector('.dart-header__catalog')
+
+if(dartHeaderCatalogToggler && dartHeaderCatalog){
+	for(let i = 0; i < dartHeaderCatalogToggler.length; i++){
+		dartHeaderCatalogToggler[i].addEventListener('click', () => {
+			dartHeaderCatalog.classList.toggle('show')
+		})
+	}
+}
+
+//Фейковые чекбоксы
+
+const fake = document.querySelectorAll('.fake');
+
+if(fake){
+	for(let i = 0; i < fake.length; i++){
+		fake[i].addEventListener('click', () => {
+			fake[i].classList.toggle('active')
 		})
 	}
 }

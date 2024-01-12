@@ -92,7 +92,7 @@
 }
 
 .search-filtrs{
-    width: 287px;
+    width: 100%;
     border-radius: 5px;
     background: var(--main-background-windows);
     padding: 24px 16px;
@@ -118,6 +118,23 @@
     align-items: center;
     color: var(--secondary-color);
     gap: 8px;
+
+    &.fake{
+        label:hover::before{
+            border-color: var(--primary-hover);
+        }
+    }
+
+    &.fake.active{
+        label{
+            &::before{
+                border-color: var(--primary-color);
+    background-color: transparent;
+    background-image: url("../img/icons/checkmark.svg");
+    background-size: 80%;
+            }
+        }
+    }
 }
 
 .polzunok-container-5{

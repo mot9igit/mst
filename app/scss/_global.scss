@@ -631,6 +631,44 @@ ul{
 	display: flex;
     align-items: center;
 
+	&__catalog{
+		margin: 0 24px;
+
+		&.show{
+			.dart-header{
+				&__catalog-container{
+					opacity: 1;
+					pointer-events: all;
+				}
+
+				&__catalog-close{
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+	}
+
+	&__catalog-container{
+		height: unset;
+		position: absolute;
+		top: 78px;
+		z-index: 1;
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.4s;
+	}
+
+	&__catalog-close{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	&__logo{
 		margin-right: 24px;
 		width: 210px;
@@ -2175,6 +2213,10 @@ ul{
 		margin: 24px 0 8px 0;
 	}
 
+	b{
+		line-height: 19px;
+	}
+
 	p{
 		text-align: center;
 		max-width: 280px;
@@ -2290,7 +2332,7 @@ ul{
 	border-radius: 5px;
 	box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.06);
 	max-height: 700px;
-    height: 100vh;
+    height: 70vh;
 	background: var(--main-background-windows);
 
 	.basket-empty{
@@ -2414,7 +2456,7 @@ ul{
 
 .btn-arrange{
 	width: 100%;
-	margin-top: 24px;
+	margin-top: 10px;
 	justify-content: space-between;
 }
 
@@ -2454,6 +2496,45 @@ ul{
 			padding: 15px 14px !important;
 		}
 	}
+}
+
+
+@media (max-width: 1600px){
+    .d-col-basket{
+        .basket-container{
+			padding-bottom: 0;
+
+            &__adres{
+                font-size: 12px;
+            }
+
+            &__card{
+                align-items: flex-start;
+            }
+
+            &__img{
+                width: 60px;
+            }
+
+            &__article{
+                margin: 6px 0 3px 0;
+            }
+
+            &__count{
+                gap: 0px;
+                flex-direction: column;
+            }
+		
+			.btn-close{
+				width: 18px;
+    			height: 18px;
+			}
+
+			&__title p{
+				width: calc(100% - 18px);
+			}
+        }
+    }
 }
 
 @media (max-width: $small-desktop){
@@ -2531,6 +2612,14 @@ ul{
 		display: flex;
 		align-items: center;
     	justify-content: space-around;
+	}
+
+	.search-filtrs{
+		display: none;
+	}
+
+	.d-col-content-mt-0{
+		padding-top: 0 !important;
 	}
 }
 
