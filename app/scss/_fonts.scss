@@ -26,6 +26,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-checkmark:before {
+  content: "\e91a";
+}
+
 .d_icon-filtr:before {
   content: "\e919";
 }

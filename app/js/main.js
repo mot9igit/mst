@@ -197,6 +197,32 @@ var swipertree = new Swiper(".swiperImageChangeShop", {
     }
 });
 
+//Свайпер выбора даты
+// var swipertree = new Swiper(".swiperDateOrder", {
+//     slidesPerView: 4.5,
+//     spaceBetween: 8,
+//     navigation: {
+//         nextEl: ".swiper-date-next",
+//         prevEl: ".swiper-date-prev",
+//     }
+// });
+
+const swiperDateOrder = document.querySelectorAll('.swiperDateOrder');
+if(swiperDateOrder){
+	for (let i = 0; i < swiperDateOrder.length; i++) {
+
+       //Свайпер новинки
+		var swipertree = new Swiper(swiperDateOrder[i], {
+			slidesPerView: 8,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: ".swiper-date-next-"+ (i+1),
+				prevEl: ".swiper-date-prev-"+ (i+1),
+			},
+		});
+    }
+}
+
 
 //Левое меню каталог
 const menu_items = document.querySelectorAll('.dart-catalog-menu__el');
@@ -765,4 +791,39 @@ if(fake){
 			fake[i].classList.toggle('active')
 		})
 	}
+}
+
+//Промокод
+
+const promocode = document.querySelector('input[name="promocode"]');
+const promocodeContainer = document.querySelector('.dart-order__promo')
+const savePromo = document.querySelector('.savePromo'); // Применить / Удалить промокод
+let isPromo = false;
+
+if(promocode){
+	promocode.addEventListener('input', () => {
+		if(promocode.value.length > 0){
+			promocodeContainer.classList.add('active');
+		}else{
+			promocodeContainer.classList.remove('active');
+		}
+	})
+}
+
+if(savePromo){
+	savePromo.addEventListener('click', () => {
+		if(!isPromo){
+			promocodeContainer.classList.add('apply');
+			savePromo.innerHTML = "Удалить"
+			promocode.disabled = true;
+			isPromo = true;
+		}else{
+			promocodeContainer.classList.remove('apply')
+			savePromo.innerHTML = "Применить"
+			promocodeContainer.classList.remove('active');
+			isPromo = false;
+			promocode.disabled = false;
+			promocode.value = ""
+		}
+	})
 }
