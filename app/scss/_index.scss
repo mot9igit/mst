@@ -346,8 +346,8 @@
 .d-col-menu{
     max-width: 287px;
     height: 100%;
-    position: sticky;
-    top: 8px;
+    // position: sticky;
+    // top: 8px;
 }
 
 .d-col-content{
@@ -549,6 +549,10 @@
 
 @media (max-width: $small-desktop){
 
+    .dart-window{
+        border-radius: 15px;
+    }
+
     .dart-catalog-menu-mobile{
         h2{
             display: none !important;
@@ -616,8 +620,6 @@
 }
 
 @media (max-width: $tablets){
-
-
     .whoWorking{
         flex-direction: column;
         align-items: flex-start;

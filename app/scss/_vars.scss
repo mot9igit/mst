@@ -42,6 +42,8 @@ $main-padding:          24px;
     --logo-mobile: url('../img/min-logo.svg');
     --color-sitebar-text: #595959;
     --text-color-dop: #ACABAB;
+    --bs-breadcrumb-divider: "-";
+
 }
 
 //Тёмная тема
@@ -65,6 +67,7 @@ $main-padding:          24px;
     --logo-mobile: url('../img/logo.svg');
     --color-sitebar-text: #595959;
     --text-color-dop: #ACABAB;
+    --bs-breadcrumb-divider: "—";
 }
 
 //Демо!!!

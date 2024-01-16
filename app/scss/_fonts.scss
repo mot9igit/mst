@@ -26,6 +26,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-filtr:before {
+  content: "\e919";
+}
+
 .d_icon-plus:before {
   content: "\e917";
 }

@@ -186,6 +186,17 @@ var swipertree = new Swiper(".dartSwiperManufacturer", {
 	}
 });
 
+//Свайпер в комментариях
+
+var swipertree = new Swiper(".swiperImageChangeShop", {
+    slidesPerView: 4.5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-image-next",
+        prevEl: ".swiper-image-prev",
+    }
+});
+
 
 //Левое меню каталог
 const menu_items = document.querySelectorAll('.dart-catalog-menu__el');
@@ -193,6 +204,16 @@ if(menu_items){
     for (let i = 0; i < menu_items.length; i++) {
         menu_items[i].addEventListener("click", function() {
             menu_items[i].parentElement.classList.toggle("active");
+        });
+    }
+}
+
+//Левое меню с подкаталогами
+const menuItems = document.querySelectorAll('.dart-menu-category__el');
+if(menuItems){
+    for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].addEventListener("click", function() {
+            menuItems[i].parentElement.classList.toggle("active");
         });
     }
 }
@@ -371,6 +392,7 @@ if(menu_toggler && sidebar){
 	menu_toggler.addEventListener('click', () => {
 		sidebar.classList.toggle('show');
 		body.style.overflow = "hidden"
+		
 	})
 }
 
@@ -589,8 +611,7 @@ if(showModalFiltrs && allFiltrsModal){
 				allFiltrsModal.classList.add('show')
 				body.style.overflow = "hidden"
 				isModalFiltrs = true
-			}
-			
+			}	
 		})
 	}
 }

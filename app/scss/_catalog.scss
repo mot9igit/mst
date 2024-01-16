@@ -1,0 +1,171 @@
+.dart-card-category{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: row;
+    gap: 8px;
+    margin-bottom: 35px;
+
+    &__elem{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: var(--btn-secondary-outline-background);
+        transition: all 0.4s;
+        align-items: flex-start;
+
+        &:hover{
+            background-color: var(--btn-secondary-outline-hover);
+        }
+        
+        b{
+            padding: 16px 12px 0 12px;
+        }
+    
+        img{
+            margin-left: auto;
+            max-height: 97px !important;
+            object-fit: contain;
+            float: right;
+            padding: 0 4px 8px 0;
+        }
+    }
+}
+
+.dart-catalog-products{
+    margin-top: 40px;
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__sort{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    &__sort-price{
+        cursor: pointer;
+
+        .d_icon-down-arrow{
+            font-size: 12px;
+        }
+    }
+
+    &__filtrs{
+        font-size: 20px;
+        display: none;
+    }
+
+    &__container{
+        gap: 8px 0;
+    }
+}
+
+
+@media (max-width: $desktop){
+
+}
+
+@media (max-width: 1600px){
+    .dart-card-category{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dart-catalog-products__container{
+        .dartSwiperSearch__buttons{
+            .dart-btn{
+                padding: 15px 10px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: $small-desktop){
+	.dart-card-category{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .dart-catalog-products{
+        &__filtrs{
+            display: flex;
+        }
+    }
+    
+}
+
+@media (max-width: $tablets){
+    .dart-card-category{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+}
+
+@media (max-width: $small-tablets){
+    .dart-card-category{
+        padding-bottom: 6px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        margin-bottom: 15px;
+
+        &__elem{
+            width: unset;
+            img{
+                display: none;
+            }
+
+            b{
+                padding: 16px 12px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (max-width: $big-phones){
+    .dart-catalog-products{
+        &__nav{
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        &__sort{
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__buttons{
+            width: 100%;
+            overflow-x: auto;
+
+            .dart-btn-radio-mini{
+                white-space: nowrap;
+            }
+
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+        }
+    }
+    
+
+
+}
+
+@media (max-width: $phones){
+
+}
+

@@ -46,6 +46,11 @@
 
     &__text{
         padding: 12px;
+
+        .dart-rating{
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
     }
 
     &__code{
@@ -55,6 +60,7 @@
         font-weight: 400;
         line-height: 18px;
         margin-bottom: 8px;
+        margin-top: 4px;
     }
 
     &__image{
@@ -76,12 +82,18 @@
         font-weight: 500;
         line-height: 16px;
         color: var(--secondary-color);
+        margin-bottom: 16px;
     }
 
     &__buttons{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 12px;
+
+        .dart-btn-secondary{
+            width: 100%;
+        }
     }
 }
 

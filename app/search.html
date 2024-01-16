@@ -36,7 +36,7 @@
                 </div>
                 <a href="/" class="dart-header__logo"></a>
             </div>
-            <div class="dart-header__catalog">
+            <!-- <div class="dart-header__catalog">
               <a href="#" class="dart-btn dart-btn-secondary dartHeaderCatalogToggler"><i class="d_icon d_icon-menu"></i>Каталог</a>
               <div class="d-col-menu dart-header__catalog-container">
                 <div class="dart-catalog-menu">
@@ -248,9 +248,8 @@
                   </div>
                 </div>
               </div>
-              <!-- Область для закрытия каталога в шапке -->
               <div class="dart-header__catalog-close dartHeaderCatalogToggler"></div>
-            </div>
+            </div> -->
             <div class="dart-input dart-input-search dart-header__search">
                 <div class="dart-header__search-btn">
                     <input type="text" placeholder="Найти во всех магазинах">
@@ -505,33 +504,45 @@
 
 <div class="sidebar">
     <div class="sidebar__menu" onclick="event.stopPropagation()">
-        <div class="sidebar__profile">
-            <!-- Если аватарка -->
-            <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+        <div class="sidebar__container">
 
-            <!-- Если первая буква -->
-            <div class="sidebar__profile-letter">М</div>
-            <p>Максимов Максим</p>
+            <!-- Авторизован? -->
+            <div class="sidebar__profile">
+                <!-- Если аватарка -->
+                <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+    
+                <!-- Если первая буква -->
+                <div class="sidebar__profile-letter">М</div>
+                <p>Максимов Максим</p>
+            </div>
+            <a href="#" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-basket"></i>
+                <p>История заказов</p>
+            </a>
+            <a href="#" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-logout"></i>
+                <p>Выйти</p>
+            </a>
+
+            <!-- НЕ АВТОРИЗОВАН -->
+            <!-- <a href="#" class="sidebar__bold link-no-style">
+                <p>Войти</p>
+            </a> -->
+
+            <div class="sidebar__list">
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+                <a href="#">Возврат товара</a>
+                <a href="#">Гарантии</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Публичная оферта</a>
+                <hr />
+                <a href="#">+7 (499) 325-52-50</a>
+                <a href="#">info@mst.tools</a>
+            </div>
         </div>
-        <a href="#" class="sidebar__bold link-no-style">
-            <i class="d_icon d_icon-basket"></i>
-            <p>История заказов</p>
-        </a>
-        <a href="#" class="sidebar__bold link-no-style">
-            <i class="d_icon d_icon-logout"></i>
-            <p>Выйти</p>
-        </a>
-
-        <div class="sidebar__list">
-            <a href="#">О компании</a>
-            <a href="#">Контакты</a>
-            <a href="#">Возврат товара</a>
-            <a href="#">Гарантии</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Публичная оферта</a>
-            <hr />
-            <a href="#">+7 (499) 325-52-50</a>
-            <a href="#">info@mst.tools</a>
+        <div class="sidebar__logo">
+            <img src="../../img/logo_alt.svg" alt="">
         </div>
     </div>
 </div>
@@ -988,6 +999,65 @@
                             Отличный магазин! Низкие цены и самое главное всё
                             есть
                         </div>
+                        <div class="changeShopRating__images mt-2">
+                            <div class="swiper swiperImageChangeShop">
+                                <div class="swiper-wrapper">
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                  <a href="#" class="swiper-slide">
+                                    <img src="../img/slider/mini-slider-promo-1.png" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="swiper-button-next dart-swiper-next dart-btn-next swiper-image-next"></div>
+                                <div class="swiper-button-prev dart-swiper-prev dart-btn-prev swiper-image-prev"></div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="changeShopRating__feedback">
+                        <div class="changeShopRating__info">
+                            <div class="changeShopRating__user">
+                                <!-- Если аватарка -->
+                                <!-- <img class="sidebar__profile-image" src="../../img/gallery/1.jpg" alt=""> -->
+
+                                <!-- Если первая буква -->
+                                <div class="sidebar__profile-letter">М</div>
+                                <div class="changeShopRating__user-rating">
+                                    <b>Максимов Максим</b>
+                                    <div class="dart-rating" data-rating="5">
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                        <i class="d_icon d_icon-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="changeShopRating__date">
+                                30 августа 2023
+                            </p>
+                        </div>
+                        <div class="changeShopRating__text">
+                            Отличный магазин! Низкие цены и самое главное всё
+                            есть
+                        </div>
                         <div class="changeShopRating__answer">
                             <span
                                 class="changeShopRating__answer-on answerChangeShow"
@@ -1046,7 +1116,10 @@
 
 <div class="allFiltrsModal showModalFiltrs">
     <div class="allFiltrsModal__content" onclick="event.stopPropagation()">
-        <h3 class="allFiltrsModal__title">Все фильтры в Бензотехника</h3>
+        <div class="modalHeaderMenu">
+            <i class="d_icon d_icon-left-arrow closeModalButton showModalFiltrs"></i>
+            <h3 class="allFiltrsModal__title">Все фильтры в Бензотехника</h3>
+        </div>
         <i class="d_icon d_icon-close showModalFiltrs d_icon-hover"></i>
         <div class="dart-input dart-input-search mb-4 mt-3">
             <input type="text" placeholder="Поиск по фильтрам" />
@@ -1235,7 +1308,436 @@
                     </div>
                 </div>
             </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Цена</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__price">
+                        <div class="dart-row mb-3">
+                            <div class="d-col-6">
+                                <p class="mb-1">от</p>
+                                <div class="dart-input dart-input-text">
+                                    <input
+                                        type="text"
+                                        placeholder="0"
+                                        class="polzunok-input-5-left"
+                                    />
+                                </div>
+                            </div>
+                            <div class="d-col-6">
+                                <p class="mb-1">до</p>
+                                <div class="dart-input dart-input-text">
+                                    <input
+                                        type="text"
+                                        placeholder="0"
+                                        class="polzunok-input-5-right"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="polzunok-container-5">
+                            <div class="polzunok-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Производитель</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-1"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-1">Alpicool</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-2"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-2">Indel B</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-3"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-3">AVC</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-4"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-4">Libhof</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-5"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-5">Dometic</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-6"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-6">Vitrifrigo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Серия</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-11"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-11">A</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-22"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-22">ACX</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-33"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-33">BAR</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-44"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-44">BCD</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-55"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-55">BD</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-66"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-66">C</label>
+                        </div>
 
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-77"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-77">CD</label>
+                        </div>
+
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-88"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-88">CDF</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Производитель</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-1"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-1">Alpicool</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-2"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-2">Indel B</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-3"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-3">AVC</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-4"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-4">Libhof</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-5"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-5">Dometic</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-6"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-6">Vitrifrigo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Цена</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__price">
+                        <div class="dart-row mb-3">
+                            <div class="d-col-6">
+                                <p class="mb-1">от</p>
+                                <div class="dart-input dart-input-text">
+                                    <input
+                                        type="text"
+                                        placeholder="0"
+                                        class="polzunok-input-5-left"
+                                    />
+                                </div>
+                            </div>
+                            <div class="d-col-6">
+                                <p class="mb-1">до</p>
+                                <div class="dart-input dart-input-text">
+                                    <input
+                                        type="text"
+                                        placeholder="0"
+                                        class="polzunok-input-5-right"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="polzunok-container-5">
+                            <div class="polzunok-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Производитель</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-1"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-1">Alpicool</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-2"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-2">Indel B</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-3"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-3">AVC</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-4"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-4">Libhof</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-5"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-5">Dometic</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-6"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-6">Vitrifrigo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Серия</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-11"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-11">A</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-22"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-22">ACX</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-33"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-33">BAR</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-44"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-44">BCD</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-55"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-55">BD</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-66"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-66">C</label>
+                        </div>
+
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-77"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-77">CD</label>
+                        </div>
+
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-88"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-88">CDF</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-filter">
+                <p class="widget-filter__title">Производитель</p>
+                <div class="widget-content">
+                    <div class="search-filtrs__cheackbox-container">
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-1"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-1">Alpicool</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-2"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-2">Indel B</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-3"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-3">AVC</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-4"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-4">Libhof</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-5"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-5">Dometic</label>
+                        </div>
+                        <div class="dart-cheackbox-container">
+                            <input
+                                class="dart-cheackbox"
+                                id="dart-cheackbox-6"
+                                type="checkbox"
+                            />
+                            <label for="dart-cheackbox-6">Vitrifrigo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="widget-filter">
                 <p class="widget-filter__title">Цена</p>
                 <div class="widget-content">
@@ -1269,6 +1771,10 @@
                 </div>
             </div>
         </form>
+        <div class="allFiltrsModal__buttons">
+            <a href="#" class="dart-btn dart-btn-secondary-outline">Сбросить</a>
+            <a href="#" class="dart-btn dart-btn-primary">Показать товары</a>
+        </div>
     </div>
 </div>
 
@@ -1514,11 +2020,55 @@
                     <label for="dart-cheackbox-88">CDF</label>
                   </div>
                 </div>
-                <a href="#" class="dart-btn dart-btn-secondary-outline mt-5 showModalFiltrs" style="width: 100%;">Все фильтры</a>
+                <a class="dart-btn dart-btn-secondary-outline mt-5 showModalFiltrs" style="width: 100%;">Все фильтры</a>
               </div>
             </div>
             <div class="d-col-content d-col-content-mt-0">
+              <div class="dart-mobile-searsh">
+    <div class="dart-input dart-input-search">
+        <input type="text" placeholder="Найти во всех магазинах">
+    </div>
+</div>
               <div class="dart-window">
+                <nav aria-label="breadcrumb">
+    <ol
+        class="breadcrumb"
+        itemscope=""
+        itemtype="http://schema.org/BreadcrumbList"
+    >
+        <li
+            class="breadcrumb-item"
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+        >
+            <a itemprop="item" href="/"><span itemprop="name">Главная</span></a
+            ><meta itemprop="position" content="1" />
+        </li>
+        <li
+            class="breadcrumb-item"
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+        >
+            <a itemprop="item" href="catalog/"
+                ><span itemprop="name">Каталог товаров</span></a
+            ><meta itemprop="position" content="2" />
+        </li>
+        <li
+            class="breadcrumb-item"
+            itemprop="itemListElement"
+            itemscope=""
+            itemtype="http://schema.org/ListItem"
+        >
+            <a itemprop="item" href="catalog/benzotexnika/"
+                ><span itemprop="name">Бензотехника</span></a
+            ><meta itemprop="position" content="3" />
+        </li>
+        <li class="breadcrumb-item active">Триммеры \ бензокосы</li>
+    </ol>
+</nav>
+
                 <h2 class="mb-4">Найдено 10 результатов по запросу «Перфоратор»</h2>
                 <div class="mini-info-shop">
                   <div class="mini-info-shop__content">
@@ -1545,14 +2095,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1566,14 +2116,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1587,14 +2137,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1608,14 +2158,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1629,14 +2179,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1650,14 +2200,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1671,14 +2221,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1692,14 +2242,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1713,14 +2263,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1758,14 +2308,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1779,14 +2329,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1800,14 +2350,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1821,14 +2371,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1842,14 +2392,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1863,14 +2413,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1884,14 +2434,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1905,14 +2455,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1926,14 +2476,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1971,14 +2521,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -1992,14 +2542,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2013,14 +2563,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2034,14 +2584,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2055,14 +2605,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2076,14 +2626,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2097,14 +2647,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2118,14 +2668,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2139,14 +2689,14 @@
                         <div class="dartSwiperSearch__text">
                           <p class="dartSwiperSearch__code">Код товара: 140101199</p>
                           <p>Перфоратор П-32/1000ЭВ-2</p>
-                          <div class="dart-rating mt-1 mb-3" data-rating="4">
+                          <div class="dart-rating" data-rating="4">
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                             <i class="d_icon d_icon-star"></i>
                           </div>
-                          <p class="dartSwiperSearch__sale mb-2">13 290 ₽</p>
+                          <p class="dartSwiperSearch__sale">13 290 ₽</p>
                           <div class="dartSwiperSearch__buttons">
                             <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
                             <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
@@ -2162,7 +2712,7 @@
             </div>
             <div class="d-col-map">
     <!-- МАГАЗИН НЕ ВЫБРАН -------------------------------------------------------------------------------------- -->
-    <!-- <div class="dart-menu-left">
+    <div class="dart-menu-left">
         <div class="dart-menu-left__info-top">
             <h3>Выберите магазин</h3>
             <p>Сейчас вы видите магазины в Москве</p>
@@ -2174,12 +2724,12 @@
         </div>
         <div class="dart-menu-left__map" id="dart-menu-left__map">
         </div>
-    </div> -->
+    </div>
     <!-- МАГАЗИН НЕ ВЫБРАН -------------------------------------------------------------------------------------- -->
 
     <!-- МАГАЗИН ВЫБРАН -------------------------------------------------------------------------------------- -->
 
-    <div class="d-col-shop mb-2">
+    <!-- <div class="d-col-shop mb-2">
         <div class="d-col-shop__info">
             <div class="d-col-shop__left">
                 <h3>Самоделкин <i class="d_icon d_icon-down-arrow"></i></h3>
@@ -2201,7 +2751,6 @@
         <span class="d-col-shop__status">Открыто</span>
     </div>
     <div class="d-col-basket">
-        <!-- Корзина с элементами -->
         <h3>Корзина <span>Очистить</span></h3>
 
         <div class="basket-container">
@@ -2385,15 +2934,15 @@
             >Оформить заказ <span>7 500 ₽</span></a
         >
 
-        <!-- Пустая корзина -->
-        <!-- <h3>Корзина</h3>
+    
+        <h3>Корзина</h3>
           <div class="basket-empty">
             <div class="basket-empty__content">
               <img src="../img/test.svg" alt="">
               <h3>В вашей корзине пока пусто</h3>
             </div>
-          </div> -->
-    </div>
+          </div>
+    </div>-->
 
     <!-- МАГАЗИН ВЫБРАН -------------------------------------------------------------------------------------- -->
 </div>
