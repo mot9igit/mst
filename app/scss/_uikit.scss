@@ -74,6 +74,27 @@
     }
 }
 
+.dart-btn-choice{
+    background: var(--btn-secondary-outline-background);
+    justify-content: space-between;
+
+    p{
+        color: var(--text-color-dop);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    
+    i{
+        color: var(--secondary-color);
+        font-size: 24px;
+    }
+
+    &:hover{
+        background: var(--btn-secondary-outline-hover);
+    }
+}
+
 .dart-btn-secondary-outline{
     background: var(--btn-secondary-outline-background);
     color: var(--btn-secondary-outline-color);
@@ -223,6 +244,7 @@
 }
 
 .btn-close{
+    cursor: pointer;
     background: var(--color-sitebar-text);
     opacity: 0.3;
     color: var(--white-color) !important;

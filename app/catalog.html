@@ -1780,11 +1780,11 @@
 
 <!-- Оформление заказа -->
 
-<div class="dart-order show">
-    <div class="dart-order__content">
+<div class="dart-order basketToggleModal">
+    <div class="dart-order__content" onclick="event.stopPropagation()">
         <div class="dart-order__title">
             <h1 class="h1-mini">Оформление заказа</h1>
-            <a href="#" class="btn-close link-no-style"><i class="d_icon d_icon-close"></i></a>
+            <a class="btn-close link-no-style basketToggleModal"><i class="d_icon d_icon-close"></i></a>
         </div>
 
         <div class="dart-order__container">
@@ -2107,7 +2107,7 @@
                 <h3>Способы получения</h3>
                 <div class="dart-order__delivery-methods">
                     <a class="dart-btn dart-btn-radio-mini">
-                        <input type="radio" id="delivery-method-1" name="delivery-method">
+                        <input type="radio" id="delivery-method-1" name="delivery-method" value="store">
                         <label for="delivery-method-1" class="text">
                             <p class="dart-order__delivery-title">Забрать из магазина</p>
 
@@ -2118,7 +2118,7 @@
                         </label>
                     </a>
                     <a class="dart-btn dart-btn-radio-mini">
-                        <input checked type="radio" id="delivery-method-2" name="delivery-method">
+                        <input checked type="radio" id="delivery-method-2" name="delivery-method" value="express">
                         <label for="delivery-method-2" class="text">
                             <p class="dart-order__delivery-title">Экспресс-доставка</p>
 
@@ -2129,7 +2129,7 @@
                         </label>
                     </a>
                     <a class="dart-btn dart-btn-radio-mini">
-                        <input type="radio" id="delivery-method-3" name="delivery-method">
+                        <input type="radio" id="delivery-method-3" name="delivery-method" value="receivingPoint">
                         <label for="delivery-method-3" class="text">
                             <p class="dart-order__delivery-title">В пункт выдачи</p>
 
@@ -2140,9 +2140,9 @@
                         </label>
                     </a>
                     <a class="dart-btn dart-btn-radio-mini">
-                        <input type="radio" id="delivery-method-4" name="delivery-method">
+                        <input type="radio" id="delivery-method-4" name="delivery-method" value="courier">
                         <label for="delivery-method-4" class="text">
-                            <p class="dart-order__delivery-title">Забрать из магазина</p>
+                            <p class="dart-order__delivery-title">Курьером</p>
 
                             <div class="dart-order__time-price">
                                 <p>от 5 января</p>
@@ -2151,7 +2151,72 @@
                         </label>
                     </a>
                 </div>
-                <div class=""></div>
+                <div class="dart-order__inputs-container express">
+                    <div class="dart-order__tk mb-3">
+                        <h3>Транспортная компания</h3>
+                        <div class="companyRadio">
+                            <input id="tk-company-1" type="radio" name="tk-company">
+                            <label for="tk-company-1"><img src="../../img/yandex-delivery.png" alt=""> Яндекс Доставка</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-2" type="radio" name="tk-company">
+                            <label for="tk-company-2"><img src="../../img/delivery/2.png" alt=""> DPD</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-3" type="radio" name="tk-company">
+                            <label for="tk-company-3"><img src="../../img/delivery/3.png" alt=""> CDEK</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-4" type="radio" name="tk-company">
+                            <label for="tk-company-4"><img src="../../img/delivery/4.png" alt=""> СберЛогистика</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <a href="#" class="dart-btn dart-btn-choice mt-3" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
+                    </div>
+                    <div class="dart-order__courier mb-3">
+                        <h3>Транспортная компания</h3>
+                        <div class="companyRadio">
+                            <input id="tk-company-5" type="radio" name="tk-company">
+                            <label for="tk-company-5"><img src="../../img/delivery/1.png" alt=""> Почта Росии</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-6" type="radio" name="tk-company">
+                            <label for="tk-company-6"><img src="../../img/delivery/2.png" alt=""> DPD</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-7" type="radio" name="tk-company">
+                            <label for="tk-company-7"><img src="../../img/delivery/3.png" alt=""> CDEK</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <div class="companyRadio">
+                            <input id="tk-company-8" type="radio" name="tk-company">
+                            <label for="tk-company-8"><img src="../../img/delivery/4.png" alt=""> СберЛогистика</label>
+                            <p>5 января – 500 руб.</p>
+                        </div>
+                        <a href="#" class="dart-btn dart-btn-choice mt-3" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
+                    </div>
+                    <div class="dart-order__express mb-3">
+                        <h3>Адрес доставки</h3>
+                        <a class="dart-btn dart-btn-choice mt-2 dart-modal-toggler" data-dart-modal="dm-my-addres" style="width: 100%;"><p>Укажите адрес</p><i class="d_icon d_icon-right-arrow"></i></a>
+                    </div>
+                    <div class="dart-order__all-delivery">
+                        <h3>Получатель</h3>
+                        <div class="dart-input dart-input-text mt-2">
+                            <input type="text" placeholder="ФИО">
+                        </div>
+                        <div class="dart-input dart-input-text mt-2">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="dart-input dart-input-text mt-2">
+                            <input type="Телефон" placeholder="Телефон">
+                        </div>
+                    </div>
+                </div>
                 <div class="dart-order__oplata">
                     <div class="dart-order__info-oplata">
                         <div class="dart-order__list">
@@ -2194,7 +2259,7 @@
 
 <div class="dart-modal" id="dm-feedback-no-auth">
     <div class="dart-modal__content" onclick="event.stopPropagation()">
-        <a href="#" class="btn-close link-no-style dart-modal-close"
+        <a class="btn-close link-no-style dart-modal-close"
             ><i class="d_icon d_icon-close"></i
         ></a>
         <div class="feedback-no-auth">
@@ -2214,7 +2279,7 @@
 
 <div class="dart-modal" id="dm-login">
     <div class="dart-modal__content dm-login" onclick="event.stopPropagation()">
-        <a href="#" class="btn-close link-no-style dart-modal-close"
+        <a class="btn-close link-no-style dart-modal-close"
             ><i class="d_icon d_icon-close"></i
         ></a>
         <div class="feedback-no-auth">
@@ -2261,7 +2326,7 @@
         class="dart-modal__content dm-register"
         onclick="event.stopPropagation()"
     >
-        <a href="#" class="btn-close link-no-style dart-modal-close"
+        <a class="btn-close link-no-style dart-modal-close"
             ><i class="d_icon d_icon-close"></i
         ></a>
         <div class="feedback-no-auth">
@@ -2301,7 +2366,7 @@
 
 <div class="dart-modal" id="dm-warn-count-tovar">
     <div class="dart-modal__content" onclick="event.stopPropagation()">
-        <a href="#" class="btn-close link-no-style dart-modal-close"
+        <a class="btn-close link-no-style dart-modal-close"
             ><i class="d_icon d_icon-close"></i
         ></a>
         <div class="feedback-no-auth">
@@ -2329,6 +2394,79 @@
     <i class="d_icon d_icon-right-arrow"></i>
 </a>
 
+<!-- Мои адреса -->
+<div class="dart-modal show" id="dm-my-addres">
+    <div class="dart-modal__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style dart-modal-close"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="dart-modal-change-addres">
+            <h3>Мои адреса</h3>
+            <div class="dart-modal-change-addres__el">
+                <p>РФ, Челябинская область, г. Миасс, ул. Советская 27, кв 58</p>
+                <i class="d_icon d_icon-btn-dots show change-addres-btn">
+                    <p class="dart-modal-change-addres__change newAddresToggleModal">Изменить</p>
+                </i>
+            </div>
+            <div class="dart-modal-change-addres__el">
+                <p>РФ, Челябинская область, г. Миасс, ул. Советская 27, кв 58</p>
+                <i class="d_icon d_icon-btn-dots change-addres-btn">
+                    <p class="dart-modal-change-addres__change newAddresToggleModal">Изменить</p>
+                </i>
+            </div>
+            <div class="dart-modal-change-addres__el">
+                <p>РФ, Челябинская область, г. Миасс, ул. Советская 27, кв 58</p>
+                <i class="d_icon d_icon-btn-dots change-addres-btn">
+                    <p class="dart-modal-change-addres__change newAddresToggleModal">Изменить</p>
+                </i>
+            </div>
+            <div class="dart-modal-change-addres__el">
+                <p>РФ, Челябинская область, г. Миасс, ул. Советская 27, кв 58</p>
+                <i class="d_icon d_icon-btn-dots change-addres-btn">
+                    <p class="dart-modal-change-addres__change newAddresToggleModal">Изменить</p>
+                </i>
+            </div>
+
+            <a class="dart-btn dart-btn-secondary-outline newAddresToggleModal" style="width: 100%;"><i class="d_icon d_icon-plus"></i> Добавить новый адрес</a>
+        </div>
+    </div>
+</div>
+
+<div class="newAddresDelivery newAddresToggleModal">
+    <div class="newAddresDelivery__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style newAddresToggleModal"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="newAddresDelivery__left">
+            <h3>Новый адрес доставки</h3>
+            <div class="dart-input dart-input-text">
+                <input type="text" placeholder="г. Миасс, ул. Советская 27">
+            </div>
+            <div class="newAddresDelivery__two-col">
+                <div class="dart-input dart-input-text">
+                    <input type="text" placeholder="Квартира">
+                </div>
+                <div class="dart-input dart-input-text">
+                    <input type="text" placeholder="Этаж">
+                </div>
+            </div>
+            <div class="newAddresDelivery__two-col">
+                <div class="dart-input dart-input-text">
+                    <input type="text" placeholder="Подъезд">
+                </div>
+                <div class="dart-input dart-input-text">
+                    <input type="text" placeholder="Домофон">
+                </div>
+            </div>
+            <a href="#" class="dart-btn dart-btn-primary newAddresDelivery__change">Привезти сюда</a>
+        </div>
+        <div class="newAddresDelivery__right">
+            <img src="../../img/home/menumap.png" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Выберите пункт выдачи -->
     <main class="dart_main">
       <section class="dart-section dart-overflov-unset mpt-0" >
         <div class="dart_container mp-0">
@@ -3053,7 +3191,7 @@
             </div>
             <div class="d-col-map">
     <!-- МАГАЗИН НЕ ВЫБРАН -------------------------------------------------------------------------------------- -->
-    <div class="dart-menu-left">
+    <!-- <div class="dart-menu-left">
         <div class="dart-menu-left__info-top">
             <h3>Выберите магазин</h3>
             <p>Сейчас вы видите магазины в Москве</p>
@@ -3065,12 +3203,12 @@
         </div>
         <div class="dart-menu-left__map" id="dart-menu-left__map">
         </div>
-    </div>
+    </div> -->
     <!-- МАГАЗИН НЕ ВЫБРАН -------------------------------------------------------------------------------------- -->
 
     <!-- МАГАЗИН ВЫБРАН -------------------------------------------------------------------------------------- -->
 
-    <!-- <div class="d-col-shop mb-2">
+    <div class="d-col-shop mb-2">
         <div class="d-col-shop__info">
             <div class="d-col-shop__left">
                 <h3>Самоделкин <i class="d_icon d_icon-down-arrow"></i></h3>
@@ -3271,19 +3409,19 @@
             <hr />
         </div>
 
-        <a href="#" class="dart-btn dart-btn-primary btn-arrange"
+        <a class="dart-btn dart-btn-primary btn-arrange basketToggleModal"
             >Оформить заказ <span>7 500 ₽</span></a
         >
 
     
-        <h3>Корзина</h3>
+        <!-- <h3>Корзина</h3>
           <div class="basket-empty">
             <div class="basket-empty__content">
               <img src="../img/test.svg" alt="">
               <h3>В вашей корзине пока пусто</h3>
             </div>
-          </div>
-    </div>-->
+          </div> -->
+    </div>
 
     <!-- МАГАЗИН ВЫБРАН -------------------------------------------------------------------------------------- -->
 </div>

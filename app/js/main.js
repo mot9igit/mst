@@ -827,3 +827,83 @@ if(savePromo){
 		}
 	})
 }
+
+//Методы доставки
+
+const deliveryMethods = document.querySelectorAll('input[name=delivery-method]');
+const deliveryInputsContainer = document.querySelector('.dart-order__inputs-container')
+
+function setNullDelivery(){
+	deliveryInputsContainer.classList.remove('express')
+	deliveryInputsContainer.classList.remove('courier')
+	deliveryInputsContainer.classList.remove('receivingPoint')
+	deliveryInputsContainer.classList.remove('store')
+}
+
+if(deliveryMethods){
+	for(let i = 0; i < deliveryMethods.length; i++){
+		deliveryMethods[i].addEventListener('change', () => {
+			setNullDelivery()
+			deliveryInputsContainer.classList.add(deliveryMethods[i].value)
+		})
+	}
+}
+
+//Открытие доставки
+const basketToggleModal = document.querySelectorAll('.basketToggleModal');
+const DartOrder = document.querySelector('.dart-order');
+
+if(basketToggleModal){
+	for(let i = 0; i<basketToggleModal.length; i++){
+		basketToggleModal[i].addEventListener('click', () => {
+			if(DartOrder.classList.contains('show')){
+				DartOrder.classList.remove('show')
+				body.style.overflow = "auto"
+			}else{
+				DartOrder.classList.add('show')
+				body.style.overflow = "hidden"
+			}
+
+		})
+	}
+}
+
+//Новый адрес
+
+const newAddresToggleModal = document.querySelectorAll('.newAddresToggleModal');
+const newAddresDelivery = document.querySelector('.newAddresDelivery');
+
+if(newAddresToggleModal){
+	for(let i = 0; i<newAddresToggleModal.length; i++){
+		newAddresToggleModal[i].addEventListener('click', () => {
+			if(newAddresDelivery.classList.contains('show')){
+				newAddresDelivery.classList.remove('show')
+				body.style.overflow = "auto"
+			}else{
+				newAddresDelivery.classList.add('show')
+				body.style.overflow = "hidden"
+			}
+
+		})
+	}
+}
+
+
+//Изменить кнопочка на модалке мои адреса
+
+const changeAddresBtn = document.querySelectorAll('.change-addres-btn');
+
+if(changeAddresBtn){
+	document.querySelector('.dart-modal__content').addEventListener('click', () => {
+		console.log('click')
+		for(let i = 0; i<changeAddresBtn.length; i++){
+			changeAddresBtn[i].classList.remove('show')
+		}
+	})
+
+	for(let i = 0; i<changeAddresBtn.length; i++){
+		changeAddresBtn[i].addEventListener('click', () => {
+			changeAddresBtn[i].classList.toggle('show')
+		})
+	}
+}

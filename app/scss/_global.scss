@@ -1586,6 +1586,93 @@ ul{
     border-color: var(--primary-hover);
 }
 
+//Новый адрес доставки модалка
+
+.newAddresDelivery{
+	background: rgba(0, 0, 0, 0.0);
+	pointer-events: none;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	transition: all 0.4s;
+	
+
+	&__content{
+		width: 1100px;
+		border-radius: 5px;
+		background: var(--main-background-windows);
+		min-height: 700px;
+		height: 700px;
+		transform: scale(0.8);
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.4s;
+		display: flex;
+	}
+
+	&__change{
+		width: calc(100% - 64px);
+		position: absolute;
+		bottom: 32px;
+	}
+
+	.btn-close{
+		position: absolute;
+		right: 32px;
+		top: 32px;
+	}
+
+	&__left{
+		width: 50%;
+		height: 100%;
+		padding: 32px;
+		position: relative;
+
+		h3{
+			margin-bottom: 24px;
+		}
+	}
+
+	&__right{
+		width: 50%;
+
+		// Временно!
+		img{
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: cover;
+		}
+	}
+
+	&__two-col{
+		display: flex;
+		gap: 16px;
+		margin-top: 16px;
+
+		.dart-input{
+			width: 100%;
+		}
+	}
+
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.50);
+
+		.newAddresDelivery{
+			&__content{
+				transform: scale(1);
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+}
+
 //changeshop
 .changeshop{
 	background: rgba(0, 0, 0, 0);
@@ -2265,6 +2352,7 @@ ul{
 		.dart-modal{
 			&__content{
 				opacity: 1;
+				transform: scale(1);
 			}
 		}
 	}
@@ -2276,6 +2364,8 @@ ul{
 		position: relative;
 		max-width: 460px;
 		opacity: 0;
+		transform: scale(0.7);
+		transition: all 0.4s;
 
 		.btn-close{
 			position: absolute;
@@ -2691,7 +2781,7 @@ ul{
 		z-index: 2;
 		transition: all 0.7s;
 		right: 0%;
-		width: 1100px;
+		width: 1200px;
 		transform: translate(100%);
 		padding: 60px 32px;
 		display: flex;
@@ -2713,13 +2803,14 @@ ul{
 
 	&__container{
 		display: flex;
+		width: 100%;
 		gap: 32px;
 		height: -webkit-fill-available;
 		padding-bottom: 60px;
 	}
 
 	&__left{
-		width: 577px;
+		width: 50%;
 		overflow-y: auto;
 		
 		display: flex;
@@ -2740,7 +2831,7 @@ ul{
 	}
 
 	&__right{
-		width: 422px;
+		width: 50%;
 	}
 
 	&__el{
@@ -2822,8 +2913,20 @@ ul{
 	}
 
 	&__oplata{
-		padding-top: 24px;
+		margin-top: 6px;
+		padding-top: 12px;
 		border-top: 1px solid var(--border-color);
+		position: relative;
+
+		&::before{
+			pointer-events: none;
+			content: "";
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #FFF 87.24%);
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			top: -19px;
+		}
 	}
 
 	&__info-oplata{
@@ -2894,6 +2997,62 @@ ul{
 			}
 		}
 	}
+
+	&__express{
+		display: none;
+	}
+
+	&__courier{
+		display: none;
+	}
+
+	&__tk{
+		display: none;
+	}
+
+	&__inputs-container{
+		overflow-y: auto;
+		margin-top: 20px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		height: calc(100% - 465px);
+		padding-bottom: 20px;
+
+		&::-webkit-scrollbar {
+			width: 8px;
+			background-color: #e0e0e0; /* blue */
+	   	}
+
+	   &::-webkit-scrollbar-thumb {
+			background-color: #b4b4b4; /* green */
+			border-radius: 9em;
+	   }
+
+		&.express{
+			.dart-order__express{
+				display: block;
+			}
+		}
+
+		&.courier{
+			.dart-order{
+				&__express{
+					display: block;
+				}
+
+				&__courier{
+					display: block;
+				}
+			}
+		}
+
+		&.receivingPoint{
+			.dart-order__tk{
+				display: block;
+			}
+		}
+	}
 }
 
 .dart-procuct-cart{
@@ -2910,6 +3069,7 @@ ul{
 
 		p{
 			width: calc(100% - 24px);
+			line-height: 1.2;
 		}
 	}
 
@@ -2947,6 +3107,147 @@ ul{
 		justify-content: space-between;
 	}
 }
+
+.companyRadio{
+	margin-top: 16px;
+	margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+	p{
+		color: var( --text-color-dop);
+		font-size: 14px;
+		line-height: 1;
+		margin-right: 8px;
+	}
+
+	img{
+		height: 36px !important;
+		object-fit: cover;
+	}
+
+	input[type=radio] {
+		display: none;
+	}
+
+	label {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-right: 0;
+		line-height: 18px;
+		user-select: none;
+	}
+
+	label:before {
+		content: "";
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		left: 0;
+		bottom: 1px;
+		border: 1px solid var(--primary-color);
+		border-radius: 50%;
+		transform: translate(0, -50%);
+		top: 50%;
+	}
+
+	input[type=radio]:checked + label::after {
+		content: "";
+		background: var(--primary-color);
+		transform: translate(0, -50%);
+		top: 50%;
+	
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		left: 4px;
+		bottom: 1px;
+		border: 1px solid var(--primary-color);
+		border-radius: 50%;
+	}
+
+	label:hover:before {
+		filter: brightness(120%);
+	}
+
+	input[type=radio]:disabled + label:before {
+		filter: grayscale(100%);
+	}
+}
+
+.dart-modal-change-addres{
+	max-width: 444px;
+
+	.dart-btn-secondary-outline{
+		margin-top: 40px;
+	}
+
+	h3{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+
+	&__el{
+		display: flex;
+
+		p{
+			cursor: pointer;
+		}
+
+		.change-addres-btn{
+			font-size: 24px;
+			color: var(--text-color-dop);
+			cursor: pointer;
+			position: relative;
+
+			p{
+				font-family: var(--bs-body-font-family) !important;
+			}
+
+			&.show{
+				.dart-modal-change-addres__change{
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+		
+	}
+
+	&__el + &__el{
+		padding-top: 24px;
+		margin-top: 24px;
+		border-top: 1px solid var(--border-color);
+	}
+
+	&__change{
+		padding: 24px;
+		box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
+		border-radius: 5px;
+		background-color: var(--main-background-windows);
+		position: absolute;
+		margin-top: 10px;
+		right: 0;
+		opacity: 0;
+		pointer-events: none;
+		z-index: 1;
+		transition: all 0.3s;
+
+		&:hover{
+			background-color: var(--color-prev-hover);
+		}
+		
+	}
+}
+
 
 * + .dart-procuct-cart{
 	padding-top: 16px;

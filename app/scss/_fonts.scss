@@ -26,6 +26,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-btn-dots:before {
+  content: "\e91b";
+}
+
 .d_icon-checkmark:before {
   content: "\e91a";
 }
