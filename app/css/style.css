@@ -6841,6 +6841,11 @@ ul {
   margin-top: 16px;
 }
 
+.product-info__img-card {
+  position: sticky;
+  top: 0;
+}
+
 .product-info__slide {
   border-radius: 5px !important;
 }
