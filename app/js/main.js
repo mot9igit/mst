@@ -197,15 +197,46 @@ var swipertree = new Swiper(".swiperImageChangeShop", {
     }
 });
 
-//Свайпер выбора даты
-// var swipertree = new Swiper(".swiperDateOrder", {
-//     slidesPerView: 4.5,
-//     spaceBetween: 8,
-//     navigation: {
-//         nextEl: ".swiper-date-next",
-//         prevEl: ".swiper-date-prev",
-//     }
-// });
+//Свайпер комментариев
+const swiperFeedbackProduct = document.querySelectorAll('.swiperFeedbackProduct');
+
+if(swiperFeedbackProduct){
+	for (let i = 0; i < swiperFeedbackProduct.length; i++) {
+
+       //Свайпер новинки
+		var swipertree = new Swiper(swiperFeedbackProduct[i], {
+			slidesPerView: 12,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: ".swiper-feedback-next-" + (i+1),
+				prevEl: ".swiper-feedback-prev-"+ (i+1),
+			}
+		});
+    }
+}
+
+
+// Карточка товара
+
+var mySwiperProduct = new Swiper(".mySwiperProduct", {
+	loop: true,
+	spaceBetween: 8,
+	slidesPerView: 5,
+	freeMode: true,
+	watchSlidesProgress: true,
+  });
+  var mySwiperProductTwo = new Swiper(".mySwiperProductTwo", {
+	loop: true,
+	effect: "fade",
+	spaceBetween: 8,
+	navigation: {
+	  nextEl: ".swiper-product-next",
+	  prevEl: ".swiper-product-prev",
+	},
+	thumbs: {
+	  swiper: mySwiperProduct,
+	},
+  });
 
 const swiperDateOrder = document.querySelectorAll('.swiperDateOrder');
 if(swiperDateOrder){
@@ -888,9 +919,26 @@ if(newAddresToggleModal){
 	}
 }
 
+//Модалка "Выберите пункт выдачи"
+
+const changePointToggleModal = document.querySelectorAll('.changePointToggleModal');
+const changeAddresPoint = document.querySelector('.changeAddresPoint');
+
+if(changePointToggleModal){
+	for(let i = 0; i<changePointToggleModal.length; i++){
+		changePointToggleModal[i].addEventListener('click', () => {
+			if(changeAddresPoint.classList.contains('show')){
+				changeAddresPoint.classList.remove('show')
+				body.style.overflow = "auto"
+			}else{
+				changeAddresPoint.classList.add('show')
+				body.style.overflow = "hidden"
+			}
+		})
+	}
+}
 
 //Изменить кнопочка на модалке мои адреса
-
 const changeAddresBtn = document.querySelectorAll('.change-addres-btn');
 
 if(changeAddresBtn){

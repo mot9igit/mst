@@ -1672,7 +1672,7 @@
                             <label for="tk-company-4"><img src="../../img/delivery/4.png" alt=""> СберЛогистика</label>
                             <p>5 января – 500 руб.</p>
                         </div>
-                        <a href="#" class="dart-btn dart-btn-choice mt-3" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
+                        <a class="dart-btn dart-btn-choice mt-3 changePointToggleModal" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
                     </div>
                     <div class="dart-order__courier mb-3">
                         <h3>Транспортная компания</h3>
@@ -1696,7 +1696,7 @@
                             <label for="tk-company-8"><img src="../../img/delivery/4.png" alt=""> СберЛогистика</label>
                             <p>5 января – 500 руб.</p>
                         </div>
-                        <a href="#" class="dart-btn dart-btn-choice mt-3" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
+                        <a class="dart-btn dart-btn-choice mt-3 changePointToggleModal" style="width: 100%;"><p>Выберите пункт выдачи</p><i class="d_icon d_icon-right-arrow"></i></a>
                     </div>
                     <div class="dart-order__express mb-3">
                         <h3>Адрес доставки</h3>
@@ -1893,7 +1893,7 @@
 </a>
 
 <!-- Мои адреса -->
-<div class="dart-modal show" id="dm-my-addres">
+<div class="dart-modal" id="dm-my-addres">
     <div class="dart-modal__content" onclick="event.stopPropagation()">
         <a class="btn-close link-no-style dart-modal-close"
             ><i class="d_icon d_icon-close"></i
@@ -1902,7 +1902,7 @@
             <h3>Мои адреса</h3>
             <div class="dart-modal-change-addres__el">
                 <p>РФ, Челябинская область, г. Миасс, ул. Советская 27, кв 58</p>
-                <i class="d_icon d_icon-btn-dots show change-addres-btn">
+                <i class="d_icon d_icon-btn-dots change-addres-btn">
                     <p class="dart-modal-change-addres__change newAddresToggleModal">Изменить</p>
                 </i>
             </div>
@@ -1965,3 +1965,153 @@
 </div>
 
 <!-- Выберите пункт выдачи -->
+<div class="changeAddresPoint changePointToggleModal">
+    <div class="changeAddresPoint__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style changePointToggleModal"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="changeAddresPoint__left">
+            <div class="changeshop__settings">
+                <div class="dart-home__title">
+                    <h3>Выберите пункт выдачи</h3>
+
+                    <div class="btn-back">
+                        <i class="d_icon d_icon-left-arrow"></i>
+                    </div>
+                </div>
+                <div class="dart-input dart-input-search mt-3 mb-2">
+                    <input
+                        type="text"
+                        placeholder="Адрес или наименование магазина"
+                    />
+                </div>
+                <div class="changeshop__filtrs">
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="filter-point-delivery-1" />
+                        <label for="filter-point-delivery-1" class="text"
+                            >Открыто</label
+                        >
+                    </a>
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="filter-point-delivery-2" />
+                        <label for="filter-point-delivery-2" class="text"
+                            >Открыто в указанное время</label
+                        >
+                    </a>
+                    <a class="dart-btn dart-btn-radio-mini mb-1">
+                        <input type="checkbox" id="filter-point-delivery-3" />
+                        <label for="filter-point-delivery-3" class="text"
+                            >По удаллённости</label
+                        >
+                    </a>
+                </div>
+            </div>
+            <div class="changeshop__shops">
+                <div class="changeshop__el">
+                    <div class="changeshop__info">
+                        <h4>Пункт выдачи заказов DPD</h4>
+                        <p class="mt-3 mb-1">
+                            <span class="shop-map__light-text">12 км</span>
+                            ул.Советская улица, 89с1
+                        </p>
+                        <span class="shop-map__light-text">Дата доставки: 5 января – 500 руб.</span>
+                        <p class="shop-map__timing mt-3">
+                            Сегодня с 10:00 до 20:00
+                        </p>
+                        <span class="shop-map__light-text changeshop__it-close"
+                            >Закроется через 5 минут</span
+                        >
+                    </div>
+                    <div>
+                        <img
+                            class="shop-map__icon"
+                            src="../../img/delivery/2.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <div class="changeshop__el">
+                    <div class="changeshop__info">
+                        <h4>Пункт выдачи заказов DPD</h4>
+                        <p class="mt-3 mb-1">
+                            <span class="shop-map__light-text">12 км</span>
+                            ул.Советская улица, 89с1
+                        </p>
+                        <span class="shop-map__light-text">Дата доставки: 5 января – 500 руб.</span>
+                        <p class="shop-map__timing mt-3">
+                            Сегодня с 10:00 до 20:00
+                        </p>
+                        <span class="shop-map__light-text changeshop__it-close"
+                            >Закроется через 5 минут</span
+                        >
+                    </div>
+                    <div>
+                        <img
+                            class="shop-map__icon"
+                            src="../../img/delivery/2.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <div class="changeshop__el">
+                    <div class="changeshop__info">
+                        <h4>Пункт выдачи заказов DPD</h4>
+                        <p class="mt-3 mb-1">
+                            <span class="shop-map__light-text">12 км</span>
+                            ул.Советская улица, 89с1
+                        </p>
+                        <span class="shop-map__light-text">Дата доставки: 5 января – 500 руб.</span>
+                        <p class="shop-map__timing mt-3">
+                            Сегодня с 10:00 до 20:00
+                        </p>
+                        <span class="shop-map__light-text changeshop__it-close"
+                            >Закроется через 5 минут</span
+                        >
+                    </div>
+                    <div>
+                        <img
+                            class="shop-map__icon"
+                            src="../../img/delivery/2.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+
+                <div class="changeshop__el">
+                    <div class="changeshop__info">
+                        <h4>Пункт выдачи заказов DPD</h4>
+                        <p class="mt-3 mb-1">
+                            <span class="shop-map__light-text">12 км</span>
+                            ул.Советская улица, 89с1
+                        </p>
+                        <span class="shop-map__light-text">Дата доставки: 5 января – 500 руб.</span>
+                        <p class="shop-map__timing mt-3">
+                            Сегодня с 10:00 до 20:00
+                        </p>
+                        <span class="shop-map__light-text changeshop__it-close"
+                            >Закроется через 5 минут</span
+                        >
+                    </div>
+                    <div>
+                        <img
+                            class="shop-map__icon"
+                            src="../../img/delivery/2.png"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="changeshop__button">
+                <a href="#" class="dart-btn dart-btn-primary"
+                    >Выбрать магазин</a
+                >
+            </div>
+            
+        </div>
+        <div class="changeAddresPoint__right">
+            <img src="../../img/home/menumap.png" alt="">
+        </div>
+    </div>
+</div>
