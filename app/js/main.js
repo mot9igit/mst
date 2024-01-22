@@ -215,9 +215,27 @@ if(swiperFeedbackProduct){
     }
 }
 
+// Свайпер в профиле
+
+const swiperProfileComments = document.querySelectorAll('.swiperProfileComments');
+
+if(swiperProfileComments){
+	for (let i = 0; i < swiperProfileComments.length; i++) {
+
+       //Свайпер новинки
+		var swipertree = new Swiper(swiperProfileComments[i], {
+			slidesPerView: 6,
+			spaceBetween: 8,
+			navigation: {
+				nextEl: ".swiper-mycomment-next-" + (i+1),
+				prevEl: ".swiper-mycomment-prev-"+ (i+1),
+			}
+		});
+    }
+}
+
 
 // Карточка товара
-
 var mySwiperProduct = new Swiper(".mySwiperProduct", {
 	loop: true,
 	spaceBetween: 8,
@@ -952,6 +970,94 @@ if(changeAddresBtn){
 	for(let i = 0; i<changeAddresBtn.length; i++){
 		changeAddresBtn[i].addEventListener('click', () => {
 			changeAddresBtn[i].classList.toggle('show')
+		})
+	}
+}
+
+// DREPZONE
+
+Dropzone.options.myDropzone = {
+	autoProcessQueue: true,
+	parallelUploads: 1,
+  //   uploadMultiple: true,
+	paramName: "file", // имя параметра, который будет использоваться сервером для получения файла
+	//url: "/forms/upload-file.php", // URL-адрес, на который отправляются данные
+	//method: "post", // метод отправки данных (например, post или get)
+	maxFilesize: 20, // максимальный размер файла в мегабайтах
+	addRemoveLinks: true, // добавление ссылок для удаления загруженных файлов
+	acceptedFiles: "image/*,.mp4",
+	// init: function(){
+	//   var myDropzone = this;
+	//   this.on("success", function(file, response) {
+	// 	  $(file.previewElement).append( $('<input type="hidden" name="media-ids[]" id="media-ids[]" class="media-ids dz-media-id" value="' + response +'">') );
+	//   });
+	// }
+  };
+
+
+
+//Иконка пользователя в навигации (Открытие / Закрытие менюшки)
+const dartHeaderUserMenu = document.querySelector('.dart-header__user-ava')
+const dartHeaderUserMenuToggler = document.querySelectorAll('.dartHeaderUserMenuToggler');
+const dartHeaderUserMenuClose = document.querySelector('.dartHeaderUserMenuClose');
+
+//Закрытие при клике на пустую область
+if(dartHeaderUserMenuClose){
+	dartHeaderUserMenuClose.addEventListener('click', () => {
+		dartHeaderUserMenu.classList.remove('show');
+	})
+}
+
+//Открытие
+if(dartHeaderUserMenuToggler){
+	for(let i = 0; i < dartHeaderUserMenuToggler.length; i++){
+		dartHeaderUserMenuToggler[i].addEventListener('click', () => {
+			dartHeaderUserMenu.classList.toggle('show');
+		})
+	}
+}
+
+//Корзина в навигации
+
+const dartBasket = document.querySelector('.dart-header__basket');
+const dartBasketToggler = document.querySelectorAll('.dartBasketToggler')
+const dartBasketClose = document.querySelector('.dartBasketClose')
+
+//Открытие
+if(dartBasketToggler){
+	for(let i = 0; i < dartBasketToggler.length; i++){
+		dartBasketToggler[i].addEventListener('click', () => {
+			dartBasket.classList.toggle('show');
+		})
+	}
+}
+
+//Закрытие при клике на пустую область
+if(dartBasketClose){
+	dartBasketClose.addEventListener('click', () => {
+		dartBasket.classList.remove('show');
+	})
+}
+
+//Мои отзывы (кнопка действия)
+
+const dartMyFeadbacksClose = document.querySelectorAll('.dartMyFeadbacksClose');
+const dartMyFeadbacks = document.querySelectorAll('.profile-my-comment__action');
+
+if(dartMyFeadbacks){
+	for(let i = 0; i < dartMyFeadbacks.length; i++){
+		dartMyFeadbacks[i].addEventListener('click', () => {
+			dartMyFeadbacks[i].classList.toggle('show');
+		})
+	}
+}
+
+if(dartMyFeadbacksClose){
+	for(let i = 0; i < dartMyFeadbacksClose.length; i++){
+		dartMyFeadbacksClose[i].addEventListener('click', () => {
+			for(let j = 0; j < dartMyFeadbacks.length; j++){
+				dartMyFeadbacks[j].classList.remove('show');
+			}
 		})
 	}
 }

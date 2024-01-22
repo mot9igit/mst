@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('./includes/meta.html')
+    </head>
+
+    <body>
+        <div class="dart_wrapper">
+            @@include('./includes/header.html')
+            @@include('./includes/modal.html')
+            <main class="dart_main">
+                <section class="dart-section dart-overflov-unset mpt-0">
+                    <div class="dart_container mp-0">
+                        <div class="dart-custom-grid grid-center">
+                            @@include('./includes/profileMenu.html')
+                            <div class="d-col-profile">
+                                <h1 class="h1-mini">Возвраты</h1>
+
+                                <div class="profile-order-cart">
+                                    <a href="/profile_return_info.html" class="profile-order-cart__el link-no-style">
+                                      <div class="profile-order-cart__top">
+                                        <h3>Заявка на возврат от 12 января 2024<p>56745686</p></h3>
+                                        <b>8 500 ₽</b>
+                                      </div>
+                                      <div class="profile-order-cart__info">
+                                        <p><span>Здесь будет вынесено решение по заявке</span></p>
+                                        <p>ожидание решения поставщика</p>
+                                      </div>
+                                      <div class="profile-order-cart__img">
+                                        <img src="../img/product/1.webp" alt="">
+                                      </div>
+                                    </a>
+
+                                    <a href="/profile_return_info.html" class="profile-order-cart__el link-no-style">
+                                        <div class="profile-order-cart__top">
+                                          <h3>Заявка на возврат от 5 марта 2023<p>56745686</p></h3>
+                                          <b>8 500 ₽</b>
+                                        </div>
+                                        <div class="profile-order-cart__info">
+                                          <p class="profile-order-cart__success">Мы перечислим деньги на ваш счёт в ближайшее время. Обычно это занимает 1–2 дня.</p>
+                                          <p>возврат денег одобрен</p>
+                                        </div>
+                                        <div class="profile-order-cart__img">
+                                          <img src="../img/product/1.webp" alt="">
+                                        </div>
+                                      </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('./includes/footer.html')
+        </div>
+        @@include('./includes/scripts.html')
+    </body>
+</html>

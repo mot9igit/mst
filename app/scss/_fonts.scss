@@ -26,6 +26,27 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-clip:before {
+  content: "\e921";
+}
+
+.d_icon-basket-two:before {
+  content: "\e91c";
+}
+
+.d_icon-comment:before {
+  content: "\e91c";
+}
+.d_icon-back:before {
+  content: "\e91d";
+}
+.d_icon-order:before {
+  content: "\e91e";
+}
+.d_icon-profile:before {
+  content: "\e91f";
+}
+
 .d_icon-btn-dots:before {
   content: "\e91b";
 }

@@ -738,6 +738,108 @@ ul{
 		width: 400px;
 		transition: width .4s;
 	}
+
+	&__user-ava{
+		cursor: pointer;
+		position: relative;
+
+		&.show{
+			.dart-header{
+				&__user-menu{
+					opacity: 1;
+					pointer-events: all;
+					z-index: 2;
+				}
+
+				&__user-menu-close{
+					pointer-events: all;
+				}
+			}
+		}
+	}
+
+	&__user-menu-close{
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: transparent;
+		pointer-events: none;
+	}
+
+	&__user-menu{
+		position: absolute;
+		background: var(--main-background-windows);
+		padding: 8px 24px;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		right: 0;
+		top: 50px;
+		box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
+		min-width: 210px;
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.3s;
+		
+		a{
+			// white-space: nowrap;
+			padding: 16px 0;
+			text-decoration: none;
+
+			&:hover{
+				color: var(--text-color-dop);
+			}
+		}
+
+		a + a{
+			border-top: 1px solid var(--text-color-dop);
+		}
+	}
+
+	&__dartBasketClose{
+		width: 100vw;
+		height: 100vh;
+		background: transparent;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	&__basket{
+		margin-right: 24px;
+		position: relative;
+
+		&.show{
+			.d-col-basket{
+				opacity: 1;
+				pointer-events: all;
+				z-index: 2;
+			}
+
+			.dart-header__dartBasketClose{
+				pointer-events: all;
+			}
+		}
+
+
+		.dart-btn-primary{
+			padding: 12px;
+		}
+
+		.d-col-basket{
+			width: 442px;
+			position: absolute;
+			right: 0;
+			top: 55px;
+			box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
 }
 
 // ------------------------Модальное окно выбора города
@@ -1286,6 +1388,7 @@ ul{
 			align-items: center;
 			justify-content: center;
 			color: #fff;
+			line-height: 1;
 		}
 	}
 
@@ -3253,6 +3356,33 @@ ul{
 	input[type=radio]:disabled + label:before {
 		filter: grayscale(100%);
 	}
+}
+
+.dropzone .dz-message .dz-button{
+	top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+	color: var(--secondary-color) !important;
+
+	&::before {
+		content: "\e908";
+		position: absolute;
+		font-family: 'icomoon' !important;
+		top: -15px;
+		font-size: 28px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: var(--primary-color);
+	}
+}
+
+.dropzone{
+	min-height: 90px !important;
+	position: relative;
+	border-radius: 5px;
+	border: 1px dashed var(--text-color-dop) !important;
+	padding: 24px !important;
 }
 
 .dart-modal-change-addres{
