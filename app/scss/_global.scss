@@ -3339,6 +3339,11 @@ ul{
 	width: fit-content;
 }
 
+.grid-center{
+	justify-content: center;
+	align-items: flex-start;
+}
+
 @media (max-width: $desktop){
 	.dart-header{
 		&__components-desctop{

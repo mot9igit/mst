@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('./includes/meta.html')
+</head>
+
+<body>
+  <div class="dart_wrapper">
+    @@include('./includes/header.html')
+    @@include('./includes/modal.html')
+    <main class="dart_main">
+      <section class="dart-section dart-overflov-unset mpt-0" >
+        <div class="dart_container mp-0">
+          <div class="dart-custom-grid grid-center">
+            @@include('./includes/profileMenu.html')
+            <div class="d-col-profile">
+                <h1 class="h1-mini">Заказы</h1>
+                <div>
+                  <a class="dart-btn dart-btn-radio-mini">
+                    <input type="checkbox" id="profile-order-1" name="profile-order-status">
+                    <label for="profile-order-1" class="text">В работе</label>
+                  </a>
+                  <a class="dart-btn dart-btn-radio-mini">
+                    <input type="checkbox" id="profile-order-2" name="profile-order-status">
+                    <label for="profile-order-2" class="text">Выполненые</label>
+                  </a>
+                </div>
+                <div class="profile-order-cart">
+                  <div class="profile-order-cart__el">
+                    <div class="profile-order-cart__top">
+                      <h3>Заказ от 12 января 2024<p>56745686</p></h3>
+                      <b>8 500 ₽</b>
+                    </div>
+                    <div class="profile-order-cart__info">
+                      <p>В пункт выдачи,<span>5 января</span></p>
+                      <p>завершён</p>
+                    </div>
+                    <div class="profile-order-cart__img">
+                      <img src="../img/product/1.webp" alt="">
+                      <img src="../img/product/2.webp" alt="">
+                      <img src="../img/product/3.webp" alt="">
+                      <img src="../img/product/4.webp" alt="">
+                      <img src="../img/product/5.webp" alt="">
+                      <div class="profile-order-cart__img-all">+3</div>
+                    </div>
+                  </div>
+
+                  <div class="profile-order-cart__el">
+                    <div class="profile-order-cart__top">
+                      <h3>Заказ от 12 января 2024<p>56745686</p></h3>
+                      <b>8 500 ₽</b>
+                    </div>
+                    <div class="profile-order-cart__info">
+                      <p>В пункт выдачи,<span>5 января</span></p>
+                      <p>завершён</p>
+                    </div>
+                    <div class="profile-order-cart__img">
+                      <img src="../img/product/1.webp" alt="">
+                      <img src="../img/product/2.webp" alt="">
+                      <img src="../img/product/3.webp" alt="">
+                      <img src="../img/product/4.webp" alt="">
+                      <img src="../img/product/5.webp" alt="">
+                      <div class="profile-order-cart__img-all">+3</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./includes/footer.html')
+  </div>
+  @@include('./includes/scripts.html')
+</body>
+
+</html>

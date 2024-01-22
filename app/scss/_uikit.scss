@@ -50,6 +50,8 @@
     }
 }
 
+
+
 .dart-btn-secondary{
     background: var(--white-color);
     color: var(--secondary-color);
@@ -102,6 +104,22 @@
     &:hover{
         background: var(--btn-secondary-outline-hover);
         color: var(--btn-secondary-outline-color);
+    }
+}
+
+.dart-btn-secondary-outline-mini{
+    font-size: 14px;
+    padding: 8px 16px;
+    background: var(--btn-secondary-outline-background);
+    color: var(--btn-secondary-outline-color);
+
+    &:hover{
+        background: var(--btn-secondary-outline-hover);
+        color: var(--btn-secondary-outline-color);
+    }
+
+    .d_icon{
+        font-size: 16px;
     }
 }
 
