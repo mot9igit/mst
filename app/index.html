@@ -639,7 +639,6 @@
 </div>
 
 <!-- Фильтры -->
-
 <div class="allFiltrsModal showModalFiltrs">
     <div class="allFiltrsModal__content" onclick="event.stopPropagation()">
         <div class="modalHeaderMenu">
@@ -1305,7 +1304,6 @@
 </div>
 
 <!-- Оформление заказа -->
-
 <div class="dart-order basketToggleModal">
     <div class="dart-order__content" onclick="event.stopPropagation()">
         <div class="dart-order__title">
@@ -2143,6 +2141,447 @@
         </div>
     </div>
 </div>
+
+<!-- Выбор магазина на карточке товара -->
+<div class="productModalPresence productModalPresenceToggle">
+    <div class="productModalPresence__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style productModalPresenceToggle"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <h3>Адрес или наименование магазина</h3>
+
+        <div class="productModalPresence__top">
+            <div class="dart-input dart-input-search">
+                <input type="text" placeholder="Адрес или наименование магазина">
+            </div>
+            <a class="dart-btn dart-btn-primary-mini productModalPresenceListToggle"><i class="d_icon-geo d_icon"></i>На карте</a>
+        </div>
+        <div class="productModalPresence__filtr">
+            <div class="dart-catalog-products__sort-price">
+                По цене <i class="d_icon d_icon-down-arrow"></i>
+            </div>
+            <a class="dart-btn dart-btn-radio-mini">
+                <input type="checkbox" id="toggle-button-1">
+                <label for="toggle-button-1" class="text">В наличии</label>
+              </a>
+        </div>
+
+        <div class="productModalPresence__container">
+            <div class="productModalPresence__card">
+                <div class="dart-row">
+                    <div class="d-col-xl-4">
+                        <div class="shopLastInfo">
+                            <img class="shopLastInfo__img" src="../../img/ava.png" alt="">
+                            <div>
+                                <b>Самоделкин <span class="shop-map__light-text">12 км</span></b>
+                                <div class="dart-rating" data-rating="4">
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                </div>
+                                <p class="mt-1 mb-1">ул. Советская улица, 89с1</p>
+                                <p class="shop-map__timing mt-2">Сегодня с 10:00 до 20:00</p>
+                                <span class="shop-map__light-text">Закроется через 5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                        <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                        <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                    </div>
+                    <div class="d-col-xl-2">
+                        <p class="p-mini">Доступно: 2 шт.</p>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <b>Доступно: 2 шт.</b>
+                        <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        <a href="#" class="dart-btn dart-btn-primary-mini mt-2">В корзину</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productModalPresence__card">
+                <div class="dart-row">
+                    <div class="d-col-xl-4">
+                        <div class="shopLastInfo">
+                            <img class="shopLastInfo__img" src="../../img/ava.png" alt="">
+                            <div>
+                                <b>Самоделкин <span class="shop-map__light-text">12 км</span></b>
+                                <div class="dart-rating" data-rating="4">
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                </div>
+                                <p class="mt-1 mb-1">ул. Советская улица, 89с1</p>
+                                <p class="shop-map__timing mt-2">Сегодня с 10:00 до 20:00</p>
+                                <span class="shop-map__light-text">Закроется через 5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                        <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                        <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                    </div>
+                    <div class="d-col-xl-2">
+                        <p class="p-mini">Доступно: 2 шт.</p>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <b>Доступно: 2 шт.</b>
+                        <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        <a href="#" class="dart-btn dart-btn-primary-mini mt-2">В корзину</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productModalPresence__card">
+                <div class="dart-row">
+                    <div class="d-col-xl-4">
+                        <div class="shopLastInfo">
+                            <img class="shopLastInfo__img" src="../../img/ava.png" alt="">
+                            <div>
+                                <b>Самоделкин <span class="shop-map__light-text">12 км</span></b>
+                                <div class="dart-rating" data-rating="4">
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                </div>
+                                <p class="mt-1 mb-1">ул. Советская улица, 89с1</p>
+                                <p class="shop-map__timing mt-2">Сегодня с 10:00 до 20:00</p>
+                                <span class="shop-map__light-text">Закроется через 5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                        <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                        <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                    </div>
+                    <div class="d-col-xl-2">
+                        <p class="p-mini">Доступно: 2 шт.</p>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <b>Доступно: 2 шт.</b>
+                        <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        <a href="#" class="dart-btn dart-btn-primary-mini mt-2">В корзину</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productModalPresence__card">
+                <div class="dart-row">
+                    <div class="d-col-xl-4">
+                        <div class="shopLastInfo">
+                            <img class="shopLastInfo__img" src="../../img/ava.png" alt="">
+                            <div>
+                                <b>Самоделкин <span class="shop-map__light-text">12 км</span></b>
+                                <div class="dart-rating" data-rating="4">
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                </div>
+                                <p class="mt-1 mb-1">ул. Советская улица, 89с1</p>
+                                <p class="shop-map__timing mt-2">Сегодня с 10:00 до 20:00</p>
+                                <span class="shop-map__light-text">Закроется через 5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                        <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                        <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                    </div>
+                    <div class="d-col-xl-2">
+                        <p class="p-mini">Доступно: 2 шт.</p>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <b>Доступно: 2 шт.</b>
+                        <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        <a href="#" class="dart-btn dart-btn-primary-mini mt-2">В корзину</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productModalPresence__card">
+                <div class="dart-row">
+                    <div class="d-col-xl-4">
+                        <div class="shopLastInfo">
+                            <img class="shopLastInfo__img" src="../../img/ava.png" alt="">
+                            <div>
+                                <b>Самоделкин <span class="shop-map__light-text">12 км</span></b>
+                                <div class="dart-rating" data-rating="4">
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                    <i class="d_icon d_icon-star"></i>
+                                </div>
+                                <p class="mt-1 mb-1">ул. Советская улица, 89с1</p>
+                                <p class="shop-map__timing mt-2">Сегодня с 10:00 до 20:00</p>
+                                <span class="shop-map__light-text">Закроется через 5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                        <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                        <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                    </div>
+                    <div class="d-col-xl-2">
+                        <p class="p-mini">Доступно: 2 шт.</p>
+                    </div>
+                    <div class="d-col-xl-3">
+                        <b>Доступно: 2 шт.</b>
+                        <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        <a href="#" class="dart-btn dart-btn-primary-mini mt-2">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Выберите пункт выдачи -->
+<div class="productModalPresenceList productModalPresenceListToggle">
+    <div class="productModalPresenceList__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style productModalPresenceListToggle"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="list">
+            <h3>Адрес или наименование магазина</h3>
+
+            <div class="productModalPresenceList__top">
+                <div class="dart-input dart-input-search">
+                    <input type="text" placeholder="Адрес или наименование магазина">
+                </div>
+            </div>
+            <div class="productModalPresenceList__filtr">
+                <div class="dart-catalog-products__sort-price">
+                    По цене <i class="d_icon d_icon-down-arrow"></i>
+                </div>
+                <a class="dart-btn dart-btn-radio-mini">
+                    <input type="checkbox" id="productModalPresenceList-filtr">
+                    <label for="productModalPresenceList-filtr" class="text">В наличии</label>
+                </a>
+            </div>
+
+            <div class="productModalPresenceList__container">
+                <div class="productModalPresenceList__card">
+                    <div class="productModalPresenceList__shop-info">
+                        <div class="productModalPresenceList__shop-text">
+                            <b>13 290 руб.</b>
+                            <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        </div>
+                        <img src="../../img/ava.png" alt="">
+                    </div>
+                    <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                    <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                    <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <div class="productModalPresenceList__ooo">
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                        <p class="productModalPresence__el productModalPresenceList__flex">Доступно: 2 шт.</p>
+                    </div>
+                    <a href="#" class="dart-btn dart-btn-primary-mini">В корзину</a>
+                </div>
+
+                <div class="productModalPresenceList__card">
+                    <div class="productModalPresenceList__shop-info">
+                        <div class="productModalPresenceList__shop-text">
+                            <b>13 290 руб.</b>
+                            <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        </div>
+                        <img src="../../img/ava.png" alt="">
+                    </div>
+                    <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                    <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                    <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <div class="productModalPresenceList__ooo">
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                        <p class="productModalPresence__el productModalPresenceList__flex">Доступно: 2 шт.</p>
+                    </div>
+                    <a href="#" class="dart-btn dart-btn-primary-mini">В корзину</a>
+                </div>
+
+                <div class="productModalPresenceList__card">
+                    <div class="productModalPresenceList__shop-info">
+                        <div class="productModalPresenceList__shop-text">
+                            <b>13 290 руб.</b>
+                            <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        </div>
+                        <img src="../../img/ava.png" alt="">
+                    </div>
+                    <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                    <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                    <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <div class="productModalPresenceList__ooo">
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                        <p class="productModalPresence__el productModalPresenceList__flex">Доступно: 2 шт.</p>
+                    </div>
+                    <a href="#" class="dart-btn dart-btn-primary-mini">В корзину</a>
+                </div>
+
+                <div class="productModalPresenceList__card">
+                    <div class="productModalPresenceList__shop-info">
+                        <div class="productModalPresenceList__shop-text">
+                            <b>13 290 руб.</b>
+                            <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        </div>
+                        <img src="../../img/ava.png" alt="">
+                    </div>
+                    <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                    <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                    <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <div class="productModalPresenceList__ooo">
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                        <p class="productModalPresence__el productModalPresenceList__flex">Доступно: 2 шт.</p>
+                    </div>
+                    <a href="#" class="dart-btn dart-btn-primary-mini">В корзину</a>
+                </div>
+
+                <div class="productModalPresenceList__card">
+                    <div class="productModalPresenceList__shop-info">
+                        <div class="productModalPresenceList__shop-text">
+                            <b>13 290 руб.</b>
+                            <p class="p-gray p-mini">от 146 руб./мес. в кредит</p>
+                        </div>
+                        <img src="../../img/ava.png" alt="">
+                    </div>
+                    <p class="productModalPresence__el">Забрать в магазине (г. Москва), <span>3 января – бесплатно</span></p>
+                    <p class="productModalPresence__el">Экспресс-доставка (г. Москва), <span>30 минут – 1500 руб.</span></p>
+                    <p class="productModalPresence__el">В пункт выдачи (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <p class="productModalPresence__el">Курьером (г. Москва), <span>5 января – 500 руб.</span></p>
+                    <div class="productModalPresenceList__ooo">
+                        <p class="productModalPresence__el">Продавец: ООО «МСТ» г. Москва, ул. Ленинградская, д.29</span></p>
+                        <p class="productModalPresence__el productModalPresenceList__flex">Доступно: 2 шт.</p>
+                    </div>
+                    <a href="#" class="dart-btn dart-btn-primary-mini">В корзину</a>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <a class="dart-btn dart-btn-primary-mini productModalPresenceToggle"><i class="d_icon d_icon-list"></i>Списком (50)</a>
+            <img src="../../img/home/menumap.png" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Спасибо за заказ -->
+<div class="rightMenuOrder rightMenuOrderSuccess rightMenuOrderToggleSuccess">
+    <div class="rightMenuOrder__content" onclick="event.stopPropagation()">
+        <i class="d_icon d_icon-close d_icon-hover rightMenuOrderToggleSuccess"></i>
+
+        <div>
+            <img src="../../img/test.svg" alt="">
+            <h2 class="mt-4 mb-3">Спасибо за заказ!</h2>
+            <p>Если что-то пошло не так, обратитесь по телефону
+                *телефон*</p>
+        </div>
+
+        <a href="#" class="dart-btn dart-btn-primary">Перейти в заказы</a>
+    </div>
+</div>
+
+<!-- Что-то пошло не так -->
+<div class="rightMenuOrder rightMenuOrderError rightMenuOrderToggleError">
+    <div class="rightMenuOrder__content" onclick="event.stopPropagation()">
+        <i class="d_icon d_icon-close d_icon-hover rightMenuOrderToggleError"></i>
+
+        <div>
+            <img src="../../img/test.svg" alt="">
+            <h2 class="mt-4 mb-3">Что-то пошло не так</h2>
+            <p>Извините, но мы не смогли оформить заказ. Пожалуйста, повторите попытку.</p>
+        </div>
+
+        <a href="#" class="dart-btn dart-btn-primary">В каталог</a>
+    </div>
+</div>
+
+<!-- Спасибо за отзыв-->
+<div class="dart-modal" id="dm-thanks">
+    <div class="dart-modal__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style dart-modal-close"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="feedback-no-auth">
+            <img src="../../img/test.svg" alt="" />
+            <h3>Спасибо за отзыв!</h3>
+            <p>
+                Он будет опубликован после проверки
+            </p>
+        </div>
+        <a class="dart-btn dart-btn-primary dart-modal-toggler" data-dart-modal="dm-thanks" style="width: 100%">Готово</a>
+    </div>
+</div>
+
+<!-- Как вам этот магазин? -->
+<div class="dart-modal" id="dm-feedback">
+    <div class="dart-modal__content" onclick="event.stopPropagation()">
+        <a class="btn-close link-no-style dart-modal-close"
+            ><i class="d_icon d_icon-close"></i
+        ></a>
+        <div class="dm-feadback">
+            <h3>Как вам этот магазин?</h3>
+            <div class="productModalPresenceList__shop-info">
+                <div class="productModalPresenceList__shop-text">
+                    <b>Самоделкин</b>
+                    <p class="p-mini mt-1">ул. Мира, 89с1</p>
+                </div>
+                <img src="../../img/ava.png" alt="">
+            </div>
+            <div class="changeShopRating__change mt-3 mb-3">
+                <div class="change-rating mt-2 dart-modal-toggler" data-dart-modal="dm-feedback-no-auth">
+                    <input name="fst" value="0" type="radio" disabled="" checked="">
+                    <label for="fst-1-1">
+                        <i class="d_icon d_icon-star"></i>
+                    </label>
+                    <input name="fst" id="fst-1-1" value="1" type="radio">
+                    <label for="fst-2-1">
+                        <i class="d_icon d_icon-star"></i>
+                    </label>
+                    <input name="fst" id="fst-2-1" value="2" type="radio">
+                    <label for="fst-3-1">
+                        <i class="d_icon d_icon-star"></i>
+                    </label>
+                    <input name="fst" id="fst-3-1" value="3" type="radio">
+                    <label for="fst-4-1">
+                        <i class="d_icon d_icon-star"></i>
+                    </label>
+                    <input name="fst" id="fst-4-1" value="4" type="radio">
+                    <label for="fst-5-1">
+                        <i class="d_icon d_icon-star"></i>
+                    </label>
+                    <input name="fst" id="fst-5-1" value="5" type="radio">
+                </div>
+            </div>
+            <textarea class="dart-input dart-textarea" placeholder="Поделитесь своим впечатлением" name="textarea" cols="4"></textarea>
+            <form action="/target" class="dropzone dropzone-mini mt-3 mb-4" id="my-great-dropzone"></form>
+        </div>
+        <a class="dart-btn dart-btn-primary dart-modal-toggler" data-dart-modal="dm-thanks" style="width: 100%">Отправить</a>
+    </div>
+</div>
     <main class="dart_main">
       
       <section class="dart-section">
@@ -2201,7 +2640,36 @@
             <li class="list-group-item">
               <a href="/profile null.html" target="_blank">Профиль. Мои отзывы. Нет отзывов</a> <span class="badge text-bg-primary">NEW</span>
             </li>
-            
+            <li class="list-group-item">
+              <a href="/promo.html" target="_blank">Все акции</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a href="/promo_info.html" target="_blank">Страница акции</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a href="/new.html" target="_blank">Все новинки</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a href="/404.html" target="_blank">404 not faund</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a target="_blank" class="rightMenuOrderToggleSuccess">Спасибо за заказ! [Модалка]</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a target="_blank" class="rightMenuOrderToggleError">Что-то пошло не так [Модалка]</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a target="_blank" class="dart-modal-toggler" data-dart-modal="dm-warn-count-tovar">У нас нет столько товара [Модалка]</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a target="_blank" class="dart-modal-toggler" data-dart-modal="dm-thanks">Спасибо за отзыв [Модалка]</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a target="_blank" class="dart-modal-toggler" data-dart-modal="dm-feedback">Как вам этот магазин? [Модалка]</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
+            <li class="list-group-item">
+              <a href="/brand.html" target="_blank">Страница бренда</a> <span class="badge text-bg-primary">NEW</span>
+            </li>
           </ul>
         </div>
       </section>

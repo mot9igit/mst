@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
+
+<head>
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
 <title>MST</title>
@@ -20,11 +21,11 @@
 <link rel="stylesheet" href="css/style.css?id=90">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="../../libs/dropzone/dropzone.css">
-  </head>
+</head>
 
-  <body>
-    <div class="dart_wrapper">
-      <header class="dart-header">
+<body>
+  <div class="dart_wrapper">
+    <header class="dart-header">
     <div class="dart_container">
         <div class="dart-header__components">
             <div class="dart-header__mobile-logo">
@@ -1012,7 +1013,7 @@
     </div>
 </header>
 
-      <!-- Sitebar -->
+    <!-- Sitebar -->
 
 <div class="sidebar">
     <div class="sidebar__menu" onclick="event.stopPropagation()">
@@ -1625,6 +1626,7 @@
 </div>
 
 <!-- Фильтры -->
+
 <div class="allFiltrsModal showModalFiltrs">
     <div class="allFiltrsModal__content" onclick="event.stopPropagation()">
         <div class="modalHeaderMenu">
@@ -2290,6 +2292,7 @@
 </div>
 
 <!-- Оформление заказа -->
+
 <div class="dart-order basketToggleModal">
     <div class="dart-order__content" onclick="event.stopPropagation()">
         <div class="dart-order__title">
@@ -3471,108 +3474,15 @@
             <a class="dart-btn dart-btn-primary-mini productModalPresenceToggle"><i class="d_icon d_icon-list"></i>Списком (50)</a>
             <img src="../../img/home/menumap.png" alt="">
         </div>
+        
+
     </div>
 </div>
-
-<!-- Спасибо за заказ -->
-<div class="rightMenuOrder rightMenuOrderSuccess rightMenuOrderToggleSuccess">
-    <div class="rightMenuOrder__content" onclick="event.stopPropagation()">
-        <i class="d_icon d_icon-close d_icon-hover rightMenuOrderToggleSuccess"></i>
-
-        <div>
-            <img src="../../img/test.svg" alt="">
-            <h2 class="mt-4 mb-3">Спасибо за заказ!</h2>
-            <p>Если что-то пошло не так, обратитесь по телефону
-                *телефон*</p>
-        </div>
-
-        <a href="#" class="dart-btn dart-btn-primary">Перейти в заказы</a>
-    </div>
-</div>
-
-<!-- Что-то пошло не так -->
-<div class="rightMenuOrder rightMenuOrderError rightMenuOrderToggleError">
-    <div class="rightMenuOrder__content" onclick="event.stopPropagation()">
-        <i class="d_icon d_icon-close d_icon-hover rightMenuOrderToggleError"></i>
-
-        <div>
-            <img src="../../img/test.svg" alt="">
-            <h2 class="mt-4 mb-3">Что-то пошло не так</h2>
-            <p>Извините, но мы не смогли оформить заказ. Пожалуйста, повторите попытку.</p>
-        </div>
-
-        <a href="#" class="dart-btn dart-btn-primary">В каталог</a>
-    </div>
-</div>
-
-<!-- Спасибо за отзыв-->
-<div class="dart-modal" id="dm-thanks">
-    <div class="dart-modal__content" onclick="event.stopPropagation()">
-        <a class="btn-close link-no-style dart-modal-close"
-            ><i class="d_icon d_icon-close"></i
-        ></a>
-        <div class="feedback-no-auth">
-            <img src="../../img/test.svg" alt="" />
-            <h3>Спасибо за отзыв!</h3>
-            <p>
-                Он будет опубликован после проверки
-            </p>
-        </div>
-        <a class="dart-btn dart-btn-primary dart-modal-toggler" data-dart-modal="dm-thanks" style="width: 100%">Готово</a>
-    </div>
-</div>
-
-<!-- Как вам этот магазин? -->
-<div class="dart-modal" id="dm-feedback">
-    <div class="dart-modal__content" onclick="event.stopPropagation()">
-        <a class="btn-close link-no-style dart-modal-close"
-            ><i class="d_icon d_icon-close"></i
-        ></a>
-        <div class="dm-feadback">
-            <h3>Как вам этот магазин?</h3>
-            <div class="productModalPresenceList__shop-info">
-                <div class="productModalPresenceList__shop-text">
-                    <b>Самоделкин</b>
-                    <p class="p-mini mt-1">ул. Мира, 89с1</p>
-                </div>
-                <img src="../../img/ava.png" alt="">
-            </div>
-            <div class="changeShopRating__change mt-3 mb-3">
-                <div class="change-rating mt-2 dart-modal-toggler" data-dart-modal="dm-feedback-no-auth">
-                    <input name="fst" value="0" type="radio" disabled="" checked="">
-                    <label for="fst-1-1">
-                        <i class="d_icon d_icon-star"></i>
-                    </label>
-                    <input name="fst" id="fst-1-1" value="1" type="radio">
-                    <label for="fst-2-1">
-                        <i class="d_icon d_icon-star"></i>
-                    </label>
-                    <input name="fst" id="fst-2-1" value="2" type="radio">
-                    <label for="fst-3-1">
-                        <i class="d_icon d_icon-star"></i>
-                    </label>
-                    <input name="fst" id="fst-3-1" value="3" type="radio">
-                    <label for="fst-4-1">
-                        <i class="d_icon d_icon-star"></i>
-                    </label>
-                    <input name="fst" id="fst-4-1" value="4" type="radio">
-                    <label for="fst-5-1">
-                        <i class="d_icon d_icon-star"></i>
-                    </label>
-                    <input name="fst" id="fst-5-1" value="5" type="radio">
-                </div>
-            </div>
-            <textarea class="dart-input dart-textarea" placeholder="Поделитесь своим впечатлением" name="textarea" cols="4"></textarea>
-            <form action="/target" class="dropzone dropzone-mini mt-3 mb-4" id="my-great-dropzone"></form>
-        </div>
-        <a class="dart-btn dart-btn-primary dart-modal-toggler" data-dart-modal="dm-thanks" style="width: 100%">Отправить</a>
-    </div>
-</div>
-      <main class="dart_main">
-        <section class="dart-section dart-overflov-unset mpt-0">
-          <div class="dart_container mp-0">
-            <div class="dart-custom-grid grid-center">
-              <div class="profile-menu">
+    <main class="dart_main">
+      <section class="dart-section dart-overflov-unset mpt-0" >
+        <div class="dart_container mp-0">
+          <div class="dart-custom-grid grid-center">
+            <div class="profile-menu">
     <div class="profile-menu__top">
         <!-- Нет аватарки -->
         <div class="profile-menu__avatar">И</div>
@@ -3589,608 +3499,16 @@
         <a href="/profile_comment.html"><i class="d_icon d_icon-comment"></i>Мои отзывы</a>
     </div>
 </div>
-              <div class="d-col-profile">
+            <div class="d-col-profile">
                 <h1 class="h1-mini">Мои отзывы</h1>
-                <a class="dart-btn dart-btn-radio-mini mb-4">
-                  <input type="checkbox" id="toggle-button-1" />
-                  <label for="toggle-button-1" class="text">С ответом</label>
-                </a>
-                <div class="profile-my-comment">
-                  <div class="profile-my-comment__product">
-                    <img src="../img/product/1.webp" alt="" />
-                    <div class="profile-my-comment__top">
-                      <div class="profile-my-comment__info">
-                        <div class="dart-rating" data-rating="4">
-                          <i class="d_icon d_icon-star"></i>
-                          <i class="d_icon d_icon-star"></i>
-                          <i class="d_icon d_icon-star"></i>
-                          <i class="d_icon d_icon-star"></i>
-                          <i class="d_icon d_icon-star"></i>
-                        </div>
-                        <span>30 августа 2023</span>
-                        <i class="d_icon d_icon-btn-dots profile-my-comment__action">
-                            <div class="profile-my-comment__actions" onclick="event.stopPropagation()">
-                                <a href="#">Отредактировать</a>
-                                <a href="#">Удалить</a>
-                            </div>
-                        </i>
-                        <!-- Область для закрытия -->
-                        <div class="profile-my-comment__action-close dartMyFeadbacksClose"></div>
-                      </div>
-                      <p class="p-mini">
-                        Аккумуляторная дрель-шуруповерт ИНТЕРСКОЛ ДА-10/14.4Л2
-                        425.0.2.00
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-feedback__el">
-                    <div class="product-feedback__text">
-                      <b>Достоинства</b>
-                      <p>Только пока новый</p>
-                    </div>
-                    <div class="product-feedback__text">
-                      <b>Недостатки</b>
-                      <p>Механизм сгибания</p>
-                    </div>
-                    <div class="product-feedback__text">
-                      <b>Комментарий</b>
-                      <p>
-                        Весь механизм разболтался, врезаться нормально не
-                        получается. Использую без нагрузки. Стамеска, гипрок,
-                        вагонка
-                      </p>
-                    </div>
-
-                    <div class="product-feedback__text">
-                      <b>Фотографии</b>
-                      <div class="product-feedback__slider">
-                        <div class="product-feedback__slider">
-                          <div class="swiper swiperProfileComments">
-                            <div class="swiper-wrapper">
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                              <a href="#" class="swiper-slide">
-                                <img
-                                  src="../img/slider/mini-slider-promo-1.png"
-                                  alt=""
-                                />
-                              </a>
-                            </div>
-                          </div>
-                          <div
-                            class="swiper-button-next dart-swiper-next dart-btn-next swiper-mycomment-next-1"
-                          ></div>
-                          <div
-                            class="swiper-button-prev dart-swiper-prev dart-btn-prev swiper-mycomment-prev-1"
-                          ></div>
-                        </div>
-                      </div>
-
-                      <div class="changeShopRating__answer">
-                        <span
-                          class="changeShopRating__answer-on answerChangeShow"
-                          >— Посмотреть ответ магазина</span
-                        >
-                        <span
-                          class="changeShopRating__answer-off answerChangeShow"
-                          >— Скрыть ответ магазина</span
-                        >
-                        <div class="changeShopRating__answer-info">
-                          <!-- Если аватарка -->
-                          <img
-                            class="sidebar__profile-image"
-                            src="../../img/personal/1.png"
-                            alt=""
-                          />
-
-                          <!-- Если первая буква -->
-                          <!-- <div class="sidebar__profile-letter">М</div> -->
-
-                          <div class="changeShopRating__answer-container">
-                            <div class="changeShopRating__answer-text">
-                              <b>Самоделкин</b>
-                              <p class="changeShopRating__date">
-                                30 августа 2023
-                              </p>
-                            </div>
-                            <div class="changeShopRating__text">
-                              Добрый день! Благодарим вас за оставленный отзыв,
-                              ждем вас снова и будем радовать и впредь!
-                            </div>
-                            <div class="product-feedback__slider mt-2">
-                              <div class="product-feedback__slider">
-                                <div class="product-feedback__slider">
-                                  <div class="swiper swiperProfileComments">
-                                    <div class="swiper-wrapper">
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                      <a href="#" class="swiper-slide">
-                                        <img
-                                          src="../img/slider/mini-slider-promo-1.png"
-                                          alt=""
-                                        />
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="swiper-button-next dart-swiper-next dart-btn-next swiper-mycomment-next-2"
-                                  ></div>
-                                  <div
-                                    class="swiper-button-prev dart-swiper-prev dart-btn-prev swiper-mycomment-prev-2"
-                                  ></div>
-                                </div>
-                              </div>
-                            </div>
-                            <span class="profile-my-comment__reply">Ответить</span>
-                            
-                          </div>
-                        </div>
-                        <div class="reply-send">
-                          <!-- Если аватарка -->
-                          <!-- <img
-                          class="sidebar__profile-image"
-                          src="../../img/personal/1.png"
-                          alt=""
-                      /> -->
-
-                      <!-- Если первая буква -->
-                      <div class="sidebar__profile-letter">М</div>
-                      <div class="reply-send__rihgt">
-                          <div class="reply-send__name">
-                              <b>Иван Иванович</b>
-                              <p>Ответ на комментарий <b>Самоделкин</b></p>
-                          </div>
-                          <textarea class="dart-input dart-textarea" placeholder="Текст" name="textarea" cols="4"></textarea>
-                          <div class="reply-send__container">
-                              <i class="d_icon d_icon-clip"></i>
-                              <div class="reply-send__buttons">
-                                  <a class="dart-btn dart-btn-secondary-outline-mini replyClose">Отменить</a>
-                                  <a href="#" class="dart-btn dart-btn-primary-mini">Отправить</a>
-                              </div>
-                          </div>
-                      </div>
-                      
-
-                    </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div class="profile-my-comment">
-                    <div class="profile-my-comment__product">
-                      <img src="../img/product/1.webp" alt="" />
-                      <div class="profile-my-comment__top">
-                        <div class="profile-my-comment__info">
-                          <div class="dart-rating" data-rating="4">
-                            <i class="d_icon d_icon-star"></i>
-                            <i class="d_icon d_icon-star"></i>
-                            <i class="d_icon d_icon-star"></i>
-                            <i class="d_icon d_icon-star"></i>
-                            <i class="d_icon d_icon-star"></i>
-                          </div>
-                          <span>30 августа 2023</span>
-                          <i class="d_icon d_icon-btn-dots profile-my-comment__action">
-                            <div class="profile-my-comment__actions" onclick="event.stopPropagation()">
-                                <a href="#">Отредактировать</a>
-                                <a href="#">Удалить</a>
-                            </div>
-                        </i>
-                        <!-- Область для закрытия -->
-                        <div class="profile-my-comment__action-close dartMyFeadbacksClose"></div>
-                        </div>
-                        <p class="p-mini">
-                          Аккумуляторная дрель-шуруповерт ИНТЕРСКОЛ ДА-10/14.4Л2
-                          425.0.2.00
-                        </p>
-                      </div>
-                    </div>
-                    <div class="product-feedback__el">
-                      <div class="product-feedback__text">
-                        <b>Достоинства</b>
-                        <p>Только пока новый</p>
-                      </div>
-                      <div class="product-feedback__text">
-                        <b>Недостатки</b>
-                        <p>Механизм сгибания</p>
-                      </div>
-                      <div class="product-feedback__text">
-                        <b>Комментарий</b>
-                        <p>
-                          Весь механизм разболтался, врезаться нормально не
-                          получается. Использую без нагрузки. Стамеска, гипрок,
-                          вагонка
-                        </p>
-                      </div>
-  
-                      <div class="product-feedback__text">
-                        <b>Фотографии</b>
-                        <div class="product-feedback__slider">
-                          <div class="product-feedback__slider">
-                            <div class="swiper swiperProfileComments">
-                              <div class="swiper-wrapper">
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                                <a href="#" class="swiper-slide">
-                                  <img
-                                    src="../img/slider/mini-slider-promo-1.png"
-                                    alt=""
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                            <div
-                              class="swiper-button-next dart-swiper-next dart-btn-next swiper-mycomment-next-3"
-                            ></div>
-                            <div
-                              class="swiper-button-prev dart-swiper-prev dart-btn-prev swiper-mycomment-prev-3"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
+                <h3>Отзывов пока нет</h3>
+                <p class="p-mini p-gray">Здесь будут отображаться оставленные вами отзывы</p>
             </div>
           </div>
-        </section>
-      </main>
-      <footer class="dart_footer">
+        </div>
+      </section>
+    </main>
+    <footer class="dart_footer">
     <div class="dart_container">
         <div class="dart-topfooter">
             <div class="dart-row">
@@ -5367,8 +4685,8 @@
 </div> -->
 
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=7270e707-f1a7-4397-a1d7-0c545cf0b735&lang=ru_RU" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -5386,5 +4704,6 @@
     });
 </script>
 
-  </body>
+</body>
+
 </html>

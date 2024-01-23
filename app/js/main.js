@@ -59,6 +59,48 @@ let swiper = new Swiper(".promoSwiper", {
 	}
 });
 
+// Свайпер Акции БРЕНД
+let swiperBrand = new Swiper(".brandPromoSwiper", {
+    parallax: true,
+    speed: 600,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false
+    },
+	breakpoints: {
+		0: {
+			slidesPerView: 1.05,
+			spaceBetween: 8
+		},
+		430: {
+			slidesPerView: 1.05,
+			spaceBetween: 8
+		},
+		600: {
+			slidesPerView: 1.1,
+			spaceBetween: 8
+		},
+		768: {
+			slidesPerView: 1.2,
+			spaceBetween: 8
+		},
+		991: {
+			slidesPerView: 1.3,
+			spaceBetween: 8
+		},
+		1200: {
+			slidesPerView: 1,
+			spaceBetween: 8
+		}
+	}
+});
+
+
 //Свайпер акции сбоку
 var swipertwo = new Swiper(".promoSwiperMini", {
     grid: {
@@ -121,6 +163,69 @@ var swipertwo = new Swiper(".promoSwiperMini", {
 			slidesPerView: 2,
 		}
 	}
+});
+
+var swipertwo = new Swiper(".brandPromoSwiperMini", {
+    grid: {
+        rows: 1,
+    },
+    slidesPerView: 4.5,
+    spaceBetween: 8,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-mini-next",
+      prevEl: ".swiper-mini-prev",
+    },
+	// breakpoints: {
+	// 	0: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 2,
+	// 	},
+	// 	430: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 2.5,
+	// 	},
+	// 	600: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 3.5,
+	// 	},
+	// 	768: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 5,
+	// 	},
+	// 	993: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 5,
+	// 	},
+	// 	1000: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 4.5,
+	// 	},
+	// 	1400: {
+	// 		grid: {
+	// 			rows: 1,
+	// 		},
+	// 		slidesPerView: 4,
+	// 	},
+	// 	1601: {
+	// 		grid: {
+	// 			rows: 2,
+	// 		},
+	// 		slidesPerView: 2,
+	// 	}
+	// }
 });
 
 //Свайпер новинки
@@ -1084,3 +1189,54 @@ if(profileMyCommentReply){
 		})
 	}
 }
+
+// Модальное окно Наличие в магазинах (На карточке товара)
+
+const productModalPresenceToggle = document.querySelectorAll('.productModalPresenceToggle');
+const productModalPresence = document.querySelector('.productModalPresence');
+
+const productModalPresenceListToggle = document.querySelectorAll('.productModalPresenceListToggle');
+const productModalPresenceList = document.querySelector('.productModalPresenceList');
+
+if(productModalPresenceToggle){
+	for(let i = 0; i < productModalPresenceToggle.length; i++){
+		productModalPresenceToggle[i].addEventListener('click', () => {
+			productModalPresenceList.classList.remove('show');
+			productModalPresence.classList.toggle('show');
+		})
+	}
+}
+
+if(productModalPresenceListToggle){
+	for(let i = 0; i < productModalPresenceListToggle.length; i++){
+		productModalPresenceListToggle[i].addEventListener('click', () => {
+			productModalPresence.classList.remove('show');
+			productModalPresenceList.classList.toggle('show');
+		})
+	}
+}
+
+// Спасибо за заказ
+
+const rightMenuOrderToggleSuccess = document.querySelectorAll('.rightMenuOrderToggleSuccess')
+const rightMenuOrderSuccess = document.querySelector('.rightMenuOrderSuccess')
+
+const rightMenuOrderToggleError = document.querySelectorAll('.rightMenuOrderToggleError')
+const rightMenuOrderError = document.querySelector('.rightMenuOrderError')
+
+if(rightMenuOrderToggleSuccess){
+	for(let i = 0; i < rightMenuOrderToggleSuccess.length; i++){
+		rightMenuOrderToggleSuccess[i].addEventListener('click', () => {
+			rightMenuOrderSuccess.classList.toggle('show');
+		})
+	}
+}
+
+if(rightMenuOrderToggleError){
+	for(let i = 0; i < rightMenuOrderToggleError.length; i++){
+		rightMenuOrderToggleError[i].addEventListener('click', () => {
+			rightMenuOrderError.classList.toggle('show');
+		})
+	}
+}
+

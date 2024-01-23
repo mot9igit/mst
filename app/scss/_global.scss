@@ -2351,6 +2351,114 @@ ul{
 	}
 }
 
+
+// Спасибо за заказ
+
+
+.rightMenuOrder{
+	pointer-events: none;
+	background: rgba(0, 0, 0, 0);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	transition: all 0.6s;
+
+	.d_icon-close{
+		position: absolute;
+		right: 40px;
+		top: 60px;
+		cursor: pointer;
+	}
+
+	&__content{
+		height: 100%;
+		width: 500px;
+		background: #fff;
+		position: fixed;
+		right: 0;
+		top: 0;
+		transform: translateX(100%);
+		transition: all 0.6s;
+		padding: 60px 40px;
+	}
+
+	.dart-btn-primary{
+		position: absolute;
+		bottom: 60px;
+		width: calc(100% - 80px);
+	}
+
+	&__title{
+		padding-right: 40px;
+	}
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.78);
+		width: 100vw;
+		height: 100vh;
+		transition: all 0.6s;
+		z-index: 3;
+
+		.rightMenuOrder{
+			&__content{
+				transform: translateX(0%);
+				right: 0;
+				transition: all 0.6s;
+				position: fixed;
+
+			}
+		}
+	}
+}
+
+.dm-feadback{
+	width: 396px;
+}
+
+.dropzone-mini{
+	.dz-button{
+		width: 100% !important;
+	}
+}
+
+.brandPromoSwiper{
+	height: 332px;
+	width: 100%;
+}
+
+.brandPromoSwiperMiniContainer{
+	position: relative;
+	width: 100%;
+}
+
+.brandPromoSwiperMini {
+	height: 128px;
+}
+
+.swipers-brand{
+	gap: 12px;
+	flex-direction: column;
+}
+
+.brand-top{
+	&__el{
+		img{
+			width: 100%;
+			height: 80px !important;
+			object-fit: cover;
+			border-radius: 5px;
+			margin-bottom: 16px;
+		}
+
+		h3{
+			margin-bottom: 8px;	
+		}
+	}
+}
+
 .searchModal{
 	position: fixed;
 	width: 100vw;
@@ -2637,6 +2745,14 @@ ul{
 			width: 100%;
 		}
 	}
+}
+
+.d-col-not-faund{
+	padding: 20px;
+	background: var(--main-background-windows);
+	width: 1063px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.06);
 }
 
 .d-col-shop{
@@ -3474,6 +3590,292 @@ ul{
 	align-items: flex-start;
 }
 
+.promo-all{
+	margin-bottom: 24px;
+	display: block;
+
+	img{
+		width: 100%;
+	}
+}
+
+// Наличие в магазинах (Модалка)
+
+.productModalPresence{
+	background: rgba(0, 0, 0, 0.0);
+	pointer-events: none;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	transition: all 0.4s;
+
+	.btn-close{
+		position: absolute;
+		right: 32px;
+		top: 32px;	
+	}
+
+	&__content{
+		width: 1100px;
+		border-radius: 5px;
+		background: var(--main-background-windows);
+		min-height: 700px;
+		height: 700px;
+		transform: scale(0.8);
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.4s;
+		display: flex;
+		position: relative;
+		padding: 32px;
+		flex-direction: column;
+	}
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.50);
+
+		.productModalPresence{
+			&__content{
+				transform: scale(1);
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 24px 0;
+	}
+
+	&__filtr{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__container{
+		margin-top: 40px;
+	}
+
+	.dart-input-search{
+		width: 50%;
+	}
+
+	&__card + &__card{
+		margin-top: 24px;
+		padding-top: 24px;
+		border-top: 1px solid var(--text-color-dop);
+	}
+
+	&__container{
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 10px;
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #e0e0e0;
+	   	}
+
+	   &::-webkit-scrollbar-thumb {
+			background-color: #b4b4b4;
+			border-radius: 9em;
+	   }
+	}
+
+	&__el{
+		margin-bottom: 8px;
+		font-size: 14px;
+		color: var(--secondary-color);
+		line-height: 1.1;
+
+		span{
+			color: var(--text-color-dop);
+		}
+	}
+}
+
+
+.productModalPresenceList{
+	background: rgba(0, 0, 0, 0.0);
+	pointer-events: none;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	transition: all 0.4s;
+
+	.map{
+		width: 50%;
+		position: relative;
+
+		// Временно!
+		img{
+			width: 100%;
+			height: 100% !important;
+			object-fit: cover;
+			border-radius: 5px;
+		}
+
+		.dart-btn-primary-mini{
+			position: absolute;
+			top: 87px;
+			right: 32px;
+		}
+	}
+
+	.list{
+		width: 50%;
+		padding: 32px;
+	}
+
+	.btn-close{
+		position: absolute;
+		right: 32px;
+		top: 32px;
+		z-index: 1;
+	}
+
+	&__content{
+		width: 1100px;
+		border-radius: 5px;
+		background: var(--main-background-windows);
+		min-height: 700px;
+		height: 700px;
+		transform: scale(0.8);
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.4s;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+	}
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.50);
+
+		.productModalPresenceList{
+			&__content{
+				transform: scale(1);
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+
+	&__top{
+		margin: 16px 0;
+	}
+
+	&__filtr{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__container{
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 10px;
+		height: calc(100% - 170px);
+		margin-top: 20px;
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #e0e0e0;
+	   	}
+
+	   &::-webkit-scrollbar-thumb {
+			background-color: #b4b4b4;
+			border-radius: 9em;
+	   }
+	}
+
+	.dart-input-search{
+		width: 100%;
+	}
+
+	&__shop-info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__ooo{
+		margin-top: 16px;
+		display: flex;
+		justify-content: space-between;
+
+		p{
+			width: 50%;
+		}
+	}
+
+	&__flex{
+		text-align: right;
+	}
+
+
+	&__card + &__card{
+		margin-top: 24px;
+		padding-top: 24px;
+		border-top: 1px solid var(--text-color-dop);
+	}
+
+	&__container{
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 10px;
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #e0e0e0;
+	   	}
+
+	   &::-webkit-scrollbar-thumb {
+			background-color: #b4b4b4;
+			border-radius: 9em;
+	   }
+	}
+
+	&__el{
+		margin-bottom: 8px;
+		font-size: 14px;
+		color: var(--secondary-color);
+		line-height: 1.1;
+
+		span{
+			color: var(--text-color-dop);
+		}
+	}
+}
+
+.shopLastInfo{
+	display: flex;
+	gap: 8px;
+
+	&__img{
+		width: 40px !important;
+		height: 40px !important;
+		object-fit: contain;
+		border: 1px solid var(--text-color-dop);
+		border-radius: 50%;
+	}
+}
+
+
 @media (max-width: $desktop){
 	.dart-header{
 		&__components-desctop{
@@ -3565,6 +3967,10 @@ ul{
 			width: 24px;
 			height: 24px;
 		
+		}
+
+		&__basket{
+			display: none;
 		}
 
 		&__catalog{

@@ -1,0 +1,51 @@
+.promo-tag{
+    color: #fff;
+    border-radius: 5px;
+    background: #F29D61;
+    padding: 4px 8px;
+    margin-left: 8px;
+    line-height: 1;
+    font-size: 14px;
+    position: relative;
+    top: 4px;
+}
+
+.promo-info{
+    display: flex;
+
+    &__text{
+        width: 60%;
+    }
+
+    img{
+        width: 40%;
+    }
+
+    &__description{
+        width: 60%;
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100% - 48px);
+    }
+
+    &__el{
+        font-size: 14px;
+        color: var(--text-color-dop);
+
+        span{
+            color: var(--secondary-color);
+        }
+    }
+
+    &__el + &__el{
+        margin-top: 8px;
+    }
+}
+
+.promo-products{
+    margin-top: 40px;
+}
