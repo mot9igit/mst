@@ -1283,3 +1283,11 @@ if(rightMenuOrderToggleError){
 	}
 }
 
+const contrastSwiper = document.querySelector('.dart-swiper-contrast');
+
+// Сравнение товаров (Скролл)
+window.addEventListener('scroll', function () {
+	if(window.scrollY > 300){
+		contrastSwiper.classList.add('sticki')
+	}
+})
