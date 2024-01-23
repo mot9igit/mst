@@ -562,6 +562,49 @@ if(alldartSwiperSearch){
     }
 }
 
+// Слайдер сравнения
+
+var swipertree = new Swiper(".dartSwiperContrast", {
+	slidesPerView: 4,
+	spaceBetween: 8,
+	navigation: {
+		nextEl: ".swiper-search-next-",
+		prevEl: ".swiper-search-prev-",
+	},
+	// breakpoints: {
+	// 	0: {
+	// 		slidesPerView: 1.5,
+	// 	},
+	// 	410: {
+	// 		slidesPerView: 2,
+	// 	},
+	// 	600: {
+	// 		slidesPerView: 3,
+	// 	},
+	// 	800: {
+	// 		slidesPerView: 4,
+	// 	},
+	// 	1000: {
+	// 		slidesPerView: 5,
+	// 	},
+	// 	1200: {
+	// 		slidesPerView: 3,
+	// 	},
+	// 	1350: {
+	// 		slidesPerView: 3.5,
+	// 	},
+	// 	1450: {
+	// 		slidesPerView: 4,
+	// 	},
+	// 	1700: {
+	// 		slidesPerView: 4.5,
+	// 	},
+	// 	1780: {
+	// 		slidesPerView: 5,
+	// 	}
+	// }
+});
+
 //Открытие менюшки
 
 const menu_toggler = document.querySelector('.nav-dart-menu');

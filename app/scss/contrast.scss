@@ -1,0 +1,58 @@
+.dartSwiperContrast{
+    &__last{
+        background: var(--btn-secondary-outline-background);
+        height: auto !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        span{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+    }
+}
+
+.dart-contrast{
+    background: var(--main-background-windows);
+    padding-bottom: 20px;
+}
+
+.contrast{
+    &__nav{
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__table{
+        margin-top: 30px;
+    }
+
+    &__row{
+        width: 100%;
+        padding: 12px 24px;
+    }
+
+    &__row:nth-child(2n - 1){
+        background: var(--btn-secondary-outline-background);
+    }
+
+    &__title{
+        margin-bottom: 8px;
+        max-width: calc(25% - 8px);
+    }
+
+    &__value{
+        width: calc(25% - 8px);
+    }
+
+    &__detals{
+        display: flex;
+        justify-content: space-between;
+    }
+}
