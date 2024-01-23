@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('./includes/meta.html')
+</head>
+
+<body>
+  <div class="dart_wrapper">
+    @@include('./includes/header.html')
+    @@include('./includes/modal.html')
+    <main class="dart_main">
+      <section class="dart-section dart-overflov-unset mpt-0" >
+        <div class="dart_container mp-0">
+          <div class="dart-custom-grid grid-center">
+            @@include('./includes/profileMenu.html')
+            <div class="d-col-profile">
+                <h1 class="h1-mini">Мои отзывы</h1>
+                <h3>Отзывов пока нет</h3>
+                <p class="p-mini p-gray">Здесь будут отображаться оставленные вами отзывы</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('./includes/footer.html')
+  </div>
+  @@include('./includes/scripts.html')
+</body>
+
+</html>

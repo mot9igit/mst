@@ -739,9 +739,11 @@ if(answerChangeShow){
     for (let i = 0; i < answerChangeShow.length; i++) {
         answerChangeShow[i].addEventListener("click", function() {
             answerChangeShow[i].parentElement.classList.toggle("show");
+			answerChangeShow[i].parentElement.classList.remove("reply");
         });
     }
 }
+
 
 //Свои модалки
 
@@ -1058,6 +1060,27 @@ if(dartMyFeadbacksClose){
 			for(let j = 0; j < dartMyFeadbacks.length; j++){
 				dartMyFeadbacks[j].classList.remove('show');
 			}
+		})
+	}
+}
+
+// Кнопка ответить в профиле
+
+const profileMyCommentReply = document.querySelectorAll('.profile-my-comment__reply');
+const replyClose = document.querySelectorAll('.replyClose');
+
+if(replyClose){
+	for(let i = 0; i < replyClose.length; i++){
+		replyClose[i].addEventListener('click', () => {
+			replyClose[i].parentElement.parentElement.parentElement.parentElement.parentElement.classList.remove('reply')
+		})
+	}
+}
+
+if(profileMyCommentReply){
+	for(let i = 0; i < profileMyCommentReply.length; i++){
+		profileMyCommentReply[i].addEventListener('click', () => {
+			profileMyCommentReply[i].parentElement.parentElement.parentElement.classList.add('reply')
 		})
 	}
 }
