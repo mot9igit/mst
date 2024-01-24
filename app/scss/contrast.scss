@@ -23,7 +23,6 @@
 
 .contrast{
     &__nav{
-        padding: 0 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -31,6 +30,9 @@
 
     &__table{
         margin-top: 30px;
+        width: calc(100% + 48px);
+        position: relative;
+        right: 24px;
     }
 
     &__row{
@@ -54,5 +56,163 @@
     &__detals{
         display: flex;
         justify-content: space-between;
+    }
+}
+
+.dart-swiper-contrast{
+
+    
+    position: relative;
+    &.sticky{
+        position: sticky;
+        top: 0;
+        background: var(--main-background-windows);
+        z-index: 1;
+        padding: 0 24px;
+        width: calc(100% + 48px);
+        transform: translateX(-24px);
+
+        .dart-rating{
+            margin-bottom: 0;
+        }
+
+        .dartSwiperContrast{
+
+            &__slide{
+                margin: 24px 0;
+            }
+            &__card{
+                display: flex;
+                gap: 4px;
+            }
+
+            &__sticky{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        
+
+        .dartSwiperSearch{
+            &__buttons{
+                display: none;
+            }
+
+            &__sale{
+                display: none;
+            }
+
+            &__image{
+                width: 70px;
+                height: 70px;
+            }
+
+            &__code{
+                display: none;
+            }
+        }
+    }
+}
+
+.dartSwiperContrast{
+
+    transition: all 0.5s;
+
+    &__slide{
+        &:hover{
+            .dartSwiperContrast{
+                &__close{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+    
+
+    &__sticky{
+        display: none;
+    }
+
+    &__close{
+        width: 24px;
+        height: 24px;
+        background: var(--btn-secondary-outline-hover);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        top: 12px;
+        right: 12px;
+
+        .d_icon-close{
+            font-size: 10px;
+            color: #fff;
+            position: relative;
+            top: 1px;
+        }
+
+        &:hover{
+            background: var(--link-color-hover);
+        }
+    }
+}
+
+.contast-category{
+    margin-bottom: 32px;
+    display: flex;
+    gap: 8px;
+    
+    &__close{
+        width: 0;
+        height: 0;
+        background: var(--btn-secondary-outline-hover);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+
+        .d_icon-close{
+            font-size: 10px;
+            color: #fff;
+            position: relative;
+            top: 1px;
+        }
+
+        &:hover{
+            background: var(--link-color-hover);
+        }
+    }
+
+    &__el{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        width: fit-content;
+        position: relative;
+        background-color: var(--main-background-windows);
+        box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
+        cursor: pointer;
+
+        &:hover{
+            background: var(--btn-secondary-outline-background);
+
+            .contast-category{
+                &__close{
+                    opacity: 1;
+                    pointer-events: all;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
     }
 }

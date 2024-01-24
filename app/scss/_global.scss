@@ -2628,6 +2628,11 @@ ul{
 	align-items: center;
 	justify-content: center;
 
+	&__two-buttons{
+		display: flex;
+		gap: 8px;
+	}
+
 	&.show{
 		background: rgba(0, 0, 0, 0.30);
 		pointer-events: all;

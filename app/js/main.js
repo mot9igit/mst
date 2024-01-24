@@ -568,8 +568,8 @@ var swipertree = new Swiper(".dartSwiperContrast", {
 	slidesPerView: 4,
 	spaceBetween: 8,
 	navigation: {
-		nextEl: ".swiper-search-next-",
-		prevEl: ".swiper-search-prev-",
+		nextEl: ".dart-contast-next",
+		prevEl: ".dart-contast-prev",
 	},
 	// breakpoints: {
 	// 	0: {
@@ -1287,7 +1287,28 @@ const contrastSwiper = document.querySelector('.dart-swiper-contrast');
 
 // Сравнение товаров (Скролл)
 window.addEventListener('scroll', function () {
-	if(window.scrollY > 300){
-		contrastSwiper.classList.add('sticki')
+	if(window.scrollY > 320){
+		contrastSwiper.classList.add('sticky')
+	}else{
+		contrastSwiper.classList.remove('sticky')
 	}
 })
+
+//Блок вопрос-ответ
+
+const faqQuest = document.querySelectorAll('.faq__quest');
+
+if(faqQuest){
+	for(let i = 0; i < faqQuest.length; i++){
+		faqQuest[i].addEventListener('click', function() {
+			this.parentElement.classList.toggle('active');
+
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		})
+	}
+}
