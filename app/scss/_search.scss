@@ -94,6 +94,27 @@
         .dart-btn-secondary{
             width: 100%;
         }
+
+        .dartSwiperSearch__sale{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.search-filters-mobile{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    display: none;
+
+    &__distance{
+        .d_icon-down-arrow{
+            font-size: 12px;
+        }
+    }
+
+    .d_icon-filtr{
+        font-size: 24px;
     }
 }
 
@@ -199,4 +220,10 @@
     background: var(--primary-color);
     border-radius:10px;
     top: -1px;
+}
+
+@media (max-width: $small-desktop){
+    .search-filters-mobile{
+        display: flex;
+    }
 }

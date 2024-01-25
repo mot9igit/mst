@@ -248,6 +248,7 @@
 
         .p-mini{
             width: 80%;
+            line-height: 1.1;
         }
     }
 
@@ -257,11 +258,15 @@
             color: var(--text-color-dop);
             font-size: 12px;
             margin-top: 12px;
+            margin-top: 0;
         }
     }
 
     &__article{
         color: var(--text-color-dop);
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -569,4 +574,130 @@
 
 .p-gray{
     color: var(--text-color-dop);
+}
+
+@media (max-width: $small-desktop){
+    .custom-grid-profile{
+        flex-direction: row;
+
+        .d-col-profile{
+            margin-left: 16px;
+        }
+    }
+}
+
+@media (max-width: $tablets){
+    .custom-grid-profile{
+        flex-direction: column;
+
+        .d-col-profile{
+            margin-left: 0;
+        }
+
+        .profile-menu{
+            display: none;
+        }
+
+        .d-col-profile{
+            width: 100%;
+        }
+    
+    }
+}
+
+@media (max-width: $small-tablets){
+    .custom-grid-profile{
+        .profile-order-cart__img{
+            width: 41px;
+            height: 40px !important;
+        }
+    }
+}
+
+
+@media (max-width: $big-phones){
+    .custom-grid-profile{
+        .address-list__el{
+            p{
+                padding-right: 10px;
+            }
+        }
+
+        .profile-order-cart__top h3{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .profile-select-return__order{
+            padding: 0;
+            text-align: center;
+        }
+
+        .profile-select-return{
+            .dart-btn-primary{
+                width: calc(100% - 32px);
+            }
+
+            &__button{
+                width: calc(100% + 32px);
+                transform: translateX(-16px);
+                background: var(--main-background-windows);
+                position: sticky;
+                bottom: 0;
+                padding: 8px 0 20px 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .profile-title-return{
+            justify-content: center;
+        }
+
+        .h1-mini{
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px; 
+        }
+    }
+
+    .d-col-profile{
+        padding: 24px 16px;
+
+        .dart-cheackbox-container{
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    }
+
+    .product-card img{
+        width: 54px;
+        height: 54px !important;
+    }
+
+    .product-card__article{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: $phones){
+    .product-card__title{
+        flex-direction: column;
+        align-items: flex-start;
+
+        b{
+            margin-top: 4px;
+        }
+    }
+
+    
+    .product-card__title .p-mini{
+        width: 100%;
+        line-height: 1.1;
+    }
 }

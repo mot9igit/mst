@@ -420,6 +420,17 @@ blockquote{
 	}
 }
 
+@media (max-width: $big-phones){
+	.mptm-0{
+		padding-top: 0 !important;
+	}
+
+	.mpm-0{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+
 @media (max-width: $tablets){
 	.mobile-show{
 		display: block !important;
@@ -2218,7 +2229,7 @@ ul{
 	}
 
 	&__content{
-		height: 100%;
+		height: 100dvh;
 		width: 500px;
 		background: #fff;
 		position: fixed;
@@ -2266,7 +2277,7 @@ ul{
 
 	form{
 		overflow-y: auto;
-    	height: calc(100% - 180px);
+    	height: calc(100dvh - 180px);
 
 		&::-webkit-scrollbar {
 			width: 6px;
@@ -3886,6 +3897,12 @@ ul{
 		&__components-desctop{
 			padding: 15px 14px !important;
 		}
+
+		&__components-desctop{
+			b{
+				display: none;
+			}
+		}
 	}
 }
 
@@ -4282,8 +4299,21 @@ ul{
 		align-items: center;
 		justify-content: center;
 	}
+
+	.dm-feadback{
+		width: 350px;
+	}
+
+	.rightMenuOrder__content{
+		width: 100%;
+	}
 }
 @media (max-width: $phones){
+
+	.rightMenuOrder__content{
+		padding: 60px 16px;
+	}
+
 	.allFiltrsModal{
 		.dart-btn{
 			padding: 10px;
@@ -4303,12 +4333,20 @@ ul{
 		}
 	}
 
+	.dm-feadback{
+		width: 100%;
+	}
+
 	.dart-modal__content{
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+
+		padding: 32px 16px;
+		min-width: unset;
+
 	}
 }
 
