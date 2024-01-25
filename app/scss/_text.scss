@@ -88,6 +88,7 @@ p.def-section + p.def-section{
 }
 
 ul.def-section{
+    font-family: var(--bs-body-font-family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -108,6 +109,7 @@ ul.def-section{
 
 
 ol.def-section{
+    font-family: var(--bs-body-font-family);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -203,5 +205,15 @@ ol.def-section{
 
     .faq__el + .faq__el{
         border-top: 1px solid var(--border-color);
+    }
+}
+
+.def-section.contact{
+    .contact{
+        display: flex;
+        gap: 8px;
+        &__el{
+            width: 100%;
+        }
     }
 }

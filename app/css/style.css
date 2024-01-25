@@ -8778,6 +8778,7 @@ p.def-section + p.def-section {
 }
 
 ul.def-section {
+  font-family: var(--bs-body-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -8797,6 +8798,7 @@ ul.def-section li + li {
 }
 
 ol.def-section {
+  font-family: var(--bs-body-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -8905,6 +8907,17 @@ ol.def-section li + li {
   border-top: 1px solid var(--border-color);
 }
 
+.def-section.contact .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.def-section.contact .contact__el {
+  width: 100%;
+}
+
 .dartSwiperContrast__last {
   background: var(--btn-secondary-outline-background);
   height: auto !important;
@@ -8959,6 +8972,10 @@ ol.def-section li + li {
   padding: 12px 24px;
 }
 
+.contrast__row.different.hide {
+  display: none;
+}
+
 .contrast__row:nth-child(2n - 1) {
   background: var(--btn-secondary-outline-background);
 }
@@ -8969,23 +8986,25 @@ ol.def-section li + li {
 }
 
 .contrast__value {
-  width: calc(25% - 8px);
+  width: calc(25%);
+  display: none;
+}
+
+.contrast__value.active {
+  display: block;
 }
 
 .contrast__detals {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .dart-swiper-contrast {
   position: relative;
 }
 
-.dart-swiper-contrast.sticky {
+.contrastSwiper.sticky .dart-swiper-contrast {
   position: sticky;
   top: 0;
   background: var(--main-background-windows);
@@ -8997,22 +9016,26 @@ ol.def-section li + li {
           transform: translateX(-24px);
 }
 
-.dart-swiper-contrast.sticky .dart-rating {
+.contrastSwiper.sticky .dart-rating {
   margin-bottom: 0;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperContrast__slide {
+.contrastSwiper.sticky .contast-category {
+  margin-top: 125px;
+}
+
+.contrastSwiper.sticky .dartSwiperContrast__slide {
   margin: 24px 0;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperContrast__card {
+.contrastSwiper.sticky .dartSwiperContrast__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 4px;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperContrast__sticky {
+.contrastSwiper.sticky .dartSwiperContrast__sticky {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9024,26 +9047,21 @@ ol.def-section li + li {
           justify-content: space-between;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperSearch__buttons {
+.contrastSwiper.sticky .dartSwiperSearch__buttons {
   display: none;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperSearch__sale {
+.contrastSwiper.sticky .dartSwiperSearch__sale {
   display: none;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperSearch__image {
+.contrastSwiper.sticky .dartSwiperSearch__image {
   width: 70px;
   height: 70px;
 }
 
-.dart-swiper-contrast.sticky .dartSwiperSearch__code {
+.contrastSwiper.sticky .dartSwiperSearch__code {
   display: none;
-}
-
-.dartSwiperContrast {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .dartSwiperContrast__slide:hover .dartSwiperContrast__close {

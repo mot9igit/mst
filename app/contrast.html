@@ -3807,7 +3807,7 @@
                 </div>
             </div>
             <div class="d-col-content">
-              <div class="dart-home dart-window">
+              <div class="dart-home dart-window contrastSwiper">
                 <div class="dart-home__title mb-3">
                     <h2>Сравнение товаров</h2>
                     <a href="#" class="dart-link-all p-gray">Удалить все списки</a>
@@ -3835,7 +3835,7 @@
                 <div class="dart-swiper-contrast">
                     <div class="swiper dartSwiperContrast">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide dartSwiperContrast__slide">
+                            <div class="swiper-slide dartSwiperContrast__slide" data-product-id="1">
                                 <div class="dartSwiperContrast__card">
                                 <a href="#" class="dartSwiperContrast__close link-no-style"><i class="d_icon-close d_icon"></i></a>
                                   <div class="dartSwiperSearch__image">
@@ -3863,7 +3863,7 @@
                                   <a href="#" class="dart-btn dart-btn-secondary-mini">В корзину</a>
                                 </div>
                             </div>
-                            <div class="swiper-slide dartSwiperContrast__slide">
+                            <div class="swiper-slide dartSwiperContrast__slide" data-product-id="2">
                               <div class="dartSwiperContrast__card">
                                 <a href="#" class="dartSwiperContrast__close link-no-style"><i class="d_icon-close d_icon"></i></a>
                                 <div class="dartSwiperSearch__image">
@@ -3891,7 +3891,7 @@
                                 <a href="#" class="dart-btn dart-btn-secondary-mini">В корзину</a>
                               </div>
                           </div>
-                          <div class="swiper-slide dartSwiperContrast__slide">
+                          <div class="swiper-slide dartSwiperContrast__slide" data-product-id="3">
                             <div class="dartSwiperContrast__card">
                               <a href="#" class="dartSwiperContrast__close link-no-style"><i class="d_icon-close d_icon"></i></a>
                               <div class="dartSwiperSearch__image">
@@ -3919,7 +3919,35 @@
                               <a href="#" class="dart-btn dart-btn-secondary-mini">В корзину</a>
                             </div>
                         </div>
-                          <div class="swiper-slide dartSwiperContrast__slide">
+                        <div class="swiper-slide dartSwiperContrast__slide" data-product-id="4">
+                          <div class="dartSwiperContrast__card">
+                            <a href="#" class="dartSwiperContrast__close link-no-style"><i class="d_icon-close d_icon"></i></a>
+                            <div class="dartSwiperSearch__image">
+                              <img src="../img/product/1.webp" alt="">
+                            </div>
+                            <div class="dartSwiperSearch__text">
+                              <p class="dartSwiperSearch__code">Код товара: 140101199</p>
+                              <p>Перфоратор П-32/1000ЭВ-2</p>
+                              <div class="dart-rating" data-rating="4">
+                                <i class="d_icon d_icon-star"></i>
+                                <i class="d_icon d_icon-star"></i>
+                                <i class="d_icon d_icon-star"></i>
+                                <i class="d_icon d_icon-star"></i>
+                                <i class="d_icon d_icon-star"></i>
+                              </div>
+                              <p class="dartSwiperSearch__sale">13 290 ₽</p>
+                              <div class="dartSwiperSearch__buttons">
+                                <a href="#" class="dart-btn dart-btn-secondary">В корзину</a>
+                                <a href="#" class="link-no-style"><i class="d_icon d_icon-setting"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dartSwiperContrast__sticky">
+                            <b>13 290 руб.</b>
+                            <a href="#" class="dart-btn dart-btn-secondary-mini">В корзину</a>
+                          </div>
+                        </div>
+                          <div class="swiper-slide dartSwiperContrast__slide" data-product-id="5">
                             <div class="dartSwiperContrast__card">
                               <a href="#" class="dartSwiperContrast__close link-no-style"><i class="d_icon-close d_icon"></i></a>
                               <div class="dartSwiperSearch__image">
@@ -3967,301 +3995,361 @@
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Производитель</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
-                  <div class="contrast__row">
+                  <div class="contrast__row different">
                       <div class="contrast__title p-gray p-mini">Длина кабеля, м</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>3</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>4</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>3.5</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
-                  <div class="contrast__row">
+                  <div class="contrast__row different">
                       <div class="contrast__title p-gray p-mini">Частота вращения шпинделя, об/мин</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
-                  <div class="contrast__row">
+                  <div class="contrast__row different">
                       <div class="contrast__title p-gray p-mini">Число скоростей</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
-                  <div class="contrast__row">
+                  <div class="contrast__row different">
                       <div class="contrast__title p-gray p-mini">Крепление патрона</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Производитель</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
-                  <div class="contrast__row">
+                  <div class="contrast__row different">
                       <div class="contrast__title p-gray p-mini">Длина кабеля, м</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>3</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>4</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>3.5</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Частота вращения шпинделя, об/мин</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Число скоростей</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Крепление патрона</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Производитель</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>Интерскол</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Длина кабеля, м</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>3</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>4</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>3.5</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Частота вращения шпинделя, об/мин</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>0-1000</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Число скоростей</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
                   <div class="contrast__row">
                       <div class="contrast__title p-gray p-mini">Крепление патрона</div>
                       <div class="contrast__detals">
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="1">
+                              <p>Интерскол 1</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="2">
+                              <p>Интерскол 2</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="3">
+                              <p>Интерскол 3</p>
                           </div>
   
-                          <div class="contrast__value">
-                              <p>1/2</p>
+                          <div class="contrast__value" data-product-id="4">
+                              <p>Интерскол 4</p>
                           </div>
+
+                          <div class="contrast__value" data-product-id="5">
+                            <p>Интерскол 5</p>
+                        </div>
                       </div>
                   </div>
               </div>

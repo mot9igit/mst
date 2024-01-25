@@ -564,8 +564,9 @@ if(alldartSwiperSearch){
 
 // Слайдер сравнения
 
-var swipertree = new Swiper(".dartSwiperContrast", {
+var swiperContrast = new Swiper(".dartSwiperContrast", {
 	slidesPerView: 4,
+	watchSlidesProgress: true,
 	spaceBetween: 8,
 	navigation: {
 		nextEl: ".dart-contast-next",
@@ -1283,7 +1284,7 @@ if(rightMenuOrderToggleError){
 	}
 }
 
-const contrastSwiper = document.querySelector('.dart-swiper-contrast');
+const contrastSwiper = document.querySelector('.contrastSwiper');
 
 // Сравнение товаров (Скролл)
 window.addEventListener('scroll', function () {
@@ -1293,6 +1294,66 @@ window.addEventListener('scroll', function () {
 		contrastSwiper.classList.remove('sticky')
 	}
 })
+
+// Сравнение товаров (изменение данных)
+
+const swiperSlideVisible = document.querySelectorAll('.swiper-slide-visible')
+
+if(swiperSlideVisible){
+	for(let i = 0; i< swiperSlideVisible.length; i++){
+		const dataProductId = swiperSlideVisible[i].getAttribute('data-product-id');
+		if(dataProductId != null){
+			const contrastValue = document.querySelectorAll('.contrast__value[data-product-id="'+dataProductId+'"]');
+			for(let j = 0; j<contrastValue.length; j++){
+				contrastValue[j].classList.add('active');
+			}
+		}
+	}
+}
+
+swiperContrast.on('transitionEnd', (sw) => {
+
+	const contrastValueAll = document.querySelectorAll('.contrast__value');
+	if(contrastValueAll){
+		for(let i = 0; i<contrastValueAll.length; i++){
+			contrastValueAll[i].classList.remove('active')
+		}
+	}
+	
+	const swiperSlideVisible = document.querySelectorAll('.swiper-slide-visible')
+	if(swiperSlideVisible){
+		for(let i = 0; i< swiperSlideVisible.length; i++){
+			const dataProductId = swiperSlideVisible[i].getAttribute('data-product-id');
+			if(dataProductId != null){
+				const contrastValue = document.querySelectorAll('.contrast__value[data-product-id="'+dataProductId+'"]');
+				for(let j = 0; j<contrastValue.length; j++){
+					contrastValue[j].classList.add('active');
+				}
+			}
+		}
+	}
+});
+
+// Сравнение товаров (Кнопка только различающиеся)
+
+const contrastToggler = document.getElementById('contrast-toggler');
+if(contrastToggler){
+	contrastToggler.addEventListener('change', () => {
+		if(contrastToggler.checked){
+			const contrastDifferent = document.querySelectorAll('.contrast__row.different');
+
+			for(let i = 0; i< contrastDifferent.length; i++){
+				contrastDifferent[i].classList.add('hide');
+			}
+		}else{
+			const contrastDifferent = document.querySelectorAll('.contrast__row.different');
+
+			for(let i = 0; i< contrastDifferent.length; i++){
+				contrastDifferent[i].classList.remove('hide');
+			}
+		}
+	})
+}
 
 //Блок вопрос-ответ
 

@@ -38,6 +38,10 @@
     &__row{
         width: 100%;
         padding: 12px 24px;
+
+        &.different.hide{
+            display: none;
+        }
     }
 
     &__row:nth-child(2n - 1){
@@ -50,34 +54,47 @@
     }
 
     &__value{
-        width: calc(25% - 8px);
+        width: calc(25%);
+        display: none;
+
+        &.active{
+            display: block;
+        }
     }
 
     &__detals{
         display: flex;
-        justify-content: space-between;
+        // margin-right: 8px;
     }
 }
 
 .dart-swiper-contrast{
-
-    
     position: relative;
+}
+
+
+.contrastSwiper{
     &.sticky{
-        position: sticky;
-        top: 0;
-        background: var(--main-background-windows);
-        z-index: 1;
-        padding: 0 24px;
-        width: calc(100% + 48px);
-        transform: translateX(-24px);
+
+        .dart-swiper-contrast{
+            position: sticky;
+            top: 0;
+            background: var(--main-background-windows);
+            z-index: 1;
+            padding: 0 24px;
+            width: calc(100% + 48px);
+            transform: translateX(-24px);
+        }
 
         .dart-rating{
             margin-bottom: 0;
         }
 
-        .dartSwiperContrast{
+        .contast-category{
+            margin-top: 125px;
+        }
 
+        .dartSwiperContrast{
             &__slide{
                 margin: 24px 0;
             }
@@ -116,8 +133,6 @@
 }
 
 .dartSwiperContrast{
-
-    transition: all 0.5s;
 
     &__slide{
         &:hover{
