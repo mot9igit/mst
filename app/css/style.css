@@ -8851,6 +8851,7 @@ ol.def-section li + li {
 
 .def-section.faq {
   border-bottom: 1px solid var(--border-color);
+  margin-bottom: 32px;
 }
 
 .def-section.faq .faq__el {
@@ -8907,15 +8908,146 @@ ol.def-section li + li {
   border-top: 1px solid var(--border-color);
 }
 
-.def-section.contact .contact {
+.def-section.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+  margin-bottom: 40px;
 }
 
 .def-section.contact .contact__el {
+  position: relative;
   width: 100%;
+}
+
+.def-section.contact .contact__el img {
+  width: 100%;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.def-section.contact .contact__el:hover .contact__hover-info {
+  max-height: 100px;
+  margin-top: 16px;
+  padding-top: 16px;
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.def-section.contact .contact__info {
+  position: absolute;
+  bottom: 30px;
+  padding: 0 12px;
+}
+
+.def-section.contact .contact__info b {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+.def-section.contact .contact__info p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.def-section.contact .contact__hover-info {
+  max-height: 0px;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-top: 1px solid var(--border-color);
+}
+
+.def-section.map {
+  margin-bottom: 40px;
+}
+
+.def-section.map .map {
+  border-radius: 5px;
+  width: 100%;
+  height: 482px;
+  background-image: url("../img/home/menumap.png");
+}
+
+.def-section.map .map__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.def-section.map .map__el {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.def-section.map .map__el img {
+  width: 54px !important;
+  height: 54px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.def-section.map .map__el b {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.def-section.map .map__el p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.def-section.info {
+  width: calc(100% + 48px);
+  -webkit-transform: translateX(-24px);
+      -ms-transform: translateX(-24px);
+          transform: translateX(-24px);
+}
+
+.def-section.info .info__row {
+  padding: 12px 24px;
+}
+
+.def-section.info .info__row:nth-child(2n - 1) {
+  background: var(--btn-secondary-outline-background);
+}
+
+.def-section.info .info__title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--text-color-dop);
+}
+
+.def-section.info .info__value {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 8px;
 }
 
 .dartSwiperContrast__last {

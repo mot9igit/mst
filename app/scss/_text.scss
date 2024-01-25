@@ -160,6 +160,7 @@ ol.def-section{
 
 .def-section.faq{
     border-bottom: 1px solid var(--border-color);
+    margin-bottom: 32px;
     .faq{
         &__el{
             width: 100%;
@@ -209,11 +210,142 @@ ol.def-section{
 }
 
 .def-section.contact{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 40px;
+
     .contact{
-        display: flex;
-        gap: 8px;
+        &__el{
+            position: relative;
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: 100% !important;
+                object-fit: cover;
+            }
+
+            &:hover{
+                .contact{
+                    &__hover-info{
+                        max-height: 100px;
+                        margin-top: 16px;
+                        padding-top: 16px;
+                        opacity: 1;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+
+        &__info{
+            position: absolute;
+            bottom: 30px;
+            padding: 0 12px;
+
+            b{
+                color: #FFF;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 2px;
+            }
+
+            p{
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+
+        &__hover-info{
+            max-height: 0px;
+            opacity: 0;
+            transition: all 0.5s;
+            // margin-top: 16px;
+            // padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+    }
+}
+
+.def-section.map{
+    margin-bottom: 40px;
+    .map{
+        border-radius: 5px;
+        width: 100%;
+        height: 482px;
+
+        // Временно!
+        background-image: url('../img/home/menumap.png');
+
+        &__info{
+            display: flex;
+            margin-top: 40px;
+        }
+
         &__el{
             width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img{
+                width: 54px !important;
+                height: 54px !important;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            b{
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+            }
+
+            p{
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+    }
+
+
+}
+
+.def-section.info{
+    width: calc(100% + 48px);
+    transform: translateX(-24px);
+
+    .info{
+        &__row{
+            padding: 12px 24px;
+        }
+
+        &__row:nth-child(2n - 1){
+            background: var(--btn-secondary-outline-background);
+        }
+
+        &__title{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            color: var(--text-color-dop);
+        }
+
+        &__value{
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 8px;
         }
     }
 }
