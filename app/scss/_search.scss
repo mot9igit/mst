@@ -18,6 +18,7 @@
 
         img{
             width: 100%;
+            object-fit: cover;
         }
     }
 
@@ -102,16 +103,18 @@
 }
 
 .search-filters-mobile{
+
+    &__center{
+        display: flex;
+        align-items: center;
+    }
+
+
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
     display: none;
-
-    &__distance{
-        .d_icon-down-arrow{
-            font-size: 12px;
-        }
-    }
+    justify-content: flex-end;
 
     .d_icon-filtr{
         font-size: 24px;
@@ -226,4 +229,35 @@
     .search-filters-mobile{
         display: flex;
     }
+}
+
+// dart-link-all
+
+@media (max-width: $big-phones){
+    .dart-link-all{
+        display: none;
+    }
+
+    .mini-info-shop{
+        &__image{
+            width: 40px;
+            height: 40px;
+        }
+
+        &__text{
+            width: calc(100% - 52px);
+        }
+    }
+
+    .dartSwiperSearch__image{
+        height: 105px !important;
+    }
+
+    .dartSwiperSearch__text .dart-rating{
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: $phones){
+
 }

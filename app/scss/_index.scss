@@ -392,7 +392,7 @@
         text-align: center;
     }
 
-    display: flex;
+    display: none;
 
     &__left{
         width: 50%;
@@ -616,7 +616,13 @@
         }
     }
 
-    
+    .catalog-mobile{
+        display: flex;
+    }
+
+    .brand-catalog{
+        display: none !important;
+    }
 
 }
 
@@ -674,6 +680,7 @@
 			}
 		}
 	}
+
 
     .catalog-mobile__img{
         height: 212px;

@@ -1028,9 +1028,21 @@
                 <div class="sidebar__profile-letter">М</div>
                 <p>Максимов Максим</p>
             </div>
-            <a href="#" class="sidebar__bold link-no-style">
-                <i class="d_icon d_icon-basket"></i>
-                <p>История заказов</p>
+            <a href="/profile.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-profile"></i>
+                <p>Личные данные</p>
+            </a>
+            <a href="/profile_orders.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-order"></i>
+                <p>Заказы</p>
+            </a>
+            <a href="/profile_return_all.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-back"></i>
+                <p>Возвраты</p>
+            </a>
+            <a href="/profile_comment.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-comment"></i>
+                <p>Мои отзывы</p>
             </a>
             <a href="#" class="sidebar__bold link-no-style">
                 <i class="d_icon d_icon-logout"></i>
@@ -3593,9 +3605,9 @@
 </div>
 
     <main class="dart_main">
-      <section class="dart-section dart-overflov-unset mpt-0" >
-        <div class="dart_container mp-0">
-          <div class="dart-custom-grid grid-center">
+      <section class="dart-section dart-overflov-unset mptm-0" >
+        <div class="dart_container mpm-0">
+          <div class="dart-custom-grid grid-center custom-grid-profile">
             <div class="profile-menu">
     <div class="profile-menu__top">
         <!-- Нет аватарки -->
@@ -3614,9 +3626,14 @@
     </div>
 </div>
             <div class="d-col-profile">
-                <h1 class="h1-mini">Мои отзывы</h1>
+              <div class="profile-comment-null">
+                <div class="profile-title">
+                  <a href="#" class="link-no-style profile-title__return"><i class="d_icon d_icon-left-arrow"></i></a>
+                  <h1 class="h1-mini">Мои отзывы</h1>
+                </div>
                 <h3>Отзывов пока нет</h3>
                 <p class="p-mini p-gray">Здесь будут отображаться оставленные вами отзывы</p>
+              </div>
             </div>
           </div>
         </div>

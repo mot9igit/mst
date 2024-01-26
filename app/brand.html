@@ -1028,9 +1028,21 @@
                 <div class="sidebar__profile-letter">М</div>
                 <p>Максимов Максим</p>
             </div>
-            <a href="#" class="sidebar__bold link-no-style">
-                <i class="d_icon d_icon-basket"></i>
-                <p>История заказов</p>
+            <a href="/profile.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-profile"></i>
+                <p>Личные данные</p>
+            </a>
+            <a href="/profile_orders.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-order"></i>
+                <p>Заказы</p>
+            </a>
+            <a href="/profile_return_all.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-back"></i>
+                <p>Возвраты</p>
+            </a>
+            <a href="/profile_comment.html" class="sidebar__bold link-no-style">
+                <i class="d_icon d_icon-comment"></i>
+                <p>Мои отзывы</p>
             </a>
             <a href="#" class="sidebar__bold link-no-style">
                 <i class="d_icon d_icon-logout"></i>
@@ -3741,68 +3753,9 @@
 
                   </ul>
                 </div>
-                <div class="dart-catalog-menu-mobile dart-window">
-                  <div class="dart-input dart-input-search mb-3">
-                    <input type="text" placeholder="Найти во всех магазинах">
-                  </div>
-                  <div class="catalog-mobile">
-                    <div class="catalog-mobile__left">
-                      <div class="catalog-mobile__left-cont">
-                        <a href="#" class="catalog-mobile__big link-no-style">
-                          <div class="catalog-mobile__img">
-                            <img src="../img/menu/mobile/1.png" alt="">
-                          </div>
-                          <p>Электроинструмент</p>
-                        </a>
-                      </div>
-                      <div class="catalog-mobile__left-cont-small">
-                        <a href="#" class="catalog-mobile__small catalog-mobile__small-two link-no-style">
-                          <div class="catalog-mobile__img-small">
-                            <img src="../img/menu/mobile/2.png" alt="">
-                          </div>
-                          <p>Садовая техника</p>
-                        </a>
-  
-                        <a href="#" class="catalog-mobile__small catalog-mobile__small-two link-no-style">
-                          <div class="catalog-mobile__img-small">
-                            <img src="../img/menu/mobile/3.png" alt="">
-                          </div>
-                          <p>Измерительный инструмент</p>
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="catalog-mobile__right">
-                    
-                      <a href="#" class="catalog-mobile__small link-no-style">
-                        <div class="catalog-mobile__img-small">
-                          <img src="../img/menu/mobile/4.png" alt="">
-                        </div>
-                        <p>Расходные материалы</p>
-                      </a>
-
-                      <a href="#" class="catalog-mobile__small link-no-style">
-                        <div class="catalog-mobile__img-small">
-                          <img src="../img/menu/mobile/5.png" alt="">
-                        </div>
-                        <p>Бензотехника</p>
-                      </a>
-
-                      <a href="#" class="catalog-mobile__small link-no-style">
-                        <div class="catalog-mobile__img-small">
-                          <img src="../img/menu/mobile/6.png" alt="">
-                        </div>
-                        <p>Насосы</p>
-                      </a>
-
-                      <a href="#" class="catalog-mobile__small link-no-style">
-                        <div class="catalog-mobile__img-small">
-                          <img src="../img/menu/mobile/7.png" alt="">
-                        </div>
-                        <p>Пневматический инструмент</p>
-                      </a>
-
-                    </div>
+                <div class="dart-mobile-searsh">
+                  <div class="dart-input dart-input-search">
+                      <input type="text" placeholder="Найти во всех магазинах">
                   </div>
                 </div>
             </div>
@@ -3810,11 +3763,13 @@
               <div class="dart-home dart-window">
                 <div class="dart-home__title mb-3">
                   <h2>Интерскол</h2>
-                  <a class="dart-link-all" href="/promo.html">Все <i class="d_icon d_icon-right-arrow"></i></a>
                 </div>
                 <div class="d-col-main-swiper swipers-brand">
+                  <div class="brand-cover">
+                    <img src="../img/brand.jpg" alt="">
+                  </div>
                   <!-- d-col-xl-8 -->
-                  <div class="swiper brandPromoSwiper">
+                  <!-- <div class="swiper brandPromoSwiper">
                     <div class="swiper-wrapper">
                       <a href="#" class="swiper-slide promoSwiper__slide">
                         <p>Скидки и кешбэк</p>
@@ -3830,7 +3785,7 @@
                       </a>
                     </div>
                     <div class="swiper-pagination"></div>
-                  </div>
+                  </div> -->
                   <!-- d-col-xl-4 -->
                   <div class="brandPromoSwiperMiniContainer">
                     <div class="swiper brandPromoSwiperMini">
@@ -3927,7 +3882,7 @@
 
                 <h2 class="mb-3 mt-5">Каталог</h2>
 
-                <div class="dart-row">
+                <div class="dart-row brand-catalog">
                   <div class="d-col-xl-3 mb-3">
                     <a href="#" class="dart-card-category__elem link-no-style">
                       <b>Триммеры / бензокосы</b>
@@ -3977,27 +3932,86 @@
                     </a>
                   </div>
                 </div>
+                <div class="catalog-mobile">
+                  <div class="catalog-mobile__left">
+                    <div class="catalog-mobile__left-cont">
+                      <a href="#" class="catalog-mobile__big link-no-style">
+                        <div class="catalog-mobile__img">
+                          <img src="../img/menu/mobile/1.png" alt="">
+                        </div>
+                        <p>Электроинструмент</p>
+                      </a>
+                    </div>
+                    <div class="catalog-mobile__left-cont-small">
+                      <a href="#" class="catalog-mobile__small catalog-mobile__small-two link-no-style">
+                        <div class="catalog-mobile__img-small">
+                          <img src="../img/menu/mobile/2.png" alt="">
+                        </div>
+                        <p>Садовая техника</p>
+                      </a>
+
+                      <a href="#" class="catalog-mobile__small catalog-mobile__small-two link-no-style">
+                        <div class="catalog-mobile__img-small">
+                          <img src="../img/menu/mobile/3.png" alt="">
+                        </div>
+                        <p>Измерительный инструмент</p>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="catalog-mobile__right">
+                  
+                    <a href="#" class="catalog-mobile__small link-no-style">
+                      <div class="catalog-mobile__img-small">
+                        <img src="../img/menu/mobile/4.png" alt="">
+                      </div>
+                      <p>Расходные материалы</p>
+                    </a>
+
+                    <a href="#" class="catalog-mobile__small link-no-style">
+                      <div class="catalog-mobile__img-small">
+                        <img src="../img/menu/mobile/5.png" alt="">
+                      </div>
+                      <p>Бензотехника</p>
+                    </a>
+
+                    <a href="#" class="catalog-mobile__small link-no-style">
+                      <div class="catalog-mobile__img-small">
+                        <img src="../img/menu/mobile/6.png" alt="">
+                      </div>
+                      <p>Насосы</p>
+                    </a>
+
+                    <a href="#" class="catalog-mobile__small link-no-style">
+                      <div class="catalog-mobile__img-small">
+                        <img src="../img/menu/mobile/7.png" alt="">
+                      </div>
+                      <p>Пневматический инструмент</p>
+                    </a>
+
+                  </div>
+                </div>
 
                 <h2 class="mb-3 mt-5">О бренде</h2>
                 <p>Мы не обычный маркетплейс, а онлайн-витрина магазинов вашего города. На нашем сайте вы можете посмотреть какой товар есть в наличии в магазине и по какой цене не выходя из дома. Кроме этого, у нас вы можете увидеть какой товар поставщики могут привезти в магазин по заказ</p>
               
                 <div class="brand-top mt-5">
                   <div class="dart-row">
-                    <div class="d-col-xxl-4">
+                    <div class="d-col-xxl-4 d-col-xl-12 d-col-lg-4">
                       <div class="brand-top__el">
                         <img src="../img/test.svg" alt="">
                         <h3>Более 100 лет опыта</h3>
                         <p>Компания с 1915 года выпускает инструменты, садовую технику и аксессуары. Производства находятся в Японии, США, Великобритании, Китае, Германии и Румынии</p>
                       </div>
                     </div>
-                    <div class="d-col-xxl-4">
+                    <div class="d-col-xxl-4 d-col-xl-12 d-col-lg-4">
                       <div class="brand-top__el">
                         <img src="../img/test.svg" alt="">
                         <h3>Японский подход</h3>
                         <p>При разработке продукции учитываются факторы окружающей среды и экологические стандарты. Используются проверенные материалы, которые гарантируют долговечность</p>
                       </div>
                     </div>
-                    <div class="d-col-xxl-4">
+                    <div class="d-col-xxl-4 d-col-xl-12 d-col-lg-4">
                       <div class="brand-top__el">
                         <img src="../img/test.svg" alt="">
                         <h3>Легендарное качество</h3>

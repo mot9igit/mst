@@ -60,45 +60,45 @@ let swiper = new Swiper(".promoSwiper", {
 });
 
 // Свайпер Акции БРЕНД
-let swiperBrand = new Swiper(".brandPromoSwiper", {
-    parallax: true,
-    speed: 600,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    loop: true,
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false
-    },
-	breakpoints: {
-		0: {
-			slidesPerView: 1.05,
-			spaceBetween: 8
-		},
-		430: {
-			slidesPerView: 1.05,
-			spaceBetween: 8
-		},
-		600: {
-			slidesPerView: 1.1,
-			spaceBetween: 8
-		},
-		768: {
-			slidesPerView: 1.2,
-			spaceBetween: 8
-		},
-		991: {
-			slidesPerView: 1.3,
-			spaceBetween: 8
-		},
-		1200: {
-			slidesPerView: 1,
-			spaceBetween: 8
-		}
-	}
-});
+// let swiperBrand = new Swiper(".brandPromoSwiper", {
+//     parallax: true,
+//     speed: 600,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     loop: true,
+//     autoplay: {
+//         delay: 10000,
+//         disableOnInteraction: false
+//     },
+// 	breakpoints: {
+// 		0: {
+// 			slidesPerView: 1.05,
+// 			spaceBetween: 8
+// 		},
+// 		430: {
+// 			slidesPerView: 1.05,
+// 			spaceBetween: 8
+// 		},
+// 		600: {
+// 			slidesPerView: 1.1,
+// 			spaceBetween: 8
+// 		},
+// 		768: {
+// 			slidesPerView: 1.2,
+// 			spaceBetween: 8
+// 		},
+// 		991: {
+// 			slidesPerView: 1.3,
+// 			spaceBetween: 8
+// 		},
+// 		1200: {
+// 			slidesPerView: 1,
+// 			spaceBetween: 8
+// 		}
+// 	}
+// });
 
 
 //Свайпер акции сбоку
@@ -166,66 +166,35 @@ var swipertwo = new Swiper(".promoSwiperMini", {
 });
 
 var swipertwo = new Swiper(".brandPromoSwiperMini", {
-    grid: {
-        rows: 1,
-    },
-    slidesPerView: 4.5,
     spaceBetween: 8,
     loop: true,
     navigation: {
       nextEl: ".swiper-mini-next",
       prevEl: ".swiper-mini-prev",
     },
-	// breakpoints: {
-	// 	0: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 2,
-	// 	},
-	// 	430: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 2.5,
-	// 	},
-	// 	600: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 3.5,
-	// 	},
-	// 	768: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 5,
-	// 	},
-	// 	993: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 5,
-	// 	},
-	// 	1000: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 4.5,
-	// 	},
-	// 	1400: {
-	// 		grid: {
-	// 			rows: 1,
-	// 		},
-	// 		slidesPerView: 4,
-	// 	},
-	// 	1601: {
-	// 		grid: {
-	// 			rows: 2,
-	// 		},
-	// 		slidesPerView: 2,
-	// 	}
-	// }
+	breakpoints: {
+		0: {
+			slidesPerView: 1.3,
+		},
+		430: {
+			slidesPerView: 2,
+		},
+		600: {
+			slidesPerView: 3,
+		},
+		768: {
+			slidesPerView: 4,
+		},
+		1000: {
+			slidesPerView: 3.5,
+		},
+		1200: {
+			slidesPerView: 3.5,
+		},
+		1400: {
+			slidesPerView: 4,
+		}
+	}
 });
 
 //Свайпер новинки
@@ -252,7 +221,7 @@ var swipertree = new Swiper(".dartSwiperNew", {
 		991: {
 			slidesPerView: 5.6,
 		},
-		1200: {
+		1201: {
 			slidesPerView: 3.5,
 		},
 		1400: {
@@ -334,6 +303,14 @@ if(swiperProfileComments){
 			navigation: {
 				nextEl: ".swiper-mycomment-next-" + (i+1),
 				prevEl: ".swiper-mycomment-prev-"+ (i+1),
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 4,
+				},
+				601: {
+					slidesPerView: 6,
+				}
 			}
 		});
     }
@@ -528,10 +505,10 @@ if(alldartSwiperSearch){
 			},
 			breakpoints: {
 				0: {
-					slidesPerView: 1.5,
+					slidesPerView: 2,
 				},
 				410: {
-					slidesPerView: 2,
+					slidesPerView: 2.5,
 				},
 				600: {
 					slidesPerView: 3,
