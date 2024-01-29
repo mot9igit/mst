@@ -26,6 +26,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.d_icon-play:before {
+  content: "\e922";
+}
+
 .d_icon-clip:before {
   content: "\e921";
 }

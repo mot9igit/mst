@@ -197,6 +197,7 @@ var swipertwo = new Swiper(".brandPromoSwiperMini", {
 	}
 });
 
+
 //Свайпер новинки
 var swipertree = new Swiper(".dartSwiperNew", {
     slidesPerView: 5,
@@ -284,13 +285,87 @@ if(swiperFeedbackProduct){
 			navigation: {
 				nextEl: ".swiper-feedback-next-" + (i+1),
 				prevEl: ".swiper-feedback-prev-"+ (i+1),
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 5.2,
+				},
+				430: {
+					slidesPerView: 6,
+				},
+				600: {
+					slidesPerView: 6.5,
+				},
+				768: {
+					slidesPerView: 8,
+				},
+				991: {
+					slidesPerView: 9,
+				}
 			}
+
+		});
+    }
+}
+
+
+//Текстовая страница (Фото)
+const dartPhotoGalery = document.querySelectorAll('.dartPhotoGalery');
+const dartVideoGalery = document.querySelectorAll('.dartVideoGalery');
+
+if(dartPhotoGalery){
+	for (let i = 0; i < dartPhotoGalery.length; i++) {
+       //Свайпер новинки
+		var swipertree = new Swiper(dartPhotoGalery[i], {
+			slidesPerView: 3,
+			spaceBetween: 12,
+			navigation: {
+				nextEl: ".swiper-photo-next-" + (i+1),
+				prevEl: ".swiper-photo-prev-"+ (i+1),
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.2,
+				},
+				600: {
+					slidesPerView: 2.5,
+				},
+				991: {
+					slidesPerView: 3,
+				}
+			}
+
+		});
+    }
+}
+
+if(dartVideoGalery){
+	for (let i = 0; i < dartVideoGalery.length; i++) {
+       //Свайпер новинки
+		var swipertree = new Swiper(dartVideoGalery[i], {
+			slidesPerView: 3,
+			spaceBetween: 12,
+			navigation: {
+				nextEl: ".swiper-video-next-" + (i+1),
+				prevEl: ".swiper-video-prev-"+ (i+1),
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.2,
+				},
+				600: {
+					slidesPerView: 2,
+				},
+				991: {
+					slidesPerView: 3,
+				}
+			}
+
 		});
     }
 }
 
 // Свайпер в профиле
-
 const swiperProfileComments = document.querySelectorAll('.swiperProfileComments');
 
 if(swiperProfileComments){
@@ -337,6 +412,17 @@ var mySwiperProduct = new Swiper(".mySwiperProduct", {
 	  swiper: mySwiperProduct,
 	},
   });
+
+// Карточка товара (Мобилка)
+var mySwiperProductMobile = new Swiper(".mySwiperProductMobile", {
+	loop: true,
+	spaceBetween: 8,
+	slidesPerView: 1,
+	pagination: {
+        el: ".swiper-pagination",
+    },
+	watchSlidesProgress: true,
+});
 
 const swiperDateOrder = document.querySelectorAll('.swiperDateOrder');
 if(swiperDateOrder){
@@ -549,38 +635,23 @@ var swiperContrast = new Swiper(".dartSwiperContrast", {
 		nextEl: ".dart-contast-next",
 		prevEl: ".dart-contast-prev",
 	},
-	// breakpoints: {
-	// 	0: {
-	// 		slidesPerView: 1.5,
-	// 	},
-	// 	410: {
-	// 		slidesPerView: 2,
-	// 	},
-	// 	600: {
-	// 		slidesPerView: 3,
-	// 	},
-	// 	800: {
-	// 		slidesPerView: 4,
-	// 	},
-	// 	1000: {
-	// 		slidesPerView: 5,
-	// 	},
-	// 	1200: {
-	// 		slidesPerView: 3,
-	// 	},
-	// 	1350: {
-	// 		slidesPerView: 3.5,
-	// 	},
-	// 	1450: {
-	// 		slidesPerView: 4,
-	// 	},
-	// 	1700: {
-	// 		slidesPerView: 4.5,
-	// 	},
-	// 	1780: {
-	// 		slidesPerView: 5,
-	// 	}
-	// }
+	breakpoints: {
+		0: {
+			slidesPerView: 2,
+		},
+		500: {
+			slidesPerView: 3,
+		},
+		800: {
+			slidesPerView: 4,
+		},
+		1201: {
+			slidesPerView: 3,
+		},
+		1400: {
+			slidesPerView: 4,
+		}
+	}
 });
 
 //Открытие менюшки
@@ -1263,14 +1334,15 @@ if(rightMenuOrderToggleError){
 
 const contrastSwiper = document.querySelector('.contrastSwiper');
 
-// Сравнение товаров (Скролл)
-window.addEventListener('scroll', function () {
-	if(window.scrollY > 320){
-		contrastSwiper.classList.add('sticky')
-	}else{
-		contrastSwiper.classList.remove('sticky')
-	}
-})
+if(contrastSwiper){
+	window.addEventListener('scroll', function () {
+		if(window.scrollY > 320){
+			contrastSwiper.classList.add('sticky')
+		}else{
+			contrastSwiper.classList.remove('sticky')
+		}
+	})
+}
 
 // Сравнение товаров (изменение данных)
 
@@ -1349,4 +1421,25 @@ if(faqQuest){
 			}
 		})
 	}
+}
+
+//Продукт (характеристики) на мобилке
+
+const propertyMobile = document.querySelector('.property-mobile');
+const productProperty = document.querySelector('.product-property');
+let isPropertyActive = false;
+
+if(productProperty && propertyMobile){
+	propertyMobile.addEventListener('click', () => {
+
+		if (isPropertyActive) {
+			productProperty.style.maxHeight = "120px";
+			propertyMobile.innerHTML = `Полные характеристики <i class="d_icon d_icon-right-arrow"></i>`
+			isPropertyActive = false;
+		}else {
+			productProperty.style.maxHeight = productProperty.scrollHeight + "px";
+			propertyMobile.innerHTML = `Скрыть полные характеристики <i class="d_icon d_icon-right-arrow"></i>`
+			isPropertyActive = true;
+		}
+	})
 }

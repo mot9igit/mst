@@ -78,6 +78,7 @@
 
         .dart-swiper-contrast{
             position: sticky;
+            overflow: hidden;
             top: 0;
             background: var(--main-background-windows);
             z-index: 1;
@@ -91,7 +92,7 @@
         }
 
         .contast-category{
-            margin-top: 125px;
+            margin-top: 155px;
         }
 
         .dartSwiperContrast{
@@ -230,4 +231,140 @@
             }
         }
     }
+}
+
+@media (max-width: $desktop){
+   
+}
+
+@media (max-width: 1600px){
+    
+    .contrastSwiper.sticky{
+        .dartSwiperContrast__sticky{
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            b{
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px){
+    .contrast__value{
+        width: 33.33%;
+    }
+
+    .contrastSwiper.sticky{
+        .dartSwiperSearch__buttons{
+            .dart-btn-secondary{
+                padding: 10px 8px;
+                width: fit-content;
+            }
+        }
+    }
+
+    .contrastSwiper.sticky .dartSwiperContrast__sticky{
+        align-items: flex-start
+    }
+
+    .dartSwiperSearch__text{
+        padding: 0;
+        p{
+            font-size: 12px;
+        }
+    }
+
+    .contrastSwiper.sticky {
+        .dartSwiperSearch__image{
+            width: 50px !important;
+            height: 50px !important;
+        }
+
+        .dartSwiperSearch__text p{
+            padding-right: 30px;
+        }
+    }
+
+    .contrastSwiper.sticky .dartSwiperContrast__slide{
+        margin: 16px 0;
+    }
+}
+
+
+@media (max-width: $small-desktop){
+    .contrast__value{
+        width: 25%;
+    }
+
+    .contrastSwiper.sticky .dartSwiperContrast__sticky{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        b{
+            margin-bottom: 0px;
+        }
+    }    
+}
+
+@media (max-width: 800px){
+    .contrast__value{
+        width: 33.33%;
+    }
+
+    .contast-category__el{
+        padding: 8px 12px;
+        box-shadow: none;
+        white-space: nowrap;
+        border: 1px solid var(--border-color);
+        border-radius: 5px;
+    }
+
+    .contast-category{
+        width: 100%;
+        overflow-x: auto;
+
+
+        &::-webkit-scrollbar {
+			height: 0px;
+			background-color: #e0e0e0; /* blue */
+	   	}
+    }
+
+    .contrastSwiper.sticky{
+        .dartSwiperContrast__sticky{
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            b{
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .contrast__value{
+        width: 50%;
+    }
+}
+
+
+
+@media (max-width: $small-tablets){
+    
+    
+}
+
+@media (max-width: $big-phones){
+    .contrast__nav{
+        margin-top: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: $phones){
+
 }

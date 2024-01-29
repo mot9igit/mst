@@ -3,7 +3,7 @@ h1.def-section{
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 h2.def-section{
     font-size: 28px;
@@ -213,11 +213,26 @@ ol.def-section{
     display: flex;
     gap: 8px;
     margin-bottom: 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+
+    &::-webkit-scrollbar {
+        height: 5px;
+        background-color: #e0e0e0; /* blue */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #b4b4b4; /* green */
+        border-radius: 9em;
+    }
 
     .contact{
         &__el{
             position: relative;
             width: 100%;
+            min-width: 180px;
+            min-height: 230px
 
             img{
                 width: 100%;
@@ -348,4 +363,184 @@ ol.def-section{
             margin-top: 8px;
         }
     }
+}
+
+.def-section.two-columns{
+    display: flex;
+    gap: 4%;
+
+    .two-columns{
+        &__el{
+            width: 48%;
+
+            img{
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &.image{
+        .two-columns{
+            &__el{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+* + .def-section.two-columns{
+    margin-top: 30px;
+}
+
+.def-section.image-full{
+    img{
+        width: 100%;
+    }
+}
+
+* + .def-section.image-full{
+    margin-top: 30px;
+}
+
+.dartPhotoGalery{
+    height: 450px;
+    &__slide{
+
+        img{
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+}
+
+.def-section.photoGalery{
+    position: relative;
+}
+
+* + .def-section.photoGalery{
+    margin-top: 30px;
+}
+
+.def-section.dartVideoGalery{
+    position: relative;
+}
+
+* + .def-section.dartVideoGalery{
+    margin-top: 30px;
+}
+
+.dartVideoGalery{
+    &__slide{
+        position: relative;
+
+        &::before{
+            transition: all 0.3s;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid #F8F8F8;
+            content: "\e922";
+            font-family: 'icomoon' !important;
+            position: absolute;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F8F8F8;
+        }
+
+        &:hover::before{
+            background: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            color: #F8F8F8;
+        }
+    }
+}
+
+.def-section.form{
+    max-width: 672px;
+    .dart-input + .dart-input{
+        margin-top: 16px;
+    }
+
+    .dart-btn-primary{
+        margin-top: 24px;
+    }
+}
+
+* + .def-section.form{
+    margin-top: 30px;
+}
+
+
+.def-section.h1{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+
+    .d_icon-left-arrow{
+        display: none;
+    }
+}
+
+@media (max-width: $desktop){
+ 
+}
+
+@media (max-width: $small-desktop){
+    .def-section.quote{
+        width: calc(100% + 40px);
+    }
+
+    .def-section.info{
+        width: calc(100% + 40px);
+
+    }
+}
+
+@media (max-width: $tablets){
+    .def-section.map .map__info{
+        margin-top: 32px;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+
+@media (max-width: $small-tablets){
+
+
+}
+
+@media (max-width: $big-phones){
+    .def-section.two-columns{
+        flex-direction: column;
+        gap: 12px;
+
+        .two-columns__el{
+            width: 100%;
+        }   
+    }
+
+    .def-section.h1{
+        h1{
+            text-align: center;
+            width: 100%;
+            padding-right: 20px;
+        }
+
+        .d_icon-left-arrow{
+            display: flex;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: $phones){
+
 }
