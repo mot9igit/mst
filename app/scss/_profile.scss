@@ -445,6 +445,7 @@
         font-size: 24px;
         color: var(--text-color-dop);
         cursor: pointer;
+        z-index: 3;
 
         &.show{
             .profile-my-comment__actions{

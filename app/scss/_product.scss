@@ -9,7 +9,13 @@
 
     img{
         width: 95px;
+        border-radius: 5px;
     }
+}
+
+.swiper-product-next,
+.swiper-product-prev{
+    top: calc(50% - 65px) !important;
 }
 
 .product-speed-info{
