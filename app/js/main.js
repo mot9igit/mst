@@ -1074,6 +1074,12 @@ if(dartModalTogglers){
 	}
 }
 
+function closeModalDmRating(){
+	if(document.getElementById("dm-rating")){
+		document.getElementById("dm-rating").classList.remove('show');
+	}
+}
+
 //Закрытие модалок
 
 const closeDartModal = document.querySelectorAll('.dart-modal');
