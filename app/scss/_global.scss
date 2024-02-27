@@ -1248,6 +1248,8 @@ ul{
 		opacity: 0;
 		user-select: none;
 	}
+
+	
 }
 
 .change-city.show{
@@ -2539,6 +2541,15 @@ ul{
 			}
 		}
 	}
+
+	.dart-btn-icon-list{
+		p{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			max-width: 100px;
+		}
+	}
 }
 
 
@@ -2978,6 +2989,10 @@ ul{
 			display: flex;
 			align-items: center;
 			gap: 8px;
+
+			span{
+				max-width: 250px;
+			}
 		}
 
 		.d_icon-down-arrow{
@@ -2993,11 +3008,19 @@ ul{
 		align-items: flex-start;
 
 		img{
+<<<<<<< Updated upstream
 			width: 40px;
 			height: 40px !important;
 			object-fit: contain;
 			border: 1px solid var(--border-color);
 			border-radius: 50%;
+=======
+			width: 54px;
+			height: 54px !important;
+			border-radius: 50%;
+			border: 1px solid var(--border-color);
+			object-fit: cover;
+>>>>>>> Stashed changes
 		}
 	}
 
@@ -3015,6 +3038,11 @@ ul{
 		color: var(--text-color-dop);
 	}
 }
+
+.link-no-link{
+	text-decoration: none;
+}
+
 
 .d-col-basket{
 	overflow: hidden;
