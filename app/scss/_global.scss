@@ -1259,6 +1259,7 @@ ul{
 
 // FOOTER
 
+
 .dart-topfooter{
 	padding: 40px 0;
 	border-top: 1px solid var(--border-color);
@@ -1462,6 +1463,7 @@ ul{
     border-radius: 5px;
     padding: 18px;
     background: var(--main-background-windows);
+	margin-bottom: 10px;
 
     ul{
         padding: 0;
@@ -2533,6 +2535,7 @@ ul{
 				width: 600px;
 				position: absolute;
 				transition: width .4s;
+				top: -25px;
 			}
 		}
 	}
@@ -2988,6 +2991,14 @@ ul{
 		display: flex;
 		justify-content: space-between;	
 		align-items: flex-start;
+
+		img{
+			width: 40px;
+			height: 40px !important;
+			object-fit: contain;
+			border: 1px solid var(--border-color);
+			border-radius: 50%;
+		}
 	}
 
 	&__chart{
@@ -3079,6 +3090,17 @@ ul{
 			align-items: center;
 			justify-content: space-around;
 
+			a{
+				text-decoration: none;
+				line-height: 1.1;
+				width: calc(100% - 24px);
+				margin-bottom: 8px;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 18px;
+			}
+
 			p{
 				font-size: 14px;
 				width: auto;
@@ -3101,6 +3123,7 @@ ul{
 		&__card{
 			display: flex;
 			gap: 8px;
+			margin-bottom: 20px;
 		}
 
 		&__img{
@@ -3149,6 +3172,11 @@ ul{
     border-radius: 5px;
     background: var(--btn-secondary-outline-background);
 	// background: #F29D61;
+
+	form{
+		display: flex;
+    	align-items: center;
+	}
 
 
 	&__counter{
@@ -3232,11 +3260,13 @@ ul{
 
 	&__el{
 		list-style: none;
-		padding: 12px 16px;
+		padding: 12px 16px !important;
 		transition: 0.4s;
 		line-height: 1;
 		text-decoration: none;
 		cursor: pointer;
+		width: 100%;
+		display: block;
 
 
 		&:hover{
@@ -3251,6 +3281,12 @@ ul{
 		max-height: 0px;
 		transition: all 0.7s;
 		overflow: hidden;
+
+		.dart-menu-category{
+			margin-bottom: 0 !important;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 	}
 
 	&__category{
@@ -3342,6 +3378,14 @@ ul{
 		display: flex;
 		align-items: center;
 		gap: 8px;
+
+		img{
+			width: 40px;
+			height: 40px !important;
+			object-fit: contain;
+			border: 1px solid var(--border-color);
+			border-radius: 50%;
+		}
 
 		&-mt{
 			margin-top: 20px;
@@ -3567,6 +3611,11 @@ ul{
 		display: flex;
 
 		p{
+			width: calc(100% - 24px);
+			line-height: 1.2;
+		}
+
+		a:not(.btn-close){
 			width: calc(100% - 24px);
 			line-height: 1.2;
 		}
@@ -4264,7 +4313,51 @@ ul{
 	.d-col-content-mt-0{
 		padding-top: 0 !important;
 	}
+
+	.dart-order{
+		&__content{
+			width: 600px;
+			padding: 32px;
+		}
+
+		&__inputs-container{
+			height: 100%;
+			overflow: unset;
+			height: fit-content;
+		}
+
+		&__container{
+    		height: calc(100% - 240px);
+			overflow-y: auto;
+			padding-bottom: 0;
+			flex-direction: column-reverse;
+		}
+
+		&__left{
+			width: 100%;
+			overflow: unset;
+			padding-bottom: 20px;
+		}
+
+		&__right{
+			width: 100%;
+			height: fit-content;
+		}
+
+		&__oplata{
+			position: absolute;
+			bottom: 20px;
+			width: calc(100% - 64px);
+			background: #FFF;
+			z-index: 11;
+		}
+
+		&__delivery-methods .dart-btn-radio-mini label{
+			height: 100%;
+		}
+	}	
 }
+
 
 @media (max-width: $tablets){
 	h2, .h2{
@@ -4410,6 +4503,8 @@ ul{
 			}
 		}	
 	}
+
+
 	
 }
 
@@ -4450,6 +4545,48 @@ ul{
 }
 
 @media (max-width: $big-phones){
+
+	.dart-order{
+		&__content{
+			width: 100%;
+			padding: 20px;
+		}
+
+		&__oplata{
+			width: calc(100% - 40px);
+		}
+
+		&__container{
+			gap: 16px;
+		}
+
+		.companyRadio{
+			flex-direction: column;
+			align-items: flex-start;
+
+			p{
+				padding-left: 24px;
+    			margin-top: 6px;
+			}
+
+			label{
+				user-select: none;
+				white-space: nowrap;
+			}
+		}
+
+		.dart-btn-choice p{
+			font-size: 14px;
+		}
+
+		.dart-procuct-cart{
+			align-items: flex-start;
+
+			&__img{
+				width: 60px;
+			}
+		}
+	}
 	
 
 	#choice_city{
