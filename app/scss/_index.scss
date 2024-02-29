@@ -34,24 +34,28 @@
 
 
 .d-col-promoSwiperMini{
-    height: 332px;
-    width: 332px;
-    margin-left: 8px;
+    // max-height: 160px;
+    width: 100%;
+    // margin-left: 8px;
+    margin-top: 8px;
     position: relative;
 }
 
+
 .promoSwiper{
-    // height: 332px;
-    width: calc(100% - 340px);
+    // max-height: 350px;
+    //height: 400px;
+    width: 100%;
     border-radius: 5px;
 
     &__slide{
         position: relative;
 
         img{
-            width: 100%;
-            height: 100% !important;
-            object-fit: cover;
+            width: 100% !important;
+            border-radius: 5px;
+            // max-height: 350px;
+            object-fit: contain;
         }
 
         p{
@@ -70,6 +74,7 @@
 .promoSwiperMini{
     width: 100%;
     height: 100%;
+    // max-height: 160px;
 
     &__slide{
         border-radius: 5px;
@@ -80,6 +85,7 @@
         img{
             width: 100%;
             height: 100% !important;
+            // max-height: 160px;
             object-fit: cover;
         }
 
@@ -168,6 +174,45 @@
             line-height: 20px;
             color: #282828;
             top: 0;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+
+.dartSwiperSezon{
+    &__slide{
+        position: relative;
+
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+.dartSwiperIdea{
+    &__slide{
+        position: relative;
+
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+.dartSwiperEveryDay{
+    &__slide{
+        position: relative;
+
+        img{
+            width: 100%;
+            border-radius: 8px;
         }
     }
 }
@@ -359,12 +404,12 @@
 }
 
 .d-col-content{
-    width: calc(100% - calc(287px + 442px));
+    width: calc(100% - calc(287px + 350px));
     padding: 0 24px;
 }
 
 .d-col-map{
-    width: 442px;
+    width: 350px;
     height: 100%;
     top: 8px;
     position: sticky;
@@ -388,7 +433,10 @@
 }
 
 .d-col-main-swiper{
-    display: flex;
+    width: 100%;
+    height: 100%;
+//     display: flex;
+//     flex-direction: column;
 }
 
 .catalog-mobile{
@@ -543,6 +591,10 @@
         max-width: 237px;
         height: 100%;
     }
+
+    .menu-catalog-button{
+        width: 237px !important;
+    }
     
     .d-col-content{
         width: calc(100% - calc(237px + 324px));
@@ -556,6 +608,10 @@
 }
 
 @media (max-width: $small-desktop){
+
+    .menu-catalog-button{
+        display: none !important;
+    }
 
     .dart-window{
         border-radius: 15px;

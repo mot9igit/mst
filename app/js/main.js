@@ -110,9 +110,9 @@ let swiper = new Swiper(".promoSwiper", {
 
 //Свайпер акции сбоку
 var swipertwo = new Swiper(".promoSwiperMini", {
-    grid: {
-        rows: 2,
-    },
+    // grid: {
+    //     rows: 2,
+    // },
     slidesPerView: 2,
     spaceBetween: 8,
     loop: true,
@@ -122,52 +122,31 @@ var swipertwo = new Swiper(".promoSwiperMini", {
     },
 	breakpoints: {
 		0: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 2,
+			slidesPerView: 1.8,
 		},
 		430: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 2.5,
+			slidesPerView: 2.1,
 		},
 		600: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 3.5,
+			slidesPerView: 2.5,
 		},
 		768: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 5,
+			slidesPerView: 3.8,
 		},
 		993: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 5,
+			slidesPerView: 3.5,
 		},
 		1000: {
-			grid: {
-				rows: 1,
-			},
 			slidesPerView: 4.5,
 		},
+		1201: {
+			slidesPerView: 2.3,
+		},
 		1400: {
-			grid: {
-				rows: 1,
-			},
-			slidesPerView: 4,
+			slidesPerView: 3.5,
 		},
 		1601: {
-			grid: {
-				rows: 2,
-			},
-			slidesPerView: 2,
+			slidesPerView: 3.5,
 		}
 	}
 });
@@ -240,6 +219,123 @@ var swipertree = new Swiper(".dartSwiperNew", {
 		}
 	}
 });
+
+//Свайпер готовимся к сезону
+var swipertree = new Swiper(".dartSwiperSezon", {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-sezon-next",
+        prevEl: ".swiper-sezon-prev",
+    },
+	breakpoints: {
+		0: {
+			slidesPerView: 2,
+		},
+		430: {
+			slidesPerView: 2.8,
+		},
+		600: {
+			slidesPerView: 3.6,
+		},
+		768: {
+			slidesPerView: 4,
+		},
+		991: {
+			slidesPerView: 5,
+		},
+		1201: {
+			slidesPerView: 3,
+		},
+		1400: {
+			slidesPerView: 4.3,
+		},
+		1800: {
+			slidesPerView: 5,
+		}
+	}
+});
+
+//Идеи для подарков
+var swipertree = new Swiper(".dartSwiperIdea", {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-idea-next",
+        prevEl: ".swiper-idea-prev",
+    },
+	breakpoints: {
+		0: {
+			slidesPerView: 1.9,
+		},
+		430: {
+			slidesPerView: 2.8,
+		},
+		600: {
+			slidesPerView: 3.6,
+		},
+		768: {
+			slidesPerView: 4.6,
+		},
+		991: {
+			slidesPerView: 5.6,
+		},
+		1201: {
+			slidesPerView: 3.5,
+		},
+		1400: {
+			slidesPerView: 4.5,
+		},
+		1800: {
+			slidesPerView: 5.5,
+		}
+	}
+});
+
+//На каждый день
+var swipertree = new Swiper(".dartSwiperEveryDay", {
+    slidesPerView: 5,
+    spaceBetween: 8,
+    navigation: {
+        nextEl: ".swiper-idea-next",
+        prevEl: ".swiper-idea-prev",
+    },
+	breakpoints: {
+		0: {
+			slidesPerView: 1.5,
+		},
+		430: {
+			slidesPerView: 2.2,
+		},
+		600: {
+			slidesPerView: 3,
+		},
+		768: {
+			slidesPerView: 3.6,
+		},
+		991: {
+			slidesPerView: 4,
+		},
+		1201: {
+			slidesPerView: 3,
+		},
+		1400: {
+			slidesPerView: 3.5,
+		},
+		1800: {
+			slidesPerView: 4,
+		}
+	}
+});
+
+const menuCatalogButton = document.querySelector('.menu-catalog-button');
+
+if(menuCatalogButton){
+	menuCatalogButton.addEventListener('click', () => {
+		menuCatalogButton.parentElement.classList.toggle('menuShow');
+	})
+}
+
 
 //Свайпер производители
 var swipertree = new Swiper(".dartSwiperManufacturer", {
@@ -631,7 +727,7 @@ if(alldartSwiperSearch){
 				1000: {
 					slidesPerView: 5,
 				},
-				1200: {
+				1201: {
 					slidesPerView: 3,
 				},
 				1350: {
@@ -1451,17 +1547,7 @@ if(rightMenuOrderToggleError){
 	}
 }
 
-const contrastSwiper = document.querySelector('.contrastSwiper');
 
-if(contrastSwiper){
-	window.addEventListener('scroll', function () {
-		if(window.scrollY > 320){
-			contrastSwiper.classList.add('sticky')
-		}else{
-			contrastSwiper.classList.remove('sticky')
-		}
-	})
-}
 
 // Сравнение товаров (изменение данных)
 
@@ -1600,4 +1686,31 @@ if(modalSortClose){
 			modalSortClose[i].parentNode.classList.remove('show');
 		})
 	}
+}
+
+let isVissible = true;
+const contrastSwiper = document.querySelector('.contrastSwiper');
+
+const callback = () => {
+	if(contrastSwiper){
+		if(isVissible){
+			contrastSwiper.classList.remove('sticky')
+			isVissible = false;
+		}else{
+			contrastSwiper.classList.add('sticky')
+			isVissible = true;
+		}
+	}
+	console.log("Виден")
+}
+
+const options = {
+  threshold: 0.5 // 1 – полная видимость элемента, 0.5 – половина и т.д.
+}
+const observer = new IntersectionObserver(callback, options);
+
+const target = document.querySelector('.contrast__nav h3')
+
+if(target){
+	observer.observe(target)
 }

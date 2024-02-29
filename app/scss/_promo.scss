@@ -33,20 +33,27 @@
 
     img{
         width: 40%;
+        object-fit: contain;
     }
 
     &__description{
         width: 60%;
+    }
+    
+    .h1-mini{
+        padding-right: 40px;
+        line-height: 1.2;
     }
 
     &__details{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: calc(100% - 48px);
+        height: calc(100% - 74px);
     }
 
     &__el{
+        margin-top: 10px;
         font-size: 14px;
         color: var(--text-color-dop);
 

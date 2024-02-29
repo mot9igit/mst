@@ -73,6 +73,7 @@
     }
 
     &__slide{
+        background: var(--main-background-windows);
         border-radius: 5px !important;
 
         img{
@@ -246,6 +247,7 @@
         margin: 0;
         p{
             margin-bottom: 6px;
+            font-size: 14px;
 
             span{
                 cursor: pointer;

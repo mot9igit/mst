@@ -2139,12 +2139,16 @@ ul{
 	}
 
 	&__el{
+
 		display: flex;
 		justify-content: space-between;
-		padding-right: 20px;
 		transition: all 0.5s;
 		cursor: pointer;
-		margin-bottom: 40px;
+		padding: 24px;
+
+		&.active{
+			background: var(--btn-secondary-outline-background);
+		}
 
 		img{
 			transition: all 0.3s;
@@ -2171,6 +2175,10 @@ ul{
 		.dart-btn-primary{
 			width: 100%;
 		}
+	}
+
+	&__info{
+		width: calc(100% - 40px);
 	}
 }
 
@@ -3008,19 +3016,11 @@ ul{
 		align-items: flex-start;
 
 		img{
-<<<<<<< Updated upstream
-			width: 40px;
-			height: 40px !important;
-			object-fit: contain;
-			border: 1px solid var(--border-color);
-			border-radius: 50%;
-=======
 			width: 54px;
 			height: 54px !important;
 			border-radius: 50%;
 			border: 1px solid var(--border-color);
 			object-fit: cover;
->>>>>>> Stashed changes
 		}
 	}
 
@@ -3182,6 +3182,10 @@ ul{
 			align-items: center;
 			justify-content: space-between
 		}
+
+		&__info{
+			width: calc(100% - 60px);
+		}
 	}
 }
 
@@ -3223,6 +3227,27 @@ ul{
 		border: none;
 		text-align: center;
 	}
+}
+
+.dart-menu-category__el{
+	color: var(--secondary-color) !important;
+}
+
+.dart-menu-category{
+	color: #5C5C5C !important;
+}
+
+.breadcrumb-item{
+	color: var(--text-color-dop) !important;
+	margin-bottom: 20px !important;
+}
+
+.breadcrumb a{
+	color: var(--text-color-dop) !important;
+}
+
+.d-col-catalog-el{
+	width: 20%;
 }
 
 .breadcrumb{
@@ -3369,7 +3394,7 @@ ul{
 		width: 100%;
 		gap: 32px;
 		height: -webkit-fill-available;
-		padding-bottom: 60px;
+		// padding-bottom: 60px;
 	}
 
 	&__left{
@@ -3394,6 +3419,22 @@ ul{
 
 	&__right{
 		width: 50%;
+		position: relative;
+
+		form{
+			height: calc(100% - 202px);
+			overflow-y: auto;
+
+			&::-webkit-scrollbar {
+				width: 8px;
+				background-color: #e0e0e0; /* blue */
+			   }
+	
+		   &::-webkit-scrollbar-thumb {
+				background-color: #b4b4b4; /* green */
+				border-radius: 9em;
+		   }
+		}
 	}
 
 	&__el{
@@ -3486,7 +3527,10 @@ ul{
 		margin-top: 6px;
 		padding-top: 12px;
 		border-top: 1px solid var(--border-color);
-		position: relative;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		background: #FFF;
 
 		&::before{
 			pointer-events: none;
@@ -3586,7 +3630,7 @@ ul{
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		height: calc(100% - 465px);
+		// height: calc(100% - 465px);
 		padding-bottom: 20px;
 		padding-right: 8px;
 
@@ -3682,6 +3726,15 @@ ul{
 		align-items: center;
 		justify-content: space-between;
 	}
+
+	&__info{
+		width: calc(100% - 108px);
+
+		a{
+			text-decoration: none;
+			line-height: 1.2;
+		}
+	}
 }
 
 .companyRadio{
@@ -3690,6 +3743,11 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+	&.loading::before{
+		height: 40px;
+		width: 40px;
+	}
 
 	p{
 		color: var( --text-color-dop);
@@ -3701,6 +3759,8 @@ ul{
 	img{
 		height: 36px !important;
 		object-fit: cover;
+		width: 100px;
+		object-fit: contain;
 	}
 
 	input[type=radio] {
@@ -3755,6 +3815,22 @@ ul{
 
 	input[type=radio]:disabled + label:before {
 		filter: grayscale(100%);
+	}
+}
+
+.product-speed-info{
+	.d_icon-setting{
+		margin-right: 8px;
+	}
+}
+
+.comparison-remove{
+	*{
+		color: var(--primary-color);
+	}
+
+	*:hover{
+		color: var(--primary-hover) !important;
 	}
 }
 
@@ -4169,6 +4245,70 @@ ul{
 	}
 }
 
+.menu-catalog-button{
+	padding: 12px 20px;
+	background: var(--primary-color);
+	transition: all 0.4s;
+	color: #FFF;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	margin-bottom: 8px;
+	width: 287px;
+	cursor: pointer;
+
+	&:hover{
+		background: var(--primary-hover);
+	}
+	
+	p{
+		color: #FFF;
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	.d_icon{
+		color: #FFF;
+	}
+
+	.d_icon-right-arrow{
+		font-size: 20px;
+		transition: all 0.4s;
+	}
+
+	.d_icon-menu{
+		font-size: 24px;
+	}
+}
+
+.dart-catalog-menu{
+	display: none;
+}
+
+.dart-menu-category{
+	display: none;
+}
+
+.d-col-menu{
+	&.menuShow{
+		.dart-catalog-menu{
+			display: block;
+		}
+
+		.dart-menu-category{
+			display: flex;
+		}
+
+		.menu-catalog-button{
+			.d_icon-right-arrow{
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
 
 @media (max-width: $desktop){
 	.dart-header{
@@ -4185,45 +4325,53 @@ ul{
 }
 
 
+.d-col-basket{
+	.basket-container{
+		padding-bottom: 0;
+
+		&__adres{
+			font-size: 12px;
+		}
+
+		&__card{
+			align-items: flex-start;
+		}
+
+		&__img{
+			width: 60px;
+		}
+
+		&__article{
+			margin: 6px 0 3px 0;
+		}
+
+		&__count{
+			gap: 0px;
+			flex-direction: column;
+		}
+	
+		.btn-close{
+			width: 18px;
+			height: 18px;
+		}
+
+		&__title p{
+			width: calc(100% - 18px);
+		}
+	}
+}
+
 @media (max-width: 1600px){
-    .d-col-basket{
-        .basket-container{
-			padding-bottom: 0;
-
-            &__adres{
-                font-size: 12px;
-            }
-
-            &__card{
-                align-items: flex-start;
-            }
-
-            &__img{
-                width: 60px;
-            }
-
-            &__article{
-                margin: 6px 0 3px 0;
-            }
-
-            &__count{
-                gap: 0px;
-                flex-direction: column;
-            }
-		
-			.btn-close{
-				width: 18px;
-    			height: 18px;
-			}
-
-			&__title p{
-				width: calc(100% - 18px);
-			}
-        }
-    }
+    .d-col-catalog-el{
+		width: 25%;
+	}
 }
 
 @media (max-width: $small-desktop){
+
+	.d-col-catalog-el{
+		width: 20%;
+	}
 
 	.d-col-not-faund{
 		width: 100%;
@@ -4335,7 +4483,7 @@ ul{
 	}
 
 	.dart-menu-category{
-		display: none;
+		display: none !important;
 	}
 
 	.d-col-content-mt-0{
@@ -4343,6 +4491,7 @@ ul{
 	}
 
 	.dart-order{
+
 		&__content{
 			width: 600px;
 			padding: 32px;
@@ -4359,6 +4508,16 @@ ul{
 			overflow-y: auto;
 			padding-bottom: 0;
 			flex-direction: column-reverse;
+
+			&::-webkit-scrollbar {
+				width: 8px;
+				background-color: #e0e0e0; /* blue */
+			   }
+	
+		   &::-webkit-scrollbar-thumb {
+				background-color: #b4b4b4; /* green */
+				border-radius: 9em;
+		   }
 		}
 
 		&__left{
@@ -4370,6 +4529,11 @@ ul{
 		&__right{
 			width: 100%;
 			height: fit-content;
+
+			form{
+				height: 100%;
+				overflow-y: unset;
+			}
 		}
 
 		&__oplata{
@@ -4380,6 +4544,10 @@ ul{
 			z-index: 11;
 		}
 
+		&__right{
+			position: unset;
+		}
+
 		&__delivery-methods .dart-btn-radio-mini label{
 			height: 100%;
 		}
@@ -4388,6 +4556,15 @@ ul{
 
 
 @media (max-width: $tablets){
+
+	.d-col-catalog-el{
+		width: 25%;
+	}
+
+	// .promoSwiperMini__slide img{
+	// 	max-height: 130px;
+	// }
+
 	h2, .h2{
 		font-size: 24px !important;
 	}
@@ -4537,6 +4714,11 @@ ul{
 }
 
 @media (max-width: $small-tablets){
+
+	.d-col-catalog-el{
+		width: calc(100% / 3);
+	}
+
 	.footer-link{
 		gap: 16px;
 		margin-bottom: 16px;
@@ -4573,6 +4755,8 @@ ul{
 }
 
 @media (max-width: $big-phones){
+
+
 
 	.dart-order{
 		&__content{
@@ -4703,6 +4887,10 @@ ul{
 }
 
 @media (max-width: $phones){
+
+	.d-col-catalog-el{
+		width: 50%;
+	}
 
 	.rightMenuOrder__content{
 		padding: 60px 16px;
