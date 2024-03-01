@@ -680,11 +680,16 @@ ul{
 	&__catalog-container{
 		height: unset;
 		position: absolute;
-		top: 78px;
+		top: 70px;
+		border-radius: 5px;
 		z-index: 1;
 		opacity: 0;
 		pointer-events: none;
 		transition: all 0.4s;
+
+		ul{
+			margin-bottom: 0;
+		}
 	}
 
 	&__catalog-close{
@@ -805,7 +810,7 @@ ul{
 		}
 
 		a + a{
-			border-top: 1px solid var(--text-color-dop);
+			border-top: 1px solid #E2E2E2;
 		}
 	}
 
@@ -851,6 +856,25 @@ ul{
 			pointer-events: none;
 		}
 	}
+}
+
+.menu-header-scroll{
+	height: calc(100vh - 200px);
+	border: 1px solid var(--border-color);
+    overflow-x: auto;
+	&::-webkit-scrollbar {
+		width: 5px;
+		background-color: #e0e0e0; /* blue */
+	   }
+
+   &::-webkit-scrollbar-thumb {
+		background-color: #b4b4b4; /* green */
+		border-radius: 9em;
+   }
+
+   .dart-catalog-menu{
+	margin: 0;
+   }
 }
 
 // ------------------------Модальное окно выбора города
@@ -2889,9 +2913,9 @@ ul{
 	flex-direction: column;
 
 	img{
-		width: 130px;
+		width: 180px;
 		height: 130px !important;
-		object-fit: cover;
+		object-fit: contain;
 		margin-top: 24px;
 	}
 
@@ -2994,20 +3018,26 @@ ul{
 	&__left{
 		h3{
 			cursor: pointer;
-			display: flex;
-			align-items: center;
-			gap: 8px;
+			//display: flex;
+			//align-items: center;
+			//gap: 8px;
 
-			span{
-				max-width: 250px;
-			}
+			// span{
+			// 	max-width: 250px;
+			// }
 		}
 
 		.d_icon-down-arrow{
 			font-size: 10px;
 			position: relative;
-			top: 3px;
+			top: -2px;
+			margin-left: 8px;
 		}
+	}
+
+	&__span{
+		color: var(--text-color-dop);
+		font-size: 12px;
 	}
 
 	&__info{
@@ -3021,6 +3051,7 @@ ul{
 			border-radius: 50%;
 			border: 1px solid var(--border-color);
 			object-fit: cover;
+			margin-top: 20px;
 		}
 	}
 
@@ -3240,10 +3271,13 @@ ul{
 .breadcrumb-item{
 	color: var(--text-color-dop) !important;
 	margin-bottom: 20px !important;
+	font-size: 14px;
+	
 }
 
 .breadcrumb a{
 	color: var(--text-color-dop) !important;
+	font-size: 14px;
 }
 
 .d-col-catalog-el{
@@ -3441,6 +3475,10 @@ ul{
 		border-radius: 5px;
 		border: 1px solid var(--border-color);
 		padding: 20px;
+	}
+
+	&__el + &__el{
+		margin-top: 20px;
 	}
 
 	&__info{

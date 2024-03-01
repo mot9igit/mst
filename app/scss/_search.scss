@@ -64,7 +64,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             text-decoration: none;
-            line-height: 1.2;
+            line-height: 18px;
         }
     }
 
@@ -101,6 +101,13 @@
         }
     }
 
+    &__info{
+        a{
+            height: 54px;
+
+        }
+    }
+
     &__sale{
         font-size: 16px;
         font-style: normal;
@@ -108,6 +115,7 @@
         line-height: 16px;
         color: var(--secondary-color);
         margin-bottom: 16px;
+        height: 16px;
     }
 
     &__buttons{
@@ -116,10 +124,14 @@
         justify-content: space-between;
         gap: 12px;
 
-        .dart-btn-secondary{
-            border: none;
-            background: #F8F7F5;
+        form{
             width: calc(100% - 36px);
+        }
+
+        .dart-btn-secondary-outline{
+            border: none;
+            // background: #F8F7F5;
+            width: 100%;
         }
 
         .dartSwiperSearch__sale{
@@ -160,6 +172,10 @@
     margin-bottom: 40px;
     margin-top: 20px;
     position: relative;
+
+    &__mb{
+        margin-bottom: 0px;
+    }
 }
 
 .search-filtrs{
