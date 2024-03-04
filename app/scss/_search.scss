@@ -313,6 +313,17 @@
         height: 105px !important;
     }
 
+    .dartSwiperSearch{
+        &__text a{
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__info a{
+            height: 48px;
+        }
+    }
+
     .dartSwiperSearch__text .dart-rating{
         margin-bottom: 12px;
     }
