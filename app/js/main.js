@@ -1716,12 +1716,68 @@ if(target){
 }
 
 
-const mobileBasketToggle = document.querySelectorAll('.mobileBasketToggle')
+// const mobileBasketToggle = document.querySelectorAll('.mobileBasketToggle')
+// const mobileBasket = document.querySelector('.mobile-basket')
 
-if(mobileBasketToggle){
-	for(let i = 0; i<mobileBasketToggle.length; i++){
+
+// // if(mobileBasket){
+// // 	mobileBasket.addEventListener('click', () => {
+// // 		mobileBasket.classList.remove('show')
+// // 	})
+// // }
+
+// if(mobileBasketToggle){
+// 	for(let i = 0; i<mobileBasketToggle.length; i++){
+// 		if(mobileBasket){
+// 			mobileBasketToggle[i].addEventListener('click', () => {
+// 				mobileBasket.classList.toggle('show');
+// 			})
+
+// 			if(!mobileBasket.classList.contains('show')){
+// 				body.style.overflow = "hidden"
+// 			}else{
+// 				body.style.overflow = "auto"
+// 			}
+// 		}
+// 	}
+// }
+
+// document.onclick = function (e) {
+//     if (e.target.className != "d-col-basket") {
+//         mobileBasket.classList.toggle('show');
+//     };
+// };
+
+
+const mobileBasketToggle = document.querySelectorAll('.mobileBasketToggle')
+const mobileBasket = document.querySelector('.mobile-basket')
+let isModalBasket = false;
+
+if(mobileBasketToggle && mobileBasket){
+	for(let i = 0; i < mobileBasketToggle.length; i++){
 		mobileBasketToggle[i].addEventListener('click', () => {
-			document.querySelector('.mobile-basket').classList.toggle('show');
+			if(!isModalBasket){
+				mobileBasket.classList.add('show')
+				body.style.overflow = "hidden"
+				isModalBasket = true
+			}	
 		})
 	}
 }
+
+
+
+	document.onclick = function (e) {
+		if(isModalBasket){
+			let listClass = e.target.classList;
+			console.log(listClass)
+			for(let i = 0; i < listClass.length; i++){
+				if(listClass[i] == "mobileBasketToggleClose"){
+					mobileBasket.classList.remove('show')
+					body.style.overflow = "auto"
+					isModalBasket = false
+					break;
+				}
+			}
+		}
+	};
