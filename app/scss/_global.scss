@@ -1366,6 +1366,36 @@ ul{
     }
 }
 
+.user-avatar-image-wrapper{
+	border: 2px solid #e2e2e2 !important;
+	margin-bottom: 16px;
+}
+
+.user-avatar-btn{
+	cursor: pointer;
+	border: 1px solid #E2E2E2 !important;
+
+	&:hover{
+        background-color: #E9E9E9 !important;
+        color: var(--secondary-color) !important;
+		border: 1px solid #E2E2E2 !important;
+    }
+}
+
+.user-avatar-upload-btn{
+	cursor: pointer;
+	font-size: 14px;
+    padding: 8px 16px;
+    background: var(--primary-color) !important;
+    color: var(--white-color) !important;
+	border: none !important;
+
+    &:hover{
+        background: var(--primary-hover) !important;
+        color: var(--white-color) !important;
+    }
+}
+
 //Sitebar
 
 .sidebar{
@@ -1414,6 +1444,7 @@ ul{
 			height: 40px !important;
 			object-fit: cover;
 			border-radius: 50%;
+
 		}
 
 		&-letter{
