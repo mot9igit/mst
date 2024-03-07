@@ -2420,6 +2420,68 @@ ul{
 	}
 }
 
+.CatalogModal{
+	pointer-events: none;
+	background: rgba(0, 0, 0, 0);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	transition: all 0.6s;
+
+	.d_icon-close{
+		position: absolute;
+		right: 40px;
+		top: 60px;
+		cursor: pointer;
+	}
+
+	&__content{
+		height: 100dvh;
+		width: 400px;
+		background: #fff;
+		position: fixed;
+		left: 0;
+		transform: translateX(-100%);
+		transition: all 0.6s;
+		// padding: 60px 40px;
+		position: relative;
+
+		h3{
+			padding: 32px 18px 0 18px;
+			margin: 0;
+		}
+	}
+
+	.dart-catalog-menu{
+		display: flex;
+
+		ul{
+			width: 100%;
+		}
+	}
+
+
+	&.show{
+		pointer-events: all;
+		background: rgba(0, 0, 0, 0.78);
+		width: 100vw;
+		height: 100vh;
+		transition: all 0.6s;
+		z-index: 3;
+
+		.CatalogModal{
+			&__content{
+				transform: translateX(0%);
+				transition: all 0.6s;
+			}
+		}
+	}
+}
+
+
 // Filters modal
 
 .allFiltrsModal{
@@ -4279,6 +4341,99 @@ ul{
 		border: 1px solid var(--text-color-dop);
 		border-radius: 50%;
 	}
+
+	p{
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+.product-price-order{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-direction: row;
+	justify-content: flex-end;
+
+	.procutc-presence__price{
+		text-decoration: line-through;
+		color: #7E7E7E;
+		font-weight: 600;
+		font-size: 16px;
+		text-decoration-color: var(--secondary-color);
+	}
+
+	p{
+		color: var(--secondary-color);
+		font-weight: 600;
+		font-size: 16px;
+	}
+}
+
+.product-price-order p + p{
+	// text-decoration: line-through;
+	color: var(--primary-color);
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.product-price-card{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+
+	.procutc-presence__price{
+		text-decoration: line-through;
+		color: #7E7E7E;
+		font-weight: 600;
+		font-size: 16px;
+		text-decoration-color: var(--secondary-color);
+	}
+
+	p{
+		color: var(--secondary-color);
+		font-weight: 600;
+		font-size: 16px;
+	}
+}
+
+
+.product-price-card p + p{
+	// text-decoration: line-through;
+	color: var(--primary-color);
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.product-price{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+
+	.procutc-presence__price{
+		text-decoration: line-through;
+		color: #7E7E7E;
+		font-weight: 600;
+		font-size: 16px;
+		text-decoration-color: var(--secondary-color);
+	}
+
+	p{
+		color: var(--secondary-color);
+		font-weight: 600;
+		font-size: 20px;
+	}
+}
+
+.product-price p + p{
+	// text-decoration: line-through;
+	color: var(--primary-color);
+	font-weight: 600;
+	font-size: 20px;
 }
 
 .catalog-mobile-brand{

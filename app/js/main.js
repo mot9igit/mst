@@ -140,12 +140,15 @@ var swipertwo = new Swiper(".promoSwiperMini", {
 			slidesPerView: 4.5,
 		},
 		1201: {
-			slidesPerView: 2.3,
+			slidesPerView: 3,
 		},
 		1400: {
 			slidesPerView: 3.5,
 		},
 		1601: {
+			slidesPerView: 4,
+		},
+		1901:{
 			slidesPerView: 3.5,
 		}
 	}
@@ -209,12 +212,15 @@ var swipertree = new Swiper(".dartSwiperNew", {
 			slidesPerView: 5.6,
 		},
 		1201: {
-			slidesPerView: 3.5,
+			slidesPerView: 5,
 		},
 		1400: {
-			slidesPerView: 4.5,
+			slidesPerView: 6,
 		},
-		1800: {
+		1600: {
+			slidesPerView: 6.5,
+		},
+		1901: {
 			slidesPerView: 5.5,
 		}
 	}
@@ -245,12 +251,15 @@ var swipertree = new Swiper(".dartSwiperSezon", {
 			slidesPerView: 5,
 		},
 		1201: {
-			slidesPerView: 3,
+			slidesPerView: 4.5,
 		},
 		1400: {
-			slidesPerView: 4.3,
+			slidesPerView: 5,
 		},
-		1800: {
+		1600: {
+			slidesPerView: 5.5,
+		},
+		1901: {
 			slidesPerView: 5,
 		}
 	}
@@ -281,12 +290,15 @@ var swipertree = new Swiper(".dartSwiperIdea", {
 			slidesPerView: 5.6,
 		},
 		1201: {
-			slidesPerView: 3.5,
+			slidesPerView: 5,
 		},
 		1400: {
-			slidesPerView: 4.5,
+			slidesPerView: 6,
 		},
-		1800: {
+		1600: {
+			slidesPerView: 6.5,
+		},
+		1901: {
 			slidesPerView: 5.5,
 		}
 	}
@@ -728,18 +740,21 @@ if(alldartSwiperSearch){
 					slidesPerView: 5,
 				},
 				1201: {
-					slidesPerView: 3,
-				},
-				1350: {
-					slidesPerView: 3.5,
-				},
-				1450: {
 					slidesPerView: 4,
 				},
-				1700: {
+				1350: {
 					slidesPerView: 4.5,
 				},
+				1450: {
+					slidesPerView: 5,
+				},
+				1700: {
+					slidesPerView: 6,
+				},
 				1780: {
+					slidesPerView: 7,
+				},
+				1901: {
 					slidesPerView: 5,
 				}
 			}
@@ -1781,3 +1796,26 @@ if(mobileBasketToggle && mobileBasket){
 			}
 		}
 	};
+
+
+	
+//Модальное окно каталога
+const showModalCatalog = document.querySelectorAll('.showModalCatalog');
+const CatalogModal = document.querySelector('.CatalogModal');
+let isModalCatalog = false;
+
+if(showModalCatalog && CatalogModal){
+	for(let i = 0; i < showModalCatalog.length; i++){
+		showModalCatalog[i].addEventListener('click', () => {
+			if(isModalCatalog){
+				CatalogModal.classList.remove('show')
+				body.style.overflow = "auto"
+				isModalCatalog = false
+			}else{
+				CatalogModal.classList.add('show')
+				body.style.overflow = "hidden"
+				isModalCatalog = true
+			}	
+		})
+	}
+}
