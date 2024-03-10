@@ -4821,12 +4821,13 @@ ul{
 			&::-webkit-scrollbar {
 				width: 8px;
 				background-color: #e0e0e0; /* blue */
-			   }
-	
-		   &::-webkit-scrollbar-thumb {
-				background-color: #b4b4b4; /* green */
 				border-radius: 9em;
-		   }
+			}
+	
+			&::-webkit-scrollbar-thumb {
+					background-color: #b4b4b4; /* green */
+					border-radius: 9em;
+			}
 		}
 
 		&__left{
