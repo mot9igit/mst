@@ -1716,7 +1716,6 @@ const callback = () => {
 			isVissible = true;
 		}
 	}
-	console.log("Виден")
 }
 
 const options = {
@@ -1816,6 +1815,61 @@ if(showModalCatalog && CatalogModal){
 				body.style.overflow = "hidden"
 				isModalCatalog = true
 			}	
+		})
+	}
+}
+
+
+const deleteList = document.querySelectorAll('.deleteList'); // извлекаем элемент формы
+
+if(deleteList){
+	for(let i = 0; i<deleteList.length; i++){
+		deleteList[i].addEventListener('submit', (e) => {
+			e.preventDefault();
+			const formData = new FormData(deleteList[i]); // создаём объект FormData, передаём в него элемент формы
+			// теперь можно извлечь данные
+			const list = formData.get('list');
+
+			$.ajax({
+				type: "POST",
+				url: "/",
+				dataType: 'json',
+				data: {
+					cmp_action: 'remove-list',
+					list: list
+				},
+				success:  function(data) {
+					location.reload();
+				}
+			});
+		})
+	}
+}
+
+const deleteAllList = document.querySelector('.deleteAllList');
+if(deleteAllList){
+	deleteList.addEventListener('click', (e) => {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "/",
+			dataType: 'json',
+			data: {
+				cmp_action: 'remove-all-list',
+			},
+			success:  function(data) {
+				location.reload();
+			}
+		});
+	})
+}
+
+const reloadJs = document.querySelectorAll('.reload-js')
+
+if(reloadJs){
+	for(let i = 0; i<reloadJs.length; i++){
+		reloadJs[i].addEventListener('click', (e) => {
+			setTimeout(() => location.reload(), 500);
 		})
 	}
 }

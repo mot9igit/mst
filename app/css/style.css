@@ -668,6 +668,7 @@ a {
 }
 
 .dart-link-all {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7255,7 +7256,11 @@ ul {
 .product-price-card p {
   color: var(--secondary-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.button-mini-block {
+  display: block !important;
 }
 
 .product-price-card p + p {
@@ -7668,6 +7673,7 @@ ul {
     width: 8px;
     background-color: #e0e0e0;
     /* blue */
+    border-radius: 9em;
   }
   .dart-order__container::-webkit-scrollbar-thumb {
     background-color: #b4b4b4;
@@ -8109,6 +8115,10 @@ ul {
   gap: 12px;
 }
 
+.comparison .loading {
+  min-height: auto !important;
+}
+
 .dartSwiperSearch__text {
   padding: 12px;
   display: -webkit-box;
@@ -8204,6 +8214,10 @@ ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 12px;
+}
+
+.dartSwiperSearch__buttons-w100 {
+  width: 100% !important;
 }
 
 .dartSwiperSearch__buttons form {
@@ -8403,13 +8417,6 @@ ul {
   }
   .dartSwiperSearch__image {
     height: 105px !important;
-  }
-  .dartSwiperSearch__text a {
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .dartSwiperSearch__info a {
-    height: 48px;
   }
   .dartSwiperSearch__text .dart-rating {
     margin-bottom: 12px;
@@ -11329,6 +11336,16 @@ ol.def-section li + li {
   gap: 8px;
 }
 
+.dartSwiperContrast__close {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.dartSwiperContrast__close:hover {
+  color: #fff !important;
+}
+
 .dart-contrast {
   background: var(--main-background-windows);
   padding-bottom: 20px;
@@ -11362,7 +11379,7 @@ ol.def-section li + li {
   display: none;
 }
 
-.contrast__row:nth-child(2n - 1) {
+.contrast__row:not(.hide):nth-child(2n - 1) {
   background: var(--btn-secondary-outline-background);
 }
 
@@ -11525,6 +11542,16 @@ ol.def-section li + li {
   color: #fff;
   position: relative;
   top: 1px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contast-category__close:hover {
@@ -11548,6 +11575,15 @@ ol.def-section li + li {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
           box-shadow: 0px 0px 12px 0px rgba(51, 51, 51, 0.15);
   cursor: pointer;
+  text-decoration: none;
+}
+
+.contast-category__el a {
+  text-decoration: none;
+}
+
+.contast-category__el.active {
+  background: var(--btn-secondary-outline-background);
 }
 
 .contast-category__el:hover {

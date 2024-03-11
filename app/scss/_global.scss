@@ -4426,8 +4426,12 @@ ul{
 	p{
 		color: var(--secondary-color);
 		font-weight: 600;
-		font-size: 16px;
+		font-size: 20px;
 	}
+}
+
+.button-mini-block{
+	display: block !important;
 }
 
 

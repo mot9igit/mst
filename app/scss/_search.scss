@@ -40,10 +40,14 @@
     }
 }
 
-
+.comparison .loading{
+    // visibility: hidden !important;
+    min-height: auto !important;
+}
 
 .dartSwiperSearch{
     // margin-bottom: 50px;
+
 
     &__text{
         padding: 12px;
@@ -104,7 +108,6 @@
     &__info{
         a{
             height: 54px;
-
         }
     }
 
@@ -123,6 +126,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 12px;
+
+        &-w100{
+            width: 100% !important;
+        }
 
         form{
             width: calc(100% - 36px);
@@ -311,17 +318,6 @@
 
     .dartSwiperSearch__image{
         height: 105px !important;
-    }
-
-    .dartSwiperSearch{
-        &__text a{
-            font-size: 14px;
-            line-height: 16px;
-        }
-
-        &__info a{
-            height: 48px;
-        }
     }
 
     .dartSwiperSearch__text .dart-rating{
