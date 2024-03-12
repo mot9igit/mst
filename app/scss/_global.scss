@@ -4,6 +4,7 @@ body {
 	height: auto !important;
 	background: var(--main-background);
 	-webkit-font-smoothing: antialiased;
+	scrollbar-gutter: stable;
 	font-smoothing: antialiased;
 	&.loading .preloader{
 		display: block;
@@ -32,6 +33,7 @@ body {
 		overflow: hidden;
 	}
 }
+
 
 hr{
 	color: var(--border-color);
@@ -2455,7 +2457,7 @@ ul{
 	pointer-events: none;
 	background: rgba(0, 0, 0, 0);
 	width: 100vw;
-	height: 100vh;
+	height: 100dvh;
 	position: fixed;
 	z-index: 2;
 	top: 0;
@@ -2487,7 +2489,9 @@ ul{
 	}
 
 	.dart-catalog-menu{
-		display: flex;
+		height: calc(100% - 80px);
+    	overflow: auto;
+		display: flex !important;
 
 		ul{
 			width: 100%;
@@ -3492,7 +3496,7 @@ ul{
 	background: rgba(0, 0, 0, 0);
 	pointer-events: none;
 	position: fixed;
-	z-index: 3;
+	z-index: 25;
 	width: 100%;
 	height: 100dvh;
 	transition: all 0.3s;
@@ -5210,6 +5214,8 @@ ul{
 	.brand-top__el img{
 		margin-bottom: 12px;
 	}
+
+	
 }
 
 @media (max-width: $phones){
@@ -5269,5 +5275,10 @@ ul{
 		min-width: unset;
 
 	}
+
+	.CatalogModal__content{
+		width: 100%;
+	}
+
 }
 

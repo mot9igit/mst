@@ -1617,6 +1617,7 @@ body {
   height: auto !important;
   background: var(--main-background);
   -webkit-font-smoothing: antialiased;
+  scrollbar-gutter: stable;
   font-smoothing: antialiased;
 }
 
@@ -4992,7 +4993,7 @@ ul {
   pointer-events: none;
   background: rgba(0, 0, 0, 0);
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -5028,9 +5029,11 @@ ul {
 }
 
 .CatalogModal .dart-catalog-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: calc(100% - 80px);
+  overflow: auto;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .CatalogModal .dart-catalog-menu ul {
@@ -8056,6 +8059,9 @@ ul {
     padding: 32px 16px;
     min-width: unset;
   }
+  .CatalogModal__content {
+    width: 100%;
+  }
 }
 
 .mini-info-shop {
@@ -8303,8 +8309,8 @@ ul {
 .search-filtrs__cheackbox-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
   grid-auto-flow: row;
   gap: 8px 0;
 }
@@ -10587,7 +10593,13 @@ ul {
   display: none;
 }
 
+.promo-info-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 .promo-info {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

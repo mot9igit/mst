@@ -24,7 +24,13 @@
     display: none;
 }
 
+.promo-info-bottom{
+    position: absolute;
+    bottom: 0;
+}
+
 .promo-info{
+    position: relative;
     display: flex;
 
     &__text{
