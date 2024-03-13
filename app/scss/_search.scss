@@ -204,6 +204,35 @@
         grid-template-columns: repeat(1, 1fr);
         grid-auto-flow: row;
         gap: 8px 0;
+        height: 150px;
+        overflow: hidden;
+    }
+
+    &_all-filter{
+        margin-top: 8px;
+        color: var(--text-color-dop);
+        font-size: 14px;
+        line-height: 16px;
+        cursor: pointer;
+    }
+}
+
+.fitler-mini{
+    &.show{
+        .search-filtrs__cheackbox-container{
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+				width: 8px;
+				background-color: #e0e0e0; /* blue */
+				border-radius: 9em;
+			}
+	
+			&::-webkit-scrollbar-thumb {
+					background-color: #b4b4b4; /* green */
+					border-radius: 9em;
+			}
+        }
     }
 }
 

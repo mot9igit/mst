@@ -35,12 +35,27 @@
 
 
 .d-col-promoSwiperMini{
-    // max-height: 160px;
     width: 100%;
     // margin-left: 8px;
     margin-top: 8px;
     position: relative;
+
+    &.loadSwiper{
+        max-height: 160px;
+        overflow: hidden;
+
+        .promoSwiperMini__slide{
+            width: 30%;
+            margin-right: 8px;
+
+            img{
+                object-fit: contain !important;
+            }
+        }
+    }
 }
+
+
 
 
 .promoSwiper{
@@ -80,7 +95,6 @@
     &__slide{
         border-radius: 5px;
         overflow: hidden;
-        background: linear-gradient(106deg, #FEC23D 3.93%, #FF6652 101.62%);
         position: relative;
         
         img{

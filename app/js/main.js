@@ -110,9 +110,14 @@ let swiper = new Swiper(".promoSwiper", {
 
 //Свайпер акции сбоку
 var swipertwo = new Swiper(".promoSwiperMini", {
-    // grid: {
-    //     rows: 2,
-    // },
+	on: {
+		init: function () {
+		  const dColPromoSwiper = document.querySelector('.d-col-promoSwiperMini');
+		  if(dColPromoSwiper){
+			dColPromoSwiper.classList.remove('loadSwiper')
+		  }
+		},
+	},
     slidesPerView: 2,
     spaceBetween: 8,
     loop: true,
@@ -763,7 +768,6 @@ if(alldartSwiperSearch){
 }
 
 // Слайдер сравнения
-
 var swiperContrast = new Swiper(".dartSwiperContrast", {
 	slidesPerView: 4,
 	watchSlidesProgress: true,
@@ -1870,6 +1874,27 @@ if(reloadJs){
 	for(let i = 0; i<reloadJs.length; i++){
 		reloadJs[i].addEventListener('click', (e) => {
 			setTimeout(() => location.reload(), 500);
+		})
+	}
+}
+
+// фильтры
+
+const toggleAllFilters = document.querySelectorAll('.search-filtrs_all-filter');
+
+if(toggleAllFilters){
+	for(let i = 0; i<toggleAllFilters.length; i++){
+		toggleAllFilters[i].addEventListener('click', () => {
+			toggleAllFilters[i].parentElement.classList.toggle('show');
+			if(toggleAllFilters[i].parentElement.classList.contains('show')){
+				toggleAllFilters[i].innerText = "Свернуть"
+				console.log('Свернуть')
+			}else{
+				toggleAllFilters[i].innerText = "Показать все"
+				console.log('Показать все')
+				
+			}
+
 		})
 	}
 }

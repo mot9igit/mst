@@ -94,7 +94,13 @@
     }
 }
 
-.header-basket{
+.mySwiperProductTwo, .mySwiperProduct{
+    .swiper-wrapper{
+        align-items: center;
+    }
+}
+
+.header-basket:not(.header-basket-visible){
     display: none;
     margin-right: 14px;
 }
@@ -124,7 +130,7 @@
     }
 
     .header-basket{
-        display: inline-flex;
+        display: inline-flex !important;
     }
 
     .header-phone{
@@ -154,6 +160,6 @@
     }
 
     .header-basket{
-        display: none;
+        display: none !important;
     }
 }
