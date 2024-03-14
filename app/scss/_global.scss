@@ -4438,12 +4438,23 @@ ul{
 	display: block !important;
 }
 
+.dart-search__form {
+	&.loading{
+		min-height: auto !important;	
+	}
+}
+
+.dart-search{
+	&.loading{
+		min-height: auto !important;
+	}
+}
 
 .product-price-card p + p{
 	// text-decoration: line-through;
 	color: var(--primary-color);
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .product-price{
