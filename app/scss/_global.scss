@@ -236,6 +236,52 @@ a{
 	}
 }
 
+span.h1{
+	display: block;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 1.3;
+	color: $secondary-color;
+	margin-bottom: 32px;
+}
+
+span.h2{
+	display: block;
+	color: var(--secondary-color);
+	// margin-bottom: 20px;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 30px;
+}
+
+span.h3{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	color: var(--secondary-color);
+
+	& + *{
+		margin-top: 8px;
+	}
+}
+
+span.h4{
+	color: var(--secondary-color);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+
+	& + *{
+		margin-top: 8px;
+	}
+}
+
+
+
 h1, .h1{
 	display: block;
 	font-style: normal;
@@ -414,6 +460,25 @@ blockquote{
 	padding: 24px 15px;
 	background-color: var(--main-background-windows);
 	display: none;
+	position: relative;
+
+	.dart-input-search{
+		input{
+			padding: 16px 24px;
+		}
+
+		&::before{
+			display: none;
+		}
+	}
+
+	.dart-btn-primary-mini{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		height: 100%;
+		transform: translate(0, -50%);
+	}
 }
 
 @media (max-width: $small-desktop){
@@ -1974,9 +2039,9 @@ ul{
 	&__left{
 		width: 50%;
 		overflow: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
 	}
 
 	&__right{
@@ -2041,7 +2106,7 @@ ul{
 		padding: 32px;
 		position: relative;
 
-		h3{
+		.h3{
 			margin-bottom: 24px;
 		}
 	}
@@ -2218,7 +2283,7 @@ ul{
 				transform: scale(1.1);
 			}
 
-			h4{
+			.h4{
 				text-decoration: underline;
 			}
 		}
@@ -2587,7 +2652,8 @@ ul{
 
 	&__scroll{
 		overflow-y: auto;
-    	height: calc(100dvh - 300px);
+		padding-top: 30px;
+    	height: calc(100dvh - 210px);
 
 		&::-webkit-scrollbar {
 			width: 6px;
@@ -3024,7 +3090,7 @@ ul{
 		margin-top: 24px;
 	}
 
-	h3{
+	.h3{
 		margin: 24px 0 8px 0;
 	}
 
@@ -3208,7 +3274,7 @@ ul{
 				object-fit: cover;
 			}
 
-			h3{
+			.h3{
 				margin-top: 24px;
 				max-width: 200px;
 				text-align: center;
@@ -3216,7 +3282,7 @@ ul{
 		}
 	}
 
-	h3{
+	.h3{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -4011,7 +4077,7 @@ ul{
 		margin-top: 40px;
 	}
 
-	h3{
+	.h3{
 		text-align: center;
 		margin-bottom: 40px;
 	}
@@ -4411,6 +4477,8 @@ ul{
 	font-weight: 600;
 	font-size: 16px;
 }
+
+
 
 .product-price-card{
 	display: flex;
@@ -5194,6 +5262,10 @@ ul{
 		&__buttons{
 			padding: 20px 16px 16px 16px;
 		}
+
+		&__scroll{
+			height: calc(100dvh - 150px);
+		}
 	}
 
 
@@ -5204,8 +5276,6 @@ ul{
 		font-size: 20px;
 		padding: 10px;
 		cursor: pointer;
-		position: absolute;
-		left: 24px;
 	}
 
 	.modalHeaderMenu{
@@ -5226,18 +5296,29 @@ ul{
 		margin-bottom: 12px;
 	}
 
+	.change-shop-mobile-use__shop{
+		b{
+			flex-direction: column;
+			gap: 0;
+			font-size: 12px;
+			p{
+				font-size: 12px;
+				text-align: center;
+				max-width: 95%;
+
+				&::before{
+					display: none;
+				}
+			}
+		}
+	}
 	
 }
 
 @media (max-width: $phones){
 
-	.change-shop-mobile-use__shop{
-		b{
-			font-size: 14px;
-			p{
-				font-size: 14px;
-			}
-		}
+	.h1-mini{
+		font-size: 18px !important;
 	}
 
 	.mobile-basket.show .d-col-basket{
@@ -5255,6 +5336,7 @@ ul{
 	.allFiltrsModal{
 		.dart-btn{
 			padding: 10px;
+			font-size: 12px;
 		}
 	}
 
@@ -5293,3 +5375,8 @@ ul{
 
 }
 
+@media (max-width: 320px){
+	.d-col-catalog-el{
+		width: 100%;
+	}
+}

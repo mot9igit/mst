@@ -25,8 +25,7 @@
 }
 
 .promo-info-bottom{
-    position: absolute;
-    bottom: 0;
+    margin-top: 20px;
 }
 
 .promo-info{
@@ -54,8 +53,8 @@
     &__details{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: calc(100% - 74px);
+        // justify-content: space-between;
+        // height: calc(100% - 74px);
     }
 
     &__el{
