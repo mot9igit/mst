@@ -8168,6 +8168,12 @@ ul {
   .d-col-catalog-el {
     width: 100%;
   }
+  .dart-mobile-searsh .dart-input-search input {
+    padding: 11px 10px;
+  }
+  .dart-input-search .dart-btn-primary-mini {
+    padding: 12px;
+  }
 }
 
 .mini-info-shop {
