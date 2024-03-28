@@ -120,8 +120,15 @@
     height: 54px;
 }
 
+.mobile-basket{
+	display: none;
+}
 
 @media (max-width: 1900px){
+    .mobile-basket{
+        display: block;
+    }
+
     .d-col-map{
         display: none;
     }

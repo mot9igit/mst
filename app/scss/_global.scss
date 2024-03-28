@@ -4564,6 +4564,27 @@ ul{
 	}
 }
 
+.dart-comparison-count{
+	width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+	background: var(--primary-color);
+	color: var(--white-color);
+	font-size: 14px;
+	font-weight: 500;
+	font-family: var(--bs-body-font-family) !important;
+}
+
+.dart-btn .d_icon{
+	position: relative;
+}
+
 .mobile-basket{
 	position: fixed;
     right: 0;
@@ -4574,6 +4595,11 @@ ul{
 	transition: all 0.5s;
 	pointer-events: none;
 
+	&__close{
+		display: flex;
+		align-items: center;
+	}
+
 	&.show{
 		pointer-events: all;
 		background: rgba(0, 0, 0, 0.7);
@@ -4582,13 +4608,6 @@ ul{
 			right: 0;
 			transform: translateX(0);
 		}
-	}
-
-	&__close{
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		cursor: pointer;
 	}
 
 	.d-col-basket{
@@ -4602,6 +4621,14 @@ ul{
 		top: 0;
 		max-height: 100dvh;
 	}
+}
+
+.basket-clear-btn{
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--text-color-dop);
+	cursor: pointer;
+	background: var(--main-background-windows);
 }
 
 
@@ -5313,6 +5340,9 @@ ul{
 		}
 	}
 	
+	#choice_city .modal-content{
+		height: 100dvh;
+	}
 }
 
 @media (max-width: $phones){

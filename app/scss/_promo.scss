@@ -34,6 +34,9 @@
 
     &__text{
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     img{
